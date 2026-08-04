@@ -1,0 +1,342 @@
+{
+  "schema": 1,
+  "generatorVersion": "0.1.0",
+  "catalogVersion": "barrow@1",
+  "seed": "gilded-court-404",
+  "params": {
+    "areas": 6,
+    "depth": 2,
+    "party": 4,
+    "deadliness": "standard",
+    "density": "standard",
+    "greed": "standard",
+    "clock": "standard",
+    "ending": "authored",
+    "theme": "barrow"
+  },
+  "skeleton": {
+    "placeName": "The Cairn of the Patient Lord",
+    "knot": {
+      "appetiteId": "first",
+      "accommodationId": "unmade",
+      "claimant": "Patient Lord",
+      "conscript": "a procession",
+      "transgression": "The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "cruelty": 3
+    },
+    "motif": {
+      "id": "precedence",
+      "danger": "procession",
+      "dangerLine": "the barrow keeps its order, and you have joined the queue",
+      "trigger": "announced"
+    },
+    "prize": {
+      "kind": "regalia",
+      "label": "the crown worn first, and only once",
+      "function": "the proof of precedence"
+    },
+    "bottomProblem": {
+      "label": "The Patient Lord",
+      "wantNow": "to be first in all things",
+      "failureState": "is second now, and cannot bear it",
+      "handledBy": "giving them what they want, at a price"
+    },
+    "factions": [
+      {
+        "id": "host",
+        "name": "The Silent Host",
+        "kind": "undead",
+        "essence": "still performing the ritual they were buried for",
+        "handledBy": "courtesy",
+        "conscriptedAs": "a procession"
+      },
+      {
+        "id": "wardens",
+        "name": "the Barrow-Wardens",
+        "kind": "undead",
+        "essence": "sealed this place and stayed to make sure",
+        "handledBy": "proof of right"
+      }
+    ],
+    "foreshadow": [
+      {
+        "index": 1,
+        "role": "approach",
+        "facet": "institution",
+        "fragment": "a stair too grand for the door it serves"
+      },
+      {
+        "index": 2,
+        "role": "complication",
+        "facet": "ritual",
+        "fragment": "banners in sequence, each house a place further back"
+      },
+      {
+        "index": 3,
+        "role": "complication",
+        "facet": "ritual",
+        "fragment": "a herald's script with the order still marked"
+      },
+      {
+        "index": 4,
+        "role": "turn",
+        "facet": "demand",
+        "fragment": "a door only one person may pass at a time, and only first"
+      },
+      {
+        "index": 5,
+        "role": "descent",
+        "facet": "wound",
+        "fragment": "a procession that doubled back on itself"
+      },
+      {
+        "index": 6,
+        "role": "threshold",
+        "facet": "anchor",
+        "fragment": "a seat at the head of everything, occupied"
+      },
+      {
+        "index": 7,
+        "role": "ending",
+        "facet": "demand",
+        "fragment": "a corridor that will not let two walk abreast"
+      }
+    ]
+  },
+  "areas": [
+    {
+      "index": 1,
+      "role": "approach",
+      "name": "The Threshold Stones",
+      "facet": "institution",
+      "cueFragments": [
+        "a stair too grand for the door it serves",
+        "a floor mosaic worn only along one path"
+      ],
+      "truth": "this is how the place was ordered, and it still is. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "a member of the faction, alone and not yet hostile",
+        "cost": "talking costs time; not talking costs later"
+      },
+      "encounter": null,
+      "hoard": null,
+      "temptation": null,
+      "trigger": "announced",
+      "baneBeat": "announcing",
+      "clue": {
+        "automatic": "a stair too grand for the door it serves — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 2,
+      "role": "complication",
+      "name": "The Hall of Bows",
+      "facet": "ritual",
+      "cueFragments": [
+        "banners in sequence, each house a place further back",
+        "grave-goods stacked with obsessive neatness"
+      ],
+      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "two ways on: one narrow and dark, one wide and announced",
+        "cost": "the wide way is faster and the barrow hears it"
+      },
+      "encounter": null,
+      "hoard": null,
+      "temptation": null,
+      "trigger": "loud",
+      "baneBeat": "noticing",
+      "clue": {
+        "automatic": "banners in sequence, each house a place further back — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 3,
+      "role": "complication",
+      "name": "The Lesser Vault",
+      "facet": "ritual",
+      "cueFragments": [
+        "a herald's script with the order still marked",
+        "an alcove emptied in a hurry"
+      ],
+      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "something valuable, awkward to carry",
+        "cost": "carrying it slows you and it is not yours"
+      },
+      "encounter": null,
+      "hoard": null,
+      "temptation": null,
+      "trigger": "announced",
+      "baneBeat": "relicUse",
+      "clue": {
+        "automatic": "a herald's script with the order still marked — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 4,
+      "role": "turn",
+      "name": "The Records Room",
+      "facet": "demand",
+      "cueFragments": [
+        "a door only one person may pass at a time, and only first",
+        "a collapse that has opened a way the builders never meant"
+      ],
+      "truth": "here the want is explicit — the place asks something of whoever enters. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "a sealed door, and a crack you could squeeze through",
+        "cost": "the crack costs skin and a Bane on a failure"
+      },
+      "encounter": {
+        "heat": "fight",
+        "kind": "undead"
+      },
+      "hoard": "cache",
+      "temptation": {
+        "id": "coronet",
+        "cue": "a small crown, sized for someone who never grew",
+        "benefit": "+1 die when others must defer to you",
+        "useCost": {
+          "bane": 1
+        },
+        "standingDrawback": "you must be addressed correctly or lose the benefit"
+      },
+      "trigger": "announced",
+      "baneBeat": "relicUse",
+      "clue": {
+        "automatic": "a door only one person may pass at a time, and only first — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 5,
+      "role": "descent",
+      "name": "The Sunken Nave",
+      "facet": "wound",
+      "cueFragments": [
+        "a procession that doubled back on itself",
+        "a lamp still burning on oil that should be long gone"
+      ],
+      "truth": "this is the damage the want did to those who had to satisfy it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "a shortcut down, through water",
+        "cost": "everything gets wet, including what burns"
+      },
+      "encounter": null,
+      "hoard": "pocket",
+      "temptation": {
+        "id": "glass",
+        "cue": "a hand-mirror that shows the room a moment behind",
+        "benefit": "once per scene, see what was just here",
+        "useCost": {
+          "bane": 1
+        },
+        "standingDrawback": "your reflection lags, and others notice"
+      },
+      "trigger": "seenTwice",
+      "baneBeat": "refusal",
+      "clue": {
+        "automatic": "a procession that doubled back on itself — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 6,
+      "role": "threshold",
+      "name": "The Antechamber Royal",
+      "facet": "anchor",
+      "cueFragments": [
+        "a seat at the head of everything, occupied",
+        "a door that has been wedged open from the inside"
+      ],
+      "truth": "the thing the whole barrow is arranged around is close. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "decision": {
+        "cue": "a way back, still open",
+        "cost": "leaving now means it will be worse when you return"
+      },
+      "encounter": {
+        "heat": "battle",
+        "kind": "undead"
+      },
+      "hoard": "chest",
+      "temptation": {
+        "id": "ledger",
+        "cue": "a book of names, one line left blank",
+        "benefit": "write a name and the Host obeys it once",
+        "acceptanceCost": {
+          "vice": "Pride"
+        },
+        "useCost": {
+          "bane": 2
+        },
+        "standingDrawback": "your own name is now in it"
+      },
+      "trigger": "disturbed",
+      "baneBeat": "relicUse",
+      "clue": {
+        "automatic": "a seat at the head of everything, occupied — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, the ending opens with them holding nothing the bottom problem wants.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    }
+  ],
+  "ending": {
+    "index": 7,
+    "role": "ending",
+    "mode": "authored",
+    "heat": null,
+    "hoard": null,
+    "name": "The Gilded Audience",
+    "cueFragments": [
+      "a corridor that will not let two walk abreast"
+    ],
+    "question": "\"Who goes first?\"",
+    "authored": true
+  },
+  "budget": {
+    "plannedFights": 2,
+    "heatBase": "fight",
+    "wantFights": 2
+  },
+  "pressure": {
+    "turn": 0,
+    "clockRolls": 0,
+    "clockFired": 0,
+    "triggerNumber": 1,
+    "escalated": false,
+    "tab": 6,
+    "target": 5
+  }
+}

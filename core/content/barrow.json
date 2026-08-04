@@ -1,0 +1,843 @@
+{
+  "id": "barrow",
+  "label": "Barrow",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "_model": "Everything derives from one kernel: an APPETITE and the ACCOMMODATION made for it. The motif, danger, prize kind and faction all follow from the appetite. Cue fragments hang off the MOTIF and are tagged by FACET (institution/ritual/demand/wound/anchor) and level, so two delves sharing a motif draw different imagery. The foreshadow chain is a fixed facet progression mapped onto the arc — which is why area 2's bows and area 4's scratched eyes both point at the same wound.",
+  "appetites": [
+    {
+      "id": "seen",
+      "want": "to be looked at",
+      "motif": "looking",
+      "prize": "likeness",
+      "conscript": "an audience",
+      "lack": "unlooked-at",
+      "purpose": "someone would always be looking",
+      "appeasement": {
+        "move": "look at it and say plainly what you see",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it is being looked at, which is all it ever wanted",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "remembered",
+      "want": "never to be forgotten",
+      "motif": "naming",
+      "prize": "record",
+      "conscript": "witnesses",
+      "lack": "forgotten",
+      "purpose": "someone would always remember",
+      "appeasement": {
+        "move": "say its name aloud, correctly, unprompted",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "someone remembered",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "obeyed",
+      "want": "to be obeyed without asking",
+      "motif": "voices",
+      "prize": "seal",
+      "conscript": "a household",
+      "lack": "disobeyed",
+      "purpose": "someone would always obey",
+      "appeasement": {
+        "move": "do one small thing it asks, without arguing",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was obeyed",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "young",
+      "want": "never to age",
+      "motif": "keeping",
+      "prize": "vessel",
+      "conscript": "the young",
+      "lack": "old",
+      "purpose": "nothing would ever age",
+      "appeasement": {
+        "move": "tell it that it has not changed",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it hears that nothing has aged",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "envied",
+      "want": "to be envied",
+      "motif": "display",
+      "prize": "ornament",
+      "conscript": "rivals",
+      "lack": "unenvied",
+      "purpose": "someone would always envy them",
+      "appeasement": {
+        "move": "admire something of its openly, and mean it",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it is envied again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "attended",
+      "want": "never to be alone",
+      "motif": "company",
+      "prize": "token",
+      "conscript": "servants",
+      "lack": "alone",
+      "purpose": "someone would always be there",
+      "appeasement": {
+        "move": "sit down and stay a while",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is not alone",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "forgiven",
+      "want": "to be told it was not a sin",
+      "motif": "confession",
+      "prize": "testament",
+      "conscript": "confessors",
+      "lack": "unforgiven",
+      "purpose": "someone would always absolve them",
+      "appeasement": {
+        "move": "tell it that what it did was not a sin",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is absolved, for a moment",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "first",
+      "want": "to be first in all things",
+      "motif": "precedence",
+      "prize": "regalia",
+      "conscript": "a procession",
+      "lack": "second",
+      "purpose": "someone would always go behind them",
+      "appeasement": {
+        "move": "stand aside and let it go ahead of you",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it goes first",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "interred",
+      "text": "had {conscript} interred alive alongside them",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "remembered",
+        "attended",
+        "forgiven",
+        "obeyed",
+        "first"
+      ]
+    },
+    {
+      "id": "bound",
+      "text": "bound {conscript} by oath they could not break",
+      "cruelty": 2,
+      "fits": [
+        "obeyed",
+        "attended",
+        "forgiven",
+        "first",
+        "remembered"
+      ]
+    },
+    {
+      "id": "replaced",
+      "text": "replaced {conscript} with something more obedient",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "obeyed",
+        "envied",
+        "young",
+        "attended"
+      ]
+    },
+    {
+      "id": "unmade",
+      "text": "had the faces struck from {conscript}",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "remembered",
+        "envied",
+        "first"
+      ]
+    },
+    {
+      "id": "purchased",
+      "text": "bought {conscript} from those with nothing left",
+      "cruelty": 2,
+      "fits": [
+        "envied",
+        "attended",
+        "young",
+        "obeyed"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "would not let {conscript} leave, and then could not",
+      "cruelty": 1,
+      "fits": [
+        "young",
+        "attended",
+        "seen",
+        "remembered"
+      ]
+    }
+  ],
+  "motifs": {
+    "looking": {
+      "danger": "attention",
+      "dangerLine": "the barrow notices those who are seen",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "mourners carved beside every step, their faces smooth blank ovals",
+          "attendants posed facing an empty centre, heads all turned the same way",
+          "seats arranged in a half-circle around one chair"
+        ],
+        "ritual": [
+          "courtiers bent in a bow they have been holding for three hundred years",
+          "a receiving line of the dead, still waiting to be presented",
+          "gloves laid out for hands that would be kissed"
+        ],
+        "demand": [
+          "hand-mirrors set into the walls, hundreds, every one angled inward",
+          "a chamber where every surface has been polished to show you back",
+          "a chair placed so that whoever sits in it must be looked at"
+        ],
+        "wound": [
+          "portraits of the same woman, the eyes scratched out by fingernails",
+          "likenesses turned to face the wall, every one of them",
+          "a face chiselled off a statue, and the chisel left behind"
+        ],
+        "anchor": [
+          "a covered frame the height of a person, facing away from the door",
+          "a wardrobe of three hundred dresses in a room with no dust in it",
+          "one thing under cloth, and the cloth is clean"
+        ]
+      }
+    },
+    "naming": {
+      "danger": "recognition",
+      "dangerLine": "to say a name here is to be answered",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "names cut into the lintel, each one struck through",
+          "the dead laid out in the order their names were entered",
+          "a register stone, filled edge to edge"
+        ],
+        "ritual": [
+          "a roll of the dead being read aloud by nobody",
+          "grave-goods labelled in a hand that keeps correcting itself",
+          "an oath cut into the floor, to be spoken on entering"
+        ],
+        "demand": [
+          "a wall of tongues in wax, each with a name pressed into it",
+          "a chamber that repeats the last name spoken in it",
+          "a blank plate at the head of the hall, waiting"
+        ],
+        "wound": [
+          "a name gouged out so deeply it went through the stone",
+          "a ledger with one line scraped away and rewritten forty times",
+          "monuments to someone whose name nobody kept"
+        ],
+        "anchor": [
+          "a book of names with one line left blank",
+          "a seal cut with a name worn smooth by rubbing",
+          "a tally-stick longer than a person"
+        ]
+      }
+    },
+    "voices": {
+      "danger": "obedience",
+      "dangerLine": "the dead here still take instruction, and give it",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a bell-pull beside every alcove, all of them still taut",
+          "servants' bones arranged as though mid-errand",
+          "a board of numbered bells, one still swinging"
+        ],
+        "ritual": [
+          "orders scratched into the floor, the last one unfinished",
+          "a speaking-tube running the barrow's length, warm to the touch",
+          "a queue of the dead outside a door that never opened"
+        ],
+        "demand": [
+          "a hall where your own voice arrives before you speak",
+          "a seat that expects to be addressed",
+          "a room that will not carry sound away from its centre"
+        ],
+        "wound": [
+          "jaws wired shut, every one of them",
+          "an instruction repeated until the stone gave out",
+          "a tongue-shaped hollow worn into a step"
+        ],
+        "anchor": [
+          "a signet still warm, sized for a thumb",
+          "a staff of office propped where it was set down",
+          "a key that fits nothing here"
+        ]
+      }
+    },
+    "keeping": {
+      "danger": "preservation",
+      "dangerLine": "nothing here is allowed to change, including you",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "flowers on the steps that have not wilted or dried",
+          "a bed made fresh this morning, three centuries running",
+          "lamps trimmed and filled, all of them"
+        ],
+        "ritual": [
+          "a meal laid out, still warm, for people long past eating",
+          "clothes brushed and hung in the order they would be worn",
+          "a clock wound by somebody, recently"
+        ],
+        "demand": [
+          "jars along the wall, each holding a single year",
+          "a mirror that shows the room a little younger than it is",
+          "a room that resets itself if you look away"
+        ],
+        "wound": [
+          "a child's shoes, unworn, in eleven sizes",
+          "portraits ageing in sequence, then stopping",
+          "something kept so well it has forgotten how to end"
+        ],
+        "anchor": [
+          "a vessel, sealed, still faintly warm",
+          "an hourglass that has never been turned",
+          "a casket sized for something smaller than a body"
+        ]
+      }
+    },
+    "display": {
+      "danger": "comparison",
+      "dangerLine": "the barrow measures you against its host",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "plinths along the stair, each holding a rival's finest thing",
+          "a gallery of gifts, none of them opened",
+          "cases arranged so the best is always further in"
+        ],
+        "ritual": [
+          "trophies mounted at a height that forces you to look up",
+          "a book recording who admired what, and for how long",
+          "a ribbon for every visitor who conceded the point"
+        ],
+        "demand": [
+          "an empty plinth, larger than the rest, waiting",
+          "a room that leaves you nowhere to stand but the centre",
+          "a case angled so you see yourself beside the prize"
+        ],
+        "wound": [
+          "a case of crowns, each slightly better than the last, all of them scratched",
+          "gifts defaced by whoever gave them",
+          "a plinth toppled, and the label kept"
+        ],
+        "anchor": [
+          "the piece every rival was meant to want, still under glass",
+          "a case holding one item and a great deal of space",
+          "a lock polished more often than the thing it guards"
+        ]
+      }
+    },
+    "company": {
+      "danger": "attachment",
+      "dangerLine": "the barrow does not like it when people leave",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "two sets of footprints in the dust, going in only",
+          "bedding laid for more than were ever buried",
+          "a coat-rack, full"
+        ],
+        "ritual": [
+          "chairs drawn up in a circle, all facing one seat",
+          "places set every evening for three hundred years",
+          "a table laid for more than were ever buried here"
+        ],
+        "demand": [
+          "hands, skeletal, holding other hands, the length of a hall",
+          "a doorway with the hinges taken off",
+          "a room arranged for a conversation that never ended"
+        ],
+        "wound": [
+          "a door barred from the inside, and the marks of it",
+          "scratches on the inside of a lid",
+          "a name called so often it wore into the wall"
+        ],
+        "anchor": [
+          "a keepsake still warm from being held",
+          "a chair kept empty and dusted",
+          "a second cup, always out"
+        ]
+      }
+    },
+    "confession": {
+      "danger": "judgement",
+      "dangerLine": "the barrow is still listening for the right answer",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a kneeler worn through to the stone",
+          "a screen with a hole cut at the height of a mouth",
+          "benches facing one small window"
+        ],
+        "ritual": [
+          "written confessions, thousands, all in the same hand",
+          "a bell rung to begin, still roped",
+          "a queue of the dead facing a curtain"
+        ],
+        "demand": [
+          "a chamber where the echo answers differently than you spoke",
+          "a scale with a feather on one side and nothing on the other",
+          "a seat that will not let you rise until you have spoken"
+        ],
+        "wound": [
+          "a page torn from every book at the same place",
+          "a mouth chiselled off a statue",
+          "absolutions burned, and the ash kept"
+        ],
+        "anchor": [
+          "a confession nobody ever heard, sealed",
+          "a ledger of sins with the last page blank",
+          "a box that has only ever been opened once"
+        ]
+      }
+    },
+    "precedence": {
+      "danger": "procession",
+      "dangerLine": "the barrow keeps its order, and you have joined the queue",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a stair too grand for the door it serves",
+          "the dead laid in strict order of rank, heads toward the centre",
+          "numbered flagstones, counting down"
+        ],
+        "ritual": [
+          "banners in sequence, each house a place further back",
+          "a herald's script with the order still marked",
+          "a queue that has not moved"
+        ],
+        "demand": [
+          "a corridor that will not let two walk abreast",
+          "a door only one person may pass at a time, and only first",
+          "a threshold worn on one side only"
+        ],
+        "wound": [
+          "rank-plates prised off and swapped",
+          "a name moved to the front by force, repeatedly",
+          "a procession that doubled back on itself"
+        ],
+        "anchor": [
+          "the crown worn first, and only once",
+          "a staff of precedence, laid down",
+          "a seat at the head of everything, occupied"
+        ]
+      }
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Barrow of the",
+      "The Tomb of the",
+      "The Vault of the",
+      "The Halls of the",
+      "The Cairn of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Mourners' Steps",
+      "The Long Descent",
+      "The Threshold Stones",
+      "The Weeping Stair",
+      "The Outer Cut"
+    ],
+    "complication": [
+      "The Antechamber",
+      "The Attendants' Row",
+      "The Lesser Vault",
+      "The First Hall",
+      "The Waiting Room"
+    ],
+    "turn": [
+      "The Gallery",
+      "The Turning Hall",
+      "The Records Room",
+      "The Middle Vault",
+      "The Crossing"
+    ],
+    "descent": [
+      "The Under-Vault",
+      "The Cold Gallery",
+      "The Servants' Deep",
+      "The Sunken Nave",
+      "The Lower Cut"
+    ],
+    "threshold": [
+      "The Robing Room",
+      "The Antechamber Royal",
+      "The Last Door",
+      "The Inner Vault",
+      "The Quiet Room"
+    ],
+    "ending": [
+      "The Audience",
+      "The Throne Beneath",
+      "The Long Hall",
+      "The Seat of the Host"
+    ]
+  },
+  "factions": [
+    {
+      "id": "host",
+      "name": "The Silent Host",
+      "kind": "undead",
+      "essence": "still performing the ritual they were buried for",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "robbers",
+      "name": "grave-robbers",
+      "kind": "living",
+      "essence": "got in first and cannot get out",
+      "handledBy": "trade"
+    },
+    {
+      "id": "wardens",
+      "name": "the Barrow-Wardens",
+      "kind": "undead",
+      "essence": "sealed this place and stayed to make sure",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "scavengers",
+      "name": "things that moved in",
+      "kind": "beast",
+      "essence": "neither know nor care whose tomb this is",
+      "handledBy": "force or food"
+    }
+  ],
+  "features": [
+    "a door that has been wedged open from the inside",
+    "a hole broken through a wall, recently, and not by you",
+    "water that has got in and taken three centuries to do it",
+    "a lamp still burning on oil that should be long gone",
+    "a collapse that has opened a way the builders never meant",
+    "grave-goods stacked with obsessive neatness",
+    "a floor mosaic worn only along one path",
+    "an alcove emptied in a hurry"
+  ],
+  "decisions": [
+    {
+      "cue": "two ways on: one narrow and dark, one wide and announced",
+      "cost": "the wide way is faster and the barrow hears it"
+    },
+    {
+      "cue": "a sealed door, and a crack you could squeeze through",
+      "cost": "the crack costs skin and a Bane on a failure"
+    },
+    {
+      "cue": "something valuable, awkward to carry",
+      "cost": "carrying it slows you and it is not yours"
+    },
+    {
+      "cue": "a member of the faction, alone and not yet hostile",
+      "cost": "talking costs time; not talking costs later"
+    },
+    {
+      "cue": "a shortcut down, through water",
+      "cost": "everything gets wet, including what burns"
+    },
+    {
+      "cue": "a way back, still open",
+      "cost": "leaving now means it will be worse when you return"
+    }
+  ],
+  "temptations": [
+    {
+      "id": "mask",
+      "cue": "a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile",
+      "benefit": "the Host receives you as court",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "while worn you cannot be recognised by name"
+    },
+    {
+      "id": "ring",
+      "cue": "a signet, still warm",
+      "benefit": "doors that answer to rank open for you",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "the barrow's servants bring you their problems"
+    },
+    {
+      "id": "glass",
+      "cue": "a hand-mirror that shows the room a moment behind",
+      "benefit": "once per scene, see what was just here",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "your reflection lags, and others notice"
+    },
+    {
+      "id": "ledger",
+      "cue": "a book of names, one line left blank",
+      "benefit": "write a name and the Host obeys it once",
+      "acceptanceCost": {
+        "vice": "Pride"
+      },
+      "useCost": {
+        "bane": 2
+      },
+      "standingDrawback": "your own name is now in it"
+    },
+    {
+      "id": "coronet",
+      "cue": "a small crown, sized for someone who never grew",
+      "benefit": "+1 die when others must defer to you",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "you must be addressed correctly or lose the benefit"
+    }
+  ],
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "prizes": {
+    "likeness": {
+      "label": "a portrait painted while they still had a face",
+      "function": "the only place they can be seen"
+    },
+    "record": {
+      "label": "the one complete roll of the dead",
+      "function": "the only place the name survives"
+    },
+    "seal": {
+      "label": "the signet that is still obeyed",
+      "function": "the only thing the household answers to"
+    },
+    "vessel": {
+      "label": "a sealed jar holding one good year",
+      "function": "the only thing here that has not aged"
+    },
+    "ornament": {
+      "label": "the piece every rival was meant to want",
+      "function": "the reason the others came"
+    },
+    "token": {
+      "label": "a keepsake they would not be parted from",
+      "function": "the promise that someone would stay"
+    },
+    "testament": {
+      "label": "a confession nobody ever heard",
+      "function": "the only account of what was done"
+    },
+    "regalia": {
+      "label": "the crown worn first, and only once",
+      "function": "the proof of precedence"
+    }
+  },
+  "claimants": [
+    "Vain Queen",
+    "Hollow King",
+    "Peacock Prince",
+    "Patient Lord",
+    "Gilded Abbess",
+    "Unlooked-For Heir",
+    "Silent Margrave"
+  ],
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; half harm from arrows"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they do not open hostilities on a guest"
+    },
+    "fight": {
+      "line": "1 Ghoul and 2 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "on a hit, a free Called Shot to freeze for a round"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "the Ghoul goes for court dress first — send someone plain"
+    },
+    "battle": {
+      "line": "1 Wraith and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour and drains 1 max Grit"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons ONLY",
+      "avoid": "it will take an appeasement over a fight every time"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ghoul and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL"
+        },
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "freezes on a hit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "triggerGlossary": {
+    "announced": "entered somewhere grandly — the big doors, a shout, a herald",
+    "seenTwice": "reflected, echoed or witnessed twice over in one place",
+    "loud": "a raised voice, a broken door, steel on stone",
+    "lingering": "stayed in one place longer than it takes to search it",
+    "disturbed": "struck or moved something that had not moved in centuries"
+  }
+}
