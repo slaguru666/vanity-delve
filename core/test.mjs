@@ -55,7 +55,7 @@ for (let i = 0; i < 30; i++) {
 t('no repeated cue fragment inside one delve', repeats === 0, `${repeats}/30 had repeats`);
 
 // motif-scoping: the furniture must belong to the fiction, not a global pool
-let offMotifDecisions = 0, offMotifTemptations = 0, checked = 0;
+let offMotifDecisions = 0, offMotifTemptations = 0, offMotifFeatures = 0, checked = 0;
 for (let i = 0; i < 40; i++) {
   const d = generateDelve({ pack, seed: `scope-${i}`, areas: 6 });
   const m = pack.motifs[d.skeleton.motif.id];
@@ -65,9 +65,11 @@ for (let i = 0; i < 40; i++) {
     checked++;
     if (a.decision && !okD.has(a.decision.cue)) offMotifDecisions++;
     if (a.temptation && !okT.has(a.temptation.id)) offMotifTemptations++;
+    if (a.cueFragments[1] && !(m.features ?? []).includes(a.cueFragments[1])) offMotifFeatures++;
   }
 }
 t('decisions come from the delve\'s own motif', offMotifDecisions === 0, `${offMotifDecisions}/${checked} off-motif`);
+t('features come from the delve\'s own motif', offMotifFeatures === 0, `${offMotifFeatures}/${checked} off-motif`);
 t('temptations come from the delve\'s own motif', offMotifTemptations === 0, `${offMotifTemptations} off-motif`);
 
 // no repeated decision or temptation inside one delve
@@ -83,6 +85,20 @@ for (let i = 0; i < 40; i++) {
 }
 t('no repeated decision inside one delve', dupD === 0, `${dupD}/80`);
 t('no repeated temptation inside one delve', dupT === 0, `${dupT}/80`);
+
+// every decision must be resolvable, and no decision may gate progress without an escape
+let noResolve = 0, noEscape = 0, halfSpecified = 0;
+for (const m of Object.values(pack.motifs)) {
+  for (const dec of m.decisions ?? []) {
+    const r = dec.resolve;
+    if (!r) { noResolve++; continue; }
+    if (!r.orElse) noEscape++;
+    if (r.roll && (!r.success || !r.failure)) halfSpecified++;
+  }
+}
+t('every decision has a resolution', noResolve === 0, `${noResolve} missing`);
+t('no decision gates progress without an alternative', noEscape === 0, `${noEscape} gated — playtest 1 died on one`);
+t('every rolled decision states success AND failure', halfSpecified === 0, `${halfSpecified} half-specified`);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

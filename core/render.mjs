@@ -78,6 +78,15 @@ export function renderMarkdown(d) {
       L.push('');
     }
     L.push(`**The decision.** ${a.decision.cue} — *${a.decision.cost}*`);
+    const rv = a.decision.resolve;
+    if (rv) {
+      if (rv.roll) {
+        L.push(`- **Attempt it:** \`[VANITY: ${rv.roll}]\``);
+        L.push(`- **Success:** ${rv.success}`);
+        L.push(`- **Failure:** ${rv.failure}`);
+      }
+      L.push(`- **Or simply:** ${rv.orElse}`);
+    }
     L.push('');
     if (a.encounter) {
       const R = a.encounter.roster;

@@ -45,7 +45,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a stair too grand for the door it serves
-- a floor mosaic worn only along one path
+- the queue disturbed — three of the dead pushed aside
 
 **Truth.** this is how the place was ordered, and it still is. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 
@@ -68,7 +68,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - banners in sequence, each house a place further back
-- grave-goods stacked with obsessive neatness
+- a seat at the head of the hall dragged back, as if to sit in
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 
@@ -91,7 +91,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a herald's script with the order still marked
-- an alcove emptied in a hurry
+- someone has walked the corridor the wrong way, scuffing one side
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 
@@ -114,7 +114,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a door only one person may pass at a time, and only first
-- a collapse that has opened a way the builders never meant
+- a numbered flagstone lifted and not replaced
 
 **Truth.** here the want is explicit — the place asks something of whoever enters. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 
@@ -152,7 +152,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a procession that doubled back on itself
-- a lamp still burning on oil that should be long gone
+- banners pulled down and stacked without regard for order
 
 **Truth.** this is the damage the want did to those who had to satisfy it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 
@@ -180,7 +180,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a seat at the head of everything, occupied
-- a door that has been wedged open from the inside
+- a rank-plate prised off and dropped, still shiny where it sat
 
 **Truth.** the thing the whole barrow is arranged around is close. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
 

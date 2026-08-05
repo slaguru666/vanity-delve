@@ -45,7 +45,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - lamps trimmed and filled, all of them
-- water that has got in and taken three centuries to do it
+- a seal broken and the contents already spoiled
 
 **Truth.** this is how the place was ordered, and it still is. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 
@@ -68,7 +68,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a meal laid out, still warm, for people long past eating
-- a collapse that has opened a way the builders never meant
+- one preserved thing removed, leaving a clean shape in the dust
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 
@@ -106,7 +106,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a clock wound by somebody, recently
-- grave-goods stacked with obsessive neatness
+- a fire built recently, of furniture that was three centuries old
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 
@@ -144,7 +144,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a room that resets itself if you look away
-- a floor mosaic worn only along one path
+- a clock stopped by hand — the pendulum caught and tied
 
 **Truth.** here the want is explicit — the place asks something of whoever enters. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 
@@ -172,7 +172,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - something kept so well it has forgotten how to end
-- a door that has been wedged open from the inside
+- rot, in exactly one place, spreading
 
 **Truth.** this is the damage the want did to those who had to satisfy it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 
@@ -195,7 +195,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a casket sized for something smaller than a body
-- a lamp still burning on oil that should be long gone
+- something here has been eaten, which should not be possible
 
 **Truth.** the thing the whole barrow is arranged around is close. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
 

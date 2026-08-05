@@ -42,7 +42,8 @@ export function generateDelve(params = {}) {
   // cohered but the things in the rooms did not belong to it.
   const motifPack = pack.motifs?.[skeleton.motif.id] ?? {};
   const decisionPool = motifPack.decisions?.length ? motifPack.decisions : (pack.decisions ?? []);
-  const features = deal(pack.features ?? [], plan.areas.length, 'features');
+  const featurePool = motifPack.features?.length ? motifPack.features : (pack.features ?? []);
+  const features = deal(featurePool, plan.areas.length, 'features', pack.features ?? []);
   const decisions = deal(decisionPool, plan.areas.length, 'decisions', pack.decisions ?? []);
 
   // Temptations are dealt across the areas that carry a hoard, for the same reason as decisions:

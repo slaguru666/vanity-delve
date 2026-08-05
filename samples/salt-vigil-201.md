@@ -45,7 +45,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a coat-rack, full
-- a door that has been wedged open from the inside
+- two cups set out and one of them recently drunk from
 
 **Truth.** this is how the place was ordered, and it still is. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 
@@ -68,7 +68,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - places set every evening for three hundred years
-- a collapse that has opened a way the builders never meant
+- someone has been counting the dead — tally marks by the entrance
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 
@@ -96,7 +96,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - chairs drawn up in a circle, all facing one seat
-- a lamp still burning on oil that should be long gone
+- a bedroll, used, and not by anyone buried here
 
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 
@@ -134,7 +134,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a doorway with the hinges taken off
-- a floor mosaic worn only along one path
+- a name carved beside another, joining them, badly
 
 **Truth.** here the want is explicit — the place asks something of whoever enters. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 
@@ -172,7 +172,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a name called so often it wore into the wall
-- a hole broken through a wall, recently, and not by you
+- a door tied open with a belt, so it could not close
 
 **Truth.** this is the damage the want did to those who had to satisfy it. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 
@@ -195,7 +195,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a chair kept empty and dusted
-- an alcove emptied in a hurry
+- a chair dragged out of position and left where it was needed
 
 **Truth.** the thing the whole barrow is arranged around is close. The Peacock Prince bound servants by oath they could not break, so that someone would always be there.
 

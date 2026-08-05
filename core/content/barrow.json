@@ -289,27 +289,63 @@
       "decisions": [
         {
           "cue": "a doorway you can only reach by crossing open floor, in full view",
-          "cost": "cross it and you are seen — roll the clock; go the long way and lose a Turn"
+          "cost": "cross it and you are seen — roll the clock; go the long way and lose a Turn",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you time the crossing between whatever is watching — no clock roll",
+            "failure": "you are seen: roll the clock now",
+            "orElse": "go the long way: one Turn, no risk"
+          }
         },
         {
           "cue": "a mirror blocking the passage, angled to catch whoever passes",
-          "cost": "cover it and something notices the dark; pass it and something notices you"
+          "cost": "cover it and something notices the dark; pass it and something notices you",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you cover it without meeting your own eye — pass freely",
+            "failure": "you meet your own eye: +1 Bane and roll the clock",
+            "orElse": "smash it — loud, roll the clock, but done"
+          }
         },
         {
           "cue": "a portrait that must be moved to open the way behind it",
-          "cost": "turn it to the wall and the Host takes offence; carry it and you are announced everywhere"
+          "cost": "turn it to the wall and the Host takes offence; carry it and you are announced everywhere",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you turn it aside with enough ceremony that the Host takes no offence",
+            "failure": "the Host is offended: they will not receive you until someone appeases",
+            "orElse": "leave it and squeeze past: one Turn, and you are watched"
+          }
         },
         {
           "cue": "a gallery lit end to end, and an unlit servants' crawl beside it",
-          "cost": "the gallery is quick and bright; the crawl costs a Turn and a Brawn roll"
+          "cost": "the gallery is quick and bright; the crawl costs a Turn and a Brawn roll",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you make the crawl in good order",
+            "failure": "you arrive filthy and stuck: lose a Turn, +1 Bane",
+            "orElse": "take the gallery: fast, bright, and you are seen"
+          }
         },
         {
           "cue": "a shuttered window onto the next room, and a choice about opening it",
-          "cost": "looking through costs nothing; being seen looking costs a Bane"
+          "cost": "looking through costs nothing; being seen looking costs a Bane",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you see through without being framed in the opening",
+            "failure": "you are framed: whatever is beyond has your description",
+            "orElse": "do not look; you go in blind but unannounced"
+          }
         },
         {
           "cue": "a room you must cross either quickly or quietly",
-          "cost": "quick is one Turn and a clock roll; quiet is two Turns and none"
+          "cost": "quick is one Turn and a clock roll; quiet is two Turns and none",
+          "resolve": {
+            "roll": null,
+            "success": null,
+            "failure": null,
+            "orElse": "a pure choice: quick costs a clock roll, quiet costs two Turns"
+          }
         }
       ],
       "temptations": [
@@ -361,6 +397,14 @@
           },
           "standingDrawback": "they are watching you back"
         }
+      ],
+      "features": [
+        "a mirror smashed deliberately, and recently — the pieces swept into a corner",
+        "scorch-marks where someone burned a portrait and did not stay to watch",
+        "a sheet thrown over something, by living hands, in a hurry",
+        "eyeholes bored through a wall at three different heights",
+        "a lamp set facing the wall so it lights nothing but stone",
+        "dust disturbed in a wide circle, as though someone turned slowly on the spot"
       ]
     },
     "naming": {
@@ -397,27 +441,63 @@
       "decisions": [
         {
           "cue": "a door with a name cut into it, and a space beneath for a reply",
-          "cost": "answer with your own name and it opens — and it is written down"
+          "cost": "answer with your own name and it opens — and it is written down",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you give a name that is true enough to open it and thin enough to cost nothing",
+            "failure": "the door takes your real name: it is written down, and things here now use it",
+            "orElse": "refuse to answer: the door stays shut, find another way at one Turn"
+          }
         },
         {
           "cue": "a roll of the dead, and one line you could strike out",
-          "cost": "striking a name frees something; it also puts you where the name was"
+          "cost": "striking a name frees something; it also puts you where the name was",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you strike the name cleanly and something long-bound is released, grateful",
+            "failure": "the strike is crooked: you are entered where the name was, +1 Bane",
+            "orElse": "leave the roll alone; nothing is freed and nothing is owed"
+          }
         },
         {
           "cue": "someone's name called softly from two directions at once",
-          "cost": "answer either and the other stops calling"
+          "cost": "answer either and the other stops calling",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you work out which call is the real one",
+            "failure": "you answer the wrong one and the other keeps calling, closer",
+            "orElse": "answer neither: both keep calling for the rest of the delve"
+          }
         },
         {
           "cue": "a lintel you must be announced under, or crawl beneath",
-          "cost": "announced costs a Bane; crawling costs your dignity and a Turn"
+          "cost": "announced costs a Bane; crawling costs your dignity and a Turn",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you are announced as something grander than you are, and it holds",
+            "failure": "the announcement is thin and the Host hears it: +1 Bane",
+            "orElse": "crawl beneath: undignified, one Turn, entirely safe"
+          }
         },
         {
           "cue": "a list of the dead with one name you recognise",
-          "cost": "saying it aloud helps; it also tells the barrow you are connected"
+          "cost": "saying it aloud helps; it also tells the barrow you are connected",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the hand is recent — you learn who else is down here and roughly when",
+            "failure": "you learn nothing but leave your own mark on the page",
+            "orElse": "do not touch it; the name stays unread"
+          }
         },
         {
           "cue": "two passages, and someone is being called down one of them",
-          "cost": "follow the voice and be expected; take the other and arrive unannounced"
+          "cost": "follow the voice and be expected; take the other and arrive unannounced",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you follow the voice and arrive expected, which opens doors",
+            "failure": "you arrive expected by the wrong thing",
+            "orElse": "take the other passage: unannounced, one extra Turn"
+          }
         }
       ],
       "temptations": [
@@ -469,6 +549,14 @@
           },
           "standingDrawback": "they come whenever your name is said aloud"
         }
+      ],
+      "features": [
+        "a name freshly scratched over an old one, in a modern hand",
+        "a page torn out and the stub still in the binding",
+        "someone has been writing their own name on things, repeatedly",
+        "a gravestone laid face-down, which takes two people",
+        "chalk marks numbering the doorways, not old",
+        "a name spoken so recently the air still feels used"
       ]
     },
     "voices": {
@@ -505,27 +593,63 @@
       "decisions": [
         {
           "cue": "an order carved into the floor, still legible",
-          "cost": "obey it and the Host counts you as household; step over it and they do not"
+          "cost": "obey it and the Host counts you as household; step over it and they do not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you obey exactly enough to be counted household — Skeletons stand down for you",
+            "failure": "you obey wrongly, which is worse than not obeying: +1 Bane",
+            "orElse": "step over it: no cost now, and the Host does not count you as theirs"
+          }
         },
         {
           "cue": "a speaking-tube that is warm, and asking a question down it",
-          "cost": "an answer comes back — and now something knows where you are"
+          "cost": "an answer comes back — and now something knows where you are",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the tube answers truly, and you learn the way on",
+            "failure": "something answers and now knows where you are: roll the clock",
+            "orElse": "do not speak into it; you keep your position but learn nothing"
+          }
         },
         {
           "cue": "a bell-pull that would summon someone",
-          "cost": "ring it and help comes, and it is not the kind you wanted"
+          "cost": "ring it and help comes, and it is not the kind you wanted",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "what comes is answerable to you for one scene",
+            "failure": "what comes is not the kind of help you wanted",
+            "orElse": "do not ring: the way on is longer by one Turn"
+          }
         },
         {
           "cue": "two doors, and behind one a voice giving instructions to nobody",
-          "cost": "the quiet door is longer; the voice would tell you exactly where to go"
+          "cost": "the quiet door is longer; the voice would tell you exactly where to go",
+          "resolve": {
+            "roll": null,
+            "success": null,
+            "failure": null,
+            "orElse": "a pure choice: the voice names the route exactly, the quiet door takes one Turn"
+          }
         },
         {
           "cue": "an instruction you can obey, ignore, or countermand",
-          "cost": "countermanding it works once and marks you as someone who gives orders"
+          "cost": "countermanding it works once and marks you as someone who gives orders",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you countermand it and the dead obey you instead — this marks you as someone who gives orders: from now on the Host brings you their disputes, and once per delve you may issue one order they must follow",
+            "failure": "the order stands and you have been seen to fail at giving one: +1 Bane, and the Host addresses someone else from now on",
+            "orElse": "obey it, or ignore it and go round: ignoring costs one Turn"
+          }
         },
         {
           "cue": "a door that opens to a spoken password nobody living knows",
-          "cost": "guessing costs a Bane per attempt; the long way costs two Turns"
+          "cost": "guessing costs a Bane per attempt; the long way costs two Turns",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the fiction gives you the word — the unfinished order, the wax, the name on the tube all point at it",
+            "failure": "you have the shape of it but not the word: one more attempt, or take the long way",
+            "orElse": "the long way: two Turns, no guessing, no Banes"
+          }
         }
       ],
       "temptations": [
@@ -577,6 +701,14 @@
           },
           "standingDrawback": "you cannot hear warnings either"
         }
+      ],
+      "features": [
+        "a bell-rope cut through, cleanly, from this side",
+        "wax jammed into a speaking-tube, still soft",
+        "an order half-scratched out and rewritten by a different hand",
+        "a door braced shut from within by furniture",
+        "boot-prints that stop mid-corridor and do not resume",
+        "someone has been talking here, and stopped when you arrived"
       ]
     },
     "keeping": {
@@ -613,27 +745,63 @@
       "decisions": [
         {
           "cue": "a room you can search, or leave exactly as you found it",
-          "cost": "searching disturbs a preservation three centuries old — roll the clock"
+          "cost": "searching disturbs a preservation three centuries old — roll the clock",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you search without disturbing the arrangement",
+            "failure": "the preservation breaks: roll the clock, and something here begins to rot",
+            "orElse": "leave it exactly as found: nothing gained, nothing woken"
+          }
         },
         {
           "cue": "a sealed jar, and a way on that needs what is inside",
-          "cost": "breaking the seal spends the year it holds, in front of you"
+          "cost": "breaking the seal spends the year it holds, in front of you",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you break the seal cleanly and spend the year deliberately",
+            "failure": "the year escapes all at once, in front of everyone: +1 Bane",
+            "orElse": "find another way: one Turn"
+          }
         },
         {
           "cue": "a bed, made, and a body-shaped hollow that has not filled in",
-          "cost": "lie in it and you rest fully; you also stop, and the barrow prefers that"
+          "cost": "lie in it and you rest fully; you also stop, and the barrow prefers that",
+          "resolve": {
+            "roll": null,
+            "success": null,
+            "failure": null,
+            "orElse": "a pure choice: rest fully and lose a Turn, or press on tired"
+          }
         },
         {
           "cue": "a door held shut by nothing but the fact it has never been opened",
-          "cost": "open it and something that had not changed, changes"
+          "cost": "open it and something that had not changed, changes",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you move it and it survives, just",
+            "failure": "it does not survive, and the barrow notices what you cost it: +1 Bane",
+            "orElse": "squeeze past: one Turn and some skin"
+          }
         },
         {
           "cue": "a preserved thing blocking the way, which will not survive being moved",
-          "cost": "move it and something here ends; leave it and lose a Turn"
+          "cost": "move it and something here ends; leave it and lose a Turn",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you open it having understood what changes",
+            "failure": "something that had not changed, changes, and it was holding something back",
+            "orElse": "leave it shut; the way on is longer"
+          }
         },
         {
           "cue": "food and water laid out, still good",
-          "cost": "eating restores you fully and the barrow adds you to what it keeps"
+          "cost": "eating restores you fully and the barrow adds you to what it keeps",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you eat and are restored entirely",
+            "failure": "you are restored, and the barrow has added you to what it keeps: +1 Bane",
+            "orElse": "do not eat; you keep your Grit as it is"
+          }
         }
       ],
       "temptations": [
@@ -682,6 +850,14 @@
           },
           "standingDrawback": "it also halts something you wanted to finish"
         }
+      ],
+      "features": [
+        "something here has been eaten, which should not be possible",
+        "a seal broken and the contents already spoiled",
+        "a clock stopped by hand — the pendulum caught and tied",
+        "one preserved thing removed, leaving a clean shape in the dust",
+        "a fire built recently, of furniture that was three centuries old",
+        "rot, in exactly one place, spreading"
       ]
     },
     "display": {
@@ -718,27 +894,63 @@
       "decisions": [
         {
           "cue": "an empty plinth, sized for something you are carrying",
-          "cost": "leave a thing and the Host approves; keep it and they compare you unfavourably"
+          "cost": "leave a thing and the Host approves; keep it and they compare you unfavourably",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you leave the offering with enough style that the Host counts you a peer",
+            "failure": "your gift is judged and found wanting: +1 Bane, and they compare you aloud",
+            "orElse": "keep everything: the next door stays shut, find the long way at one Turn"
+          }
         },
         {
           "cue": "a case of trophies and one obviously missing",
-          "cost": "replacing it opens the next door; nothing else will"
+          "cost": "replacing it opens the next door; nothing else will",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what the gap held and what would satisfy it",
+            "failure": "you fill it with the wrong thing and the Host notices the substitution",
+            "orElse": "force the case: loud, roll the clock, and the display is ruined"
+          }
         },
         {
           "cue": "two ways on: one you must be invited down, one you may simply take",
-          "cost": "the invitation costs an act of admiration; taking it costs their good opinion"
+          "cost": "the invitation costs an act of admiration; taking it costs their good opinion",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "the invitation is given and you go down honoured",
+            "failure": "your admiration rings false: +1 Bane",
+            "orElse": "take the open way instead — free, and they think less of you for it"
+          }
         },
         {
           "cue": "a gift left for you, unopened, with your description on it",
-          "cost": "opening it accepts the comparison; leaving it is a refusal, and noted"
+          "cost": "opening it accepts the comparison; leaving it is a refusal, and noted",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you open it and find something chosen for someone like you",
+            "failure": "you open it and find it was not for you at all",
+            "orElse": "leave it: a refusal, noted, and the Host is cooler from here"
+          }
         },
         {
           "cue": "a comparison invited — your gear against theirs",
-          "cost": "engage and gain their favour; decline and be marked as beneath notice"
+          "cost": "engage and gain their favour; decline and be marked as beneath notice",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you win the comparison and their favour with it",
+            "failure": "you lose it publicly: +1 Bane and the Host addresses someone else",
+            "orElse": "decline: you are beneath notice, which is its own kind of safe"
+          }
         },
         {
           "cue": "a display you could improve, or rob",
-          "cost": "improving it opens the next door; robbing it opens all of them, badly"
+          "cost": "improving it opens the next door; robbing it opens all of them, badly",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you improve the display and the next door opens for a benefactor",
+            "failure": "your improvement is vandalism to them: +1 Bane",
+            "orElse": "rob it: every door in the barrow opens badly from now on"
+          }
         }
       ],
       "temptations": [
@@ -790,6 +1002,14 @@
           },
           "standingDrawback": "someone will want to test that"
         }
+      ],
+      "features": [
+        "an empty case with the lock forced and the label left",
+        "a plinth pushed over, and nobody righted it",
+        "price marks chalked on the exhibits by someone practical",
+        "the best piece gone and a worse one moved into its place",
+        "a trophy defaced with a knife, thoroughly",
+        "sacking and rope left behind by people who meant to carry a lot"
       ]
     },
     "company": {
@@ -826,27 +1046,63 @@
       "decisions": [
         {
           "cue": "one of the dead follows you and will not be told otherwise",
-          "cost": "let it come and doors open; send it back and they close"
+          "cost": "let it come and doors open; send it back and they close",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you let it come, courteously — it opens doors and stays close",
+            "failure": "it attaches: it will not be sent back, and it follows you out",
+            "orElse": "send it back firmly: doors close, and the way on costs a Turn"
+          }
         },
         {
           "cue": "a chair drawn out, and a place laid, and time to sit",
-          "cost": "sitting costs a Turn and buys the Host's goodwill entirely"
+          "cost": "sitting costs a Turn and buys the Host's goodwill entirely",
+          "resolve": {
+            "roll": null,
+            "success": null,
+            "failure": null,
+            "orElse": "a pure choice: sit and lose a Turn for the Host's goodwill entirely, or press on"
+          }
         },
         {
           "cue": "a door that will only admit one of you at a time",
-          "cost": "splitting the party is exactly what this place wants"
+          "cost": "splitting the party is exactly what this place wants",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the order that gets everyone through without splitting for long",
+            "failure": "you are separated: the party is in two places when the clock next fires",
+            "orElse": "refuse to split: the door is not passed, one Turn to find another"
+          }
         },
         {
           "cue": "a hand, skeletal, held out to be taken",
-          "cost": "take it and you are not alone; you are also not alone later"
+          "cost": "take it and you are not alone; you are also not alone later",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you take it and are not alone — once, something comes when you call",
+            "failure": "you take it and are not alone later either, whether you call or not",
+            "orElse": "do not take it: it is left held out, and the Host remembers"
+          }
         },
         {
           "cue": "a way on that only works if someone stays behind",
-          "cost": "whoever stays is not alone, and that is the problem"
+          "cost": "whoever stays is not alone, and that is the problem",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "whoever stays holds the way open and rejoins later, shaken",
+            "failure": "whoever stays is kept: they rejoin at the ending, changed",
+            "orElse": "nobody stays: the way is impassable, two Turns to go round"
+          }
         },
         {
           "cue": "an invitation to stay the night, meant sincerely",
-          "cost": "accepting restores everything and costs a Turn and a Bane"
+          "cost": "accepting restores everything and costs a Turn and a Bane",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you accept, rest fully, and the Host is yours for the delve",
+            "failure": "you accept and the barrow counts you as staying: +1 Bane",
+            "orElse": "decline politely: no rest, no cost, slightly colder welcome"
+          }
         }
       ],
       "temptations": [
@@ -898,6 +1154,14 @@
           },
           "standingDrawback": "you are expected to come back"
         }
+      ],
+      "features": [
+        "a bedroll, used, and not by anyone buried here",
+        "a chair dragged out of position and left where it was needed",
+        "two cups set out and one of them recently drunk from",
+        "a door tied open with a belt, so it could not close",
+        "someone has been counting the dead — tally marks by the entrance",
+        "a name carved beside another, joining them, badly"
       ]
     },
     "confession": {
@@ -934,27 +1198,63 @@
       "decisions": [
         {
           "cue": "a screen, a kneeler, and a question you can hear being asked",
-          "cost": "answer honestly and the way opens; lie and it opens anyway, differently"
+          "cost": "answer honestly and the way opens; lie and it opens anyway, differently",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer honestly and the way opens, cleanly",
+            "failure": "you lie and it opens anyway, onto somewhere else",
+            "orElse": "go round: two Turns, and the question is still waiting"
+          }
         },
         {
           "cue": "a scale, one pan holding a feather, the other empty",
-          "cost": "put something of yours in and it is weighed; walk past and you are not"
+          "cost": "put something of yours in and it is weighed; walk past and you are not",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you weigh something small and true, and pass",
+            "failure": "you weigh something you needed: it is kept",
+            "orElse": "walk past unweighed: the way on is longer by a Turn"
+          }
         },
         {
           "cue": "a book of absolutions with room for one more",
-          "cost": "signing it forgives someone; it does not say who"
+          "cost": "signing it forgives someone; it does not say who",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sign and someone long-accused is released",
+            "failure": "you sign and the accusation transfers to you: +1 Bane",
+            "orElse": "leave it unsigned: nothing forgiven, nothing owed"
+          }
         },
         {
           "cue": "a door that opens to whoever admits something first",
-          "cost": "whoever speaks pays; whoever stays silent owes"
+          "cost": "whoever speaks pays; whoever stays silent owes",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "someone admits something and the door opens for them",
+            "failure": "nobody speaks: the door stays shut and the silence is counted",
+            "orElse": "force it: loud, roll the clock"
+          }
         },
         {
           "cue": "a question asked directly of one hero, by name",
-          "cost": "answering costs privacy; refusing costs the way forward"
+          "cost": "answering costs privacy; refusing costs the way forward",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the screen's angle and learn who has been here answering",
+            "failure": "you learn nothing and your own voice is now in the echo",
+            "orElse": "do not investigate: the room keeps its question"
+          }
         },
         {
           "cue": "a penance offered instead of a fight",
-          "cost": "perform it and pass freely; it takes a Turn and it is humiliating"
+          "cost": "perform it and pass freely; it takes a Turn and it is humiliating",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you perform the penance and pass freely",
+            "failure": "the penance is refused as insincere: +1 Bane",
+            "orElse": "fight instead — the way is open either way, at a cost"
+          }
         }
       ],
       "temptations": [
@@ -1003,6 +1303,14 @@
           },
           "standingDrawback": "you cannot remember it either, and it mattered"
         }
+      ],
+      "features": [
+        "a confessional screen forced open from the wrong side",
+        "a page of absolutions torn out and burned separately",
+        "a kneeler moved to face a different way entirely",
+        "someone has answered the question aloud, and the echo has not settled",
+        "a knife left on the ledge where hands should rest",
+        "fresh ash in a place designed for keeping things"
       ]
     },
     "precedence": {
@@ -1039,27 +1347,63 @@
       "decisions": [
         {
           "cue": "a corridor that will not let two walk abreast",
-          "cost": "whoever goes first meets whatever is there first"
+          "cost": "whoever goes first meets whatever is there first",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you settle the order and whoever leads meets what is there, ready",
+            "failure": "you argue in the corridor and something arrives while you do",
+            "orElse": "send one scout: slow, one Turn, and they are alone"
+          }
         },
         {
           "cue": "a queue of the dead, and a way to step round it",
-          "cost": "waiting costs two Turns; pushing in costs the Host's patience"
+          "cost": "waiting costs two Turns; pushing in costs the Host's patience",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you step round without breaking the order, and the Host allows it",
+            "failure": "you push in: +1 Bane and the queue closes behind you",
+            "orElse": "wait: two Turns, and the Host thinks better of you"
+          }
         },
         {
           "cue": "a door that opens only for the foremost of a party",
-          "cost": "someone must be named first, aloud, and the others must accept it"
+          "cost": "someone must be named first, aloud, and the others must accept it",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "someone is named first, aloud, and the door opens for them",
+            "failure": "the naming is disputed and the door reads that as no answer",
+            "orElse": "let the barrow choose: it picks the loudest, and remembers"
+          }
         },
         {
           "cue": "banners in strict order, and one you could move",
-          "cost": "reordering them opens a way and insults everyone buried here"
+          "cost": "reordering them opens a way and insults everyone buried here",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you reorder them correctly and a way opens",
+            "failure": "you reorder wrongly and insult everyone buried here: +1 Bane",
+            "orElse": "leave them: the way stays shut, one Turn to find another"
+          }
         },
         {
           "cue": "a stair where the order of descent is visibly recorded",
-          "cost": "whoever goes last is remembered as having gone last"
+          "cost": "whoever goes last is remembered as having gone last",
+          "resolve": {
+            "roll": null,
+            "success": null,
+            "failure": null,
+            "orElse": "a pure choice: whoever goes last is recorded as having gone last, and the Host treats them accordingly"
+          }
         },
         {
           "cue": "a claim to settle: which of you the barrow should address",
-          "cost": "settling it opens the way; refusing to settle it does not"
+          "cost": "settling it opens the way; refusing to settle it does not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "the claim is settled and the barrow addresses one of you from now on",
+            "failure": "it is not settled, and the barrow keeps asking, in worse places",
+            "orElse": "refuse to settle: the way on does not open"
+          }
         }
       ],
       "temptations": [
@@ -1111,6 +1455,14 @@
           },
           "standingDrawback": "you go first into everything from now on"
         }
+      ],
+      "features": [
+        "banners pulled down and stacked without regard for order",
+        "a rank-plate prised off and dropped, still shiny where it sat",
+        "someone has walked the corridor the wrong way, scuffing one side",
+        "the queue disturbed — three of the dead pushed aside",
+        "a numbered flagstone lifted and not replaced",
+        "a seat at the head of the hall dragged back, as if to sit in"
       ]
     }
   },
@@ -1442,5 +1794,5 @@
     "lingering": "stayed in one place longer than it takes to search it",
     "disturbed": "struck or moved something that had not moved in centuries"
   },
-  "_globalPoolsNote": "decisions/temptations below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>.decisions/.temptations, so the furniture matches the fiction."
+  "_globalPoolsNote": "decisions/temptations/features below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>."
 }
