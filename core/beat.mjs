@@ -20,7 +20,7 @@ const FACET_TRUTH = {
   demandEnd:   'the question itself, asked directly',
 };
 
-export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision, temptation = null }) {
+export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision, temptation = null, situation = null }) {
   const r = rng.derive('area', String(planned.index));
   const fs = skeleton.foreshadow.find(f => f.index === planned.index) ?? {};
   const names = pack.areaNames?.[planned.role] ?? pack.areaNames?.approach ?? ['Unnamed'];
@@ -39,6 +39,13 @@ export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = n
 
     // Cue: fragments, not prose.
     cueFragments: [fs.fragment, feature].filter(Boolean),
+
+    // The situation is the room as the players find it: someone doing something, and what
+    // changes when they walk in. The decision is one of the things you can do about it.
+    situation: situation ? {
+      occupant: situation.occupant, doing: situation.doing, onArrival: situation.onArrival,
+      because: situation.because, offer: situation.offer,
+    } : null,
 
     truth: `${FACET_TRUTH[fs.facet] ?? ''}. ${skeleton.knot.transgression}`,
 

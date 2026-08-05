@@ -44,6 +44,10 @@ export function generateDelve(params = {}) {
   const decisionPool = motifPack.decisions?.length ? motifPack.decisions : (pack.decisions ?? []);
   const featurePool = motifPack.features?.length ? motifPack.features : (pack.features ?? []);
   const features = deal(featurePool, plan.areas.length, 'features', pack.features ?? []);
+  // A room must arrive as a place with something happening in it. Without this an area is a
+  // prompt plus a resolver: the review's verdict was "choices attached to prompts, not spaces
+  // that naturally produce play".
+  const situations = deal(motifPack.situations ?? [], plan.areas.length, 'situations');
   const decisions = deal(decisionPool, plan.areas.length, 'decisions', pack.decisions ?? []);
 
   // Temptations are dealt across the areas that carry a hoard, for the same reason as decisions:
@@ -56,10 +60,21 @@ export function generateDelve(params = {}) {
   const built = plan.areas.map((planned, i) => {
     const beat = baneBeatFor(planned, pressure, rng.derive('banebeat', String(planned.index)));
     if (beat) pressure.bankBane('(offered)', beat, planned.index);
-    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i], temptation: planned.hoard ? temptations[tIdx++] : null });
+    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i], situation: situations[i], temptation: planned.hoard ? temptations[tIdx++] : null });
     area.fallback = fallbackRoute(area, skeleton);
     return area;
   });
+
+  // Resolve {priorCue} against a cue from an earlier area, so an investigation route points at
+  // something the table has already been shown rather than granting the answer by fiat.
+  for (let i = 0; i < built.length; i++) {
+    const rv = built[i].decision?.resolve;
+    if (!rv?.success?.includes('{priorCue}')) continue;
+    const prior = built.slice(0, i).flatMap(a => a.cueFragments).filter(Boolean);
+    const pick = prior.length ? rng.derive('priorcue', String(i)).pick(prior) : null;
+    built[i] = { ...built[i], decision: { ...built[i].decision, resolve: { ...rv,
+      success: rv.success.replace('{priorCue}', pick ?? 'what the approach already showed you') } } };
+  }
 
   const endFs = skeleton.foreshadow.find(f => f.role === 'ending');
 

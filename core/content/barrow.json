@@ -341,10 +341,10 @@
           "cue": "a room you must cross either quickly or quietly",
           "cost": "quick is one Turn and a clock roll; quiet is two Turns and none",
           "resolve": {
-            "roll": null,
-            "success": null,
-            "failure": null,
-            "orElse": "a pure choice: quick costs a clock roll, quiet costs two Turns"
+            "roll": "Wits 2",
+            "success": "you read which way the room is watched and pick the right speed — cross unremarked",
+            "failure": "you pick wrong: roll the clock, and whatever is watching now knows your pace",
+            "orElse": "cross without judging it: quick costs a clock roll, quiet costs two Turns"
           }
         }
       ],
@@ -405,6 +405,50 @@
         "eyeholes bored through a wall at three different heights",
         "a lamp set facing the wall so it lights nothing but stone",
         "dust disturbed in a wide circle, as though someone turned slowly on the spot"
+      ],
+      "situations": [
+        {
+          "occupant": "a half-dozen of the Host",
+          "doing": "holding a bow, waiting to be acknowledged",
+          "onArrival": "they hold it deeper, and wait longer",
+          "because": "nobody has returned the courtesy in three centuries",
+          "offer": "acknowledge them properly and be received as court"
+        },
+        {
+          "occupant": "one of the Host at a mirror",
+          "doing": "describing its own reflection aloud, incorrectly",
+          "onArrival": "it asks you to confirm the description",
+          "because": "it was taught to say what the Lord wished to hear",
+          "offer": "agree, and it will show you what it is not allowed to look at"
+        },
+        {
+          "occupant": "nobody visible",
+          "doing": "something is turning to follow you, one mirror at a time",
+          "onArrival": "the movement stops when you look directly at it",
+          "because": "it may only move unobserved",
+          "offer": "stare it down — hold your gaze and it cannot advance"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "covering mirrors with a torn shirt, working fast",
+          "onArrival": "they hiss at you to keep your face down",
+          "because": "they have learned what being seen twice costs",
+          "offer": "help, and they will tell you which rooms are watched"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "presenting an absent noble to an empty chair",
+          "onArrival": "they present you instead",
+          "because": "the ceremony cannot be abandoned, only redirected",
+          "offer": "accept the presentation and the barrow treats you as its guest of honour"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "sketching the room, badly, by feel",
+          "onArrival": "they ask you not to look at the drawing",
+          "because": "they have learned that what gets looked at gets noticed",
+          "offer": "leave the sketch alone and they will mark your map with the watched rooms"
+        }
       ]
     },
     "naming": {
@@ -557,6 +601,50 @@
         "a gravestone laid face-down, which takes two people",
         "chalk marks numbering the doorways, not old",
         "a name spoken so recently the air still feels used"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host with a ledger",
+          "doing": "reading the roll of the dead aloud, and has reached the Ns",
+          "onArrival": "it asks for your names, politely, pen ready",
+          "because": "the roll must be complete or the reading starts again",
+          "offer": "give a name — any name — and it will read you the entry beside it"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "something is calling a name in the next room, patiently",
+          "onArrival": "it starts calling yours instead",
+          "because": "it learned your names when you were announced",
+          "offer": "answer once and it will lead you somewhere; answer twice and it will not stop"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "chiselling their own name over an older one",
+          "onArrival": "they stop, caught, and try to look casual",
+          "because": "they think a name on the wall means the barrow lets you leave",
+          "offer": "tell them the truth for a share of what they have found"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "searching for someone by name, room to room",
+          "onArrival": "they ask whether you are that person",
+          "because": "the summons was never fulfilled",
+          "offer": "say yes and be taken directly to whoever wanted them"
+        },
+        {
+          "occupant": "one of the Host, silent",
+          "doing": "holding a nameplate out, waiting for someone to claim it",
+          "onArrival": "it offers the plate to each of you in turn",
+          "because": "the post has been vacant and the household needs it filled",
+          "offer": "take the plate and the household obeys you — and expects you to stay"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "a name is being written on the wall, letter by letter, as you watch",
+          "onArrival": "the letters stop",
+          "because": "the barrow is recording who came in",
+          "offer": "finish the name yourself with something false and it is accepted"
+        }
       ]
     },
     "voices": {
@@ -625,10 +713,10 @@
           "cue": "two doors, and behind one a voice giving instructions to nobody",
           "cost": "the quiet door is longer; the voice would tell you exactly where to go",
           "resolve": {
-            "roll": null,
-            "success": null,
-            "failure": null,
-            "orElse": "a pure choice: the voice names the route exactly, the quiet door takes one Turn"
+            "roll": "Poise 2",
+            "success": "you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service",
+            "failure": "you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now",
+            "orElse": "take the quiet door and never speak to it: one extra Turn, no obligation"
           }
         },
         {
@@ -646,7 +734,7 @@
           "cost": "guessing costs a Bane per attempt; the long way costs two Turns",
           "resolve": {
             "roll": "Wits 2",
-            "success": "the fiction gives you the word — the unfinished order, the wax, the name on the tube all point at it",
+            "success": "the word is already in your notes. It is in something you passed earlier — *{priorCue}*. Say it and the door opens; if nobody wrote it down, the roll tells them now",
             "failure": "you have the shape of it but not the word: one more attempt, or take the long way",
             "orElse": "the long way: two Turns, no guessing, no Banes"
           }
@@ -709,6 +797,50 @@
         "a door braced shut from within by furniture",
         "boot-prints that stop mid-corridor and do not resume",
         "someone has been talking here, and stopped when you arrived"
+      ],
+      "situations": [
+        {
+          "occupant": "three of the Host in servants' dress",
+          "doing": "carrying out an errand that has no destination left",
+          "onArrival": "they stop, and wait to be told what to do",
+          "because": "the order was never rescinded and nobody outranks it",
+          "offer": "tell them where to go, and they go"
+        },
+        {
+          "occupant": "a single figure at a speaking-tube",
+          "doing": "reporting, at length, to a listener who died first",
+          "onArrival": "it pauses mid-sentence and asks whether you are the reply",
+          "because": "it has never once been answered",
+          "offer": "answer as the listener would, and learn what it has been reporting"
+        },
+        {
+          "occupant": "nobody — but the bells are moving",
+          "doing": "a summons is being rung, room by room, coming closer",
+          "onArrival": "the bell in this room begins",
+          "because": "something has called for service and the house is obliging",
+          "offer": "answer the bell yourself before whatever is meant to arrives"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "arguing, soundlessly, over an instruction each was given",
+          "onArrival": "both turn to you as the obvious arbiter",
+          "because": "the orders contradict and neither may disobey",
+          "offer": "rule between them — the loser stands down and the winner is yours for a scene"
+        },
+        {
+          "occupant": "a living grave-robber",
+          "doing": "repeating a phrase over and over, trying to get the intonation right",
+          "onArrival": "they go quiet and put their back to the wall",
+          "because": "they heard the password and cannot say it correctly",
+          "offer": "trade something for the phrase, badly remembered"
+        },
+        {
+          "occupant": "one of the Host, kneeling",
+          "doing": "waiting for an instruction that was promised and never came",
+          "onArrival": "it addresses the first of you to speak as its superior",
+          "because": "it was told to await further orders and did",
+          "offer": "give it the instruction and it will carry it out to the letter, wherever that leads"
+        }
       ]
     },
     "keeping": {
@@ -767,10 +899,10 @@
           "cue": "a bed, made, and a body-shaped hollow that has not filled in",
           "cost": "lie in it and you rest fully; you also stop, and the barrow prefers that",
           "resolve": {
-            "roll": null,
-            "success": null,
-            "failure": null,
-            "orElse": "a pure choice: rest fully and lose a Turn, or press on tired"
+            "roll": "Wits 1",
+            "success": "you see what the hollow is for and rest without lying in it — regain Grit, lose a Turn",
+            "failure": "someone lies in it: they rest fully, and the barrow now counts them among what it keeps",
+            "orElse": "press on tired: no rest, no cost, no attention"
           }
         },
         {
@@ -858,6 +990,50 @@
         "one preserved thing removed, leaving a clean shape in the dust",
         "a fire built recently, of furniture that was three centuries old",
         "rot, in exactly one place, spreading"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host",
+          "doing": "trimming a lamp that has never gone out",
+          "onArrival": "it will not stop, and speaks without looking up",
+          "because": "the task is what has kept it from ending",
+          "offer": "take the task from it, and it will finally rest — and tell you something first"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "a room is undoing your presence — footprints filling, dust returning",
+          "onArrival": "it works faster",
+          "because": "nothing here is permitted to change, including evidence of you",
+          "offer": "leave something deliberately and see whether it is allowed to remain"
+        },
+        {
+          "occupant": "a living robber, badly hurt",
+          "doing": "refusing to bleed, and frightened by it",
+          "onArrival": "they grab you and ask what is wrong with them",
+          "because": "the barrow has begun keeping them too",
+          "offer": "carry them out and the wound resumes; leave them and they stay perfect"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "setting a table for a meal that is always about to happen",
+          "onArrival": "they lay two more places",
+          "because": "the household was told to expect guests, and does",
+          "offer": "sit and eat — full restoration, and the barrow adds you to its inventory"
+        },
+        {
+          "occupant": "something young",
+          "doing": "waiting, exactly as instructed, and has been",
+          "onArrival": "it asks whether it is allowed to stop now",
+          "because": "nobody ever came back to release it",
+          "offer": "release it, and it gives you what it was guarding"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "repairing something that is not damaged",
+          "onArrival": "they set the work down and wait for inspection",
+          "because": "the standing order was to maintain, and there is nothing left to maintain",
+          "offer": "find them a genuine fault and they will fix a door you cannot"
+        }
       ]
     },
     "display": {
@@ -1010,6 +1186,50 @@
         "the best piece gone and a worse one moved into its place",
         "a trophy defaced with a knife, thoroughly",
         "sacking and rope left behind by people who meant to carry a lot"
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Host",
+          "doing": "polishing a piece that is already flawless",
+          "onArrival": "they turn it toward you to be admired",
+          "because": "it was never admired enough while the Lord lived",
+          "offer": "admire it properly and they will show you the better one"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "weighing two trophies, unable to choose",
+          "onArrival": "they ask which is worth more, genuinely",
+          "because": "they can carry one and have been here an hour deciding",
+          "offer": "decide for them and take the other"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "a case is being restocked — items arriving in it, one at a time",
+          "onArrival": "a space clears, sized for something you carry",
+          "because": "the collection is still being completed",
+          "offer": "contribute, and the barrow counts you a benefactor"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "comparing every visitor against a portrait and recording the result",
+          "onArrival": "it begins comparing you",
+          "because": "the Lord required to know he was the finest thing here",
+          "offer": "lose the comparison deliberately and it relaxes entirely"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "setting out gifts nobody will open",
+          "onArrival": "they present one to you",
+          "because": "the giving was the point; the opening never was",
+          "offer": "accept without opening it, and they will carry your burdens"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "dusting an empty plinth with great care",
+          "onArrival": "it asks whether you have brought the replacement",
+          "because": "the finest piece was stolen and the post has been vacant since",
+          "offer": "give it anything at all and it treats you as the restorer of the collection"
+        }
       ]
     },
     "company": {
@@ -1058,10 +1278,10 @@
           "cue": "a chair drawn out, and a place laid, and time to sit",
           "cost": "sitting costs a Turn and buys the Host's goodwill entirely",
           "resolve": {
-            "roll": null,
-            "success": null,
-            "failure": null,
-            "orElse": "a pure choice: sit and lose a Turn for the Host's goodwill entirely, or press on"
+            "roll": "Poise 2",
+            "success": "you sit, are courteous, and leave — the Host's goodwill for the whole delve, one Turn spent",
+            "failure": "you sit too long: +1 Bane, and they expect you at every table from here",
+            "orElse": "walk past the setting: no goodwill, no obligation"
           }
         },
         {
@@ -1162,6 +1382,50 @@
         "a door tied open with a belt, so it could not close",
         "someone has been counting the dead — tally marks by the entrance",
         "a name carved beside another, joining them, badly"
+      ],
+      "situations": [
+        {
+          "occupant": "a dozen of the Host",
+          "doing": "sitting in a circle, facing one empty chair",
+          "onArrival": "they shuffle round to make room for you",
+          "because": "the gathering may not end while anyone remains",
+          "offer": "sit, and they will answer anything while you do"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "holding a door open for someone who is not coming",
+          "onArrival": "it looks relieved and gestures you through",
+          "because": "it was told to wait and hold the door",
+          "offer": "walk through and it may finally follow — it will not leave you afterwards"
+        },
+        {
+          "occupant": "a living robber, alone",
+          "doing": "talking steadily to a companion who is not there",
+          "onArrival": "they introduce you to the empty air",
+          "because": "the barrow does not like people leaving, and one of them did",
+          "offer": "play along and they will guide you; correct them and they stop speaking"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "a second set of footsteps is keeping pace with yours",
+          "onArrival": "they stop when you stop, close",
+          "because": "something attached itself in an earlier room",
+          "offer": "acknowledge it and it becomes useful; ignore it and it becomes insistent"
+        },
+        {
+          "occupant": "two of the Host, hand in hand",
+          "doing": "refusing to be parted to let anyone past",
+          "onArrival": "they look at you and do not move",
+          "because": "they were separated once and will not be again",
+          "offer": "find them a way to pass together and they open every door ahead"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "laying out a game for four",
+          "onArrival": "they look up and count you",
+          "because": "the fourth left and the game has never finished",
+          "offer": "play a round and they will tell you how the fourth got out"
+        }
       ]
     },
     "confession": {
@@ -1311,6 +1575,50 @@
         "someone has answered the question aloud, and the echo has not settled",
         "a knife left on the ledge where hands should rest",
         "fresh ash in a place designed for keeping things"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host at a screen",
+          "doing": "hearing a confession from nobody, and nodding",
+          "onArrival": "it slides the panel and waits for yours",
+          "because": "it may not leave the box until someone is absolved",
+          "offer": "confess something true and it will absolve you — and tell you what it heard last"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "writing a confession they cannot finish",
+          "onArrival": "they ask you how to word it",
+          "because": "they think the barrow will let them go if they admit it properly",
+          "offer": "help them word it and they will hand over what they took"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "the room is repeating a confession, quietly, on a loop",
+          "onArrival": "it changes to your voice",
+          "because": "it keeps the last honest thing said in it",
+          "offer": "say something true and worse, and it will let you take the old one away"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "kneeling in a row, waiting to be heard",
+          "onArrival": "they turn, hopefully, toward you",
+          "because": "the confessor died and nobody replaced him",
+          "offer": "hear one of them, and the rest will stand aside for you permanently"
+        },
+        {
+          "occupant": "one of the Host with a scale",
+          "doing": "weighing small objects against a feather, all night",
+          "onArrival": "it holds out its hand for something of yours",
+          "because": "the Lord wanted to know he was not the heaviest thing here",
+          "offer": "give it something that matters and it will weigh a door open"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "reciting the same admission, over and over, getting no answer",
+          "onArrival": "it stops and asks whether that was sufficient",
+          "because": "nobody has ever told it yes",
+          "offer": "tell it yes and it will open the way it has been guarding out of gratitude"
+        }
       ]
     },
     "precedence": {
@@ -1389,10 +1697,10 @@
           "cue": "a stair where the order of descent is visibly recorded",
           "cost": "whoever goes last is remembered as having gone last",
           "resolve": {
-            "roll": null,
-            "success": null,
-            "failure": null,
-            "orElse": "a pure choice: whoever goes last is recorded as having gone last, and the Host treats them accordingly"
+            "roll": "Poise 2",
+            "success": "you settle the order before you descend and the record reads as a party, not a rabble",
+            "failure": "you descend in a scramble: whoever is recorded last is treated as least by the Host from here",
+            "orElse": "descend however you like and accept the record as it falls"
           }
         },
         {
@@ -1463,6 +1771,50 @@
         "the queue disturbed — three of the dead pushed aside",
         "a numbered flagstone lifted and not replaced",
         "a seat at the head of the hall dragged back, as if to sit in"
+      ],
+      "situations": [
+        {
+          "occupant": "a queue of the Host",
+          "doing": "waiting to pass a door, in strict order, not moving",
+          "onArrival": "the queue opens a gap at exactly your rank",
+          "because": "the first in line is waiting for someone who never arrived",
+          "offer": "take the gap and go with them; take the front and they will remember it"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "reading out an order of precedence to an empty hall",
+          "onArrival": "it pauses and asks where you fall in it",
+          "because": "the list must be read in full before anyone may proceed",
+          "offer": "name your own place in the order and it will be honoured, exactly"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "each refusing to go through a door second",
+          "onArrival": "they both look at you to break it",
+          "because": "neither may be seen to yield",
+          "offer": "rule between them and the loser attaches to you as a lesser"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "prising number-plates off the flagstones",
+          "onArrival": "they freeze, then offer you one",
+          "because": "they worked out the order is what keeps the doors shut",
+          "offer": "take a plate and go first anywhere — the Host will hate you for it"
+        },
+        {
+          "occupant": "nobody",
+          "doing": "a procession is passing through, unhurried, and you are in its way",
+          "onArrival": "it does not stop or go round",
+          "because": "it has right of way and has had for three centuries",
+          "offer": "stand aside and be counted courteous; join it and be counted one of them"
+        },
+        {
+          "occupant": "one of the Host with a herald's staff",
+          "doing": "announcing arrivals to an empty stair",
+          "onArrival": "it announces you, inventing a rank",
+          "because": "the post requires arrivals and there have been none",
+          "offer": "accept the invented rank and the barrow will treat you as it"
+        }
       ]
     }
   },

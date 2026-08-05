@@ -97,8 +97,34 @@ for (const m of Object.values(pack.motifs)) {
   }
 }
 t('every decision has a resolution', noResolve === 0, `${noResolve} missing`);
+t('every decision offers an attempt, not just a pick', (() => { let n = 0; for (const m of Object.values(pack.motifs)) for (const dec of m.decisions ?? []) if (!dec.resolve?.roll) n++; return n === 0; })(), 'a decision with no roll is a menu, not a situation');
 t('no decision gates progress without an alternative', noEscape === 0, `${noEscape} gated — playtest 1 died on one`);
 t('every rolled decision states success AND failure', halfSpecified === 0, `${halfSpecified} half-specified`);
+
+// {priorCue} must always be substituted — an unresolved token would print a literal placeholder
+let unresolvedToken = 0;
+for (let i = 0; i < 40; i++) {
+  const d = generateDelve({ pack, seed: `tok-${i}`, areas: 6 });
+  for (const a of d.areas) if (a.decision?.resolve?.success?.includes('{')) unresolvedToken++;
+}
+t('no unresolved {tokens} reach the page', unresolvedToken === 0, `${unresolvedToken}`);
+
+// every area must arrive as a place, and no situation may repeat inside one delve
+let noSit = 0, dupSit = 0, offMotifSit = 0;
+for (let i = 0; i < 40; i++) {
+  const d = generateDelve({ pack, seed: `sit-${i}`, areas: 6 });
+  const m = pack.motifs[d.skeleton.motif.id];
+  const ids = [];
+  for (const a of d.areas) {
+    if (!a.situation?.occupant) { noSit++; continue; }
+    ids.push(a.situation.occupant + a.situation.doing);
+    if (!(m.situations ?? []).some(x => x.occupant === a.situation.occupant && x.doing === a.situation.doing)) offMotifSit++;
+  }
+  if (new Set(ids).size !== ids.length) dupSit++;
+}
+t('every area arrives as a situation', noSit === 0, `${noSit} bare areas`);
+t('situations come from the delve\'s own motif', offMotifSit === 0, `${offMotifSit} off-motif`);
+t('no repeated situation inside one delve', dupSit === 0, `${dupSit}/40`);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -70,6 +70,14 @@ export function renderMarkdown(d) {
     L.push('**Cue** — *assemble aloud; these are fragments, not read-aloud text*');
     for (const c of a.cueFragments) L.push(`- ${c}`);
     L.push('');
+    if (a.situation) {
+      const S = a.situation;
+      L.push(`**The situation.** ${S.occupant} — ${S.doing}.`);
+      L.push(`**When you walk in:** ${S.onArrival}.`);
+      L.push(`- *Why (GM):* ${S.because}`);
+      L.push(`- *What it offers:* ${S.offer}`);
+      L.push('');
+    }
     L.push(`**Truth.** ${a.truth}`);
     L.push('');
     if (a.clue.automatic) {

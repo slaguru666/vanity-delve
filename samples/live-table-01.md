@@ -47,6 +47,11 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 - servants' bones arranged as though mid-errand
 - someone has been talking here, and stopped when you arrived
 
+**The situation.** three of the Host in servants' dress — carrying out an errand that has no destination left.
+**When you walk in:** they stop, and wait to be told what to do.
+- *Why (GM):* the order was never rescinded and nobody outranks it
+- *What it offers:* tell them where to go, and they go
+
 **Truth.** this is how the place was ordered, and it still is. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
 
 **The clue is automatic:** servants' bones arranged as though mid-errand — and it was done deliberately.
@@ -74,13 +79,21 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 - orders scratched into the floor, the last one unfinished
 - a door braced shut from within by furniture
 
+**The situation.** a living grave-robber — repeating a phrase over and over, trying to get the intonation right.
+**When you walk in:** they go quiet and put their back to the wall.
+- *Why (GM):* they heard the password and cannot say it correctly
+- *What it offers:* trade something for the phrase, badly remembered
+
 **Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
 
 **The clue is automatic:** orders scratched into the floor, the last one unfinished — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
 **The decision.** two doors, and behind one a voice giving instructions to nobody — *the quiet door is longer; the voice would tell you exactly where to go*
-- **Or simply:** a pure choice: the voice names the route exactly, the quiet door takes one Turn
+- **Attempt it:** `[VANITY: Poise 2]`
+- **Success:** you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service
+- **Failure:** you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now
+- **Or simply:** take the quiet door and never speak to it: one extra Turn, no obligation
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -113,6 +126,11 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 - a hall where your own voice arrives before you speak
 - an order half-scratched out and rewritten by a different hand
 
+**The situation.** nobody — but the bells are moving — a summons is being rung, room by room, coming closer.
+**When you walk in:** the bell in this room begins.
+- *Why (GM):* something has called for service and the house is obliging
+- *What it offers:* answer the bell yourself before whatever is meant to arrives
+
 **Truth.** here the want is explicit — the place asks something of whoever enters. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
 
 **The clue is automatic:** a hall where your own voice arrives before you speak — and it was done deliberately.
@@ -140,6 +158,11 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 - an instruction repeated until the stone gave out
 - boot-prints that stop mid-corridor and do not resume
 
+**The situation.** a single figure at a speaking-tube — reporting, at length, to a listener who died first.
+**When you walk in:** it pauses mid-sentence and asks whether you are the reply.
+- *Why (GM):* it has never once been answered
+- *What it offers:* answer as the listener would, and learn what it has been reporting
+
 **Truth.** this is the damage the want did to those who had to satisfy it. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
 
 **The clue is automatic:** an instruction repeated until the stone gave out — and it was done deliberately.
@@ -147,7 +170,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 
 **The decision.** a door that opens to a spoken password nobody living knows — *guessing costs a Bane per attempt; the long way costs two Turns*
 - **Attempt it:** `[VANITY: Wits 2]`
-- **Success:** the fiction gives you the word — the unfinished order, the wax, the name on the tube all point at it
+- **Success:** the word is already in your notes. It is in something you passed earlier — *someone has been talking here, and stopped when you arrived*. Say it and the door opens; if nobody wrote it down, the roll tells them now
 - **Failure:** you have the shape of it but not the word: one more attempt, or take the long way
 - **Or simply:** the long way: two Turns, no guessing, no Banes
 
@@ -171,6 +194,11 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 **Cue** — *assemble aloud; these are fragments, not read-aloud text*
 - a key that fits nothing here
 - wax jammed into a speaking-tube, still soft
+
+**The situation.** one of the Host, kneeling — waiting for an instruction that was promised and never came.
+**When you walk in:** it addresses the first of you to speak as its superior.
+- *Why (GM):* it was told to await further orders and did
+- *What it offers:* give it the instruction and it will carry it out to the letter, wherever that leads
 
 **Truth.** the thing the whole barrow is arranged around is close. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
 
