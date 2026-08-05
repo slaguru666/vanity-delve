@@ -1,0 +1,484 @@
+{
+  "schema": 1,
+  "generatorVersion": "0.1.0",
+  "catalogVersion": "barrow@1",
+  "seed": "live-table-01",
+  "params": {
+    "areas": 5,
+    "depth": 2,
+    "party": 4,
+    "deadliness": "standard",
+    "density": "standard",
+    "greed": "standard",
+    "clock": "standard",
+    "ending": "authored",
+    "theme": "barrow"
+  },
+  "skeleton": {
+    "placeName": "The Vault of the Patient Lord",
+    "knot": {
+      "appetiteId": "obeyed",
+      "accommodationId": "purchased",
+      "claimant": "Patient Lord",
+      "conscript": "a household",
+      "transgression": "The Patient Lord bought a household from those with nothing left, so that someone would always obey.",
+      "cruelty": 2
+    },
+    "motif": {
+      "id": "voices",
+      "danger": "obedience",
+      "dangerLine": "the dead here still take instruction, and give it",
+      "trigger": "loud"
+    },
+    "prize": {
+      "kind": "seal",
+      "label": "the signet that is still obeyed",
+      "function": "the only thing the household answers to"
+    },
+    "bottomProblem": {
+      "label": "The Patient Lord",
+      "wantNow": "to be obeyed without asking",
+      "failureState": "is disobeyed now, and cannot bear it",
+      "handledBy": "giving them what they want, at a price"
+    },
+    "appeasement": {
+      "move": "do one small thing it asks, without arguing",
+      "attribute": "Poise",
+      "successes": 2,
+      "why": "it was obeyed",
+      "gain": {
+        "vanity": 1
+      },
+      "cost": {
+        "bane": 1
+      },
+      "repeatable": true,
+      "faction": "The Silent Host"
+    },
+    "factions": [
+      {
+        "id": "host",
+        "name": "The Silent Host",
+        "kind": "undead",
+        "essence": "still performing the ritual they were buried for",
+        "handledBy": "courtesy",
+        "conscriptedAs": "a household"
+      },
+      {
+        "id": "scavengers",
+        "name": "things that moved in",
+        "kind": "beast",
+        "essence": "neither know nor care whose tomb this is",
+        "handledBy": "force or food"
+      }
+    ],
+    "foreshadow": [
+      {
+        "index": 1,
+        "role": "approach",
+        "facet": "institution",
+        "fragment": "servants' bones arranged as though mid-errand"
+      },
+      {
+        "index": 2,
+        "role": "complication",
+        "facet": "ritual",
+        "fragment": "orders scratched into the floor, the last one unfinished"
+      },
+      {
+        "index": 3,
+        "role": "turn",
+        "facet": "demand",
+        "fragment": "a hall where your own voice arrives before you speak"
+      },
+      {
+        "index": 4,
+        "role": "descent",
+        "facet": "wound",
+        "fragment": "an instruction repeated until the stone gave out"
+      },
+      {
+        "index": 5,
+        "role": "threshold",
+        "facet": "anchor",
+        "fragment": "a key that fits nothing here"
+      },
+      {
+        "index": 6,
+        "role": "ending",
+        "facet": "demand",
+        "fragment": "a seat that expects to be addressed"
+      }
+    ]
+  },
+  "areas": [
+    {
+      "index": 1,
+      "role": "approach",
+      "name": "The Weeping Stair",
+      "facet": "institution",
+      "cueFragments": [
+        "servants' bones arranged as though mid-errand",
+        "someone has been talking here, and stopped when you arrived"
+      ],
+      "situation": {
+        "occupant": "three of the Host in servants' dress",
+        "doing": "carrying out an errand that has no destination left",
+        "onArrival": "they stop, and wait to be told what to do",
+        "because": "the order was never rescinded and nobody outranks it",
+        "offer": "tell them where to go, and they go"
+      },
+      "truth": "This is how the place was ordered, and it still is",
+      "decision": {
+        "cue": "an order carved into the floor, still legible",
+        "cost": "obey it and the Host counts you as household; step over it and they do not",
+        "resolve": {
+          "roll": "Poise 2",
+          "success": "you obey exactly enough to be counted household — Skeletons stand down for you",
+          "failure": "you obey wrongly, which is worse than not obeying: +1 Bane",
+          "orElse": "step over it: no cost now, and the Host does not count you as theirs"
+        }
+      },
+      "encounter": null,
+      "hoard": null,
+      "temptation": null,
+      "trigger": "seenTwice",
+      "baneBeat": "announcing",
+      "clue": {
+        "automatic": "servants' bones arranged as though mid-errand — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 2,
+      "role": "complication",
+      "name": "The Lesser Vault",
+      "facet": "ritual",
+      "cueFragments": [
+        "orders scratched into the floor, the last one unfinished",
+        "a door braced shut from within by furniture"
+      ],
+      "situation": {
+        "occupant": "a living grave-robber",
+        "doing": "repeating a phrase over and over, trying to get the intonation right",
+        "onArrival": "they go quiet and put their back to the wall",
+        "because": "they heard the password and cannot say it correctly",
+        "offer": "trade something for the phrase, badly remembered"
+      },
+      "truth": "The office is still being performed, for someone who is no longer served by it",
+      "decision": {
+        "cue": "two doors, and behind one a voice giving instructions to nobody",
+        "cost": "the quiet door is longer; the voice would tell you exactly where to go",
+        "resolve": {
+          "roll": "Poise 2",
+          "success": "you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service",
+          "failure": "you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now",
+          "orElse": "take the quiet door and never speak to it: one extra Turn, no obligation"
+        }
+      },
+      "encounter": {
+        "heat": "fight",
+        "kind": "undead",
+        "roster": {
+          "line": "1 Ghoul and 2 Skeletons",
+          "foes": [
+            {
+              "n": 1,
+              "name": "Ghoul",
+              "atk": 4,
+              "def": 3,
+              "grit": 4,
+              "nerve": 5,
+              "note": "on a hit, a free Called Shot to freeze for a round"
+            },
+            {
+              "n": 2,
+              "name": "Skeleton",
+              "atk": 3,
+              "def": 2,
+              "grit": 1,
+              "nerve": 5,
+              "note": "fearless"
+            }
+          ],
+          "harmedBy": "anything",
+          "avoid": "the Ghoul goes for court dress first — send someone plain"
+        }
+      },
+      "hoard": "cache",
+      "temptation": {
+        "id": "tube",
+        "cue": "a short length of speaking-tube, cut and carried",
+        "benefit": "ask one question and get one true answer",
+        "useCost": {
+          "bane": 1
+        },
+        "standingDrawback": "whatever answers can now hear you"
+      },
+      "trigger": "loud",
+      "baneBeat": "noticing",
+      "clue": {
+        "automatic": "orders scratched into the floor, the last one unfinished — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 3,
+      "role": "turn",
+      "name": "The Crossing",
+      "facet": "demand",
+      "cueFragments": [
+        "a hall where your own voice arrives before you speak",
+        "an order half-scratched out and rewritten by a different hand"
+      ],
+      "situation": {
+        "occupant": "the bells",
+        "doing": "ringing a summons room by room, coming closer",
+        "onArrival": "the bell in this room begins",
+        "because": "something has called for service and the house is obliging",
+        "offer": "answer the bell yourself before whatever is meant to arrives"
+      },
+      "truth": "Here the want is explicit — the place asks something of whoever enters",
+      "decision": {
+        "cue": "a bell-pull that would summon someone",
+        "cost": "ring it and help comes, and it is not the kind you wanted",
+        "resolve": {
+          "roll": "Poise 2",
+          "success": "what comes is answerable to you for one scene",
+          "failure": "what comes is not the kind of help you wanted",
+          "orElse": "do not ring: the way on is longer by one Turn"
+        }
+      },
+      "encounter": null,
+      "hoard": null,
+      "temptation": null,
+      "trigger": "loud",
+      "baneBeat": "noticing",
+      "clue": {
+        "automatic": "a hall where your own voice arrives before you speak — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 4,
+      "role": "descent",
+      "name": "The Servants' Deep",
+      "facet": "wound",
+      "cueFragments": [
+        "an instruction repeated until the stone gave out",
+        "boot-prints that stop mid-corridor and do not resume"
+      ],
+      "situation": {
+        "occupant": "a single figure at a speaking-tube",
+        "doing": "reporting, at length, to a listener who died first",
+        "onArrival": "it pauses mid-sentence and asks whether you are the reply",
+        "because": "it has never once been answered",
+        "offer": "answer as the listener would, and learn what it has been reporting"
+      },
+      "truth": "This is the damage the want did to those who had to satisfy it",
+      "decision": {
+        "cue": "a door that opens to a spoken password nobody living knows",
+        "cost": "guessing costs a Bane per attempt; the long way costs two Turns",
+        "resolve": {
+          "roll": "Wits 2",
+          "success": "the word is already in your notes. It is in something you passed earlier — *someone has been talking here, and stopped when you arrived*. Say it and the door opens; if nobody wrote it down, the roll tells them now",
+          "failure": "you have the shape of it but not the word: one more attempt, or take the long way",
+          "orElse": "the long way: two Turns, no guessing, no Banes"
+        }
+      },
+      "encounter": null,
+      "hoard": "pocket",
+      "temptation": {
+        "id": "bell",
+        "cue": "a small bell from a servant's board",
+        "benefit": "ring it and one order is obeyed, by anything",
+        "useCost": {
+          "bane": 2
+        },
+        "standingDrawback": "it rings faintly when someone gives you an order"
+      },
+      "trigger": "disturbed",
+      "baneBeat": "relicUse",
+      "clue": {
+        "automatic": "an instruction repeated until the stone gave out — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, move its cue fragment into the next area so the motif still completes.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    },
+    {
+      "index": 5,
+      "role": "threshold",
+      "name": "The Last Door",
+      "facet": "anchor",
+      "cueFragments": [
+        "a key that fits nothing here",
+        "wax jammed into a speaking-tube, still soft"
+      ],
+      "situation": {
+        "occupant": "one of the Host, kneeling",
+        "doing": "waiting for an instruction that was promised and never came",
+        "onArrival": "it addresses the first of you to speak as its superior",
+        "because": "it was told to await further orders and did",
+        "offer": "give it the instruction and it will carry it out to the letter, wherever that leads"
+      },
+      "truth": "The thing the whole barrow is arranged around is close",
+      "decision": {
+        "cue": "an instruction you can obey, ignore, or countermand",
+        "cost": "countermanding it works once and marks you as someone who gives orders",
+        "resolve": {
+          "roll": "Poise 2",
+          "success": "you countermand it and the dead obey you instead — this marks you as someone who gives orders: from now on the Host brings you their disputes, and once per delve you may issue one order they must follow",
+          "failure": "the order stands and you have been seen to fail at giving one: +1 Bane, and the Host addresses someone else from now on",
+          "orElse": "obey it, or ignore it and go round: ignoring costs one Turn"
+        }
+      },
+      "encounter": {
+        "heat": "battle",
+        "kind": "undead",
+        "roster": {
+          "line": "1 Wraith and 3 Skeletons",
+          "foes": [
+            {
+              "n": 1,
+              "name": "Wraith",
+              "atk": 5,
+              "def": 3,
+              "grit": 10,
+              "nerve": 5,
+              "note": "INCORPOREAL — chill touch ignores armour and drains 1 max Grit"
+            },
+            {
+              "n": 3,
+              "name": "Skeleton",
+              "atk": 3,
+              "def": 2,
+              "grit": 1,
+              "nerve": 5,
+              "note": "fearless"
+            }
+          ],
+          "harmedBy": "blessed, silvered or magical weapons ONLY",
+          "avoid": "it will take an appeasement over a fight every time"
+        }
+      },
+      "hoard": "chest",
+      "temptation": {
+        "id": "staff",
+        "cue": "a staff of office, propped where it was set down",
+        "benefit": "give one order the dead must follow",
+        "acceptanceCost": {
+          "vice": "Pride"
+        },
+        "useCost": {
+          "bane": 2
+        },
+        "standingDrawback": "you may not refuse an order given to you"
+      },
+      "trigger": "disturbed",
+      "baneBeat": "refusal",
+      "clue": {
+        "automatic": "a key that fits nothing here — and it was done deliberately",
+        "extra": "[VANITY: Observation — 1 success] buys who did it, and roughly when"
+      },
+      "failureCase": "If they skip this, the ending opens with them holding nothing the bottom problem wants.",
+      "fallback": {
+        "route": "The Silent Host will receive anyone who behaves as a guest",
+        "cost": "one Bane on the tab, and they will expect it again"
+      }
+    }
+  ],
+  "ending": {
+    "index": 6,
+    "role": "ending",
+    "mode": "authored",
+    "heat": null,
+    "hoard": null,
+    "name": "The Audience",
+    "cueFragments": [
+      "a seat that expects to be addressed"
+    ],
+    "question": "\"Do as you are told.\"",
+    "authored": true
+  },
+  "triggerGlossary": {
+    "announced": "entered somewhere grandly — the big doors, a shout, a herald",
+    "seenTwice": "reflected, echoed or witnessed twice over in one place",
+    "loud": "a raised voice, a broken door, steel on stone",
+    "lingering": "stayed in one place longer than it takes to search it",
+    "disturbed": "struck or moved something that had not moved in centuries"
+  },
+  "budget": {
+    "plannedFights": 2,
+    "heatBase": "fight",
+    "wantFights": 2
+  },
+  "pressure": {
+    "turn": 0,
+    "clockRolls": 0,
+    "clockFired": 0,
+    "triggerNumber": 1,
+    "escalated": false,
+    "tab": 5,
+    "target": 5
+  },
+  "authored": {
+    "title": null,
+    "intro": "They bought a household from people with nothing left, so that someone would always obey. The household is still obeying.",
+    "areas": {
+      "1": {
+        "readAloud": "Forty steps down and the bones are still on their errand — a tray here, a folded cloth there, set down mid-stride three hundred years ago. Somebody was talking as you came through the arch, and stopped.",
+        "notes": null,
+        "nameOverride": null,
+        "locked": []
+      },
+      "2": {
+        "readAloud": "The floor is scratched over with orders, the last one unfinished. A door at the far end is braced shut from the inside with furniture, and behind you a living man is whispering the same phrase again and again, trying to get the sound of it right.",
+        "notes": null,
+        "nameOverride": null,
+        "locked": []
+      },
+      "3": {
+        "readAloud": "The hall answers before you do — your own voice reaches the far wall a half-beat early, saying what you have not said yet. Somewhere below a bell starts, and then the one in this room takes it up.",
+        "notes": null,
+        "nameOverride": null,
+        "locked": []
+      },
+      "4": {
+        "readAloud": "An instruction has been cut into the stone so many times the stone gave out. Bootprints cross the floor and simply stop. At the far wall a figure is talking steadily into a speaking-tube, reporting to somebody who died first.",
+        "notes": null,
+        "nameOverride": null,
+        "locked": []
+      },
+      "5": {
+        "readAloud": "Wax has been jammed into the tube here, still soft. A key that fits nothing hangs on a nail. One of them is kneeling at the last door, and has been for a very long time, waiting to be told what to do.",
+        "notes": null,
+        "nameOverride": null,
+        "locked": []
+      }
+    },
+    "ending": {
+      "readAloud": "The seat at the head of the hall is occupied by a shape that keeps the gown's outline and nothing else. It turns toward you and there is nothing in the collar to turn.",
+      "notes": "**The Patient Lord** — Wraith, Grit 6, atk 5, def 3, incorporeal. Blessed, silvered or magical weapons only; say so before initiative. It opens with \"Do as you are told.\" Obey one small instruction and it will trade the signet. Refuse and it is a fight it will win slowly.",
+      "locked": []
+    }
+  }
+}

@@ -1,20 +1,56 @@
 #!/usr/bin/env node
-/** DELVE CLI — map-free by necessity: forgeStage needs browser APIs (see spike report §3A). */
-import { readFileSync, writeFileSync } from 'fs';
+/**
+ * DELVE — an authoring system for VANITY delves.
+ *
+ *   new       node cli.mjs --new --seed=X --areas=6 --file=my-delve.json
+ *   worksheet node cli.mjs --file=my-delve.json --worksheet
+ *   reroll    node cli.mjs --file=my-delve.json --reroll=3:situation
+ *   lock      node cli.mjs --file=my-delve.json --lock=3:decision
+ *   write     node cli.mjs --file=my-delve.json --write=3:readAloud --text="..."
+ *   play      node cli.mjs --file=my-delve.json --play
+ *
+ * The JSON file is the working document. Rerolling never touches written prose.
+ */
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { generateDelve } from './delve.mjs';
-import { renderMarkdown } from './render.mjs';
+import { newWorkingFile, reroll, lock, unlock, setAuthored, outstanding } from './authoring.mjs';
+import { renderWorksheet, renderPlay } from './render-authoring.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = Object.fromEntries(process.argv.slice(2).map(a => {
-  const [k, v = true] = a.replace(/^--/, '').split('=');
-  return [k, v === true ? true : (/^\d+$/.test(v) ? Number(v) : v)];
+  const [k, ...rest] = a.replace(/^--/, '').split('=');
+  const v = rest.join('=');
+  return [k, v === '' ? true : (/^\d+$/.test(v) ? Number(v) : v)];
 }));
 
-const theme = args.theme ?? 'barrow';
-const pack = JSON.parse(readFileSync(join(here, 'content', `${theme}.json`), 'utf8'));
-const delve = generateDelve({ pack, ...args });
+const pack = JSON.parse(readFileSync(join(here, 'content', `${args.theme ?? 'barrow'}.json`), 'utf8'));
+const file = args.file;
+const load = () => JSON.parse(readFileSync(file, 'utf8'));
+const save = d => writeFileSync(file, JSON.stringify(d, null, 2));
 
-if (args.json) { const out = JSON.stringify(delve, null, 2); args.out ? writeFileSync(args.out, out) : console.log(out); }
-else { const md = renderMarkdown(delve); args.out ? writeFileSync(args.out, md) : console.log(md); }
+let d;
+if (args.new || !file || !existsSync(file)) {
+  d = newWorkingFile({ pack, ...args });
+  if (file) { save(d); console.error(`created ${file} — seed ${d.seed}`); }
+} else {
+  d = load();
+}
+
+const target = spec => { const [i, c] = String(spec).split(':'); return [i === 'ending' ? 'ending' : Number(i), c]; };
+
+if (args.reroll) { const [i, c] = target(args.reroll); reroll(d, i, c, pack); save(d); console.error(`rerolled ${c} in area ${i}`); }
+if (args.lock)   { const [i, c] = target(args.lock);   lock(d, i, c);   save(d); console.error(`locked ${c} in area ${i}`); }
+if (args.unlock) { const [i, c] = target(args.unlock); unlock(d, i, c); save(d); console.error(`unlocked ${c} in area ${i}`); }
+if (args.write)  {
+  const [i, f] = target(args.write);
+  setAuthored(d, i, f, args.text ?? '');
+  save(d); console.error(`wrote ${f} for ${i}`);
+}
+
+const out = args.play ? renderPlay(d)
+  : args.json ? JSON.stringify(d, null, 2)
+  : args.todo ? outstanding(d).map(t => `[ ] ${t.where} — ${t.what}`).join('\n')
+  : renderWorksheet(d);
+
+if (args.out) writeFileSync(args.out, out); else console.log(out);

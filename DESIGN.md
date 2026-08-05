@@ -38,11 +38,34 @@ GM-readable delve. Samples in [`samples/`](samples/).
 
 ---
 
-## 2. What DELVE is
+## 2. What DELVE is — an authoring system
 
-The dungeon-scale layer over VANITY's Forge. It does not generate maps, monsters, encounters or
-hoards — those exist and work. It generates **the fiction, the order, and the pressure**, and it
-sequences the Forge without letting the Forge talk over it.
+**This changed in draft 7, after four readings of generated output.**
+
+DELVE is the dungeon-scale layer over VANITY's Forge — it generates the fiction, the order and
+the pressure, and sequences the Forge without letting it talk over DELVE. But it is **not** a tool
+that hands a GM a delve to run. Four independent reviews converged:
+
+> *"The handwritten delve still tells the GM what matters faster."*
+> *"Would you run this at a real table tomorrow, as-is?"* — **No.**
+
+Three renderer passes each fixed what the last review named and each introduced a new problem
+(blocks → menu-like; subtraction → buried). The density is not a bug to render away: **everything
+on the page is a vice at the table and a virtue at the desk.**
+
+So a delve has two surfaces and one working file:
+
+| | For | Carries |
+|---|---|---|
+| **Worksheet** | the desk | everything, labelled, reroll commands beside each component, explicit prompts where only a human can write |
+| **Play sheet** | the table | the GM's own prose, the live leverage point, the decision on one line, the numbers. Nothing else |
+
+The JSON file is the document. An `authored` layer holds what the GM writes and the generator
+never touches it, so **rerolling a component cannot destroy prose**. Lock what is good, reroll
+what is not, write the read-aloud, export the play sheet.
+
+DELVE does not write the read-aloud and does not write the climax. It gets a GM to a strong first
+draft in a minute instead of an evening, and then gets out of the way.
 
 ---
 

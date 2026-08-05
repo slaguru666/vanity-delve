@@ -174,5 +174,48 @@ for (let i = 0; i < 30; i++) {
 }
 t('openers read as English', badOpener === 0, `${badOpener} malformed`);
 
+
+// ---- authoring layer -------------------------------------------------------
+import { newWorkingFile, reroll, lock, setAuthored, outstanding, readyToPlay } from './authoring.mjs';
+import { renderWorksheet, renderPlay } from './render-authoring.mjs';
+
+{
+  let changed = 0, lockHeld = 0, proseKept = 0;
+  for (let i = 0; i < 25; i++) {
+    const d = newWorkingFile({ pack, seed: `auth-${i}`, areas: 6 });
+    const before = d.areas[2].decision.cue;
+    reroll(d, 3, 'decision', pack);
+    if (d.areas[2].decision.cue !== before) changed++;
+
+    setAuthored(d, 3, 'readAloud', 'written by a human');
+    lock(d, 3, 'situation');
+    const sit = d.areas[2].situation.occupant;
+    reroll(d, 3, 'situation', pack);
+    if (d.areas[2].situation.occupant === sit) lockHeld++;
+    if (d.authored.areas[3].readAloud === 'written by a human') proseKept++;
+  }
+  t('a reroll always returns something different', changed === 25, `${changed}/25`);
+  t('a lock is respected', lockHeld === 25, `${lockHeld}/25`);
+  t('rerolling never destroys written prose', proseKept === 25, `${proseKept}/25`);
+
+  const d = newWorkingFile({ pack, seed: 'auth-x', areas: 4 });
+  t('a fresh delve is not ready to play', !readyToPlay(d), `${outstanding(d).length} outstanding`);
+  const ws = renderWorksheet(d);
+  t('the worksheet shows what still needs a human', ws.includes('WRITE ▸') && ws.includes('still need you'));
+  t('the worksheet offers reroll commands', ws.includes('--reroll='));
+  const play = renderPlay(d);
+  t('an unfinished play sheet says so', play.includes('unfinished') && play.includes('(unwritten)'));
+
+  setAuthored(d, 'ending', 'readAloud', 'x'); setAuthored(d, 'ending', 'notes', 'y');
+  d.authored.intro = 'z';
+  for (const a of d.areas) setAuthored(d, a.index, 'readAloud', `prose for ${a.index}`);
+  t('a finished delve reports ready', readyToPlay(d), `${outstanding(d).length} left`);
+  const done = renderPlay(d);
+  t('a finished play sheet uses the GM prose', done.includes('prose for 1') && !done.includes('(unwritten)'));
+  t('the play sheet is shorter than the worksheet',
+    done.split('\n').length < renderWorksheet(d).split('\n').length,
+    `play ${done.split('\n').length} vs worksheet ${renderWorksheet(d).split('\n').length} lines`);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
