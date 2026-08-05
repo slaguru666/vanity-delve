@@ -103,7 +103,7 @@ export function generateDelve(params = {}) {
       ...plan.ending,
       name: (pack.areaNames?.ending ?? ['The Ending'])[0],
       cueFragments: [endFs?.fragment].filter(Boolean),
-      question: endingQuestion(skeleton),
+      question: endingQuestion(skeleton, pack),
       authored: plan.ending.mode === 'authored',
     },
     triggerGlossary: pack.triggerGlossary ?? {},
@@ -112,17 +112,12 @@ export function generateDelve(params = {}) {
   };
 }
 
-/** The bottom problem asks one thing. It is the same question the whole delve has been about. */
-function endingQuestion(sk) {
-  const q = {
-    seen: '"How do I look?"',
-    remembered: '"Say my name."',
-    obeyed: '"Do as you are told."',
-    young: '"Tell me I have not changed."',
-    envied: '"What did you bring me?"',
-    attended: '"You are not leaving."',
-    forgiven: '"Tell me it was not a sin."',
-    first: '"Who goes first?"',
-  };
-  return q[sk.knot.appetiteId] ?? '"Well?"';
+/**
+ * The bottom problem asks one thing, and it is the same question the whole delve has been about.
+ * It lives on the appetite in the theme pack — hardcoding it here meant any theme whose appetite
+ * ids differed from barrow's silently fell through to a generic line.
+ */
+function endingQuestion(sk, pack) {
+  const appetite = pack?.appetites?.find(a => a.id === sk.knot.appetiteId);
+  return appetite?.asks ?? '"Well?"';
 }

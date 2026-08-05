@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "themes": [
+    {
+      "id": "barrow",
+      "label": "Barrow",
+      "geometry": "barrow",
+      "motifs": 8
+    },
+    {
+      "id": "castle",
+      "label": "Castle",
+      "geometry": "barrow",
+      "motifs": 4
+    }
+  ]
+}

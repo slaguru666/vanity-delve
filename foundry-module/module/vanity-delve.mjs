@@ -16,13 +16,14 @@
  */
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
-import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog } from './forge-app.mjs';
+import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes } from './forge-app.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
 
 let PACK = null;
 let seamsPresent = false;
+let loadPack = async () => null;
 
 const getState = () => game.settings.get(MOD, FLAG) ?? null;
 const setState = async s => game.settings.set(MOD, FLAG, s);
@@ -157,8 +158,13 @@ Hooks.once('init', () => {
 
 Hooks.once('ready', async () => {
   if (!game.user.isGM) return;
-  PACK = await foundry.utils.fetchJsonWithTimeout(`modules/${MOD}/module/core/content/barrow.json`)
-    .catch(() => fetch(`modules/${MOD}/module/core/content/barrow.json`).then(r => r.json()));
+  const fetchJson = p => foundry.utils.fetchJsonWithTimeout(p).catch(() => fetch(p).then(r => r.json()).catch(() => null));
+  const base = `modules/${MOD}/module/core/content`;
+  const index = await fetchJson(`${base}/index.json`);
+  if (index?.themes?.length) setThemes(index.themes);
+  const packs = {};
+  loadPack = async id => (packs[id] ??= await fetchJson(`${base}/${id}.json`));
+  PACK = await loadPack('barrow');
   seamsPresent = /post\s*=\s*true/.test(String(game.vanity?.forge?.hoard ?? ''));
 
   game.delve = { forge: () => new DelveForgeApp().render(true), raise: raiseDungeon,
@@ -166,6 +172,7 @@ Hooks.once('ready', async () => {
                  load, loadFile, draft, enter, ending, bane, clock, state: getState,
                  outstanding: () => outstanding(getState()?.delve ?? { areas: [] }),
                  ready: () => readyToPlay(getState()?.delve ?? { areas: [] }),
+                 loadPack: id => loadPack(id),
                  get pack() { return PACK; } };
   console.log(`DELVE | ready. Forge seams ${seamsPresent ? 'present' : 'ABSENT'}.`);
   if (!seamsPresent) ui.notifications.warn('DELVE: Forge seams not installed — see the delve-seams branch.');

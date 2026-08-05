@@ -24,7 +24,14 @@ const args = Object.fromEntries(process.argv.slice(2).map(a => {
   return [k, v === '' ? true : (/^\d+$/.test(v) ? Number(v) : v)];
 }));
 
-const pack = JSON.parse(readFileSync(join(here, 'content', `${args.theme ?? 'barrow'}.json`), 'utf8'));
+const index = JSON.parse(readFileSync(join(here, 'content', 'index.json'), 'utf8'));
+if (args.themes) { console.log(index.themes.map(t => `${t.id.padEnd(10)} ${t.geometry.padEnd(8)} ${t.motifs} motifs`).join('\n')); process.exit(0); }
+const themeId = args.theme ?? 'barrow';
+if (!index.themes.some(t => t.id === themeId)) {
+  console.error(`unknown theme "${themeId}" — available: ${index.themes.map(t => t.id).join(', ')}`);
+  process.exit(1);
+}
+const pack = JSON.parse(readFileSync(join(here, 'content', `${themeId}.json`), 'utf8'));
 const file = args.file;
 const load = () => JSON.parse(readFileSync(file, 'utf8'));
 const save = d => writeFileSync(file, JSON.stringify(d, null, 2));

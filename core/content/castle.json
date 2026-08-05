@@ -1,0 +1,1173 @@
+{
+  "id": "castle",
+  "label": "Castle",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "_model": "Same kernel as barrow: an APPETITE and the ACCOMMODATION made for it. A castle's appetites are about holding — ground, fear, obedience, a name — and its accommodations are what a house does to keep them.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Iron Baron",
+    "Widowed Castellan",
+    "Boy Duke",
+    "Margrave of the Marches",
+    "Lady of the Keep",
+    "Warden-Without-Heir",
+    "Old Constable"
+  ],
+  "appetites": [
+    {
+      "id": "feared",
+      "want": "to be feared",
+      "lack": "unfeared",
+      "purpose": "nobody would ever test the walls",
+      "motif": "terror",
+      "prize": "banner",
+      "conscript": "a garrison",
+      "appeasement": {
+        "move": "show it you are afraid, plainly and without shame",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is feared again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      },
+      "asks": "\"Are you afraid of me?\""
+    },
+    {
+      "id": "held",
+      "want": "never to give ground",
+      "lack": "dispossessed",
+      "purpose": "nothing would ever be surrendered",
+      "motif": "holding",
+      "prize": "deed",
+      "conscript": "the tenants",
+      "appeasement": {
+        "move": "ask its permission before you pass, and wait for it",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the ground is still its own to grant",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      },
+      "asks": "\"Who gave you leave to be here?\""
+    },
+    {
+      "id": "commanded",
+      "want": "to be obeyed at once",
+      "lack": "disregarded",
+      "purpose": "an order would never need repeating",
+      "motif": "command",
+      "prize": "seal",
+      "conscript": "a household",
+      "appeasement": {
+        "move": "carry out one order at once, without asking why",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "it was obeyed at once",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      },
+      "asks": "\"Why has this not been done?\""
+    },
+    {
+      "id": "lineage",
+      "want": "the name to go on",
+      "lack": "the last of the line",
+      "purpose": "the name would never end",
+      "motif": "lineage",
+      "prize": "ring",
+      "conscript": "the heirs",
+      "appeasement": {
+        "move": "say the family name as though it still means something",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "the name is spoken by someone living",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      },
+      "asks": "\"Whose child are you?\""
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "walled",
+      "text": "walled {conscript} in and did not open the gate again",
+      "cruelty": 3,
+      "fits": [
+        "feared",
+        "held",
+        "commanded"
+      ]
+    },
+    {
+      "id": "sworn",
+      "text": "bound {conscript} by an oath sworn on the name",
+      "cruelty": 2,
+      "fits": [
+        "commanded",
+        "lineage",
+        "held"
+      ]
+    },
+    {
+      "id": "hanged",
+      "text": "made an example of {conscript}, and left it up",
+      "cruelty": 3,
+      "fits": [
+        "feared",
+        "commanded"
+      ]
+    },
+    {
+      "id": "married",
+      "text": "married {conscript} into the line whether they would or not",
+      "cruelty": 2,
+      "fits": [
+        "lineage",
+        "held"
+      ]
+    },
+    {
+      "id": "quartered",
+      "text": "quartered {conscript} in the walls themselves",
+      "cruelty": 3,
+      "fits": [
+        "feared",
+        "held",
+        "lineage"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "would not let {conscript} leave, and then could not",
+      "cruelty": 1,
+      "fits": [
+        "lineage",
+        "held",
+        "commanded"
+      ]
+    }
+  ],
+  "prizes": {
+    "banner": {
+      "label": "the banner that was never struck",
+      "function": "the reason nobody ever came over the wall"
+    },
+    "deed": {
+      "label": "the deed that says whose ground this is",
+      "function": "the only proof the claim was ever good"
+    },
+    "seal": {
+      "label": "the seal that still commands the household",
+      "function": "the only thing the walls answer to"
+    },
+    "ring": {
+      "label": "the signet of the line, sized for a boy",
+      "function": "the last place the name is written"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Keep of the",
+      "The Hold of the",
+      "Castle of the",
+      "The Walls of the",
+      "The Bastion of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Barbican",
+      "The Causeway",
+      "The Outer Ward",
+      "The Gatehouse",
+      "The Drawbridge"
+    ],
+    "complication": [
+      "The Guardroom",
+      "The Inner Ward",
+      "The Stables",
+      "The Armoury",
+      "The Watch-Room"
+    ],
+    "turn": [
+      "The Great Hall",
+      "The Long Gallery",
+      "The Chapel Stair",
+      "The Solar",
+      "The Muster Yard"
+    ],
+    "descent": [
+      "The Undercroft",
+      "The Cistern",
+      "The Oubliette",
+      "The Sally Port",
+      "The Cold Cellar"
+    ],
+    "threshold": [
+      "The Privy Chamber",
+      "The Muniment Room",
+      "The Lord's Stair",
+      "The Strong Room",
+      "The Antechamber"
+    ],
+    "ending": [
+      "The Seat of the Keep",
+      "The High Hall",
+      "The Lord's Chamber",
+      "The Throne Under Arms"
+    ]
+  },
+  "factions": [
+    {
+      "id": "garrison",
+      "name": "the Garrison",
+      "kind": "undead",
+      "essence": "still standing the watch they were set",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "claimants",
+      "name": "rival claimants",
+      "kind": "living",
+      "essence": "here for the deed and armed about it",
+      "handledBy": "trade"
+    },
+    {
+      "id": "household",
+      "name": "the Household",
+      "kind": "undead",
+      "essence": "keeping a house whose lord is gone",
+      "handledBy": "an order given well"
+    },
+    {
+      "id": "besiegers",
+      "name": "what came over the wall",
+      "kind": "beast",
+      "essence": "neither knows nor cares whose keep this was",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in by the gate, in the open, seen from the walls",
+    "seenTwice": "caught by two watchposts, or by a watcher and a mirror",
+    "loud": "steel on stone, a shout, a door forced",
+    "lingering": "stayed in one place longer than a watch would allow",
+    "disturbed": "moved something the garrison had set down"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons in livery",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; half harm from arrows"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they challenge before they strike — answer the challenge"
+    },
+    "fight": {
+      "line": "2 Hobgoblin Soldiers and 2 Skeletons",
+      "foes": [
+        {
+          "n": 2,
+          "name": "Hobgoblin Soldier",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "fights in formation; flanks"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "break the formation and the Nerve 3 tells"
+    },
+    "battle": {
+      "line": "1 Ogre and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "one blow moves you a square"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — but the Ogre has 12 Grit; do not trade blows",
+      "avoid": "the Ogre was set to hold one doorway and will not leave it"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ogre and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "holds the door"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "terror": {
+      "danger": "reputation",
+      "dangerLine": "the keep is still frightening people, and needs to be",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "heads on the gate spikes, replaced as they weathered",
+          "a gibbet in the courtyard, oiled and maintained",
+          "arrow-slits cut to cover every step of the approach"
+        ],
+        "ritual": [
+          "a drum on the wall, beaten at the same hour for a century",
+          "the watch calling a challenge to an empty road",
+          "weapons laid out for an inspection nobody attends"
+        ],
+        "demand": [
+          "a hall arranged so a visitor must cross it alone, and slowly",
+          "a chair set high enough that you must look up from the door",
+          "a room with one way in and no way to stand out of the light"
+        ],
+        "wound": [
+          "armour hacked apart from behind, and stacked neatly anyway",
+          "a wall of tally-marks, counting something that stopped being counted",
+          "a garrison that killed itself rather than open the gate"
+        ],
+        "anchor": [
+          "a banner that has never been struck, still on its staff",
+          "a standard rolled in oiled cloth, ready to raise",
+          "a great seal pressed into black wax, unbroken"
+        ]
+      },
+      "features": [
+        "a portcullis dropped from the inside, recently",
+        "siege-marks on a wall that was never actually stormed",
+        "a fire lit last week in a hearth three centuries cold",
+        "supplies stacked for a siege that never came",
+        "a door barred with furniture, from this side",
+        "boot-prints on the wall-walk that stop halfway"
+      ],
+      "decisions": [
+        {
+          "cue": "a gate that will open for anyone who demands it loudly enough",
+          "cost": "demanding it announces you to everything inside",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you demand it with the right authority and the gate opens for you as it would for its lord",
+            "failure": "your demand rings hollow and the garrison marks you as a pretender: +1 Bane",
+            "orElse": "go round by the sally port: two Turns, unannounced"
+          }
+        },
+        {
+          "cue": "a challenge called down from the wall, and a right answer you do not know",
+          "cost": "a wrong answer is taken as an assault",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the countersign is in what you already passed — you give it and are admitted as expected",
+            "failure": "you answer wrong and the watch stands to: the next area's encounter begins hostile",
+            "orElse": "do not answer at all; go over the wall, one Turn and a Brawn roll"
+          }
+        },
+        {
+          "cue": "a body left hanging as an example, and an obvious kindness in cutting it down",
+          "cost": "the example was the point",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you cut it down with enough ceremony that the garrison approves rather than objects",
+            "failure": "you have destroyed the keep's warning and it wants a replacement: +1 Bane",
+            "orElse": "leave it; nothing changes and nothing is owed"
+          }
+        },
+        {
+          "cue": "a war-drum you could beat, or leave",
+          "cost": "beating it calls the garrison to muster — for you or against you",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "the muster forms up and takes its orders from you for one scene",
+            "failure": "the muster forms up and you are what it has come to deal with",
+            "orElse": "do not beat it: the way on is longer by one Turn"
+          }
+        },
+        {
+          "cue": "a room you must cross in full view of the arrow-slits",
+          "cost": "being watched crossing is exactly what the room is for",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you cross fast and low and are not fired upon",
+            "failure": "you are shot at: take 2 Grit and roll the clock",
+            "orElse": "walk it openly and slowly, hands visible — no harm, but you are announced"
+          }
+        },
+        {
+          "cue": "a prisoner still in the oubliette, alive by some means",
+          "cost": "letting them out means they know the keep and want out of it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "they trade the garrison's watch-pattern for their freedom, and it is true",
+            "failure": "they trade you a lie and go ahead of you to raise the alarm",
+            "orElse": "leave them: the way on is unchanged and you will hear them for hours"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Garrison",
+          "doing": "standing a watch on a road nobody uses",
+          "onArrival": "they challenge you, and wait for a countersign",
+          "because": "the order to stand down never came",
+          "offer": "give them any countersign said with confidence and they pass you through"
+        },
+        {
+          "occupant": "the drummer",
+          "doing": "beating the hour on a drum with no skin left",
+          "onArrival": "the beat stops when you enter",
+          "because": "the hour must be kept or the watch cannot change",
+          "offer": "keep the beat yourself and the whole garrison changes shift, opening the wall-walk"
+        },
+        {
+          "occupant": "a living claimant",
+          "doing": "measuring the great hall with a knotted cord",
+          "onArrival": "they put a hand on their sword and ask your business",
+          "because": "they mean to prove the keep is theirs by right of survey",
+          "offer": "offer to witness the survey and they will show you what they have already found"
+        },
+        {
+          "occupant": "the Constable",
+          "doing": "inspecting weapons that are all of them broken",
+          "onArrival": "they hand you one to examine and await your verdict",
+          "because": "the inspection was never concluded",
+          "offer": "condemn the weapons honestly and the armoury opens for you"
+        },
+        {
+          "occupant": "a single figure on the wall-walk",
+          "doing": "watching a road where something is genuinely coming",
+          "onArrival": "it points, and does not look at you",
+          "because": "it has seen the same thing arrive every night for three centuries",
+          "offer": "look where it points and it will tell you how long you have"
+        },
+        {
+          "occupant": "four of the Garrison",
+          "doing": "hauling a portcullis that is already down",
+          "onArrival": "they make room for you at the winch",
+          "because": "the order was to close the gate and it has never been rescinded",
+          "offer": "help them and they will open it once, for you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "standard",
+          "cue": "a banner-staff with the colours still on it",
+          "benefit": "raise it and the Garrison treats you as its lord for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything in the keep now knows exactly where you are"
+        },
+        {
+          "id": "countersign",
+          "cue": "a watchword scratched inside a helm",
+          "benefit": "pass any challenge in the keep without a roll, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected at the next post, and they wait"
+        },
+        {
+          "id": "gibbetiron",
+          "cue": "a length of gibbet-chain, still warm",
+          "benefit": "once, make one foe genuinely afraid — it breaks and flees",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever flees tells the rest what it saw"
+        },
+        {
+          "id": "hornofmuster",
+          "cue": "a horn that calls the garrison to arms",
+          "benefit": "sound it and three Skeletons fight for you for one scene",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they expect to be commanded again, and follow you",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "blackwax",
+          "cue": "the great seal, pressed and unbroken",
+          "benefit": "one door in the keep opens because you carry it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the seal is missed, and the household looks for who took it"
+        }
+      ]
+    },
+    "holding": {
+      "danger": "trespass",
+      "dangerLine": "the ground is still owned, and knows you are on it",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "boundary stones set closer together than any survey needs",
+          "a wall built through a room, sealing half of it off",
+          "fences inside the courtyard, dividing nothing from nothing"
+        ],
+        "ritual": [
+          "a rent-roll being read to an empty hall",
+          "a beating of the bounds, worn into the flagstones",
+          "a table where a claim was witnessed, still set for witnesses"
+        ],
+        "demand": [
+          "a door that will not open until someone asks for it aloud",
+          "a hall that reroutes you back to where you entered",
+          "a threshold worn on one side only, by people permitted to leave"
+        ],
+        "wound": [
+          "a deed torn in half, both halves kept",
+          "a wall pulled down and rebuilt three times in the same place",
+          "land salted inside the walls, so nothing else could hold it"
+        ],
+        "anchor": [
+          "a strongbox with one document in it",
+          "a survey chest, sealed, with the ribbons intact",
+          "a boundary stone brought indoors and kept warm"
+        ]
+      },
+      "features": [
+        "fresh mortar in a wall that should be three centuries old",
+        "a fence recently cut and badly mended",
+        "stakes driven into the courtyard in a line, not old",
+        "a room emptied of everything except the floorboards",
+        "chalk marks measuring out a room, still bright",
+        "a door rehung to open the other way"
+      ],
+      "decisions": [
+        {
+          "cue": "a boundary you can step over, or ask to cross",
+          "cost": "asking costs time; stepping costs standing",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you ask properly and the ground grants it — the Garrison will not treat you as trespassers again",
+            "failure": "you step over and are trespassers from here on: every encounter starts one step more hostile",
+            "orElse": "go the long way round the boundary: two Turns"
+          }
+        },
+        {
+          "cue": "a strongbox that will open for whoever holds the deed",
+          "cost": "you do not hold the deed",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out which half of the torn deed is here and open it with that",
+            "failure": "the box holds and the attempt is recorded somewhere: +1 Bane",
+            "orElse": "break it: loud, roll the clock, and the contents are damaged"
+          }
+        },
+        {
+          "cue": "a rival claimant offering to split what is inside",
+          "cost": "splitting it means telling them what you know",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you strike a deal that costs you nothing you needed",
+            "failure": "they take the better half and the way you came in",
+            "orElse": "refuse and go alone: nothing shared, nothing learned"
+          }
+        },
+        {
+          "cue": "a wall built through the middle of a room",
+          "cost": "the sealed half is where the way on is",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open a gap without bringing the rest down",
+            "failure": "the wall comes down badly: roll the clock and lose a Turn",
+            "orElse": "find the old door: one Turn of searching"
+          }
+        },
+        {
+          "cue": "a rent-roll listing everyone who ever owed here, and a blank line",
+          "cost": "signing it makes you a tenant, which has privileges",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you sign in a way that grants passage but promises nothing",
+            "failure": "you sign plainly and now owe rent to something that collects: +1 Bane",
+            "orElse": "leave it unsigned; doors that check tenancy stay shut"
+          }
+        },
+        {
+          "cue": "a room the keep keeps returning you to",
+          "cost": "the loop is deliberate and will not simply be walked out of",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you spot which door is the one that was added later",
+            "failure": "you go round again: lose a Turn and roll the clock",
+            "orElse": "break through a wall instead: loud, one Turn"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Steward",
+          "doing": "reading a rent-roll aloud to nobody",
+          "onArrival": "it stops and asks whether you are on the list",
+          "because": "the roll must be read complete before any tenant may pass",
+          "offer": "have yourself entered on the roll and every internal door opens"
+        },
+        {
+          "occupant": "two living claimants",
+          "doing": "arguing over a torn deed, half each",
+          "onArrival": "they both appeal to you at once",
+          "because": "neither half is worth anything alone",
+          "offer": "judge between them and the loser tells you what the winner would not"
+        },
+        {
+          "occupant": "a mason",
+          "doing": "rebuilding the same wall it has rebuilt many times",
+          "onArrival": "it does not stop, and asks you to hold a stone",
+          "because": "the wall must stand and will not",
+          "offer": "tell it the wall is finished and it will down tools and answer questions"
+        },
+        {
+          "occupant": "the Warden",
+          "doing": "beating the bounds of a room, slowly, with a rod",
+          "onArrival": "it invites you to walk the bounds with it",
+          "because": "the boundary must be walked or the claim lapses",
+          "offer": "walk with it and the ground stops treating you as trespassers"
+        },
+        {
+          "occupant": "a surveyor's ghost",
+          "doing": "measuring a courtyard that is bigger every time",
+          "onArrival": "it asks you to hold the other end of the cord",
+          "because": "the survey has never once agreed with itself",
+          "offer": "hold the cord and the courtyard resolves to one size, revealing a door"
+        },
+        {
+          "occupant": "the last tenant",
+          "doing": "paying rent into an empty box, coin by coin",
+          "onArrival": "it looks up and asks whether the rent is due",
+          "because": "nobody ever came to collect and it dare not stop",
+          "offer": "accept the rent on the house's behalf and it will guide you anywhere inside"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "halfdeed",
+          "cue": "half a torn deed, the upper half",
+          "benefit": "doors that check ownership open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the other half is somewhere, and someone is holding it"
+        },
+        {
+          "id": "boundstone",
+          "cue": "a boundary stone small enough to carry",
+          "benefit": "once, declare a space yours — nothing may enter it for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot leave ground you have claimed without giving it up aloud"
+        },
+        {
+          "id": "rentbook",
+          "cue": "a rent-roll with a blank line",
+          "benefit": "write a name and that person owes the keep a favour, once",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own name is entered directly beneath",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "keyring",
+          "cue": "a ring of keys, every one of them for this house",
+          "benefit": "one locked door per scene opens",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the household expects you to lock up behind you"
+        },
+        {
+          "id": "cord",
+          "cue": "a surveyor's knotted cord",
+          "benefit": "once, know exactly how far and which way the way on lies",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot stop measuring; distances distract you"
+        }
+      ]
+    },
+    "command": {
+      "danger": "obedience",
+      "dangerLine": "orders given here are still carried out, by whoever is nearest",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a duty roster chalked up, with today's date in a dead hand",
+          "bells numbered by room, all of them still wired",
+          "a chain of command painted on a wall, ranks in gold"
+        ],
+        "ritual": [
+          "a changing of the guard performed by two figures who never meet",
+          "orders read out at the same hour, to nobody",
+          "a salute held by a sentry who has not been relieved"
+        ],
+        "demand": [
+          "a hall where your own orders come back to you, obeyed",
+          "a chair placed so that whoever sits in it must be reported to",
+          "a room that will not let you leave until you have given an instruction"
+        ],
+        "wound": [
+          "orders countermanded in three hands, the last one shaking",
+          "a whipping-post worn smooth",
+          "a garrison that obeyed one order to the letter and starved doing it"
+        ],
+        "anchor": [
+          "a seal of office, still warm, on a table set for signing",
+          "a baton of command, laid down and not taken up",
+          "a written order with the wax unbroken"
+        ]
+      },
+      "features": [
+        "a duty roster amended recently, in chalk",
+        "a bell still swinging in an empty corridor",
+        "boots set out in a row, polished, for people who will not come",
+        "a door held open by a sentry who is no longer there",
+        "an order pinned to a board, the pin newer than the paper",
+        "a horse-line with the tack laid out and the horses long gone"
+      ],
+      "decisions": [
+        {
+          "cue": "an order chalked on the wall that you could obey, ignore or amend",
+          "cost": "obeying makes you household; amending makes you an officer",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you obey exactly and are counted household — the Garrison stands down for you",
+            "failure": "you obey wrongly, which is worse than refusing: +1 Bane",
+            "orElse": "ignore it and go round: one Turn, and they do not count you as theirs"
+          }
+        },
+        {
+          "cue": "a sentry who will not stand aside without relief",
+          "cost": "relieving them means taking their post",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you take the post long enough to be relieved in turn, and pass",
+            "failure": "you take the post and the relief does not come: lose a Turn and roll the clock",
+            "orElse": "find another way past: two Turns"
+          }
+        },
+        {
+          "cue": "a bell-board that would summon a servant to any room",
+          "cost": "whatever answers has been waiting a long time to be useful",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you ring for exactly the right room and something helpful arrives",
+            "failure": "you ring the wrong room and something unhelpful arrives instead",
+            "orElse": "do not ring: the way on is longer by one Turn"
+          }
+        },
+        {
+          "cue": "a written order, sealed, addressed to the garrison",
+          "cost": "reading it makes you responsible for it",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you read it and learn what the garrison is still waiting to be told",
+            "failure": "you break the seal clumsily; the order is void and the Garrison knows",
+            "orElse": "deliver it unopened to whoever it names — one Turn, and they act on it"
+          }
+        },
+        {
+          "cue": "two of the household awaiting an instruction from anyone at all",
+          "cost": "giving one commits you to the consequence",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "your instruction is carried out well and they attach to you as staff",
+            "failure": "your instruction is carried out to the letter, which is not what you meant: +1 Bane",
+            "orElse": "give none; they follow you anyway, waiting"
+          }
+        },
+        {
+          "cue": "a baton of command laid across a threshold",
+          "cost": "picking it up is picking up the post",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you take it up and the keep addresses you as its officer",
+            "failure": "you take it up and are held to an officer's standard you cannot meet: +1 Bane",
+            "orElse": "step over it; you pass, and nothing here answers to you"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a sentry",
+          "doing": "holding a salute that was never returned",
+          "onArrival": "it holds the salute, waiting",
+          "because": "the officer who should have returned it died first",
+          "offer": "return the salute and it stands down and speaks freely"
+        },
+        {
+          "occupant": "the Sergeant",
+          "doing": "reading the duty roster aloud to an empty yard",
+          "onArrival": "it reaches your position on the list and pauses",
+          "because": "the roster must be read complete or the watch cannot change",
+          "offer": "answer to a name on the roster and you are counted in the watch"
+        },
+        {
+          "occupant": "two of the Household",
+          "doing": "carrying out an order that cancelled itself",
+          "onArrival": "they ask you which of two contradictory orders stands",
+          "because": "both were given and neither was withdrawn",
+          "offer": "choose one and the other stands down and serves you"
+        },
+        {
+          "occupant": "a living deserter",
+          "doing": "stripping livery off a body, quickly",
+          "onArrival": "they freeze and put their hands where you can see them",
+          "because": "they worked out that the livery is what the keep obeys",
+          "offer": "trade for a set of livery and the Garrison will take you for household"
+        },
+        {
+          "occupant": "the bells",
+          "doing": "ringing room by room, coming closer",
+          "onArrival": "the bell in this room begins",
+          "because": "someone rang for service and the house is obliging",
+          "offer": "answer the bell yourself before whatever is meant to arrives"
+        },
+        {
+          "occupant": "an officer",
+          "doing": "waiting at a table set for the signing of an order",
+          "onArrival": "it turns the paper toward you and offers the pen",
+          "because": "the order was never signed and nothing may proceed without it",
+          "offer": "sign it and the whole household acts on it — read it first"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "baton",
+          "cue": "a baton of office, laid down",
+          "benefit": "the Household obeys one order from you per scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you may not refuse an order given to you by anything of higher rank"
+        },
+        {
+          "id": "livery",
+          "cue": "a set of household livery, clean",
+          "benefit": "the Garrison takes you for staff and does not challenge you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are given errands, and they are noticed if left undone"
+        },
+        {
+          "id": "bellpull",
+          "cue": "a bell-pull cut and carried",
+          "benefit": "once, summon something from elsewhere in the keep to help",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever comes stays until it is dismissed by name"
+        },
+        {
+          "id": "sealedorder",
+          "cue": "a written order, sealed, unaddressed",
+          "benefit": "fill in a name and that person must do one thing",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own name is on the reverse in the same hand",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "whistle",
+          "cue": "a sergeant's whistle",
+          "benefit": "once, halt anything in the keep for a round",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything in earshot looks to you for what comes next"
+        }
+      ]
+    },
+    "lineage": {
+      "danger": "succession",
+      "dangerLine": "the line is still being counted, and it is looking for the next name",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "a family tree painted the length of a wall, the last branch bare",
+          "portraits in strict order of birth, ending abruptly",
+          "cradles stacked in a storeroom, all of them used"
+        ],
+        "ritual": [
+          "a christening bowl, filled and refilled",
+          "a naming-day feast laid out and never eaten",
+          "a bible with the births entered in five hands and the deaths in one"
+        ],
+        "demand": [
+          "a hall of mirrors hung at child-height",
+          "a chair sized for an heir, kept dusted",
+          "a room that shows you your own face in the family line"
+        ],
+        "wound": [
+          "a name scratched from the tree, and the plaster gouged through",
+          "portraits of children that stop at the same age",
+          "a marriage bed with the hangings cut to ribbons"
+        ],
+        "anchor": [
+          "a signet sized for a boy's hand",
+          "a cradle with the blankets still warm",
+          "a locket with two portraits and one of them scraped blank"
+        ]
+      },
+      "features": [
+        "a name added to the family tree in fresh paint",
+        "a cradle moved recently, and rocked",
+        "a portrait taken down and turned to the wall",
+        "a christening bowl with water in it",
+        "a marriage contract half-signed on a table",
+        "toys set out for a child who is not here"
+      ],
+      "decisions": [
+        {
+          "cue": "a family tree with one bare branch, and a brush left out",
+          "cost": "adding a name is a claim; the house takes claims seriously",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you paint a name that satisfies the house without binding you",
+            "failure": "you paint yourself in, and the house now expects an heir of you: +1 Bane",
+            "orElse": "leave the branch bare and go round: one Turn"
+          }
+        },
+        {
+          "cue": "a locket with one portrait scraped away",
+          "cost": "restoring it means deciding who was removed",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out who it was from the portraits and the tree, and the house softens toward you",
+            "failure": "you guess wrong and name the wrong person: +1 Bane, and the house is colder",
+            "orElse": "leave it scraped; nothing gained, nothing owed"
+          }
+        },
+        {
+          "cue": "a living claimant with a marriage contract and a pen",
+          "cost": "signing gets you the run of the house as family",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sign in a way that grants access without obligation",
+            "failure": "you have married into a line the house intends to continue",
+            "orElse": "refuse: doors that check blood stay shut, one Turn to go round"
+          }
+        },
+        {
+          "cue": "a cradle that rocks when nobody is near it",
+          "cost": "stopping it is a kindness or an insult, depending",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you still it gently and whatever was rocking it is grateful",
+            "failure": "you still it and the house takes the loss badly: roll the clock",
+            "orElse": "leave it rocking; you will hear it for the rest of the delve"
+          }
+        },
+        {
+          "cue": "a christening bowl and a name expected of you",
+          "cost": "being named into the house has privileges",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "you give a name that is accepted and are treated as kin",
+            "failure": "you give your own name and the house has it now: +1 Bane",
+            "orElse": "decline the water; you remain a stranger and are watched as one"
+          }
+        },
+        {
+          "cue": "a portrait of a child that looks unmistakably like one of you",
+          "cost": "the house has noticed the resemblance too",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you turn the resemblance to your advantage and are welcomed as returning family",
+            "failure": "the house decides one of you is the heir, and will not be argued out of it",
+            "orElse": "cover the portrait: one Turn, and the house resents it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Nurse",
+          "doing": "rocking a cradle that has nothing in it",
+          "onArrival": "it asks you, quite reasonably, to be quiet",
+          "because": "the child was never brought and the rocking was never stopped",
+          "offer": "offer to take the watch and it will finally leave the room, and show you out"
+        },
+        {
+          "occupant": "a portrait-painter",
+          "doing": "working on a family tree that has run out of branches",
+          "onArrival": "it turns and measures your face against the wall",
+          "because": "the line must be continued on paper if it cannot be otherwise",
+          "offer": "sit for it and the house treats you as kin for the rest of the delve"
+        },
+        {
+          "occupant": "two living claimants",
+          "doing": "comparing signets, neither of which fits",
+          "onArrival": "they ask you to say which ring is the true one",
+          "because": "both were made and only one was worn",
+          "offer": "judge between them and the loser hands you what they came in with"
+        },
+        {
+          "occupant": "the Chaplain",
+          "doing": "filling a christening bowl that will not stay full",
+          "onArrival": "it holds out the ladle to you",
+          "because": "a naming was begun and never finished",
+          "offer": "finish the naming and every door that checks blood opens"
+        },
+        {
+          "occupant": "a child-sized figure",
+          "doing": "sitting in a chair too large for it, waiting to be addressed",
+          "onArrival": "it looks up and asks whether you have come for it at last",
+          "because": "it was told to wait and nobody returned",
+          "offer": "tell it that it may stop waiting, and it will show you the way down"
+        },
+        {
+          "occupant": "the Widow",
+          "doing": "setting a table for a family that is not coming",
+          "onArrival": "she counts you and adds places",
+          "because": "the meal must be laid whether anyone eats or not",
+          "offer": "sit and eat and the household is yours for the delve"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "signet",
+          "cue": "a signet ring sized for a boy",
+          "benefit": "doors that check blood open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the house expects you to produce an heir, and asks"
+        },
+        {
+          "id": "locket",
+          "cue": "a locket, one portrait scraped blank",
+          "benefit": "once, be taken for someone's kin by anything here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whoever was scraped out begins to be remembered as you"
+        },
+        {
+          "id": "cradleblanket",
+          "cue": "a blanket from a cradle, warm",
+          "benefit": "once, be protected as the house protects its own",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the house treats you as a child of it — indulged, and not consulted"
+        },
+        {
+          "id": "familybible",
+          "cue": "the register of births and deaths",
+          "benefit": "write a death and the house believes it, once",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own entry has been begun in the same hand",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "heirchair",
+          "cue": "a chair-back finial from an heir's seat",
+          "benefit": "once, insist on precedence as family and be obeyed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the rest of the line resents you, and shows it"
+        }
+      ]
+    }
+  }
+}

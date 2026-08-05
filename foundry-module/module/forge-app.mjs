@@ -18,7 +18,9 @@ const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const esc = s => foundry.utils.escapeHTML?.(String(s ?? '')) ?? String(s ?? '');
 
 const MOD = 'vanity-delve';
-const THEMES = ['barrow'];
+let THEMES = [{ id: 'barrow', label: 'Barrow' }];
+
+export function setThemes(list) { THEMES = list; }
 const PICKS = {
   depth: [1, 2, 3, 4, 5],
   party: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -76,7 +78,9 @@ export class DelveForgeApp extends HandlebarsApplicationMixin(ApplicationV2) {
  */
 export async function raiseDungeon(params = {}) {
   if (!game.user.isGM) return ui.notifications.warn('DELVE is a GM tool.');
-  const PACK = game.delve.pack;
+  // Load the chosen theme's pack on demand — only the default is preloaded.
+  const PACK = await game.delve.loadPack(params.theme ?? 'barrow');
+  if (!PACK) return ui.notifications.error(`DELVE: could not load the ${params.theme} theme.`);
   const seed = params.seed || coinSeed(new Rng(String(Date.now())));
   const d = generateDelve({ pack: PACK, ...params, seed });
   const sk = d.skeleton;

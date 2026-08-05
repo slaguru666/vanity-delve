@@ -25,7 +25,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"How do I look?\""
     },
     {
       "id": "remembered",
@@ -47,7 +48,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"Say my name.\""
     },
     {
       "id": "obeyed",
@@ -69,7 +71,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"Do as you are told.\""
     },
     {
       "id": "young",
@@ -91,7 +94,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"Tell me I have not changed.\""
     },
     {
       "id": "envied",
@@ -113,7 +117,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"What did you bring me?\""
     },
     {
       "id": "attended",
@@ -135,7 +140,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"You are not leaving.\""
     },
     {
       "id": "forgiven",
@@ -157,7 +163,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"Tell me it was not a sin.\""
     },
     {
       "id": "first",
@@ -179,7 +186,8 @@
           "bane": 1
         },
         "repeatable": true
-      }
+      },
+      "asks": "\"Who goes first?\""
     }
   ],
   "accommodations": [

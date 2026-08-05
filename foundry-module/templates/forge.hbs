@@ -5,7 +5,7 @@
   <div class="delve-grid">
     <label>Theme
       <select name="theme">
-        {{#each themes}}<option value="{{this}}" {{#if (eq this ../v.theme)}}selected{{/if}}>{{this}}</option>{{/each}}
+        {{#each themes}}<option value="{{this.id}}" {{#if (eq this.id ../v.theme)}}selected{{/if}}>{{this.label}}</option>{{/each}}
       </select>
     </label>
     <label>Areas
