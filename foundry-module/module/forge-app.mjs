@@ -12,39 +12,13 @@
  */
 import { generateDelve } from './core/delve.mjs';
 import { coinSeed, Rng } from './core/rng.mjs';
+import { foeStats, classifyFoes } from './foes.mjs';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const esc = s => foundry.utils.escapeHTML?.(String(s ?? '')) ?? String(s ?? '');
 
 const MOD = 'vanity-delve';
-
-/**
- * What a forged foe actually is.
- *
- * A pack's roster describes the encounter DELVE *planned* — "1 Ghoul and 2 Skeletons", with stats
- * and, in some themes, "blessed, silvered or magical weapons ONLY". The Forge does not take a
- * cast: it rolls its own monsters from the heat. So the roster and the actors in the world are two
- * different lists, and printing the roster's numbers beside the Forge's actors told the GM to run
- * a fight against foes that were never created.
- *
- * Read the numbers off the documents that exist. The plan is still worth showing — it carries
- * authored tactical guidance — but it has to be labelled as the plan.
- */
-export const foeStats = a => ({
-  name: a.name,
-  uuid: a.uuid,
-  atk: a.system?.attack1?.pool ?? null,
-  def: a.system?.defence?.pool ?? null,
-  grit: a.system?.grit?.value ?? null,
-  nerve: a.system?.nerve ?? null,
-  trick: a.system?.trick ?? '',
-});
-
-/** One foe as a line of stats, in the roster's own vocabulary so the two read alike. */
-export const foeLine = f =>
-  `<b>@UUID[${f.uuid}]{${f.name}}</b> — ${f.atk ?? '?'}/${f.def ?? '?'}/${f.grit ?? '?'}, Nerve ${f.nerve ?? '?'}${f.trick ? `. <i>${f.trick}</i>` : ''}`;
-
 let THEMES = [{ id: 'barrow', label: 'Barrow' }];
 
 export function setThemes(list) { THEMES = list; }
@@ -193,6 +167,26 @@ export async function raiseDungeon(params = {}) {
 
 /* ---------------------------------------------------------------- journal */
 
+/**
+ * The journal's foe section, driven by classifyFoes so it cannot disagree with the chat card.
+ * The roster's tactical notes name particular monsters, so they print only where the plan is
+ * itself the encounter.
+ */
+function foeSection(c) {
+  const table = rows => `<table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+  if (c.kind === 'forged') return `
+    <p><b>${esc(cap(c.heat))} — in the world.</b> These are the actors the Forge created; run the fight off these.</p>
+    ${table(c.foes.map(f => `<tr><td>@UUID[${f.uuid}]{${esc(f.name)}}</td><td>${f.atk ?? '?'}</td><td>${f.def ?? '?'}</td><td>${f.grit ?? '?'}</td><td>${f.nerve ?? '?'}</td><td><i>${esc(f.trick)}</i></td></tr>`).join(''))}
+    ${c.planned ? `<p><i>DELVE planned ${esc(c.planned.line)}. The Forge rolls its own cast, so the plan's foes are not these — its tactical notes describe monsters that were not created.</i></p>` : ''}`;
+  if (c.kind === 'planned') return `
+    <p><b>${esc(cap(c.heat))} — not cast.</b> Nothing was forged for this area, so the plan is the encounter. Cast it by hand:</p>
+    ${table(c.roster.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join(''))}
+    <p>Harmed by ${esc(c.roster.harmedBy)}. <i>${esc(c.roster.avoid)}.</i></p>`;
+  if (c.kind === 'unavailable') return `
+    <p><b>${esc(cap(c.heat))} — nothing to run.</b> No actors were created and this theme has no roster at this heat. Improvise the fight or skip it; the area's decision and fallback still stand.</p>`;
+  return '';
+}
+
 function buildPages(d, scenes) {
   const sk = d.skeleton, ap = sk.appeasement;
   const pages = [];
@@ -241,16 +235,7 @@ function buildPages(d, scenes) {
           ${rv.failure ? `<li><b>Miss</b> → ${esc(rv.failure)}</li>` : ''}
           ${rv.orElse ? `<li><b>Or</b> ${esc(rv.orElse)}</li>` : ''}
         </ul>
-        ${a._foes?.length ? `<p><b>${esc(cap(a.encounter.heat))} — in the world.</b> These are the actors the Forge created; run the fight off these.</p>
-          <table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>
-          ${a._foes.map(f => `<tr><td>@UUID[${f.uuid}]{${esc(f.name)}}</td><td>${f.atk ?? '?'}</td><td>${f.def ?? '?'}</td><td>${f.grit ?? '?'}</td><td>${f.nerve ?? '?'}</td><td><i>${esc(f.trick)}</i></td></tr>`).join('')}
-          </tbody></table>
-          ${R ? `<p><i>DELVE planned ${esc(R.line)}. The Forge rolls its own cast, so the plan's foes are not these — its tactical notes describe monsters that were not created.</i></p>` : ''}`
-        : R ? `<p><b>${esc(cap(a.encounter.heat))} — not cast.</b> Nothing was forged for this area, so the plan is the encounter. Cast it by hand:</p>
-          <table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>
-          ${R.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join('')}
-          </tbody></table>
-          <p>Harmed by ${esc(R.harmedBy)}${R.harmedBy.includes('ONLY') ? ' — <b>say so before initiative</b>' : ''}. <i>${esc(R.avoid)}.</i></p>` : ''}
+        ${foeSection(classifyFoes(a, a._foes ?? []))}
         ${a.temptation ? `<p><b>${esc(cap(a.temptation.id))}</b> — ${esc(a.temptation.cue)}: ${esc(a.temptation.benefit)}.<br>
           <i>Using it costs ${a.temptation.useCost?.bane ? `+${a.temptation.useCost.bane} Bane` : '—'}. While carried, ${esc(a.temptation.standingDrawback)}.</i></p>` : ''}
         ${a._hoard?.length ? `<p><b>Hoard.</b></p><ul>${a._hoard.map(l => `<li>${l}</li>`).join('')}</ul>` : ''}

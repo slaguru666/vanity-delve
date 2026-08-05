@@ -16,7 +16,8 @@
  */
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
-import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes, foeStats, foeLine } from './forge-app.mjs';
+import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes } from './forge-app.mjs';
+import { foeStats, foeLine, classifyFoes } from './foes.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
@@ -42,7 +43,7 @@ const setState = async s => game.settings.set(MOD, FLAG, s);
  */
 async function packById(id) {
   if (!id) return null;
-  if (PACK?.id === id) return PACK;
+  if (PACK?.id === id && PACK.forgeStageType) return PACK;    // validate the cache too
   const p = await loadPack(id);
   if (!p?.forgeStageType) return null;
   PACK = p;
@@ -112,7 +113,7 @@ async function draft(params = {}) {
   const theme = params.theme ?? 'barrow';         // drafting picks a theme; staging must be told one
   const pack = await packById(theme);
   if (!pack) return ui.notifications.error(`DELVE: could not load the ${theme} theme.`);
-  const d = newWorkingFile({ pack, ...params, seed });
+  const d = newWorkingFile({ ...params, seed, pack });   // pack last — see raiseDungeon
   ui.notifications.warn('DELVE: unfinished draft. Write the read-aloud in the worksheet first.');
   return load(d);
 }
@@ -130,37 +131,42 @@ async function enter() {
   if (!pack) return;
   ui.notifications.info(`DELVE: raising ${name}…`);
 
+  // A Forge failure must not leave the area half-raised. If the scene itself fails there is
+  // nothing to run, so stop before the turn advances and let the GM try again. If the population
+  // fails the scene is up and the delve is still playable — the planned roster stands in.
   const quiet = seamsPresent ? { post: false, folderId: st.folderId } : {};
   const stage = await game.vanity.forge.stage({
     type: pack.forgeStageType, size: 'medium', name, populate: false, activate: true, ...quiet,
-  });
+  }).catch(e => { console.error('DELVE | stage failed', e); return null; });
+  if (!stage) return ui.notifications.error(`DELVE: the Forge could not raise ${name}. Nothing staged; try again.`);
+
   const enc = area.encounter ? await game.vanity.forge.encounter({
     heat: area.encounter.heat, forStage: name,
     ...(seamsPresent ? { hoard: false, post: false, folderId: st.folderId } : {}),
+  }).catch(e => {
+    console.error('DELVE | encounter failed', e);
+    ui.notifications.warn(`DELVE: could not populate ${name} — the planned roster stands in.`);
+    return null;
   }) : null;
-  if (area.hoard) await game.vanity.forge.hoard({ size: area.hoard, ...(seamsPresent ? { post: false } : {}) });
+  if (area.hoard) await game.vanity.forge.hoard({ size: area.hoard, ...(seamsPresent ? { post: false } : {}) })
+    .catch(e => { console.error('DELVE | hoard failed', e); return null; });
 
   // Players first — the scene is up and this is what they came for.
   await readAloudCard(name, w.readAloud ?? `<i>(unwritten)</i> ${area.cueFragments.join('. ')}.`);
 
   // Then the GM, quietly.
-  const R = area.encounter?.roster;
-  const foes = (enc?.actors ?? []).map(foeStats);
   const rv = area.decision?.resolve ?? {};
-
-  /**
-   * One rule, both surfaces: show what exists. The roster's tactical guidance — what harms it, how
-   * to avoid it — describes the planned foes, so it travels with the plan and only when the plan
-   * IS the encounter. With nothing forged (populate off, or the Forge failed) the plan is all
-   * there is, and it must stay runnable.
-   */
-  const foeBlock = foes.length
-    ? `<p><b>${cap(area.encounter.heat)} — in the world:</b></p>${list(foes.map(foeLine))}${
-        R ? `<p><i>DELVE planned ${R.line}; the Forge rolled its own, so the plan's tactics do not describe these.</i></p>` : ''}`
-    : R
-    ? `<p><b>${cap(area.encounter.heat)} — not cast.</b> Nothing was forged; run the plan by hand:</p>${
-        list(R.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))
-      }<p><b>Harmed by ${R.harmedBy}.</b> ${R.avoid}.</p>`
+  const c = classifyFoes(area, (enc?.actors ?? []).map(foeStats));
+  const foeBlock =
+    c.kind === 'forged'
+      ? `<p><b>${cap(c.heat)} — in the world:</b></p>${list(c.foes.map(foeLine))}${
+          c.planned ? `<p><i>DELVE planned ${c.planned.line}; the Forge rolled its own, so the plan's tactics do not describe these.</i></p>` : ''}`
+    : c.kind === 'planned'
+      ? `<p><b>${cap(c.heat)} — not cast.</b> Nothing was forged; run the plan by hand:</p>${
+          list(c.roster.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))
+        }<p><b>Harmed by ${c.roster.harmedBy}.</b> ${c.roster.avoid}.</p>`
+    : c.kind === 'unavailable'
+      ? `<p><b>${cap(c.heat)} — nothing to run.</b> No actors, and no roster at this heat. Improvise or skip; the decision and fallback still stand.</p>`
     : '';
   await gmCard(`⛏ ${area.index} · ${name}`, `${area.role} · ${area.facet}`,
     `${area.situation ? `<p><b>Here:</b> ${cap(area.situation.occupant)}, ${area.situation.doing} — ${area.situation.onArrival}.<br>
@@ -218,7 +224,7 @@ Hooks.once('ready', async () => {
   if (index?.themes?.length) setThemes(index.themes);
   const packs = {};
   loadPack = async id => (packs[id] ??= await fetchJson(`${base}/${id}.json`));
-  PACK = await loadPack('barrow');
+  await packById('barrow');            // sets PACK, and validates it like any other
   seamsPresent = /post\s*=\s*true/.test(String(game.vanity?.forge?.hoard ?? ''));
 
   game.delve = { forge: () => new DelveForgeApp().render(true), raise: raiseDungeon,
