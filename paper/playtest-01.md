@@ -209,4 +209,4 @@ the gang, take the portrait in A5, and have nobody bow — the path v1 punishes 
 
 ---
 
-*Private VANITY development material — not for sale or distribution.*
+*VANITY development notes — part of [DELVE](https://github.com/slaguru666/vanity-delve).*

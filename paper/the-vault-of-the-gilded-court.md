@@ -344,4 +344,4 @@ Pass 2 is **contrarian**: Court Door, nobody bows, ally the gang, take the portr
 
 ---
 
-*Private VANITY development material — not for sale or distribution.*
+*VANITY development notes — part of [DELVE](https://github.com/slaguru666/vanity-delve).*

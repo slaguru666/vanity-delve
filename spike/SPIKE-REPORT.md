@@ -104,4 +104,4 @@ sequenced — but only if it stops talking to the table on its own.
 
 ---
 
-*Private VANITY development material — not for sale or distribution.*
+*VANITY development notes — part of [DELVE](https://github.com/slaguru666/vanity-delve).*
