@@ -20,17 +20,13 @@ const FACET_TRUTH = {
   demandEnd:   'the question itself, asked directly',
 };
 
-export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision }) {
+export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision, temptation = null }) {
   const r = rng.derive('area', String(planned.index));
   const fs = skeleton.foreshadow.find(f => f.index === planned.index) ?? {};
   const names = pack.areaNames?.[planned.role] ?? pack.areaNames?.approach ?? ['Unnamed'];
 
   // feature/decision are dealt by the caller without replacement across the delve — drawing them
   // per-area from pools of 8 and 6 made repeats near-certain inside a single delve.
-  const temptation = planned.hoard
-    ? r.derive('temptation').pick(pack.temptations)
-    : null;
-
   // Every area emits at least one attention trigger — draft 5 §9 weights triggers over the timer.
   const trigger = fs.facet === 'demand' ? skeleton.motif.trigger
     : r.derive('trigger').pick(['announced', 'loud', 'lingering', 'seenTwice', 'disturbed']);

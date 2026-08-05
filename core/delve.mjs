@@ -28,19 +28,34 @@ export function generateDelve(params = {}) {
   const pressure = new Pressure({ areas, clock });
 
   // Deal features and decisions without replacement, cycling only if the delve outruns the pack.
-  const deal = (list, n, tag) => {
+  // Deal without replacement. If a delve outruns its motif pool, top up from the generic pool
+  // before ever repeating — a repeated decision reads as a bug, generic furniture only as thin.
+  const deal = (list, n, tag, overflow = []) => {
     const r = rng.derive(tag);
-    const out = [];
+    const out = [...r.shuffle(list)];
+    if (out.length < n) out.push(...r.shuffle(overflow.filter(x => !out.includes(x))));
     while (out.length < n) out.push(...r.shuffle(list));
     return out.slice(0, n);
   };
+  // Motif-scoped furniture. Global pools are a fallback only: drawing decisions and temptations
+  // globally made the output "a consistent wrapper around generic room furniture" — the fiction
+  // cohered but the things in the rooms did not belong to it.
+  const motifPack = pack.motifs?.[skeleton.motif.id] ?? {};
+  const decisionPool = motifPack.decisions?.length ? motifPack.decisions : (pack.decisions ?? []);
   const features = deal(pack.features ?? [], plan.areas.length, 'features');
-  const decisions = deal(pack.decisions ?? [], plan.areas.length, 'decisions');
+  const decisions = deal(decisionPool, plan.areas.length, 'decisions', pack.decisions ?? []);
+
+  // Temptations are dealt across the areas that carry a hoard, for the same reason as decisions:
+  // picking independently per area from a pool of three repeated in 75 of 80 test delves.
+  const temptPool = motifPack.temptations?.length ? motifPack.temptations : (pack.temptations ?? []);
+  const hoardCount = plan.areas.filter(a => a.hoard).length;
+  const temptations = deal(temptPool, hoardCount, 'temptations');   // no generic overflow — see note
+  let tIdx = 0;
 
   const built = plan.areas.map((planned, i) => {
     const beat = baneBeatFor(planned, pressure, rng.derive('banebeat', String(planned.index)));
     if (beat) pressure.bankBane('(offered)', beat, planned.index);
-    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i] });
+    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i], temptation: planned.hoard ? temptations[tIdx++] : null });
     area.fallback = fallbackRoute(area, skeleton);
     return area;
   });

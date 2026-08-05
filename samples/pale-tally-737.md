@@ -52,7 +52,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** lamps trimmed and filled, all of them — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** two ways on: one narrow and dark, one wide and announced — *the wide way is faster and the barrow hears it*
+**The decision.** a room you can search, or leave exactly as you found it — *searching disturbs a preservation three centuries old — roll the clock*
 
 
 **Attention trigger:** disturbed.
@@ -75,7 +75,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** a meal laid out, still warm, for people long past eating — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** something valuable, awkward to carry — *carrying it slows you and it is not yours*
+**The decision.** a bed, made, and a body-shaped hollow that has not filled in — *lie in it and you rest fully; you also stop, and the barrow prefers that*
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -88,10 +88,10 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 - **Avoidable:** the Ghoul goes for court dress first — send someone plain
 - *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
 **Hoard.** Tier **cache**.
-**Temptation — ring.** a signet, still warm
-- *Benefit:* doors that answer to rank open for you
+**Temptation — flower.** a flower that has not wilted
+- *Benefit:* once, halt a condition where it stands
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* the barrow's servants bring you their problems
+- *Standing:* it also halts something you wanted to finish
 
 **Attention trigger:** lingering.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -113,7 +113,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** a clock wound by somebody, recently — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a member of the faction, alone and not yet hostile — *talking costs time; not talking costs later*
+**The decision.** a door held shut by nothing but the fact it has never been opened — *open it and something that had not changed, changes*
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -126,10 +126,10 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 - **Avoidable:** the Ghoul goes for court dress first — send someone plain
 - *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
 **Hoard.** Tier **cache**.
-**Temptation — ledger.** a book of names, one line left blank
-- *Benefit:* write a name and the Host obeys it once
-- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
-- *Standing:* your own name is now in it
+**Temptation — lamp.** a lamp still burning on three-century-old oil
+- *Benefit:* light that never gutters
+- *Accept:* free · *Use:* **+1 Bane** on the tab
+- *Standing:* nothing near it changes, including wounds you want to heal
 
 **Attention trigger:** lingering.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -151,13 +151,13 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** a room that resets itself if you look away — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a shortcut down, through water — *everything gets wet, including what burns*
+**The decision.** a preserved thing blocking the way, which will not survive being moved — *move it and something here ends; leave it and lose a Turn*
 
 **Hoard.** Tier **pocket**.
-**Temptation — glass.** a hand-mirror that shows the room a moment behind
-- *Benefit:* once per scene, see what was just here
+**Temptation — shoes.** a child's shoes, unworn, in your size
+- *Benefit:* you do not tire; ignore fatigue for a scene
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* your reflection lags, and others notice
+- *Standing:* you have stopped ageing, and it shows in the wrong light
 
 **Attention trigger:** lingering.
 **Bane beat — flattery.** Who: *whoever performs the appeasement*. When: *each time it is used*. repeatable. Say it aloud when it banks.
@@ -179,7 +179,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** something kept so well it has forgotten how to end — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a sealed door, and a crack you could squeeze through — *the crack costs skin and a Bane on a failure*
+**The decision.** a sealed jar, and a way on that needs what is inside — *breaking the seal spends the year it holds, in front of you*
 
 
 **Attention trigger:** seenTwice.
@@ -202,7 +202,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 **The clue is automatic:** a casket sized for something smaller than a body — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a way back, still open — *leaving now means it will be worse when you return*
+**The decision.** food and water laid out, still good — *eating restores you fully and the barrow adds you to what it keeps*
 
 **Encounter — battle.** 1 Wraith and 3 Skeletons
 
@@ -215,10 +215,10 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 - **Avoidable:** it will take an appeasement over a fight every time
 - *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
 **Hoard.** Tier **chest**.
-**Temptation — ledger.** a book of names, one line left blank
-- *Benefit:* write a name and the Host obeys it once
-- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
-- *Standing:* your own name is now in it
+**Temptation — jar.** a sealed jar holding one good year
+- *Benefit:* open it to undo a wound entirely, once
+- *Accept:* free · *Use:* **+2 Banes** on the tab
+- *Standing:* the year is spent in front of everyone, visibly
 
 **Attention trigger:** seenTwice.
 **Bane beat — refusal.** Who: *whoever refuses the offer*. When: *once*. once only. Say it aloud when it banks.

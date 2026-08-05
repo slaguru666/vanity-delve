@@ -54,5 +54,35 @@ for (let i = 0; i < 30; i++) {
 }
 t('no repeated cue fragment inside one delve', repeats === 0, `${repeats}/30 had repeats`);
 
+// motif-scoping: the furniture must belong to the fiction, not a global pool
+let offMotifDecisions = 0, offMotifTemptations = 0, checked = 0;
+for (let i = 0; i < 40; i++) {
+  const d = generateDelve({ pack, seed: `scope-${i}`, areas: 6 });
+  const m = pack.motifs[d.skeleton.motif.id];
+  const okD = new Set((m.decisions ?? []).map(x => x.cue));
+  const okT = new Set((m.temptations ?? []).map(x => x.id));
+  for (const a of d.areas) {
+    checked++;
+    if (a.decision && !okD.has(a.decision.cue)) offMotifDecisions++;
+    if (a.temptation && !okT.has(a.temptation.id)) offMotifTemptations++;
+  }
+}
+t('decisions come from the delve\'s own motif', offMotifDecisions === 0, `${offMotifDecisions}/${checked} off-motif`);
+t('temptations come from the delve\'s own motif', offMotifTemptations === 0, `${offMotifTemptations} off-motif`);
+
+// no repeated decision or temptation inside one delve
+let dupD = 0, dupT = 0;
+for (let i = 0; i < 40; i++) {
+  for (const areas of [6, 9]) {
+    const d = generateDelve({ pack, seed: `dup-${i}`, areas });
+    const ds = d.areas.map(a => a.decision?.cue).filter(Boolean);
+    const ts = d.areas.map(a => a.temptation?.id).filter(Boolean);
+    if (new Set(ds).size !== ds.length) dupD++;
+    if (new Set(ts).size !== ts.length) dupT++;
+  }
+}
+t('no repeated decision inside one delve', dupD === 0, `${dupD}/80`);
+t('no repeated temptation inside one delve', dupT === 0, `${dupT}/80`);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

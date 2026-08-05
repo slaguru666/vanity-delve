@@ -285,7 +285,83 @@
           "a wardrobe of three hundred dresses in a room with no dust in it",
           "one thing under cloth, and the cloth is clean"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "a doorway you can only reach by crossing open floor, in full view",
+          "cost": "cross it and you are seen — roll the clock; go the long way and lose a Turn"
+        },
+        {
+          "cue": "a mirror blocking the passage, angled to catch whoever passes",
+          "cost": "cover it and something notices the dark; pass it and something notices you"
+        },
+        {
+          "cue": "a portrait that must be moved to open the way behind it",
+          "cost": "turn it to the wall and the Host takes offence; carry it and you are announced everywhere"
+        },
+        {
+          "cue": "a gallery lit end to end, and an unlit servants' crawl beside it",
+          "cost": "the gallery is quick and bright; the crawl costs a Turn and a Brawn roll"
+        },
+        {
+          "cue": "a shuttered window onto the next room, and a choice about opening it",
+          "cost": "looking through costs nothing; being seen looking costs a Bane"
+        },
+        {
+          "cue": "a room you must cross either quickly or quietly",
+          "cost": "quick is one Turn and a clock roll; quiet is two Turns and none"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "mask",
+          "cue": "a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile",
+          "benefit": "the Host receives you as court, automatically",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "while worn you cannot be recognised by name — allies aiding you take −1 die"
+        },
+        {
+          "id": "glass",
+          "cue": "a hand-mirror that shows the room a moment behind",
+          "benefit": "once per scene, see what was just here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your reflection lags, and other people notice"
+        },
+        {
+          "id": "likeness",
+          "cue": "a small portrait of someone who is not you, painted beautifully",
+          "benefit": "show it and be taken for them, once",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they will eventually want it back"
+        },
+        {
+          "id": "veil",
+          "cue": "a mourning veil, fine enough to see through",
+          "benefit": "pass unremarked through the Host once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you see everyone as the barrow does — posed, waiting"
+        },
+        {
+          "id": "eyes",
+          "cue": "a pair of painted eyes cut from a portrait",
+          "benefit": "once, know exactly who is watching",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they are watching you back"
+        }
+      ]
     },
     "naming": {
       "danger": "recognition",
@@ -317,7 +393,83 @@
           "a seal cut with a name worn smooth by rubbing",
           "a tally-stick longer than a person"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "a door with a name cut into it, and a space beneath for a reply",
+          "cost": "answer with your own name and it opens — and it is written down"
+        },
+        {
+          "cue": "a roll of the dead, and one line you could strike out",
+          "cost": "striking a name frees something; it also puts you where the name was"
+        },
+        {
+          "cue": "someone's name called softly from two directions at once",
+          "cost": "answer either and the other stops calling"
+        },
+        {
+          "cue": "a lintel you must be announced under, or crawl beneath",
+          "cost": "announced costs a Bane; crawling costs your dignity and a Turn"
+        },
+        {
+          "cue": "a list of the dead with one name you recognise",
+          "cost": "saying it aloud helps; it also tells the barrow you are connected"
+        },
+        {
+          "cue": "two passages, and someone is being called down one of them",
+          "cost": "follow the voice and be expected; take the other and arrive unannounced"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "ledger",
+          "cue": "a book of names, one line left blank",
+          "benefit": "write a name and the Host obeys it once",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own name is now in it"
+        },
+        {
+          "id": "nameplate",
+          "cue": "a plate cut with a name worn smooth by rubbing",
+          "benefit": "doors that check a name open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you answer to that name whether you mean to or not"
+        },
+        {
+          "id": "tally",
+          "cue": "a tally-stick longer than a person, one notch unfilled",
+          "benefit": "call in a debt the barrow owes — once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the stick keeps counting what you owe too"
+        },
+        {
+          "id": "seal",
+          "cue": "a wax seal bearing a name struck through",
+          "benefit": "once, be forgotten by something hunting you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your allies find your name hard to recall"
+        },
+        {
+          "id": "lintel",
+          "cue": "a chip of lintel-stone with three names on it",
+          "benefit": "once, summon one of the named dead to answer",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they come whenever your name is said aloud"
+        }
+      ]
     },
     "voices": {
       "danger": "obedience",
@@ -349,7 +501,83 @@
           "a staff of office propped where it was set down",
           "a key that fits nothing here"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "an order carved into the floor, still legible",
+          "cost": "obey it and the Host counts you as household; step over it and they do not"
+        },
+        {
+          "cue": "a speaking-tube that is warm, and asking a question down it",
+          "cost": "an answer comes back — and now something knows where you are"
+        },
+        {
+          "cue": "a bell-pull that would summon someone",
+          "cost": "ring it and help comes, and it is not the kind you wanted"
+        },
+        {
+          "cue": "two doors, and behind one a voice giving instructions to nobody",
+          "cost": "the quiet door is longer; the voice would tell you exactly where to go"
+        },
+        {
+          "cue": "an instruction you can obey, ignore, or countermand",
+          "cost": "countermanding it works once and marks you as someone who gives orders"
+        },
+        {
+          "cue": "a door that opens to a spoken password nobody living knows",
+          "cost": "guessing costs a Bane per attempt; the long way costs two Turns"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "signet",
+          "cue": "a signet, still warm, sized for a thumb",
+          "benefit": "doors that answer to rank open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the barrow's servants bring you their problems"
+        },
+        {
+          "id": "tube",
+          "cue": "a short length of speaking-tube, cut and carried",
+          "benefit": "ask one question and get one true answer",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever answers can now hear you"
+        },
+        {
+          "id": "staff",
+          "cue": "a staff of office, propped where it was set down",
+          "benefit": "give one order the dead must follow",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you may not refuse an order given to you"
+        },
+        {
+          "id": "bell",
+          "cue": "a small bell from a servant's board",
+          "benefit": "ring it and one order is obeyed, by anything",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it rings faintly when someone gives you an order"
+        },
+        {
+          "id": "wax",
+          "cue": "a plug of wax, moulded to a mouth",
+          "benefit": "once, refuse to hear a compulsion",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot hear warnings either"
+        }
+      ]
     },
     "keeping": {
       "danger": "preservation",
@@ -381,7 +609,80 @@
           "an hourglass that has never been turned",
           "a casket sized for something smaller than a body"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "a room you can search, or leave exactly as you found it",
+          "cost": "searching disturbs a preservation three centuries old — roll the clock"
+        },
+        {
+          "cue": "a sealed jar, and a way on that needs what is inside",
+          "cost": "breaking the seal spends the year it holds, in front of you"
+        },
+        {
+          "cue": "a bed, made, and a body-shaped hollow that has not filled in",
+          "cost": "lie in it and you rest fully; you also stop, and the barrow prefers that"
+        },
+        {
+          "cue": "a door held shut by nothing but the fact it has never been opened",
+          "cost": "open it and something that had not changed, changes"
+        },
+        {
+          "cue": "a preserved thing blocking the way, which will not survive being moved",
+          "cost": "move it and something here ends; leave it and lose a Turn"
+        },
+        {
+          "cue": "food and water laid out, still good",
+          "cost": "eating restores you fully and the barrow adds you to what it keeps"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "jar",
+          "cue": "a sealed jar holding one good year",
+          "benefit": "open it to undo a wound entirely, once",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the year is spent in front of everyone, visibly"
+        },
+        {
+          "id": "stillglass",
+          "cue": "a mirror showing the room a little younger",
+          "benefit": "once, refuse a condition — the glass takes it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the glass cracks a little each time, and so do you"
+        },
+        {
+          "id": "shoes",
+          "cue": "a child's shoes, unworn, in your size",
+          "benefit": "you do not tire; ignore fatigue for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you have stopped ageing, and it shows in the wrong light"
+        },
+        {
+          "id": "lamp",
+          "cue": "a lamp still burning on three-century-old oil",
+          "benefit": "light that never gutters",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "nothing near it changes, including wounds you want to heal"
+        },
+        {
+          "id": "flower",
+          "cue": "a flower that has not wilted",
+          "benefit": "once, halt a condition where it stands",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it also halts something you wanted to finish"
+        }
+      ]
     },
     "display": {
       "danger": "comparison",
@@ -413,7 +714,83 @@
           "a case holding one item and a great deal of space",
           "a lock polished more often than the thing it guards"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "an empty plinth, sized for something you are carrying",
+          "cost": "leave a thing and the Host approves; keep it and they compare you unfavourably"
+        },
+        {
+          "cue": "a case of trophies and one obviously missing",
+          "cost": "replacing it opens the next door; nothing else will"
+        },
+        {
+          "cue": "two ways on: one you must be invited down, one you may simply take",
+          "cost": "the invitation costs an act of admiration; taking it costs their good opinion"
+        },
+        {
+          "cue": "a gift left for you, unopened, with your description on it",
+          "cost": "opening it accepts the comparison; leaving it is a refusal, and noted"
+        },
+        {
+          "cue": "a comparison invited — your gear against theirs",
+          "cost": "engage and gain their favour; decline and be marked as beneath notice"
+        },
+        {
+          "cue": "a display you could improve, or rob",
+          "cost": "improving it opens the next door; robbing it opens all of them, badly"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "prize",
+          "cue": "the piece every rival was meant to want, still under glass",
+          "benefit": "+1 die whenever someone must be impressed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everyone who sees it wants it"
+        },
+        {
+          "id": "ribbon",
+          "cue": "a ribbon awarded to whoever conceded the point",
+          "benefit": "end one argument in your favour, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot decline a challenge while wearing it"
+        },
+        {
+          "id": "gift",
+          "cue": "a gift, unopened, addressed to no one in particular",
+          "benefit": "open it for exactly the thing you needed",
+          "acceptanceCost": {
+            "vice": "Greed"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it was for someone, and they know"
+        },
+        {
+          "id": "case",
+          "cue": "a display case, small, with a good lock",
+          "benefit": "anything inside is beyond casual theft",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is in it is on show, always"
+        },
+        {
+          "id": "plinth",
+          "cue": "a plinth-plate engraved FINEST OF ITS KIND",
+          "benefit": "once, make a thing you carry undeniably the best",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "someone will want to test that"
+        }
+      ]
     },
     "company": {
       "danger": "attachment",
@@ -445,7 +822,83 @@
           "a chair kept empty and dusted",
           "a second cup, always out"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "one of the dead follows you and will not be told otherwise",
+          "cost": "let it come and doors open; send it back and they close"
+        },
+        {
+          "cue": "a chair drawn out, and a place laid, and time to sit",
+          "cost": "sitting costs a Turn and buys the Host's goodwill entirely"
+        },
+        {
+          "cue": "a door that will only admit one of you at a time",
+          "cost": "splitting the party is exactly what this place wants"
+        },
+        {
+          "cue": "a hand, skeletal, held out to be taken",
+          "cost": "take it and you are not alone; you are also not alone later"
+        },
+        {
+          "cue": "a way on that only works if someone stays behind",
+          "cost": "whoever stays is not alone, and that is the problem"
+        },
+        {
+          "cue": "an invitation to stay the night, meant sincerely",
+          "cost": "accepting restores everything and costs a Turn and a Bane"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "keepsake",
+          "cue": "a keepsake still warm from being held",
+          "benefit": "once, someone comes when you call",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "something else comes too"
+        },
+        {
+          "id": "cup",
+          "cue": "a second cup, always set out",
+          "benefit": "share it and gain an ally among the dead for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they expect to be included from now on"
+        },
+        {
+          "id": "hand",
+          "cue": "a skeletal hand that closes gently on yours",
+          "benefit": "you cannot be separated from the party by force",
+          "acceptanceCost": {
+            "vice": "Attachment"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "nor can you leave one behind"
+        },
+        {
+          "id": "chair",
+          "cue": "a folding chair, kept dusted",
+          "benefit": "set it down and something friendly sits",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it follows you if you leave it"
+        },
+        {
+          "id": "coat",
+          "cue": "a coat from a full rack, still shaped to someone",
+          "benefit": "once, be treated as expected and welcome",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to come back"
+        }
+      ]
     },
     "confession": {
       "danger": "judgement",
@@ -477,7 +930,80 @@
           "a ledger of sins with the last page blank",
           "a box that has only ever been opened once"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "a screen, a kneeler, and a question you can hear being asked",
+          "cost": "answer honestly and the way opens; lie and it opens anyway, differently"
+        },
+        {
+          "cue": "a scale, one pan holding a feather, the other empty",
+          "cost": "put something of yours in and it is weighed; walk past and you are not"
+        },
+        {
+          "cue": "a book of absolutions with room for one more",
+          "cost": "signing it forgives someone; it does not say who"
+        },
+        {
+          "cue": "a door that opens to whoever admits something first",
+          "cost": "whoever speaks pays; whoever stays silent owes"
+        },
+        {
+          "cue": "a question asked directly of one hero, by name",
+          "cost": "answering costs privacy; refusing costs the way forward"
+        },
+        {
+          "cue": "a penance offered instead of a fight",
+          "cost": "perform it and pass freely; it takes a Turn and it is humiliating"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "testament",
+          "cue": "a confession nobody ever heard, sealed",
+          "benefit": "read it aloud to unmake one accusation",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the thing confessed to becomes yours to answer for"
+        },
+        {
+          "id": "feather",
+          "cue": "the feather from the scale, weightless",
+          "benefit": "once, be believed absolutely",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot lie while carrying it, even usefully"
+        },
+        {
+          "id": "kneeler",
+          "cue": "a fragment of stone worn through by knees",
+          "benefit": "once, take a condition from someone else",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you keep every condition you take this way a little longer"
+        },
+        {
+          "id": "screen",
+          "cue": "a splinter from the confessional screen",
+          "benefit": "once, hear whether someone is lying",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they can tell you are listening for it"
+        },
+        {
+          "id": "ash",
+          "cue": "a twist of ash from burned absolutions",
+          "benefit": "once, erase a wrong you did here",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you cannot remember it either, and it mattered"
+        }
+      ]
     },
     "precedence": {
       "danger": "procession",
@@ -509,7 +1035,83 @@
           "a staff of precedence, laid down",
           "a seat at the head of everything, occupied"
         ]
-      }
+      },
+      "decisions": [
+        {
+          "cue": "a corridor that will not let two walk abreast",
+          "cost": "whoever goes first meets whatever is there first"
+        },
+        {
+          "cue": "a queue of the dead, and a way to step round it",
+          "cost": "waiting costs two Turns; pushing in costs the Host's patience"
+        },
+        {
+          "cue": "a door that opens only for the foremost of a party",
+          "cost": "someone must be named first, aloud, and the others must accept it"
+        },
+        {
+          "cue": "banners in strict order, and one you could move",
+          "cost": "reordering them opens a way and insults everyone buried here"
+        },
+        {
+          "cue": "a stair where the order of descent is visibly recorded",
+          "cost": "whoever goes last is remembered as having gone last"
+        },
+        {
+          "cue": "a claim to settle: which of you the barrow should address",
+          "cost": "settling it opens the way; refusing to settle it does not"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "coronet",
+          "cue": "a small crown, sized for someone who never grew",
+          "benefit": "+1 die when others must defer to you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must be addressed correctly or lose the benefit"
+        },
+        {
+          "id": "rankplate",
+          "cue": "a rank-plate prised off something and pocketed",
+          "benefit": "go first through any door the barrow guards",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "going first is now expected of you"
+        },
+        {
+          "id": "staffprec",
+          "cue": "a staff of precedence, laid down and not taken up",
+          "benefit": "once, decide the order of anything, and be obeyed",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you may never be second while you hold it"
+        },
+        {
+          "id": "herald",
+          "cue": "a herald's script with your name pencilled in",
+          "benefit": "once, be announced as whatever you claim",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must live up to it in front of the Host"
+        },
+        {
+          "id": "flagstone",
+          "cue": "a numbered flagstone, prised up, number one",
+          "benefit": "once, insist on going first and be obeyed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you go first into everything from now on"
+        }
+      ]
     }
   },
   "placeNames": {
@@ -839,5 +1441,6 @@
     "loud": "a raised voice, a broken door, steel on stone",
     "lingering": "stayed in one place longer than it takes to search it",
     "disturbed": "struck or moved something that had not moved in centuries"
-  }
+  },
+  "_globalPoolsNote": "decisions/temptations below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>.decisions/.temptations, so the furniture matches the fiction."
 }

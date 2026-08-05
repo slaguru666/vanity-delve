@@ -88,10 +88,22 @@ arrived at it by instinct. That convergence is the strongest evidence the model 
 
 Fragments are dealt without replacement, borrowing from a neighbouring facet before repeating.
 
-**Honest limit on "projected".** Only the motif cue fragment is projected from the appetite. The
-second cue fragment, the decisions and the temptations still come from **global pools**, so the
-current output is a projected wrapper around some generic room furniture. Making decisions and
-temptations motif-scoped is the next content job.
+**The furniture is motif-scoped too.** Codex's review found that only the motif cue fragment was
+projected — decisions and temptations came from global pools, making the output "a consistent
+wrapper around generic room furniture". Both now live under `motifs.<id>`: **6 decisions and 5
+temptations per motif**, 88 authored entries across 8 motifs. A `keeping` delve offers a flower
+that has not wilted, a lamp on three-century-old oil, and a room you may search or leave exactly
+as you found it. A `precedence` delve offers a corridor that will not let two walk abreast.
+
+Two rules the tests enforce:
+- **Nothing repeats inside one delve.** Decisions and temptations are dealt without replacement,
+  not picked per area — picking independently repeated a temptation in 75 of 80 test delves.
+- **Motif purity beats variety for temptations.** Decisions may top up from the generic pool if a
+  long delve outruns its motif; temptations may not. A generic relic breaks the fiction, while a
+  repeated one only looks thin.
+
+**Remaining limit:** the second cue fragment still comes from a global `features` pool. That is
+the last piece of generic furniture.
 
 ### The appeasement move
 

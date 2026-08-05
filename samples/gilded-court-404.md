@@ -52,7 +52,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a stair too grand for the door it serves — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a member of the faction, alone and not yet hostile — *talking costs time; not talking costs later*
+**The decision.** banners in strict order, and one you could move — *reordering them opens a way and insults everyone buried here*
 
 
 **Attention trigger:** announced.
@@ -75,7 +75,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** banners in sequence, each house a place further back — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** two ways on: one narrow and dark, one wide and announced — *the wide way is faster and the barrow hears it*
+**The decision.** a corridor that will not let two walk abreast — *whoever goes first meets whatever is there first*
 
 
 **Attention trigger:** loud.
@@ -98,7 +98,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a herald's script with the order still marked — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** something valuable, awkward to carry — *carrying it slows you and it is not yours*
+**The decision.** a door that opens only for the foremost of a party — *someone must be named first, aloud, and the others must accept it*
 
 
 **Attention trigger:** announced.
@@ -121,7 +121,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a door only one person may pass at a time, and only first — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a sealed door, and a crack you could squeeze through — *the crack costs skin and a Bane on a failure*
+**The decision.** a queue of the dead, and a way to step round it — *waiting costs two Turns; pushing in costs the Host's patience*
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -134,10 +134,10 @@ On success it goes first, and The Silent Host will not open hostilities first.
 - **Avoidable:** the Ghoul goes for court dress first — send someone plain
 - *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
 **Hoard.** Tier **cache**.
-**Temptation — coronet.** a small crown, sized for someone who never grew
-- *Benefit:* +1 die when others must defer to you
+**Temptation — flagstone.** a numbered flagstone, prised up, number one
+- *Benefit:* once, insist on going first and be obeyed
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you must be addressed correctly or lose the benefit
+- *Standing:* you go first into everything from now on
 
 **Attention trigger:** announced.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -159,13 +159,13 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a procession that doubled back on itself — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a shortcut down, through water — *everything gets wet, including what burns*
+**The decision.** a stair where the order of descent is visibly recorded — *whoever goes last is remembered as having gone last*
 
 **Hoard.** Tier **pocket**.
-**Temptation — glass.** a hand-mirror that shows the room a moment behind
-- *Benefit:* once per scene, see what was just here
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* your reflection lags, and others notice
+**Temptation — staffprec.** a staff of precedence, laid down and not taken up
+- *Benefit:* once, decide the order of anything, and be obeyed
+- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
+- *Standing:* you may never be second while you hold it
 
 **Attention trigger:** seenTwice.
 **Bane beat — refusal.** Who: *whoever refuses the offer*. When: *once*. once only. Say it aloud when it banks.
@@ -187,7 +187,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a seat at the head of everything, occupied — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a way back, still open — *leaving now means it will be worse when you return*
+**The decision.** a claim to settle: which of you the barrow should address — *settling it opens the way; refusing to settle it does not*
 
 **Encounter — battle.** 1 Wraith and 3 Skeletons
 
@@ -200,10 +200,10 @@ On success it goes first, and The Silent Host will not open hostilities first.
 - **Avoidable:** it will take an appeasement over a fight every time
 - *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
 **Hoard.** Tier **chest**.
-**Temptation — ledger.** a book of names, one line left blank
-- *Benefit:* write a name and the Host obeys it once
-- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
-- *Standing:* your own name is now in it
+**Temptation — coronet.** a small crown, sized for someone who never grew
+- *Benefit:* +1 die when others must defer to you
+- *Accept:* free · *Use:* **+1 Bane** on the tab
+- *Standing:* you must be addressed correctly or lose the benefit
 
 **Attention trigger:** disturbed.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.

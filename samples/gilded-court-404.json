@@ -18,11 +18,11 @@
     "placeName": "The Cairn of the Patient Lord",
     "knot": {
       "appetiteId": "first",
-      "accommodationId": "unmade",
+      "accommodationId": "bound",
       "claimant": "Patient Lord",
       "conscript": "a procession",
-      "transgression": "The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
-      "cruelty": 3
+      "transgression": "The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
+      "cruelty": 2
     },
     "motif": {
       "id": "precedence",
@@ -40,6 +40,20 @@
       "wantNow": "to be first in all things",
       "failureState": "is second now, and cannot bear it",
       "handledBy": "giving them what they want, at a price"
+    },
+    "appeasement": {
+      "move": "stand aside and let it go ahead of you",
+      "attribute": "Poise",
+      "successes": 2,
+      "why": "it goes first",
+      "gain": {
+        "vanity": 1
+      },
+      "cost": {
+        "bane": 1
+      },
+      "repeatable": true,
+      "faction": "The Silent Host"
     },
     "factions": [
       {
@@ -113,10 +127,10 @@
         "a stair too grand for the door it serves",
         "a floor mosaic worn only along one path"
       ],
-      "truth": "this is how the place was ordered, and it still is. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "this is how the place was ordered, and it still is. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "a member of the faction, alone and not yet hostile",
-        "cost": "talking costs time; not talking costs later"
+        "cue": "banners in strict order, and one you could move",
+        "cost": "reordering them opens a way and insults everyone buried here"
       },
       "encounter": null,
       "hoard": null,
@@ -136,16 +150,16 @@
     {
       "index": 2,
       "role": "complication",
-      "name": "The Hall of Bows",
+      "name": "The Lesser Vault",
       "facet": "ritual",
       "cueFragments": [
         "banners in sequence, each house a place further back",
         "grave-goods stacked with obsessive neatness"
       ],
-      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "two ways on: one narrow and dark, one wide and announced",
-        "cost": "the wide way is faster and the barrow hears it"
+        "cue": "a corridor that will not let two walk abreast",
+        "cost": "whoever goes first meets whatever is there first"
       },
       "encounter": null,
       "hoard": null,
@@ -165,16 +179,16 @@
     {
       "index": 3,
       "role": "complication",
-      "name": "The Lesser Vault",
+      "name": "The Waiting Room",
       "facet": "ritual",
       "cueFragments": [
         "a herald's script with the order still marked",
         "an alcove emptied in a hurry"
       ],
-      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "something valuable, awkward to carry",
-        "cost": "carrying it slows you and it is not yours"
+        "cue": "a door that opens only for the foremost of a party",
+        "cost": "someone must be named first, aloud, and the others must accept it"
       },
       "encounter": null,
       "hoard": null,
@@ -200,24 +214,49 @@
         "a door only one person may pass at a time, and only first",
         "a collapse that has opened a way the builders never meant"
       ],
-      "truth": "here the want is explicit — the place asks something of whoever enters. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "here the want is explicit — the place asks something of whoever enters. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "a sealed door, and a crack you could squeeze through",
-        "cost": "the crack costs skin and a Bane on a failure"
+        "cue": "a queue of the dead, and a way to step round it",
+        "cost": "waiting costs two Turns; pushing in costs the Host's patience"
       },
       "encounter": {
         "heat": "fight",
-        "kind": "undead"
+        "kind": "undead",
+        "roster": {
+          "line": "1 Ghoul and 2 Skeletons",
+          "foes": [
+            {
+              "n": 1,
+              "name": "Ghoul",
+              "atk": 4,
+              "def": 3,
+              "grit": 4,
+              "nerve": 5,
+              "note": "on a hit, a free Called Shot to freeze for a round"
+            },
+            {
+              "n": 2,
+              "name": "Skeleton",
+              "atk": 3,
+              "def": 2,
+              "grit": 1,
+              "nerve": 5,
+              "note": "fearless"
+            }
+          ],
+          "harmedBy": "anything",
+          "avoid": "the Ghoul goes for court dress first — send someone plain"
+        }
       },
       "hoard": "cache",
       "temptation": {
-        "id": "coronet",
-        "cue": "a small crown, sized for someone who never grew",
-        "benefit": "+1 die when others must defer to you",
+        "id": "flagstone",
+        "cue": "a numbered flagstone, prised up, number one",
+        "benefit": "once, insist on going first and be obeyed",
         "useCost": {
           "bane": 1
         },
-        "standingDrawback": "you must be addressed correctly or lose the benefit"
+        "standingDrawback": "you go first into everything from now on"
       },
       "trigger": "announced",
       "baneBeat": "relicUse",
@@ -240,21 +279,24 @@
         "a procession that doubled back on itself",
         "a lamp still burning on oil that should be long gone"
       ],
-      "truth": "this is the damage the want did to those who had to satisfy it. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "this is the damage the want did to those who had to satisfy it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "a shortcut down, through water",
-        "cost": "everything gets wet, including what burns"
+        "cue": "a stair where the order of descent is visibly recorded",
+        "cost": "whoever goes last is remembered as having gone last"
       },
       "encounter": null,
       "hoard": "pocket",
       "temptation": {
-        "id": "glass",
-        "cue": "a hand-mirror that shows the room a moment behind",
-        "benefit": "once per scene, see what was just here",
-        "useCost": {
-          "bane": 1
+        "id": "staffprec",
+        "cue": "a staff of precedence, laid down and not taken up",
+        "benefit": "once, decide the order of anything, and be obeyed",
+        "acceptanceCost": {
+          "vice": "Pride"
         },
-        "standingDrawback": "your reflection lags, and others notice"
+        "useCost": {
+          "bane": 2
+        },
+        "standingDrawback": "you may never be second while you hold it"
       },
       "trigger": "seenTwice",
       "baneBeat": "refusal",
@@ -271,33 +313,55 @@
     {
       "index": 6,
       "role": "threshold",
-      "name": "The Antechamber Royal",
+      "name": "The Last Door",
       "facet": "anchor",
       "cueFragments": [
         "a seat at the head of everything, occupied",
         "a door that has been wedged open from the inside"
       ],
-      "truth": "the thing the whole barrow is arranged around is close. The Patient Lord had the faces struck from a procession, so that someone would always go behind them.",
+      "truth": "the thing the whole barrow is arranged around is close. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.",
       "decision": {
-        "cue": "a way back, still open",
-        "cost": "leaving now means it will be worse when you return"
+        "cue": "a claim to settle: which of you the barrow should address",
+        "cost": "settling it opens the way; refusing to settle it does not"
       },
       "encounter": {
         "heat": "battle",
-        "kind": "undead"
+        "kind": "undead",
+        "roster": {
+          "line": "1 Wraith and 3 Skeletons",
+          "foes": [
+            {
+              "n": 1,
+              "name": "Wraith",
+              "atk": 5,
+              "def": 3,
+              "grit": 10,
+              "nerve": 5,
+              "note": "INCORPOREAL — chill touch ignores armour and drains 1 max Grit"
+            },
+            {
+              "n": 3,
+              "name": "Skeleton",
+              "atk": 3,
+              "def": 2,
+              "grit": 1,
+              "nerve": 5,
+              "note": "fearless"
+            }
+          ],
+          "harmedBy": "blessed, silvered or magical weapons ONLY",
+          "avoid": "it will take an appeasement over a fight every time"
+        }
       },
       "hoard": "chest",
       "temptation": {
-        "id": "ledger",
-        "cue": "a book of names, one line left blank",
-        "benefit": "write a name and the Host obeys it once",
-        "acceptanceCost": {
-          "vice": "Pride"
-        },
+        "id": "coronet",
+        "cue": "a small crown, sized for someone who never grew",
+        "benefit": "+1 die when others must defer to you",
         "useCost": {
-          "bane": 2
+          "bane": 1
         },
-        "standingDrawback": "your own name is now in it"
+        "standingDrawback": "you must be addressed correctly or lose the benefit"
       },
       "trigger": "disturbed",
       "baneBeat": "relicUse",
@@ -318,12 +382,19 @@
     "mode": "authored",
     "heat": null,
     "hoard": null,
-    "name": "The Gilded Audience",
+    "name": "The Audience",
     "cueFragments": [
       "a corridor that will not let two walk abreast"
     ],
     "question": "\"Who goes first?\"",
     "authored": true
+  },
+  "triggerGlossary": {
+    "announced": "entered somewhere grandly — the big doors, a shout, a herald",
+    "seenTwice": "reflected, echoed or witnessed twice over in one place",
+    "loud": "a raised voice, a broken door, steel on stone",
+    "lingering": "stayed in one place longer than it takes to search it",
+    "disturbed": "struck or moved something that had not moved in centuries"
   },
   "budget": {
     "plannedFights": 2,

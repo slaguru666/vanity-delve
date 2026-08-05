@@ -52,7 +52,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a coat-rack, full — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a way back, still open — *leaving now means it will be worse when you return*
+**The decision.** an invitation to stay the night, meant sincerely — *accepting restores everything and costs a Turn and a Bane*
 
 
 **Attention trigger:** lingering.
@@ -75,13 +75,13 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** places set every evening for three hundred years — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a shortcut down, through water — *everything gets wet, including what burns*
+**The decision.** a way on that only works if someone stays behind — *whoever stays is not alone, and that is the problem*
 
 **Hoard.** Tier **pocket**.
-**Temptation — coronet.** a small crown, sized for someone who never grew
-- *Benefit:* +1 die when others must defer to you
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you must be addressed correctly or lose the benefit
+**Temptation — hand.** a skeletal hand that closes gently on yours
+- *Benefit:* you cannot be separated from the party by force
+- *Accept:* take the Vice **Attachment** · *Use:* **+2 Banes** on the tab
+- *Standing:* nor can you leave one behind
 
 **Attention trigger:** lingering.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -103,7 +103,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** chairs drawn up in a circle, all facing one seat — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a member of the faction, alone and not yet hostile — *talking costs time; not talking costs later*
+**The decision.** a hand, skeletal, held out to be taken — *take it and you are not alone; you are also not alone later*
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -116,10 +116,10 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 - **Avoidable:** the Ghoul goes for court dress first — send someone plain
 - *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
 **Hoard.** Tier **cache**.
-**Temptation — mask.** a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile
-- *Benefit:* the Host receives you as court
+**Temptation — chair.** a folding chair, kept dusted
+- *Benefit:* set it down and something friendly sits
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* while worn you cannot be recognised by name
+- *Standing:* it follows you if you leave it
 
 **Attention trigger:** seenTwice.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -141,7 +141,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a doorway with the hinges taken off — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** something valuable, awkward to carry — *carrying it slows you and it is not yours*
+**The decision.** a door that will only admit one of you at a time — *splitting the party is exactly what this place wants*
 
 **Encounter — fight.** 1 Ghoul and 2 Skeletons
 
@@ -154,10 +154,10 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 - **Avoidable:** the Ghoul goes for court dress first — send someone plain
 - *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
 **Hoard.** Tier **cache**.
-**Temptation — mask.** a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile
-- *Benefit:* the Host receives you as court
+**Temptation — coat.** a coat from a full rack, still shaped to someone
+- *Benefit:* once, be treated as expected and welcome
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* while worn you cannot be recognised by name
+- *Standing:* you are expected to come back
 
 **Attention trigger:** lingering.
 **Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
@@ -179,7 +179,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a name called so often it wore into the wall — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** a sealed door, and a crack you could squeeze through — *the crack costs skin and a Bane on a failure*
+**The decision.** a chair drawn out, and a place laid, and time to sit — *sitting costs a Turn and buys the Host's goodwill entirely*
 
 
 **Attention trigger:** loud.
@@ -202,7 +202,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 **The clue is automatic:** a chair kept empty and dusted — and it was done deliberately.
 [VANITY: Observation — 1 success] buys who did it, and roughly when
 
-**The decision.** two ways on: one narrow and dark, one wide and announced — *the wide way is faster and the barrow hears it*
+**The decision.** one of the dead follows you and will not be told otherwise — *let it come and doors open; send it back and they close*
 
 **Encounter — battle.** 1 Wraith and 3 Skeletons
 
@@ -215,10 +215,10 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 - **Avoidable:** it will take an appeasement over a fight every time
 - *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
 **Hoard.** Tier **chest**.
-**Temptation — coronet.** a small crown, sized for someone who never grew
-- *Benefit:* +1 die when others must defer to you
+**Temptation — cup.** a second cup, always set out
+- *Benefit:* share it and gain an ally among the dead for a scene
 - *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you must be addressed correctly or lose the benefit
+- *Standing:* they expect to be included from now on
 
 **Attention trigger:** disturbed.
 **Bane beat — flattery.** Who: *whoever performs the appeasement*. When: *each time it is used*. repeatable. Say it aloud when it banks.
