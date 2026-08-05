@@ -1,0 +1,11 @@
+{
+  "id": "vanity-delve",
+  "title": "DELVE — a dungeon layer for VANITY",
+  "description": "Generates a coherent delve and sequences VANITY's Forge to stage it, one area at a time.",
+  "version": "0.1.0",
+  "compatibility": { "minimum": "13", "verified": "14.365" },
+  "relationships": { "systems": [{ "id": "vanity", "type": "requires", "compatibility": { "minimum": "0.10.0" } }] },
+  "esmodules": ["module/vanity-delve.mjs"],
+  "styles": ["styles/vanity-delve.css"],
+  "authors": [{ "name": "slaguru666" }]
+}

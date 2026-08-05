@@ -1,0 +1,9 @@
+.delve-card { border: 1px solid #b8912f; background: #1a1410; padding: .4rem .6rem; }
+.delve-card header { border-bottom: 1px solid #b8912f; margin-bottom: .3rem; }
+.delve-label { font-family: "Cinzel", serif; color: #e8c96a; letter-spacing: .04em; }
+.delve-sub { display: block; font-size: .8em; opacity: .75; }
+.delve-card ul { margin: .2rem 0 .3rem 1.1rem; }
+.delve-truth { border-left: 3px solid #7a5cff; padding-left: .5rem; opacity: .9; }
+
+.delve-read { border-left: 3px solid #e8c96a; font-size: 1.02em; }
+.delve-read p { margin: .2rem 0; }
