@@ -2,7 +2,7 @@
   "id": "mountain",
   "label": "Mountain",
   "forgeStageType": "cave",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Wild kernel at altitude. The appetite belongs to the hill — it wants to be gone up, to be cold, to be the only way through, and to have everything come to rest at its foot. Claimants are the mountain's own names, and its cruelties are all things weather does anyway.",
   "facetProgression": {

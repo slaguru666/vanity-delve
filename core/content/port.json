@@ -2,7 +2,7 @@
   "id": "port",
   "label": "Port",
   "forgeStageType": "village",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "own",
   "_model": "Settlement kernel on the water. The appetite belongs to the harbour, which is a place people are always about to leave — so every cruelty here is a way of stopping them, and every prize is something that makes leaving possible again.",
   "facetProgression": {

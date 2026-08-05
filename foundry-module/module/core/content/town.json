@@ -2,7 +2,7 @@
   "id": "town",
   "label": "Town",
   "forgeStageType": "village",
-  "schema": 1,
+  "schema": 2,
   "_model": "The settlement kernel: the APPETITE belongs to the place, not to a buried person. A town wants to be prosperous, respectable, safe or necessary, and its ACCOMMODATION is what a corporation does to keep it that way — price people out, charter them away, wall them off. Claimants are offices, not corpses.",
   "facetProgression": {
     "approach": "institution",

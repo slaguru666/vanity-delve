@@ -2,7 +2,7 @@
   "id": "barrow",
   "label": "Barrow",
   "forgeStageType": "barrow",
-  "schema": 1,
+  "schema": 2,
   "_model": "Everything derives from one kernel: an APPETITE and the ACCOMMODATION made for it. The motif, danger, prize kind and faction all follow from the appetite. Cue fragments hang off the MOTIF and are tagged by FACET (institution/ritual/demand/wound/anchor) and level, so two delves sharing a motif draw different imagery. The foreshadow chain is a fixed facet progression mapped onto the arc — which is why area 2's bows and area 4's scratched eyes both point at the same wound.",
   "appetites": [
     {

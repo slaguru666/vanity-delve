@@ -2,7 +2,7 @@
   "id": "temple",
   "label": "Temple",
   "forgeStageType": "barrow",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Interior kernel, older and stranger than a church. A temple wants the rite performed exactly, to be fed, to keep its name unsaid, or to be the only one. Its accommodations are what a priesthood does when a god is literal.",
   "facetProgression": {

@@ -2,7 +2,7 @@
   "id": "church",
   "label": "Church",
   "forgeStageType": "barrow",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Interior kernel. A parish church wants to be believed, attended, given to, or kept holy, and its accommodations are what a cure of souls does to keep a flock.",
   "facetProgression": {

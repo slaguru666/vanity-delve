@@ -45,8 +45,8 @@ and two paper playtests that failed before anything worked.
 
 | | |
 |---|---|
-| `core/` | the generator — pure JS, 39 tests |
-| `foundry-module/` | the Foundry module, with `core/` vendored |
+| `core/` | the generator — pure JS, 41 tests |
+| `foundry-module/` | the Foundry module, with `core/` vendored — 60 tests |
 | `paper/` | a hand-written delve and both playtest logs |
 | `spike/` | the harness that measured VANITY's Forge outside Foundry |
 | `samples/` | generated output |

@@ -2,7 +2,7 @@
   "id": "lake",
   "label": "Lake",
   "forgeStageType": "fen",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Wild kernel in still water. Where the river wants movement, the lake wants none: to be left flat, to be looked into, to keep what is under it exactly as it was, and to be a little bigger every year. Claimants are the water's own names for itself.",
   "facetProgression": {

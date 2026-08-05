@@ -2,7 +2,7 @@
   "id": "village",
   "label": "Village",
   "forgeStageType": "village",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "own",
   "_model": "The settlement kernel at its smallest. The appetite belongs to the place; the claimant is an office, not a person; and what a village does to people who might leave is quieter and worse than what a town does.",
   "facetProgression": {

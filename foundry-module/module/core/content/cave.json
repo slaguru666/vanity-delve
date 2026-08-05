@@ -2,7 +2,7 @@
   "id": "cave",
   "label": "Cave",
   "forgeStageType": "cave",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Wild kernel underground. The appetite belongs to the hole itself — it wants to be gone into, gone down, spoken to, and to keep whatever comes. Claimants are the cave's own names for itself, and the accommodation is what it did to whoever came in.",
   "facetProgression": {

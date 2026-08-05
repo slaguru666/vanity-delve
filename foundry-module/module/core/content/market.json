@@ -2,7 +2,7 @@
   "id": "market",
   "label": "Market",
   "forgeStageType": "village",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "own",
   "_model": "Settlement kernel, but the place is a transaction rather than a community. The appetite belongs to the market itself; the claimants are its offices; and everything it did to people it did by contract, which is why none of it can be undone by force.",
   "facetProgression": {

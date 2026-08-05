@@ -2,7 +2,7 @@
   "id": "river",
   "label": "River",
   "forgeStageType": "fen",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Wild kernel in moving water. The appetite belongs to the river — it wants to be asked before it is crossed, to carry things away, to run where it has always run, and to be given somebody rather than have to take them. Claimants are the river's own names.",
   "facetProgression": {

@@ -2,7 +2,7 @@
   "id": "valley",
   "label": "Valley",
   "forgeStageType": "forest",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Wild kernel that keeps you by being kind. The appetite belongs to the valley — it wants nothing to go over the top, everything to come in out of the wind, everything to end up at the bottom, and its own sky. Every cruelty here looks like hospitality, which is what makes it hard to leave.",
   "facetProgression": {

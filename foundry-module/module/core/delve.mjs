@@ -14,6 +14,10 @@ import { baneBeatFor } from './director.mjs';
  * it. Bump it when the shape of the emitted object changes or when content selection changes
  * enough that the same seed no longer yields the same delve — not when the module version moves.
  * 0.2.0: the `authored` layer, motif-scoped decisions/temptations/features, areas as situations.
+ *
+ * A change that originates in a pack rather than in this file belongs to `catalogVersion` instead
+ * — beat.mjs embeds the pack's roster verbatim, so a new roster field changes the emitted file
+ * without changing anything here. `beforeInitiative` is why the packs are at schema 2.
  */
 export const GENERATOR_VERSION = '0.2.0';
 

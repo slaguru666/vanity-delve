@@ -2,7 +2,7 @@
   "id": "city",
   "label": "City",
   "forgeStageType": "village",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "own",
   "_model": "Settlement kernel at its largest. Nobody here knows anybody, so the city knows instead — by ward, by roll, by works, by freedom granted and withheld. Its cruelties are all administrative, which is why none of them can be argued with.",
   "facetProgression": {

@@ -2,7 +2,7 @@
   "id": "castle",
   "label": "Castle",
   "forgeStageType": "barrow",
-  "schema": 1,
+  "schema": 2,
   "_model": "Same kernel as barrow: an APPETITE and the ACCOMMODATION made for it. A castle's appetites are about holding — ground, fear, obedience, a name — and its accommodations are what a house does to keep them.",
   "facetProgression": {
     "approach": "institution",

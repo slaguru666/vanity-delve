@@ -2,7 +2,7 @@
   "id": "palace",
   "label": "Palace",
   "forgeStageType": "barrow",
-  "schema": 1,
+  "schema": 2,
   "placeNameStyle": "claimant",
   "_model": "Interior kernel at its most VANITY-shaped. A palace wants to be attended, delighted, admired or centred on, and its accommodations are what a court does to people who are useful to that.",
   "facetProgression": {
