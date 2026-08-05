@@ -9,7 +9,13 @@ import { buildArea, fallbackRoute } from './beat.mjs';
 import { Pressure } from './pressure.mjs';
 import { baneBeatFor } from './director.mjs';
 
-export const GENERATOR_VERSION = '0.1.0';
+/**
+ * Stamped into every delve file and shown on both surfaces, so a file says which generator made
+ * it. Bump it when the shape of the emitted object changes or when content selection changes
+ * enough that the same seed no longer yields the same delve — not when the module version moves.
+ * 0.2.0: the `authored` layer, motif-scoped decisions/temptations/features, areas as situations.
+ */
+export const GENERATOR_VERSION = '0.2.0';
 
 export function generateDelve(params = {}) {
   const {

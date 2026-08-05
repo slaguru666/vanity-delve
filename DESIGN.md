@@ -34,7 +34,13 @@ one that matters.
 | Module | 0.6.0 |
 | Requires | VANITY **0.10.4+** — the release the seams landed in |
 | Foundry | v13 minimum, verified 14.365 |
-| Generator stamp | `GENERATOR_VERSION` 0.1.0 — written into every delve file, **not** the module version |
+| Generator stamp | `GENERATOR_VERSION` **0.2.0** — written into every delve file, **not** the module version |
+
+`GENERATOR_VERSION` had sat at 0.1.0 while the emitted object gained the `authored` layer and the
+content model moved under it, so files claimed a generator that no longer existed — the two
+samples in [`samples/`](samples/) are both stamped 0.1.0 and only one of them has an `authored`
+layer. It tracks the *shape of the delve file and what a seed yields*, and the comment on it now
+says when to bump it. Old files still load.
 
 ---
 

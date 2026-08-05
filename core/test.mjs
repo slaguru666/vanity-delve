@@ -1,9 +1,12 @@
 import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import { Rng } from './rng.mjs';
 import { generateDelve } from './delve.mjs';
 import { renderMarkdown } from './render.mjs';
 
-const pack = JSON.parse(readFileSync('./content/barrow.json', 'utf8'));
+const dir = join(dirname(fileURLToPath(import.meta.url)), 'content');
+const pack = JSON.parse(readFileSync(join(dir, 'barrow.json'), 'utf8'));
 let pass = 0, fail = 0;
 const t = (name, cond, detail = '') => { cond ? pass++ : fail++; console.log(`${cond ? ' ok ' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`); };
 
