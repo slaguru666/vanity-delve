@@ -16,7 +16,7 @@
  */
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
-import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes } from './forge-app.mjs';
+import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes, foeStats, foeLine } from './forge-app.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
@@ -27,6 +27,29 @@ let loadPack = async () => null;
 
 const getState = () => game.settings.get(MOD, FLAG) ?? null;
 const setState = async s => game.settings.set(MOD, FLAG, s);
+
+/**
+ * The pack a delve was actually authored against.
+ *
+ * PACK is only a boot-time default. A delve brought in from the desk may be any of the sixteen
+ * themes, and staging one with the wrong pack gives a harbour delve a barrow map — the fiction
+ * says quayside and the geometry says burial chamber. Resolved per call rather than once at load,
+ * because the global resets on a page reload while the staged delve in world state does not.
+ *
+ * `params.theme` is written from `pack.id` at generation time, so it is always present and always
+ * right, whatever the caller passed.
+ */
+async function packFor(d) {
+  const id = d?.params?.theme ?? 'barrow';
+  if (PACK?.id === id) return PACK;
+  const p = await loadPack(id);
+  if (!p) {
+    ui.notifications.error(`DELVE: could not load the ${id} theme — refusing to stage, it would use the wrong geometry.`);
+    return null;
+  }
+  PACK = p;
+  return p;
+}
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const list = items => `<ul>${items.filter(Boolean).map(i => `<li>${i}</li>`).join('')}</ul>`;
 
@@ -51,6 +74,7 @@ async function load(working) {
   if (!d?.skeleton || !Array.isArray(d.areas)) return ui.notifications.error('DELVE: that is not a delve file.');
 
   const todo = outstanding(d);
+  if (!await packFor(d)) return;                 // before anything is created in the world
   const folder = await Folder.create({ name: `Delve — ${d.authored?.title ?? d.skeleton.placeName}`, type: 'Actor' });
   await setState({ delve: d, folderId: folder.id, at: 0, turn: 0, tab: [], clock: [] });
 
@@ -75,7 +99,9 @@ async function loadFile(name) {
 /** Generate an unfinished draft in-world. Convenience only — the desk is the right place. */
 async function draft(params = {}) {
   const seed = params.seed || coinSeed(new Rng(String(game.world.id)));
-  const d = newWorkingFile({ pack: PACK, ...params, seed });
+  const pack = await packFor({ params });
+  if (!pack) return;
+  const d = newWorkingFile({ pack, ...params, seed });
   ui.notifications.warn('DELVE: unfinished draft. Write the read-aloud in the worksheet first.');
   return load(d);
 }
@@ -89,16 +115,18 @@ async function enter() {
   const area = d.areas[st.at];
   const w = d.authored?.areas?.[area.index] ?? {};
   const name = w.nameOverride ?? area.name;
+  const pack = await packFor(d);
+  if (!pack) return;
   ui.notifications.info(`DELVE: raising ${name}…`);
 
   const quiet = seamsPresent ? { post: false, folderId: st.folderId } : {};
   const stage = await game.vanity.forge.stage({
-    type: PACK.forgeStageType, size: 'medium', name, populate: false, activate: true, ...quiet,
+    type: pack.forgeStageType, size: 'medium', name, populate: false, activate: true, ...quiet,
   });
-  if (area.encounter) await game.vanity.forge.encounter({
+  const enc = area.encounter ? await game.vanity.forge.encounter({
     heat: area.encounter.heat, forStage: name,
     ...(seamsPresent ? { hoard: false, post: false, folderId: st.folderId } : {}),
-  });
+  }) : null;
   if (area.hoard) await game.vanity.forge.hoard({ size: area.hoard, ...(seamsPresent ? { post: false } : {}) });
 
   // Players first — the scene is up and this is what they came for.
@@ -106,13 +134,14 @@ async function enter() {
 
   // Then the GM, quietly.
   const R = area.encounter?.roster;
+  const foes = (enc?.actors ?? []).map(foeStats);
   const rv = area.decision?.resolve ?? {};
   await gmCard(`⛏ ${area.index} · ${name}`, `${area.role} · ${area.facet}`,
     `${area.situation ? `<p><b>Here:</b> ${cap(area.situation.occupant)}, ${area.situation.doing} — ${area.situation.onArrival}.<br>
         <b>They can:</b> ${area.situation.offer}. <i>${cap(area.situation.because)}.</i></p>` : ''}
      <p><b>${cap(area.decision.cue)}</b>${rv.roll ? ` — [${rv.roll}] ${rv.success}` : ''}${rv.failure ? `<br><b>Miss:</b> ${rv.failure}` : ''}${rv.orElse ? `<br><b>Or:</b> ${rv.orElse}` : ''}</p>
-     ${R ? `<p><b>${cap(area.encounter.heat)}:</b> ${R.line}</p>${list(R.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))}
-            <p><b>Harmed by ${R.harmedBy}.</b> ${R.avoid}.</p>` : ''}
+     ${foes.length ? `<p><b>${cap(area.encounter.heat)} — in the world:</b></p>${list(foes.map(foeLine))}` : ''}
+     ${R ? `<p><b>DELVE planned ${R.line}</b> — the Forge rolled its own, so run the block above. ${R.avoid}.</p>` : ''}
      ${area.temptation ? `<p><b>${cap(area.temptation.id)}:</b> ${area.temptation.benefit}. <i>Use: ${area.temptation.useCost?.bane ? `+${area.temptation.useCost.bane} Bane` : '—'}. ${area.temptation.standingDrawback}.</i></p>` : ''}
      ${w.notes ? `<p><b>Your note:</b> ${w.notes}</p>` : ''}
      <p><code>${area.trigger}${area.baneBeat ? ` · ${area.baneBeat}` : ''} · fallback: ${area.fallback.route}</code></p>`);

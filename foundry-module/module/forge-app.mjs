@@ -18,6 +18,33 @@ const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const esc = s => foundry.utils.escapeHTML?.(String(s ?? '')) ?? String(s ?? '');
 
 const MOD = 'vanity-delve';
+
+/**
+ * What a forged foe actually is.
+ *
+ * A pack's roster describes the encounter DELVE *planned* — "1 Ghoul and 2 Skeletons", with stats
+ * and, in some themes, "blessed, silvered or magical weapons ONLY". The Forge does not take a
+ * cast: it rolls its own monsters from the heat. So the roster and the actors in the world are two
+ * different lists, and printing the roster's numbers beside the Forge's actors told the GM to run
+ * a fight against foes that were never created.
+ *
+ * Read the numbers off the documents that exist. The plan is still worth showing — it carries
+ * authored tactical guidance — but it has to be labelled as the plan.
+ */
+export const foeStats = a => ({
+  name: a.name,
+  uuid: a.uuid,
+  atk: a.system?.attack1?.pool ?? null,
+  def: a.system?.defence?.pool ?? null,
+  grit: a.system?.grit?.value ?? null,
+  nerve: a.system?.nerve ?? null,
+  trick: a.system?.trick ?? '',
+});
+
+/** One foe as a line of stats, in the roster's own vocabulary so the two read alike. */
+export const foeLine = f =>
+  `<b>@UUID[${f.uuid}]{${f.name}}</b> — ${f.atk ?? '?'}/${f.def ?? '?'}/${f.grit ?? '?'}, Nerve ${f.nerve ?? '?'}${f.trick ? `. <i>${f.trick}</i>` : ''}`;
+
 let THEMES = [{ id: 'barrow', label: 'Barrow' }];
 
 export function setThemes(list) { THEMES = list; }
@@ -123,7 +150,7 @@ export async function raiseDungeon(params = {}) {
         heat: area.encounter.heat, forStage: area.name,
         ...(seams ? { hoard: false, post: false, folderId: folders.Actor.id } : {}),
       }).catch(e => { console.error('DELVE | encounter failed', e); return null; });
-      area._foes = (enc?.actors ?? []).map(a => ({ name: a.name, uuid: a.uuid }));
+      area._foes = (enc?.actors ?? []).map(foeStats);
     }
     if (area.hoard) {
       const h = await game.vanity.forge.hoard({ size: area.hoard, ...quiet })
@@ -212,11 +239,12 @@ function buildPages(d, scenes) {
           ${rv.failure ? `<li><b>Miss</b> → ${esc(rv.failure)}</li>` : ''}
           ${rv.orElse ? `<li><b>Or</b> ${esc(rv.orElse)}</li>` : ''}
         </ul>
-        ${R ? `<p><b>${esc(cap(a.encounter.heat))} — ${esc(R.line)}.</b> Harmed by ${esc(R.harmedBy)}${R.harmedBy.includes('ONLY') ? ' — <b>say so before initiative</b>' : ''}. <i>${esc(R.avoid)}.</i></p>
+        ${a._foes?.length ? `<p><b>${esc(cap(a.encounter.heat))} — in the world.</b> These are the actors the Forge created; run the fight off these.</p>
           <table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>
-          ${R.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join('')}
+          ${a._foes.map(f => `<tr><td>@UUID[${f.uuid}]{${esc(f.name)}}</td><td>${f.atk ?? '?'}</td><td>${f.def ?? '?'}</td><td>${f.grit ?? '?'}</td><td>${f.nerve ?? '?'}</td><td><i>${esc(f.trick)}</i></td></tr>`).join('')}
           </tbody></table>` : ''}
-        ${a._foes?.length ? `<p><b>Rolled for you:</b> ${a._foes.map(f => `@UUID[${f.uuid}]{${esc(f.name)}}`).join(' · ')}</p>` : ''}
+        ${R ? `<p><b>DELVE planned ${esc(R.line)}</b> — the Forge rolls its own foes, so the plan and the table above are different lists.
+          Its guidance still applies to the scene: harmed by ${esc(R.harmedBy)}${R.harmedBy.includes('ONLY') ? ' — <b>only true if you cast the fight yourself</b>' : ''}. <i>${esc(R.avoid)}.</i></p>` : ''}
         ${a.temptation ? `<p><b>${esc(cap(a.temptation.id))}</b> — ${esc(a.temptation.cue)}: ${esc(a.temptation.benefit)}.<br>
           <i>Using it costs ${a.temptation.useCost?.bane ? `+${a.temptation.useCost.bane} Bane` : '—'}. While carried, ${esc(a.temptation.standingDrawback)}.</i></p>` : ''}
         ${a._hoard?.length ? `<p><b>Hoard.</b></p><ul>${a._hoard.map(l => `<li>${l}</li>`).join('')}</ul>` : ''}

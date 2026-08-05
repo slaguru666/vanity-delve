@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { Rng } from './rng.mjs';
@@ -228,6 +228,20 @@ import { renderWorksheet, renderPlay } from './render-authoring.mjs';
   t('the play sheet is shorter than the worksheet',
     done.split('\n').length < renderWorksheet(d).split('\n').length,
     `play ${done.split('\n').length} vs worksheet ${renderWorksheet(d).split('\n').length} lines`);
+}
+
+// A delve must carry the pack it came from. The Foundry adapter reads `params.theme` to decide
+// which geometry to stage; when it trusted a boot-time global instead, every non-barrow delve got
+// a barrow map. The adapter cannot be tested here, so the contract it depends on is tested here.
+{
+  const ids = readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'index.json')
+    .map(f => f.replace('.json', ''));
+  const wrong = ids.filter(id => {
+    const p = JSON.parse(readFileSync(join(dir, `${id}.json`), 'utf8'));
+    return generateDelve({ pack: p, seed: `theme-${id}` }).params.theme !== id;
+  });
+  t('every delve records the pack it was generated from', wrong.length === 0,
+    wrong.length ? `wrong: ${wrong.join(', ')}` : `${ids.length} packs`);
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);
