@@ -1,0 +1,1174 @@
+{
+  "id": "palace",
+  "label": "Palace",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Interior kernel at its most VANITY-shaped. A palace wants to be attended, delighted, admired or centred on, and its accommodations are what a court does to people who are useful to that.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Sun-Queen",
+    "Pleasure-Prince",
+    "Regent-in-Perpetuity",
+    "Favourite",
+    "Doge",
+    "Empress of One Room",
+    "Master of Revels"
+  ],
+  "appetites": [
+    {
+      "id": "attended",
+      "want": "never to do anything unattended",
+      "lack": "unattended",
+      "purpose": "nothing would ever have to be done alone",
+      "motif": "service",
+      "prize": "bell",
+      "conscript": "the servants",
+      "asks": "\"Where is everybody?\"",
+      "appeasement": {
+        "move": "do one small service without being asked, and well",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was attended to",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "delighted",
+      "want": "never to be bored for an instant",
+      "lack": "bored",
+      "purpose": "the entertainment would never stop",
+      "motif": "delight",
+      "prize": "mask",
+      "conscript": "the entertainers",
+      "asks": "\"Well, amuse me.\"",
+      "appeasement": {
+        "move": "amuse it — a story, a trick, a scandal, anything new",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it is diverted again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "admired",
+      "want": "to be surrounded by the finest of everything",
+      "lack": "surrounded by the ordinary",
+      "purpose": "nothing plain would ever be in the room",
+      "motif": "splendour",
+      "prize": "jewel",
+      "conscript": "the makers",
+      "asks": "\"Do you like it?\"",
+      "appeasement": {
+        "move": "admire something of its aloud and in detail",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it has been admired properly",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "centred",
+      "want": "to be the reason everyone is in the room",
+      "lack": "ignored",
+      "purpose": "every eye would always be on it",
+      "motif": "audience",
+      "prize": "seal",
+      "conscript": "the courtiers",
+      "asks": "\"Am I boring you?\"",
+      "appeasement": {
+        "move": "give it your whole attention, and do not look away",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is the centre of the room again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "retained",
+      "text": "retained {conscript} at court and would not sign their leave",
+      "cruelty": 2,
+      "fits": [
+        "attended",
+        "delighted",
+        "centred"
+      ]
+    },
+    {
+      "id": "ruined",
+      "text": "ruined {conscript} so they could not afford to leave",
+      "cruelty": 3,
+      "fits": [
+        "attended",
+        "centred",
+        "admired"
+      ]
+    },
+    {
+      "id": "commissioned",
+      "text": "commissioned {conscript} to work until the work killed them",
+      "cruelty": 3,
+      "fits": [
+        "admired",
+        "delighted"
+      ]
+    },
+    {
+      "id": "favoured",
+      "text": "favoured {conscript} so publicly that they could go nowhere else",
+      "cruelty": 2,
+      "fits": [
+        "centred",
+        "delighted",
+        "attended"
+      ]
+    },
+    {
+      "id": "displayed",
+      "text": "had {conscript} dressed and posed about the rooms as furnishing",
+      "cruelty": 3,
+      "fits": [
+        "admired",
+        "centred"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "would not let {conscript} retire, and then could not",
+      "cruelty": 1,
+      "fits": [
+        "attended",
+        "delighted",
+        "admired"
+      ]
+    }
+  ],
+  "prizes": {
+    "bell": {
+      "label": "the bell that was always answered",
+      "function": "the only thing the household ever obeyed instantly"
+    },
+    "mask": {
+      "label": "the mask from the last good revel",
+      "function": "the only night anybody remembers enjoying"
+    },
+    "jewel": {
+      "label": "the one perfect thing in a palace of fine things",
+      "function": "the only object here that was never improved on"
+    },
+    "seal": {
+      "label": "the privy seal, still warm",
+      "function": "the only thing that ever ended a conversation"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Palace of the",
+      "The Winter House of the",
+      "The Pavilions of the",
+      "The Court of the",
+      "The Summer Rooms of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Court of Honour",
+      "The Grand Stair",
+      "The Colonnade",
+      "The Water Garden",
+      "The Carriage Sweep"
+    ],
+    "complication": [
+      "The Antechamber",
+      "The Mirror Gallery",
+      "The Music Room",
+      "The Orangery",
+      "The Card Room"
+    ],
+    "turn": [
+      "The Throne Room",
+      "The Long Gallery",
+      "The Presence Chamber",
+      "The Painted Hall",
+      "The Salon"
+    ],
+    "descent": [
+      "The Servants' Passages",
+      "The Kitchens",
+      "The Ice House",
+      "The Under-Stair",
+      "The Laundry Court"
+    ],
+    "threshold": [
+      "The Privy Chamber",
+      "The Closet",
+      "The Robing Room",
+      "The Cabinet",
+      "The Bedchamber Antechamber"
+    ],
+    "ending": [
+      "The Bedchamber",
+      "The Little Room",
+      "Where the Favourite Waits",
+      "The Last Salon"
+    ]
+  },
+  "factions": [
+    {
+      "id": "household",
+      "name": "the Household",
+      "kind": "undead",
+      "essence": "still in service, still waiting to be rung for",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "creditors",
+      "name": "creditors",
+      "kind": "living",
+      "essence": "here for what the court still owes them",
+      "handledBy": "trade"
+    },
+    {
+      "id": "court",
+      "name": "the Court",
+      "kind": "undead",
+      "essence": "still attending, still competing to be noticed",
+      "handledBy": "flattery"
+    },
+    {
+      "id": "vermin",
+      "name": "what moved into the empty rooms",
+      "kind": "beast",
+      "essence": "never had an invitation",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came up the grand stair and were announced, as guests are",
+    "seenTwice": "caught in two mirrors of the gallery at once",
+    "loud": "a raised voice in a room built for conversation",
+    "lingering": "stayed in one room long enough to be spoken about",
+    "disturbed": "moved, sat on, or used something the household maintains"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons in livery",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; bows before it strikes"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they will not strike a guest who has been announced"
+    },
+    "fight": {
+      "line": "1 Ghoul in the kitchens and 2 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "it stays below stairs; the state rooms are safe from it"
+    },
+    "battle": {
+      "line": "1 Wraith of the Favourite and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons — say so before initiative",
+      "avoid": "it would far rather be flattered than fight, and will pause to be"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ogre in the under-stair and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "was the doorkeeper and still is"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "service": {
+      "danger": "attendance",
+      "dangerLine": "the household is still in service, and it is waiting to be rung for",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a bell-board with every room labelled and every wire taut",
+          "back-stairs running behind every wall so nobody is seen working",
+          "a servants' hall laid for forty"
+        ],
+        "ritual": [
+          "a tray carried up at the same hour to a room nobody is in",
+          "boots cleaned nightly and set outside doors",
+          "a bed turned down every evening"
+        ],
+        "demand": [
+          "a room where something is always just about to be handed to you",
+          "a chair drawn out before you reach it",
+          "a door that opens before you touch it"
+        ],
+        "wound": [
+          "a bell-wire pulled so hard it came out of the wall",
+          "a servants' hall with the table cleared in a hurry",
+          "livery folded and stacked by people who were leaving"
+        ],
+        "anchor": [
+          "a bell that was always answered, on its own hook",
+          "a book of household orders, current",
+          "a set of keys to every room, complete"
+        ]
+      },
+      "features": [
+        "a tray set down and not collected",
+        "boots cleaned and left outside a door",
+        "a bed turned down this evening",
+        "a bell still swinging on the board",
+        "livery laid out for tomorrow",
+        "a fire laid but not lit"
+      ],
+      "decisions": [
+        {
+          "cue": "a bell-board with every wire taut and one still swinging",
+          "cost": "answering it puts you in service; ringing it summons",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer the bell and the Household takes you for staff — doors stop being locked",
+            "failure": "you ring instead and something arrives expecting to be commanded",
+            "orElse": "leave the board; the bell goes on swinging"
+          }
+        },
+        {
+          "cue": "a tray carried up at the same hour to an empty room",
+          "cost": "taking it up is service; eating it is presumption",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you deliver it correctly and the Household will fetch and carry for you",
+            "failure": "you eat from it and the court hears you were in the kitchens: +1 Bane",
+            "orElse": "let it go up as it always does; nothing changes"
+          }
+        },
+        {
+          "cue": "back-stairs running behind the wall, unlit",
+          "cost": "servants' passages go everywhere and nobody watches them",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you navigate them and reach anywhere in the palace unseen",
+            "failure": "you come out in the wrong room in front of the wrong thing",
+            "orElse": "take the state rooms: seen, announced, one Turn"
+          }
+        },
+        {
+          "cue": "a set of keys hanging where the housekeeper left them",
+          "cost": "taking them is theft below stairs and authority above",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you take them as though entitled and the Household hands you the rest",
+            "failure": "you are caught taking them and are staff, not guests, from here",
+            "orElse": "leave them; every locked door stays locked"
+          }
+        },
+        {
+          "cue": "a fire laid but not lit in a room that is very cold",
+          "cost": "lighting it announces occupancy",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you light it and the room becomes yours — the Household attends you here",
+            "failure": "the smoke draws something down the chimney: roll the clock",
+            "orElse": "leave it cold; you are not staying"
+          }
+        },
+        {
+          "cue": "a book of household orders, current, in a fresh hand",
+          "cost": "somebody is still writing the orders",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read who is issuing them and can countermand one",
+            "failure": "you add an order and the Household carries it out too literally: +1 Bane",
+            "orElse": "leave it; the orders continue"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Household",
+          "doing": "carrying a tray up a stair to a room with nobody in it",
+          "onArrival": "they stand aside for you and wait",
+          "because": "the tray goes up at this hour and always has",
+          "offer": "take the tray up yourself and they will open anything you ask"
+        },
+        {
+          "occupant": "the Housekeeper",
+          "doing": "counting linen that is already counted",
+          "onArrival": "it asks you, without looking, how many are staying",
+          "because": "the rooms must be made up for guests who never came",
+          "offer": "give it a number and rooms are made ready — and you are expected in them"
+        },
+        {
+          "occupant": "a bell",
+          "doing": "swinging on the board with no hand on the wire",
+          "onArrival": "the label beneath it names a room above you",
+          "because": "somebody rang and nobody went",
+          "offer": "answer it and whatever is up there treats you as its own servant"
+        },
+        {
+          "occupant": "a living creditor",
+          "doing": "going through a bureau, quietly, with a list",
+          "onArrival": "they look up and show you the list rather than hide it",
+          "because": "the court owes them and will not pay",
+          "offer": "help them find it and they will tell you which rooms are worth entering"
+        },
+        {
+          "occupant": "one of the Household",
+          "doing": "holding a door open for somebody who is not coming",
+          "onArrival": "its arm does not lower",
+          "because": "it was told to hold the door",
+          "offer": "walk through and thank it, and it follows you and opens every other door"
+        },
+        {
+          "occupant": "the servants' hall",
+          "doing": "standing laid for forty with the food still warm",
+          "onArrival": "chairs scrape back very slightly",
+          "because": "the hall is laid at this hour and always has been",
+          "offer": "sit and eat and the whole Household counts you one of them"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bell",
+          "cue": "a small bell from the board",
+          "benefit": "ring it and one of the Household comes and does one thing",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Household begins to expect instructions from you"
+        },
+        {
+          "id": "keys",
+          "cue": "the housekeeper's keys, complete",
+          "benefit": "one locked door per scene opens",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are held responsible for what is behind them"
+        },
+        {
+          "id": "livery",
+          "cue": "a suit of livery, pressed",
+          "benefit": "the Household and the Court both ignore you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are given work, and it is noticed if undone"
+        },
+        {
+          "id": "orderbook",
+          "cue": "the book of household orders",
+          "benefit": "write an order and the Household obeys it exactly",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it obeys the letter of it, not what you meant",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "backstairkey",
+          "cue": "a key to the servants' passages",
+          "benefit": "move unseen between any two rooms, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "something else uses the passages too, and now knows you do"
+        }
+      ]
+    },
+    "delight": {
+      "danger": "boredom",
+      "dangerLine": "the court is bored, and boredom here has always been dangerous",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a card room with the tables still set mid-hand",
+          "a theatre built into a drawing room",
+          "swings hung from a painted ceiling"
+        ],
+        "ritual": [
+          "a revel begun and never formally ended",
+          "musicians' parts left open on stands, at the same bar",
+          "a wager entered in a book every evening"
+        ],
+        "demand": [
+          "a room that goes quiet when you enter, expectantly",
+          "a stage at one end of a salon, lit",
+          "a circle of chairs turned inward with one gap"
+        ],
+        "wound": [
+          "a masque costume torn off and left",
+          "a wager book with the last entries in a desperate hand",
+          "a theatre with the seats broken from inside"
+        ],
+        "anchor": [
+          "a mask from the last good revel",
+          "a wager book, complete",
+          "an instrument still in tune"
+        ]
+      },
+      "features": [
+        "cards dealt for a hand nobody played",
+        "a mask dropped on a stair",
+        "a swing still moving",
+        "a wager written up this week",
+        "a musician's part turned to a new page",
+        "a costume laid out for somebody"
+      ],
+      "decisions": [
+        {
+          "cue": "a room that goes quiet when you enter, waiting to be amused",
+          "cost": "you are expected to be interesting",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you amuse them and the Court adopts you — nothing here troubles a favourite",
+            "failure": "you bore them and are dismissed: +1 Bane and the Court cuts you thereafter",
+            "orElse": "leave quickly; you are talked about, and not well"
+          }
+        },
+        {
+          "cue": "a hand of cards dealt and abandoned mid-play",
+          "cost": "finishing the hand finishes something else",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you play it out correctly and the Court is delighted — a door opens for the winner",
+            "failure": "you play badly and owe the table: +1 Bane",
+            "orElse": "leave the hand; it stays unfinished, which is worse for them than you"
+          }
+        },
+        {
+          "cue": "a wager book with a space for a new entry",
+          "cost": "the court will hold you to anything written",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you enter a wager you can win and collect on it",
+            "failure": "you enter one you cannot and are owed against for the rest of the delve",
+            "orElse": "leave it; you are considered dull"
+          }
+        },
+        {
+          "cue": "a stage at one end of a salon, lit, with nobody on it",
+          "cost": "going up is an offer; walking past is a refusal",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you perform something and the Court is yours for the delve",
+            "failure": "you dry, publicly, and everything here saw it: +1 Bane",
+            "orElse": "walk past the stage; the lights follow you anyway"
+          }
+        },
+        {
+          "cue": "a masque costume laid out in your size",
+          "cost": "wearing it makes you part of the entertainment",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you wear it and move through the palace as an expected part of the night",
+            "failure": "you wear it and cannot take it off until the revel ends",
+            "orElse": "leave it; you are conspicuous as yourselves"
+          }
+        },
+        {
+          "cue": "an instrument still in tune in a room with no musician",
+          "cost": "playing it restarts something",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "you play and the Court gathers, delighted, and will answer questions",
+            "failure": "you play badly and something stops the music: roll the clock",
+            "orElse": "leave it; the silence continues"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "four of the Court",
+          "doing": "holding a hand of cards that has not been played for centuries",
+          "onArrival": "one lays a card and looks up at you to follow",
+          "because": "the hand must be finished",
+          "offer": "play a card and they will pay you what the pot is worth"
+        },
+        {
+          "occupant": "a swing",
+          "doing": "moving gently in a painted room with the windows shut",
+          "onArrival": "it slows as you come in",
+          "because": "the revel has not been ended",
+          "offer": "set it swinging again and the palace warms toward you"
+        },
+        {
+          "occupant": "the Master of Revels",
+          "doing": "rehearsing an introduction for a guest who never arrived",
+          "onArrival": "it turns and begins introducing you instead",
+          "because": "the entertainment cannot begin without a guest of honour",
+          "offer": "let it finish and you are the guest of honour, with all that follows"
+        },
+        {
+          "occupant": "two living thieves",
+          "doing": "stripping gilt off a theatre box, unhurriedly",
+          "onArrival": "they wave you in as though you were expected",
+          "because": "nobody has stopped them yet",
+          "offer": "join them and they will show you the room they have not dared enter"
+        },
+        {
+          "occupant": "one of the Court",
+          "doing": "telling a story to a chair",
+          "onArrival": "it stops and asks whether you have heard this one",
+          "because": "the story has no ending and it cannot stop",
+          "offer": "supply an ending and it will tell you something true instead"
+        },
+        {
+          "occupant": "the musicians",
+          "doing": "sitting with their parts open at the same bar",
+          "onArrival": "the bar is played, once, badly",
+          "because": "the piece was never finished",
+          "offer": "finish the phrase and every door on the floor opens"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "mask",
+          "cue": "a mask from the last good revel",
+          "benefit": "wear it and the Court takes you for one of its own",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot be recognised by your own party while worn"
+        },
+        {
+          "id": "wagerbook",
+          "cue": "the wager book",
+          "benefit": "once, make something happen by betting on it",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the book records what you owe if it does not",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "instrument",
+          "cue": "a small instrument, in tune",
+          "benefit": "once, gather everything nearby to listen",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they expect a second piece, and are critical"
+        },
+        {
+          "id": "costume",
+          "cue": "a masque costume in your size",
+          "benefit": "once, be whoever the costume is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Court holds you to that character"
+        },
+        {
+          "id": "cards",
+          "cue": "a deck missing one card",
+          "benefit": "once, know what somebody is about to do",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the missing card is somewhere, and matters"
+        }
+      ]
+    },
+    "splendour": {
+      "danger": "comparison",
+      "dangerLine": "everything here was made to outshine something, and it is still competing",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "workshops built into the palace so the makers never left",
+          "a gallery hung to a plan, each piece answering the last",
+          "an inventory listing every object and what it cost"
+        ],
+        "ritual": [
+          "a room redecorated each season, over the last one",
+          "gilding laid on gilding until the moulding is shapeless",
+          "a portrait repainted whenever the face displeased"
+        ],
+        "demand": [
+          "a plinth, empty, with a card still on it",
+          "an alcove cut for something that is not there",
+          "a frame hung with nothing in it, dusted"
+        ],
+        "wound": [
+          "a workshop with the tools laid down mid-cut",
+          "a ceiling half-painted and abandoned on the scaffold",
+          "a gallery where the finest piece has been taken and the gap not filled"
+        ],
+        "anchor": [
+          "one perfect thing in a palace of fine things",
+          "the inventory, complete and in one hand",
+          "a maker's mark on the underside of everything good"
+        ]
+      },
+      "features": [
+        "an empty plinth with the card still on it",
+        "gilding laid over older gilding",
+        "a portrait with the face repainted",
+        "an alcove cut for something absent",
+        "tools laid down mid-cut",
+        "a frame hung with nothing in it"
+      ],
+      "decisions": [
+        {
+          "cue": "an empty plinth with the card still on it naming what stood here",
+          "cost": "filling it means giving something of yours up",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you set something of yours on it and the palace accepts the substitution — a door opens",
+            "failure": "you set something worthless there and the palace notices: +1 Bane",
+            "orElse": "leave the plinth bare; the gap keeps drawing things toward it"
+          }
+        },
+        {
+          "cue": "an inventory listing every object here and what it cost",
+          "cost": "reading it takes time; taking it takes more",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find which object is listed as beyond price and where it is kept",
+            "failure": "you are still reading when something comes to check the count",
+            "orElse": "leave it; you will not know what is worth taking"
+          }
+        },
+        {
+          "cue": "a portrait whose face has been repainted more than once",
+          "cost": "under the last face is the first one",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you scrape it back to the true face and learn who this place belonged to",
+            "failure": "you damage it and the Court will not receive you afterwards: +1 Bane",
+            "orElse": "leave the portrait; the face stays whatever it was last made"
+          }
+        },
+        {
+          "cue": "a ceiling half-painted, scaffold still standing",
+          "cost": "the scaffold reaches a floor no stair does",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you climb it and reach the upper rooms without passing the state floor",
+            "failure": "the scaffold gives and something below hears it: roll the clock",
+            "orElse": "take the stairs; you pass through where you can be seen"
+          }
+        },
+        {
+          "cue": "a gallery hung so each piece answers the last, with one gap",
+          "cost": "the gap can be filled or admired",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you admire the arrangement aloud, accurately, and the Court opens the next room to you",
+            "failure": "you praise the wrong piece and are marked as no judge of anything",
+            "orElse": "say nothing; you are handled as a tradesman thereafter"
+          }
+        },
+        {
+          "cue": "a maker's mark on the underside of the best thing in the room",
+          "cost": "the makers are still here somewhere",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you match the mark to the workshop and can find the maker, who will help you",
+            "failure": "you take the piece instead and the workshop knows immediately",
+            "orElse": "leave it unread; the makers stay out of it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a maker",
+          "doing": "polishing a surface that is already finished",
+          "onArrival": "it moves aside and shows you the work rather than speaking",
+          "because": "the piece was never signed off",
+          "offer": "praise one specific thing about it and it will make you what you ask for"
+        },
+        {
+          "occupant": "an empty plinth",
+          "doing": "standing lit in a room where nothing else is",
+          "onArrival": "the light on it does not move when you do",
+          "because": "what stood here was taken and nothing replaced it",
+          "offer": "put something of value on it and the palace treats you as a benefactor"
+        },
+        {
+          "occupant": "two of the Court",
+          "doing": "arguing silently over which of two vases is finer",
+          "onArrival": "they turn to you for a judgement",
+          "because": "the argument has run for centuries with no arbiter",
+          "offer": "choose one, confidently, and the loser's owner tells you what you want to know"
+        },
+        {
+          "occupant": "a living valuer",
+          "doing": "measuring a frame with a length of string",
+          "onArrival": "they ask, without preamble, what you would pay",
+          "because": "the estate is being assessed and nobody has stopped them",
+          "offer": "name a price and they will tell you which room the good things are in"
+        },
+        {
+          "occupant": "the Master of Works",
+          "doing": "standing on a scaffold with a brush that has dried",
+          "onArrival": "it looks down and asks whether the light is right yet",
+          "because": "the ceiling was never finished and cannot be",
+          "offer": "tell it the light is right and it will come down and open the upper floor"
+        },
+        {
+          "occupant": "a mirror",
+          "doing": "hanging opposite another mirror in a narrow room",
+          "onArrival": "your reflection arrives a moment after you do",
+          "because": "the room was built to double everything in it",
+          "offer": "stand between them and be admired, and something in the depth of it answers a question"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "jewel",
+          "cue": "one perfect thing, small enough to pocket",
+          "benefit": "once, buy your way past anything that can be bought",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything here recognises it as taken",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "inventory",
+          "cue": "the inventory, complete",
+          "benefit": "know the value and location of anything in the palace",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know what you have not got"
+        },
+        {
+          "id": "mark",
+          "cue": "a maker's punch",
+          "benefit": "once, make a thing appear to be the finest of its kind",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the maker knows their mark has been used"
+        },
+        {
+          "id": "mirror",
+          "cue": "a hand-mirror in a heavy frame",
+          "benefit": "once, see a room before you enter it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what is in the room is also looking"
+        },
+        {
+          "id": "gilding",
+          "cue": "a leaf of gold from the workshop",
+          "benefit": "once, make yourself look like somebody who belongs here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it wears off at the worst moment"
+        }
+      ]
+    },
+    "audience": {
+      "danger": "the eye of the room",
+      "dangerLine": "the Court is still assembled, and it notices exactly who is being attended to",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a throne set so every sightline in the room ends on it",
+          "an order of precedence painted on the floor",
+          "a presence chamber with one door for entering and none for leaving"
+        ],
+        "ritual": [
+          "names read aloud at a door to nobody",
+          "a levée held each morning around an empty bed",
+          "backing out of a room that has nothing in it"
+        ],
+        "demand": [
+          "a chair at the centre and all the others turned toward it",
+          "a space kept clear that nobody will walk into",
+          "a silence that opens when you enter, waiting"
+        ],
+        "wound": [
+          "a throne room where the chairs have been turned outward",
+          "precedence scratched off the floor by somebody's heel",
+          "a door forced from the inside"
+        ],
+        "anchor": [
+          "the privy seal, still warm",
+          "a book of precedence, current",
+          "a chair that nobody has ever been allowed to sit in"
+        ]
+      },
+      "features": [
+        "chairs turned to face one empty seat",
+        "precedence painted on the floor",
+        "a name read at a door",
+        "a space kept clear on the boards",
+        "a chair nobody sits in",
+        "a door held open from inside"
+      ],
+      "decisions": [
+        {
+          "cue": "a throne set so every sightline in the room ends on it",
+          "cost": "sitting is a claim; kneeling is a submission",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you kneel correctly and the Court receives you — safe passage through the state rooms",
+            "failure": "you sit, and every eye in the palace is on you from here on: +1 Bane",
+            "orElse": "stay standing; you are neither received nor refused, and doors stay shut"
+          }
+        },
+        {
+          "cue": "an order of precedence painted on the floor with a gap at your rank",
+          "cost": "standing in the gap accepts the rank",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take the correct place and the ceremony proceeds around you and past the guard",
+            "failure": "you take too high a place and are challenged by something that outranks you",
+            "orElse": "step off the pattern; you are escorted, not admitted"
+          }
+        },
+        {
+          "cue": "a levée being held around a bed with nobody in it",
+          "cost": "attending is required; leaving early is noticed",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you attend it out and are afterwards owed a favour by everything present",
+            "failure": "you leave in the middle and the Court cuts you: +1 Bane",
+            "orElse": "do not go in; the door is shut behind you for good"
+          }
+        },
+        {
+          "cue": "names being read at a door to nobody, and a pause",
+          "cost": "giving a name gets you announced under it",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you give a name grand enough to be believed and are announced and admitted",
+            "failure": "the name is checked against the book and found absent",
+            "orElse": "go in unannounced, and the Household treats you as staff"
+          }
+        },
+        {
+          "cue": "a door that opens inward only, held by something on the other side",
+          "cost": "it will open for the right form of words",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you ask leave properly and it opens and stays open behind you",
+            "failure": "you push, and it holds, and something takes note: roll the clock",
+            "orElse": "find another way round, costing a Turn"
+          }
+        },
+        {
+          "cue": "a chair at the centre with all the others turned toward it",
+          "cost": "the room needs somebody in it",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you put one of your own in it and the Court attends them — and ignores the rest of you",
+            "failure": "the chair is taken by something else while you argue about it",
+            "orElse": "leave it empty; the room stays restless and nothing here will settle"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Court",
+          "doing": "standing assembled and facing an empty chair",
+          "onArrival": "every head turns to the door as you come in",
+          "because": "the audience cannot begin and cannot be dismissed",
+          "offer": "take the chair, or seat one of your own in it, and be answered"
+        },
+        {
+          "occupant": "the Usher",
+          "doing": "reading names at a door to an empty corridor",
+          "onArrival": "it pauses, pen ready, and waits for yours",
+          "because": "the list must be got through",
+          "offer": "give a name and be announced, and be admitted wherever that name can go"
+        },
+        {
+          "occupant": "a living envoy",
+          "doing": "waiting on a bench with a sealed letter and no patience",
+          "onArrival": "they ask how much longer, as though you would know",
+          "because": "they were told to wait and nobody came back",
+          "offer": "take the letter in for them and they will tell you the way out"
+        },
+        {
+          "occupant": "the Regent",
+          "doing": "sitting with its back to the room, quite still",
+          "onArrival": "the whole Court watches to see whether you approach",
+          "because": "nobody has been granted an audience in a very long time",
+          "offer": "approach properly and it will grant one thing, once"
+        },
+        {
+          "occupant": "one of the Court",
+          "doing": "standing exactly on the line of its precedence",
+          "onArrival": "it will not move until somebody of higher rank passes",
+          "because": "the order must hold",
+          "offer": "outrank it, convincingly, and the corridor beyond opens"
+        },
+        {
+          "occupant": "a chair",
+          "doing": "standing alone in the middle of a cleared floor",
+          "onArrival": "the boards around it are worn in a ring",
+          "because": "nobody has been allowed to sit in it and everybody has walked around it",
+          "offer": "sit, and everything in the palace comes to see who you are"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "seal",
+          "cue": "the privy seal, still warm",
+          "benefit": "once, end any conversation on your terms",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "what you sealed is now yours to answer for",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "precedence",
+          "cue": "the book of precedence, current",
+          "benefit": "know what outranks what, everywhere here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you also know where you stand, and it is low"
+        },
+        {
+          "id": "name",
+          "cue": "a name from the usher's list",
+          "benefit": "once, be announced as somebody with the run of the place",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "somebody else answers to it and will find you"
+        },
+        {
+          "id": "ring",
+          "cue": "a signet worn thin at the edge",
+          "benefit": "once, be obeyed by anything still in service",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Household reports to you, including things you would rather not hear"
+        },
+        {
+          "id": "chair",
+          "cue": "a folding chair of state, light enough to carry",
+          "benefit": "once, hold an audience anywhere",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever attends it is not always what you invited"
+        }
+      ]
+    }
+  }
+}

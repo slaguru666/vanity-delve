@@ -1,0 +1,1174 @@
+{
+  "id": "church",
+  "label": "Church",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Interior kernel. A parish church wants to be believed, attended, given to, or kept holy, and its accommodations are what a cure of souls does to keep a flock.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Vicar-Without-Flock",
+    "Anchoress",
+    "Last Curate",
+    "Patron",
+    "Sexton",
+    "Reverend Mother",
+    "Parson of the Marsh"
+  ],
+  "appetites": [
+    {
+      "id": "believed",
+      "want": "to be believed without doubting",
+      "lack": "doubted",
+      "purpose": "nobody would ever question it",
+      "motif": "faith",
+      "prize": "relic",
+      "conscript": "the doubters",
+      "asks": "\"Do you doubt me?\"",
+      "appeasement": {
+        "move": "say the words of the creed aloud, as though you meant them",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is believed by someone living",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "attended",
+      "want": "never to preach to an empty nave",
+      "lack": "unattended",
+      "purpose": "the pews would never be empty",
+      "motif": "congregation",
+      "prize": "bell",
+      "conscript": "the parish",
+      "asks": "\"Why did you not come?\"",
+      "appeasement": {
+        "move": "take a seat in a pew and stay for the whole of it",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "somebody came to the service",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "given",
+      "want": "to be tithed to the last sheaf",
+      "lack": "unpaid",
+      "purpose": "nothing would ever be withheld",
+      "motif": "offering",
+      "prize": "chalice",
+      "conscript": "the tithed",
+      "asks": "\"What did you put in the plate?\"",
+      "appeasement": {
+        "move": "put something in the plate, and let it be seen",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "the offering was made",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "kept",
+      "want": "never to be made unholy",
+      "lack": "profaned",
+      "purpose": "nothing unclean would ever come in",
+      "motif": "sanctity",
+      "prize": "register",
+      "conscript": "the unclean",
+      "asks": "\"Did you come in like that?\"",
+      "appeasement": {
+        "move": "clean your boots and uncover your head before you enter",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the ground is respected again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "bricked",
+      "text": "bricked {conscript} into the wall to pray without stopping",
+      "cruelty": 3,
+      "fits": [
+        "believed",
+        "attended",
+        "kept"
+      ]
+    },
+    {
+      "id": "vowed",
+      "text": "held {conscript} to a vow they could not possibly keep",
+      "cruelty": 2,
+      "fits": [
+        "believed",
+        "given",
+        "kept"
+      ]
+    },
+    {
+      "id": "floored",
+      "text": "buried {conscript} under the flagstones so they would always attend",
+      "cruelty": 3,
+      "fits": [
+        "attended",
+        "believed"
+      ]
+    },
+    {
+      "id": "tithed",
+      "text": "tithed {conscript} down to the last sheaf and then the seed corn",
+      "cruelty": 3,
+      "fits": [
+        "given",
+        "attended"
+      ]
+    },
+    {
+      "id": "barred",
+      "text": "barred {conscript} from the door and would not say the words over them",
+      "cruelty": 3,
+      "fits": [
+        "kept",
+        "believed",
+        "given"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "would not release {conscript} from service, and then could not",
+      "cruelty": 1,
+      "fits": [
+        "attended",
+        "given",
+        "kept"
+      ]
+    }
+  ],
+  "prizes": {
+    "relic": {
+      "label": "the relic that was never once doubted",
+      "function": "the only thing here anyone truly believed in"
+    },
+    "bell": {
+      "label": "the bell that called a full nave",
+      "function": "the only thing that ever brought them all in"
+    },
+    "chalice": {
+      "label": "the chalice the tithes were counted into",
+      "function": "the only place the parish was ever generous"
+    },
+    "register": {
+      "label": "the register of who was and was not clean",
+      "function": "the only record of who was let in"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Church of the",
+      "St Cuth's of the",
+      "The Chapel of the",
+      "The Minster of the",
+      "Our Lady of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Lychgate",
+      "The Churchyard",
+      "The Porch",
+      "The West Door",
+      "The Path Between Graves"
+    ],
+    "complication": [
+      "The Nave",
+      "The Font",
+      "The Aisle",
+      "The Bell-Floor",
+      "The Poor Box"
+    ],
+    "turn": [
+      "The Chancel Step",
+      "The Rood Screen",
+      "The Pulpit",
+      "The Lady Chapel",
+      "The Choir"
+    ],
+    "descent": [
+      "The Crypt",
+      "The Bone-Hole",
+      "The Undercroft",
+      "The Charnel",
+      "The Sunken Chapel"
+    ],
+    "threshold": [
+      "The Vestry",
+      "The Sacristy",
+      "The Anchorhold",
+      "The Treasury",
+      "The Sealed Chapel"
+    ],
+    "ending": [
+      "The High Altar",
+      "The Sanctuary",
+      "Before the Rood",
+      "The Chancel"
+    ]
+  },
+  "factions": [
+    {
+      "id": "congregation",
+      "name": "the Congregation",
+      "kind": "undead",
+      "essence": "still attending a service that has not ended",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "relichunters",
+      "name": "relic-hunters",
+      "kind": "living",
+      "essence": "here for what is under the altar",
+      "handledBy": "trade"
+    },
+    {
+      "id": "anchorites",
+      "name": "the Walled-In",
+      "kind": "undead",
+      "essence": "praying without pause, and listening",
+      "handledBy": "an honest confession"
+    },
+    {
+      "id": "unclean",
+      "name": "what was barred out",
+      "kind": "beast",
+      "essence": "got in eventually, by another door",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in by the west door, in daylight, as a congregation does",
+    "seenTwice": "caught by two of the walled-in, or by a squint and a window",
+    "loud": "a raised voice under a vault carries further than you think",
+    "lingering": "stayed in a pew longer than a prayer takes",
+    "disturbed": "moved something consecrated"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons in the congregation's seats",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; will not leave its pew"
+        }
+      ],
+      "harmedBy": "anything; Turn Undead trivialises them",
+      "avoid": "they do not rise for anyone who sits down"
+    },
+    "fight": {
+      "line": "1 Ghoul in the charnel and 2 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "on a hit, a free Called Shot to freeze for a round"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "the Ghoul will not cross consecrated ground — stay on the flags"
+    },
+    "battle": {
+      "line": "1 Necromancer at the altar and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 4,
+          "def": 3,
+          "grit": 6,
+          "nerve": 4,
+          "note": "raises one from the floor per round"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — but they keep coming until he stops",
+      "avoid": "he will hear a confession before he fights; it costs a Turn"
+    },
+    "nightmare": {
+      "line": "1 Wraith of the Vicar, 1 Ghoul and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "freezes on a hit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "it will not strike anyone kneeling — say so before initiative"
+    }
+  },
+  "motifs": {
+    "faith": {
+      "danger": "doubt",
+      "dangerLine": "the church can tell who believes and who is only standing here",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a creed cut into the chancel arch, every letter re-gilded",
+          "pews numbered and assigned, none of them free",
+          "a squint cut so the priest can see who is not attending"
+        ],
+        "ritual": [
+          "a candle relit at the same hour by nothing",
+          "a service book open at the same page for three centuries",
+          "holy water in a stoup that has not evaporated"
+        ],
+        "demand": [
+          "a rail you are expected to kneel at before you pass",
+          "a chancel step you cannot cross without being asked a question",
+          "a font that fills when you look at it"
+        ],
+        "wound": [
+          "a rood with the figure hacked off and the cross kept",
+          "statues with their faces smoothed by hands, not weather",
+          "a creed with one line scratched out by many people"
+        ],
+        "anchor": [
+          "a reliquary with the seals unbroken",
+          "a relic-box let into the altar stone",
+          "a monstrance under cloth, still warm"
+        ]
+      },
+      "features": [
+        "a candle lit this week in an empty church",
+        "a service book moved to a different page",
+        "fresh water in the stoup",
+        "a pew re-cushioned by somebody",
+        "a hymn number left on the board",
+        "kneelers set out in a row, recently"
+      ],
+      "decisions": [
+        {
+          "cue": "a rail you are expected to kneel at",
+          "cost": "kneeling is submission and it is also protection",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you kneel and the Congregation counts you faithful — nothing here strikes a kneeler",
+            "failure": "you pass without kneeling and are marked: the next encounter starts hostile",
+            "orElse": "go round by the aisle: one Turn, and you are noticed avoiding it"
+          }
+        },
+        {
+          "cue": "a creed with one line scratched out",
+          "cost": "saying the missing line aloud would settle an old argument",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out the scratched line and say it — the church relaxes entirely",
+            "failure": "you guess wrong and say something the church considers heresy: +1 Bane",
+            "orElse": "say the creed without the line; it is accepted, coldly"
+          }
+        },
+        {
+          "cue": "a reliquary with the seals unbroken",
+          "cost": "opening it settles whether there was ever anything in it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you open it without breaking the seals and see what is inside",
+            "failure": "you break the seals and whatever was believed in stops being believed: +1 Bane",
+            "orElse": "leave it sealed; the question stays open, which suits the church"
+          }
+        },
+        {
+          "cue": "a rood with the figure hacked away",
+          "cost": "restoring it is a kindness; asking who did it is not",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you set the figure right and the Congregation is grateful — they will guide you",
+            "failure": "you drop it: the noise brings everything, roll the clock",
+            "orElse": "leave it; the cross is bare and the church resents the indifference"
+          }
+        },
+        {
+          "cue": "a font that fills when you look at it",
+          "cost": "using it is a claim on the church's protection",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you use it properly and are counted clean for the rest of the delve",
+            "failure": "you use it carelessly and it empties: +1 Bane",
+            "orElse": "walk past dry; nothing gained, nothing owed"
+          }
+        },
+        {
+          "cue": "a squint cut through the wall at eye height",
+          "cost": "looking through sees who is being watched",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you look and see the whole nave, including what is standing in it",
+            "failure": "you are seen looking, from the other side",
+            "orElse": "do not look; you go in blind"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Congregation",
+          "doing": "holding a hymn book open at a page it cannot read",
+          "onArrival": "it offers you the book and waits",
+          "because": "the service cannot continue until someone sings",
+          "offer": "sing anything at all and the whole nave joins, and stands aside"
+        },
+        {
+          "occupant": "the Anchoress",
+          "doing": "praying through a slot in a wall, without pausing",
+          "onArrival": "the prayer stops mid-word",
+          "because": "she was walled in to pray without ceasing and has",
+          "offer": "give her something to pray for and she will tell you what she has heard through the wall"
+        },
+        {
+          "occupant": "a living relic-hunter",
+          "doing": "levering at an altar stone with a bar",
+          "onArrival": "they stop and offer you the other end",
+          "because": "the relic is under it and they cannot shift it alone",
+          "offer": "help and they will split what is under it"
+        },
+        {
+          "occupant": "the candles",
+          "doing": "lighting themselves along the nave, one at a time toward you",
+          "onArrival": "the nearest one takes",
+          "because": "the service is being prepared",
+          "offer": "light one yourself and the church treats you as clergy"
+        },
+        {
+          "occupant": "three of the Congregation",
+          "doing": "standing for a hymn that has not been announced",
+          "onArrival": "they look at you, waiting for the number",
+          "because": "the hymn board is blank and nobody has set it",
+          "offer": "name any number and they sit, and let you through"
+        },
+        {
+          "occupant": "the Sexton",
+          "doing": "digging a grave inside the church, in the aisle",
+          "onArrival": "it looks up and asks who it is for",
+          "because": "it was told to dig and not told for whom",
+          "offer": "give it a name — not one of yours — and it will dig elsewhere"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "relic",
+          "cue": "a finger-bone in a silver case",
+          "benefit": "once, be believed absolutely by anything here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the church knows its relic is out of the building"
+        },
+        {
+          "id": "stoupwater",
+          "cue": "a phial of water from the stoup",
+          "benefit": "once, make ground temporarily consecrated",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what was already there has to go somewhere"
+        },
+        {
+          "id": "servicebook",
+          "cue": "a service book, much used",
+          "benefit": "once, say the right words in a rite you do not know",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to lead the next one"
+        },
+        {
+          "id": "roodsplinter",
+          "cue": "a splinter from the hacked rood",
+          "benefit": "once, refuse a supernatural effect entirely",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "whatever you refused finds someone else in the party",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "hymnnumber",
+          "cue": "a set of hymn-board numerals",
+          "benefit": "once, summon the Congregation to a place you choose",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they stay until the hymn is finished, and nobody knows the tune"
+        }
+      ]
+    },
+    "congregation": {
+      "danger": "attendance",
+      "dangerLine": "the church is still counting the house, and you have just walked in",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "pews with family names carved on the ends, all of them occupied",
+          "a hat-peg row, full",
+          "a gallery built to hold a hundred more"
+        ],
+        "ritual": [
+          "a bell rung for a service nobody is walking to",
+          "a collection taken up along an empty row",
+          "banns read out for a marriage between two dead people"
+        ],
+        "demand": [
+          "a pew with a gap in it exactly your size",
+          "a seating plan with your place already marked",
+          "a nave arranged so a latecomer must walk the length of it"
+        ],
+        "wound": [
+          "pews torn out and the fixings left",
+          "a gallery collapsed under a weight it was never given",
+          "attendance rolls with the numbers falling year on year, in one hand"
+        ],
+        "anchor": [
+          "a bell, unhung, with the rope still on it",
+          "a full attendance roll, one Sunday, framed",
+          "a hat still on its peg, brushed"
+        ]
+      },
+      "features": [
+        "a pew polished by somebody this year",
+        "a hat on a peg that was empty before",
+        "an attendance roll with a fresh entry",
+        "a collection plate with coin in it",
+        "a bell-rope replaced recently",
+        "a door propped open, welcomingly"
+      ],
+      "decisions": [
+        {
+          "cue": "a pew with a gap in it exactly your size",
+          "cost": "sitting is attendance and attendance is binding",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sit for a moment and stand — counted present, and nothing here troubles you",
+            "failure": "you sit and stay: the service continues around you and you lose a Turn",
+            "orElse": "stay standing at the back; the Congregation resents it visibly"
+          }
+        },
+        {
+          "cue": "a collection plate coming down an empty row",
+          "cost": "the plate reaches you whether anyone carries it or not",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you give well and are counted generous — the church opens for you",
+            "failure": "you give nothing and the plate follows you: +1 Bane",
+            "orElse": "give everything you carry loose: generous, and you are poorer"
+          }
+        },
+        {
+          "cue": "a bell-rope, replaced recently, in a tower with no ringer",
+          "cost": "ringing calls the parish, and something answers",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you ring it and the Congregation assembles where you want them",
+            "failure": "you ring badly and something else assembles: roll the clock",
+            "orElse": "leave the rope; the parish stays where it is"
+          }
+        },
+        {
+          "cue": "banns read for a marriage between two of the dead",
+          "cost": "objecting is your right and it will be heard",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you object on a technicality and the church is delighted by the correctness",
+            "failure": "you object badly and are held to have slandered the dead: +1 Bane",
+            "orElse": "hold your peace; the marriage proceeds and something is now bound"
+          }
+        },
+        {
+          "cue": "an attendance roll with your names already written",
+          "cost": "somebody entered you before you arrived",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who wrote it and why, and can use it",
+            "failure": "you strike your names out and the church takes the absence badly: +1 Bane",
+            "orElse": "leave it; you are expected weekly from now on"
+          }
+        },
+        {
+          "cue": "a gallery that will hold you or will not",
+          "cost": "the stair up is the fast way over the nave",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you cross the gallery and it holds",
+            "failure": "it gives: 2 Grit each and everything in the church looks up",
+            "orElse": "go round at floor level: one Turn"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a full nave of the Congregation",
+          "doing": "sitting through a service with no priest",
+          "onArrival": "every head turns as you enter, politely",
+          "because": "the service was never dismissed",
+          "offer": "take a seat for one minute and they will let you through the chancel"
+        },
+        {
+          "occupant": "the Verger",
+          "doing": "showing an empty pew to nobody",
+          "onArrival": "it turns and shows you to it instead",
+          "because": "every guest must be seated",
+          "offer": "take the seat and it will show you anything else you ask for"
+        },
+        {
+          "occupant": "a collection plate",
+          "doing": "travelling along an empty row toward you",
+          "onArrival": "it stops in front of you",
+          "because": "the collection must be taken and never is",
+          "offer": "put anything in and the row lets you pass"
+        },
+        {
+          "occupant": "two living thieves",
+          "doing": "prising a brass off a pew end",
+          "onArrival": "they freeze and one raises a crowbar, uncertainly",
+          "because": "the brasses are worth more than the box",
+          "offer": "let them work and they will tell you which floor-slab is loose"
+        },
+        {
+          "occupant": "the bell",
+          "doing": "ringing itself for a service nobody is coming to",
+          "onArrival": "the rope moves without a hand",
+          "because": "the hour must be rung",
+          "offer": "catch the rope and ring it properly, and the Congregation gathers for you"
+        },
+        {
+          "occupant": "one of the Congregation",
+          "doing": "keeping a place with a hat and a folded coat",
+          "onArrival": "it moves them aside for you",
+          "because": "the place is kept for someone who never came",
+          "offer": "sit in the kept place and it will tell you who it was for"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bell",
+          "cue": "a small hand-bell from the vestry",
+          "benefit": "once, gather everything in the church to one room",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they stay until dismissed by name"
+        },
+        {
+          "id": "hatpeg",
+          "cue": "a hat from the peg row, brushed",
+          "benefit": "the Congregation takes you for a parishioner",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected at the next service"
+        },
+        {
+          "id": "plate",
+          "cue": "a collection plate, worn thin",
+          "benefit": "once, ask for something and have it given",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is given is expected back at a hundredfold"
+        },
+        {
+          "id": "attendanceroll",
+          "cue": "a page of the attendance roll",
+          "benefit": "once, prove you were present somewhere you were not",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your absence elsewhere is now on record",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "pewbrass",
+          "cue": "a brass off a family pew",
+          "benefit": "doors that check standing open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the family it names is remembered as yours"
+        }
+      ]
+    },
+    "offering": {
+      "danger": "arrears",
+      "dangerLine": "the church is owed a tithe, and it has kept every account",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a tithe barn attached to the church and bigger than it",
+          "a poor box with three locks and three keyholders",
+          "a board listing what each field owes, in bushels"
+        ],
+        "ritual": [
+          "a first sheaf brought in and never threshed",
+          "a plate passed along a row that nobody sits in",
+          "candles bought by subscription, each with a name"
+        ],
+        "demand": [
+          "a box at the door you cannot pass without hearing",
+          "a plate held out at the chancel step",
+          "a room where every surface has somewhere to put a coin"
+        ],
+        "wound": [
+          "a poor box forced from behind, the locks intact",
+          "a tithe board with the last three years blank",
+          "a barn emptied in a night, and the parish starved for it"
+        ],
+        "anchor": [
+          "a chalice the tithes were counted into",
+          "a strongbox under the altar, still locked",
+          "a tally of every sheaf ever given"
+        ]
+      },
+      "features": [
+        "a fresh candle bought and named",
+        "a poor box emptied and put back straight",
+        "coin left on a ledge, deliberately",
+        "a sheaf laid at the altar this season",
+        "a tithe board with a new figure",
+        "a lock changed on the poor box"
+      ],
+      "decisions": [
+        {
+          "cue": "a poor box with three locks and no keyholders left",
+          "cost": "opening it is theft or restitution depending who you ask",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you open it as the churchwardens would and take only what is owed you",
+            "failure": "you force it and the parish counts you a thief: +1 Bane",
+            "orElse": "leave it; the money stays where the parish put it"
+          }
+        },
+        {
+          "cue": "a first sheaf laid at the altar and never threshed",
+          "cost": "threshing it releases something the church has been holding",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you thresh it properly and the church counts a debt cleared — it eases toward you",
+            "failure": "you scatter it and the offering is spoiled: roll the clock",
+            "orElse": "leave it; the debt stands"
+          }
+        },
+        {
+          "cue": "a plate held out at the chancel step by nothing at all",
+          "cost": "what you put in is measured against what you carry",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you give proportionately and the church is satisfied for the whole delve",
+            "failure": "you give meanly and it is noticed: +1 Bane",
+            "orElse": "give nothing; the plate follows you at a distance"
+          }
+        },
+        {
+          "cue": "a tithe board with three blank years",
+          "cost": "filling them in is a lie the church might accept",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you enter plausible figures and the arrears are considered settled",
+            "failure": "your figures are impossible and the church knows every field: +1 Bane",
+            "orElse": "leave the blanks; the arrears stand against the parish, not you"
+          }
+        },
+        {
+          "cue": "a chalice used for counting rather than communion",
+          "cost": "using it properly might be the point",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you use it as it was meant and the church gives up what it was holding",
+            "failure": "you drink from it as a cup and it is profaned: +1 Bane",
+            "orElse": "leave it; it goes on holding coin"
+          }
+        },
+        {
+          "cue": "a candle bought by subscription with a name on it",
+          "cost": "lighting someone else's candle is presumption",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "you light it and the named person's account is credited — they will help you",
+            "failure": "you light it wrongly and the subscription lapses",
+            "orElse": "leave it unlit; it has been unlit a long time"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a churchwarden",
+          "doing": "counting coin into a chalice that never fills",
+          "onArrival": "it asks whether you have come to pay or to be paid",
+          "because": "the account has never balanced",
+          "offer": "pay anything and it will unlock what it is guarding"
+        },
+        {
+          "occupant": "the tithe barn",
+          "doing": "standing fuller than the church and quite silent",
+          "onArrival": "the doors are open and nothing has been taken",
+          "because": "the tithe was gathered and never distributed",
+          "offer": "take a share openly and the parish counts you owed"
+        },
+        {
+          "occupant": "two living farmers",
+          "doing": "carrying a sheaf toward the altar, reluctantly",
+          "onArrival": "they set it down when they see you and look relieved",
+          "because": "the first sheaf is owed and they cannot afford it",
+          "offer": "carry it for them and the church credits you the gift"
+        },
+        {
+          "occupant": "the poor box",
+          "doing": "rattling although nothing has been put in",
+          "onArrival": "the sound stops as you approach",
+          "because": "the box must be filled and never is",
+          "offer": "put something in and every locked thing in the church opens once"
+        },
+        {
+          "occupant": "one of the Congregation",
+          "doing": "lighting subscription candles one by one, by name",
+          "onArrival": "it holds a taper out to you",
+          "because": "every subscriber must be remembered",
+          "offer": "light one and it will name who else is still owed"
+        },
+        {
+          "occupant": "the Sexton",
+          "doing": "carrying a strongbox toward the altar and back again",
+          "onArrival": "it asks you to take one end",
+          "because": "the box must be under the altar and will not fit",
+          "offer": "help it and it will show you what is beneath"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "chalice",
+          "cue": "a chalice used for counting",
+          "benefit": "once, ask for a payment and have it given",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the church books it against you"
+        },
+        {
+          "id": "poorboxkey",
+          "cue": "one of three keys to the poor box",
+          "benefit": "one locked thing per scene opens",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "two other keyholders are missed and looked for"
+        },
+        {
+          "id": "firstsheaf",
+          "cue": "a sheaf never threshed",
+          "benefit": "once, clear a debt owed by anyone",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the debt transfers rather than clearing"
+        },
+        {
+          "id": "tithetally",
+          "cue": "a tally of every sheaf given",
+          "benefit": "once, prove someone owes you",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own arrears are on the reverse",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "namedcandle",
+          "cue": "a candle with somebody's name on it",
+          "benefit": "light it and that person's ghost assists you, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they expect the favour returned"
+        }
+      ]
+    },
+    "sanctity": {
+      "danger": "profanation",
+      "dangerLine": "the church minds very much what is brought in, and it can tell",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a boot-scraper worn to nothing at the porch",
+          "a rail marking where the unbaptised may stand",
+          "holy ground marked out by stones set on edge"
+        ],
+        "ritual": [
+          "a threshold washed daily by nothing",
+          "hats removed and hung before a door nobody uses",
+          "a censer swung on a chain in an empty aisle"
+        ],
+        "demand": [
+          "a doorway that will not admit you as you are",
+          "a step that is cold through boots",
+          "a chancel that makes you aware of your hands"
+        ],
+        "wound": [
+          "a floor scrubbed through to the bedding mortar",
+          "a wall where something was washed off repeatedly",
+          "graves outside the wall, in a row, unmarked"
+        ],
+        "anchor": [
+          "a register of who was clean and who was not",
+          "a phial of oil, sealed",
+          "a stone let into the floor, whiter than the rest"
+        ]
+      },
+      "features": [
+        "a threshold recently washed",
+        "mud tracked in and scrubbed at, badly",
+        "a censer still warm",
+        "a hat left on the wrong side of the door",
+        "stones set on edge, one moved",
+        "a grave dug just outside the wall"
+      ],
+      "decisions": [
+        {
+          "cue": "a threshold that will not admit you as you are",
+          "cost": "cleaning up costs a moment; forcing it costs more",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you make yourself presentable and the church admits you as a guest",
+            "failure": "you cross as you are and the ground objects: +1 Bane and the Congregation cools",
+            "orElse": "go in by the vestry door: one Turn, and it is noticed"
+          }
+        },
+        {
+          "cue": "a rail marking where the unbaptised may stand",
+          "cost": "crossing it is either faith or trespass",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you cross with the right words and are treated as of the parish",
+            "failure": "you cross without them: the next encounter starts hostile",
+            "orElse": "stay behind the rail: safe, and you cannot reach what is beyond"
+          }
+        },
+        {
+          "cue": "a register of who was clean and who was not",
+          "cost": "your names are not in it yet",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you enter yourselves convincingly and the church stops testing you",
+            "failure": "you enter yourselves badly and are listed among the unclean: +1 Bane",
+            "orElse": "leave the register; you are tested at every door"
+          }
+        },
+        {
+          "cue": "a wall where something was washed off many times",
+          "cost": "reading what is under it is possible and unwelcome",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read enough to know what the parish would not have on its wall",
+            "failure": "you expose it entirely and the church wants it gone again: roll the clock",
+            "orElse": "leave it; the stain stays a stain"
+          }
+        },
+        {
+          "cue": "graves outside the wall in an unmarked row",
+          "cost": "bringing one inside would settle an old injustice",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you move a stone inside the wall and the barred dead are grateful — they will open a way",
+            "failure": "you are caught at it and the ground rejects both of you: +1 Bane",
+            "orElse": "leave them out; they have been out a long time"
+          }
+        },
+        {
+          "cue": "a phial of oil, sealed, in the sacristy",
+          "cost": "using it consecrates; wasting it does not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you use it exactly and one place becomes safe for the delve",
+            "failure": "you spill it and the church counts the waste: +1 Bane",
+            "orElse": "leave it sealed; nothing is made safe"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Sexton",
+          "doing": "scrubbing a threshold that is already clean",
+          "onArrival": "it does not look up and asks you to wipe your feet",
+          "because": "the ground must be kept and cannot be",
+          "offer": "wipe your feet and it will let you anywhere, including down"
+        },
+        {
+          "occupant": "one of the Walled-In",
+          "doing": "listening at a slot for a confession that has not come",
+          "onArrival": "it asks, through the wall, whether you have anything to say",
+          "because": "it may not leave until someone is absolved",
+          "offer": "tell it one true bad thing and every door in the church opens"
+        },
+        {
+          "occupant": "a censer",
+          "doing": "swinging on its chain in an aisle with nobody in it",
+          "onArrival": "the smoke turns toward you",
+          "because": "the ground must be censed and the thurifer is gone",
+          "offer": "take the chain and swing it, and what is unclean here withdraws"
+        },
+        {
+          "occupant": "two living gravediggers",
+          "doing": "digging just outside the wall, in the dark",
+          "onArrival": "they stop and one gestures at the church, resentfully",
+          "because": "the ground inside was refused them",
+          "offer": "dig inside for them and the barred dead will carry you through the crypt"
+        },
+        {
+          "occupant": "the stones set on edge",
+          "doing": "standing a little further in than the marks in the grass",
+          "onArrival": "the boundary has moved since you looked",
+          "because": "the holy ground is being extended",
+          "offer": "set one back and the church treats you as a churchwarden"
+        },
+        {
+          "occupant": "the Reverend Mother",
+          "doing": "washing a wall where something keeps coming back",
+          "onArrival": "she hands you a cloth without turning",
+          "because": "it must not be seen and will not go",
+          "offer": "read it aloud before you wash it and she will tell you what it means"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "oil",
+          "cue": "a sealed phial of oil",
+          "benefit": "once, make a place holy for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what was displaced waits at the edge of it"
+        },
+        {
+          "id": "register",
+          "cue": "the register of clean and unclean",
+          "benefit": "once, have your presence accepted anywhere here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "someone else's name has been struck to make room"
+        },
+        {
+          "id": "bootscraper",
+          "cue": "a shard of the porch boot-scraper",
+          "benefit": "once, cross a threshold that refuses you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you bring in whatever the threshold was keeping out"
+        },
+        {
+          "id": "whitestone",
+          "cue": "the whiter stone from the floor",
+          "benefit": "stand on it and nothing unclean may touch you",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you must not step off it while anything is watching",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "censer",
+          "cue": "a censer on a short chain",
+          "benefit": "once, drive something back without harming it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it remembers the smell and finds you later"
+        }
+      ]
+    }
+  }
+}

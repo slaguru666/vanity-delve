@@ -2,7 +2,7 @@
   "id": "vanity-delve",
   "title": "DELVE — a dungeon layer for VANITY",
   "description": "Generates a coherent delve and sequences VANITY's Forge to stage it, one area at a time.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14.365"

@@ -14,9 +14,27 @@
       "motifs": 4
     },
     {
+      "id": "church",
+      "label": "Church",
+      "geometry": "barrow",
+      "motifs": 4
+    },
+    {
       "id": "forest",
       "label": "Forest",
       "geometry": "forest",
+      "motifs": 4
+    },
+    {
+      "id": "palace",
+      "label": "Palace",
+      "geometry": "barrow",
+      "motifs": 4
+    },
+    {
+      "id": "temple",
+      "label": "Temple",
+      "geometry": "barrow",
       "motifs": 4
     },
     {

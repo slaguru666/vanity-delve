@@ -1,0 +1,1174 @@
+{
+  "id": "temple",
+  "label": "Temple",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Interior kernel, older and stranger than a church. A temple wants the rite performed exactly, to be fed, to keep its name unsaid, or to be the only one. Its accommodations are what a priesthood does when a god is literal.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "God-Beneath",
+    "Veiled One",
+    "Hierophant",
+    "Oracle of the Steps",
+    "Nameless",
+    "Twice-Born",
+    "Last Priest"
+  ],
+  "appetites": [
+    {
+      "id": "rite",
+      "want": "to have the rite performed exactly",
+      "lack": "performed wrongly",
+      "purpose": "the words would never be got wrong",
+      "motif": "exactness",
+      "prize": "tablet",
+      "conscript": "the celebrants",
+      "asks": "\"Was that the correct form?\"",
+      "appeasement": {
+        "move": "copy whatever gesture is being made, exactly and without hurrying",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the form was kept",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "fed",
+      "want": "to be given something living",
+      "lack": "unfed",
+      "purpose": "the altar would never be dry",
+      "motif": "sacrifice",
+      "prize": "knife",
+      "conscript": "the offered",
+      "asks": "\"What will you give me?\"",
+      "appeasement": {
+        "move": "give up something you will actually miss, at the altar",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it has been given something that cost",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "unnamed",
+      "want": "never to have its name said aloud",
+      "lack": "named",
+      "purpose": "nobody would ever speak it",
+      "motif": "silence",
+      "prize": "veil",
+      "conscript": "the speakers",
+      "asks": "\"Who told you my name?\"",
+      "appeasement": {
+        "move": "say nothing at all for a full exchange, and let the silence stand",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "nobody said it",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "sole",
+      "want": "to be the only one worshipped here",
+      "lack": "one of many",
+      "purpose": "no other name would ever be spoken here",
+      "motif": "exclusion",
+      "prize": "idol",
+      "conscript": "the heretics",
+      "asks": "\"Whose else do you carry?\"",
+      "appeasement": {
+        "move": "put away or cover any token of another faith you carry",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it is the only one here",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "initiated",
+      "text": "initiated {conscript} into a mystery they could not survive knowing",
+      "cruelty": 3,
+      "fits": [
+        "rite",
+        "unnamed",
+        "sole"
+      ]
+    },
+    {
+      "id": "offered",
+      "text": "offered {conscript} on the stone, in order, over years",
+      "cruelty": 3,
+      "fits": [
+        "fed",
+        "rite",
+        "sole"
+      ]
+    },
+    {
+      "id": "silenced",
+      "text": "took the tongues of {conscript} so the name could not be said",
+      "cruelty": 3,
+      "fits": [
+        "unnamed",
+        "sole"
+      ]
+    },
+    {
+      "id": "veiled",
+      "text": "veiled {conscript} and would not let them be looked at again",
+      "cruelty": 2,
+      "fits": [
+        "unnamed",
+        "rite",
+        "fed"
+      ]
+    },
+    {
+      "id": "cast",
+      "text": "cast {conscript} out and had their gods broken in the street",
+      "cruelty": 3,
+      "fits": [
+        "sole",
+        "unnamed"
+      ]
+    },
+    {
+      "id": "bound",
+      "text": "bound {conscript} to the service and did not release them",
+      "cruelty": 1,
+      "fits": [
+        "rite",
+        "fed",
+        "sole"
+      ]
+    }
+  ],
+  "prizes": {
+    "tablet": {
+      "label": "the tablet with the rite cut correctly",
+      "function": "the only complete copy of the words"
+    },
+    "knife": {
+      "label": "the knife the offerings were made with",
+      "function": "the only thing the altar has ever accepted"
+    },
+    "veil": {
+      "label": "the veil that was never lifted",
+      "function": "the only thing that has kept the name safe"
+    },
+    "idol": {
+      "label": "the idol that outlasted all the others",
+      "function": "the last one standing when the rest were broken"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Temple of the",
+      "The House of the",
+      "The Steps of the",
+      "The Sanctum of the",
+      "The Shrine of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Temenos",
+      "The Great Steps",
+      "The Outer Court",
+      "The Processional Way",
+      "The Threshold Stone"
+    ],
+    "complication": [
+      "The Court of Lamps",
+      "The Hall of Columns",
+      "The Purification Court",
+      "The Lesser Shrine",
+      "The Ambulatory"
+    ],
+    "turn": [
+      "The Veil",
+      "The Oracle's Step",
+      "The Hall of Answers",
+      "The Middle Sanctum",
+      "The Way of Offerings"
+    ],
+    "descent": [
+      "The Undercroft of Bones",
+      "The Cistern of Ash",
+      "The Deep Cell",
+      "The Sacrifice Pit",
+      "The Lower Sanctum"
+    ],
+    "threshold": [
+      "The Antechamber of the God",
+      "The Robing Cell",
+      "The Treasury of Vows",
+      "The Last Veil",
+      "The Silent Room"
+    ],
+    "ending": [
+      "The Holy of Holies",
+      "Before the Idol",
+      "The Innermost",
+      "The God-Beneath"
+    ]
+  },
+  "factions": [
+    {
+      "id": "celebrants",
+      "name": "the Celebrants",
+      "kind": "undead",
+      "essence": "still performing a rite that has no ending written",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "looters",
+      "name": "tomb-robbers",
+      "kind": "living",
+      "essence": "here for gold and out of their depth",
+      "handledBy": "trade"
+    },
+    {
+      "id": "silenced",
+      "name": "the Tongueless",
+      "kind": "undead",
+      "essence": "keeping a name they can no longer say",
+      "handledBy": "silence"
+    },
+    {
+      "id": "broken",
+      "name": "the broken gods",
+      "kind": "beast",
+      "essence": "cast out and still in the building",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came up the processional way, upright, as a celebrant would",
+    "seenTwice": "reflected in lamp-oil, or seen by two of the Tongueless",
+    "loud": "a word said aloud in a place built to carry words",
+    "lingering": "stayed still long enough for the rite to include you",
+    "disturbed": "touched, moved or uncovered something set apart"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons in celebrants' robes",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; will not break the procession"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "walk in step with them and they take you for celebrants"
+    },
+    "fight": {
+      "line": "1 Ghoul in the sacrifice pit and 2 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "it is fed on a schedule and will not leave the pit if the offering is made"
+    },
+    "battle": {
+      "line": "1 Necromancer as Hierophant and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 4,
+          "def": 3,
+          "grit": 6,
+          "nerve": 4,
+          "note": "raises one per round while the rite continues"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — but interrupting the rite stops the raising",
+      "avoid": "he cannot break off mid-rite; wait for the pause and he will parley"
+    },
+    "nightmare": {
+      "line": "1 Wraith of the Veiled One, 1 Ghoul and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "freezes on a hit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "it does not strike anyone who has said nothing — say so before initiative"
+    }
+  },
+  "motifs": {
+    "exactness": {
+      "danger": "error",
+      "dangerLine": "the rite is still being performed, and it notices a wrong hand",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "floor-marks showing where each celebrant stands, worn deep",
+          "a rite cut into the walls in three languages, all agreeing",
+          "lamps in a pattern that is clearly not decorative"
+        ],
+        "ritual": [
+          "a procession stepping the same eleven paces, over and over",
+          "hands raised and lowered on a count nobody gives",
+          "a cup passed along a line with a gap in it"
+        ],
+        "demand": [
+          "a floor-mark exactly your size, empty",
+          "a doorway you must enter with a particular foot first",
+          "a hall that makes you aware you are doing it wrong"
+        ],
+        "wound": [
+          "a wall where the rite is cut wrongly and then corrected, twice",
+          "celebrants' hands broken and reset in the correct position",
+          "a tablet with an error scratched out so hard the stone split"
+        ],
+        "anchor": [
+          "a tablet with the rite cut correctly, once",
+          "a master copy under glass, unweathered",
+          "a lead sheet with the words punched into it"
+        ]
+      },
+      "features": [
+        "a floor-mark scrubbed brighter than the rest",
+        "a lamp moved out of the pattern",
+        "fresh chalk correcting a carved line",
+        "a cup set down mid-passage",
+        "a robe folded wrongly and refolded",
+        "footprints in ash, eleven paces, repeating"
+      ],
+      "decisions": [
+        {
+          "cue": "a floor-mark exactly your size, empty in the line",
+          "cost": "standing on it joins the rite",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take the place and step the measure correctly — the Celebrants accept you",
+            "failure": "you step it wrongly and the rite must begin again: lose a Turn, +1 Bane",
+            "orElse": "stay off the marks; the procession goes round you, coldly"
+          }
+        },
+        {
+          "cue": "a rite cut on the wall in three languages that do not quite agree",
+          "cost": "one of them is the correct one",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the version the others were copied from and know the true form",
+            "failure": "you pick a corrupted copy and are confidently wrong for the rest of the delve",
+            "orElse": "copy all three and decide later: one Turn"
+          }
+        },
+        {
+          "cue": "a doorway you must enter with a particular foot first",
+          "cost": "which foot is not written anywhere obvious",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read it off the floor-wear and enter correctly",
+            "failure": "you enter wrongly and the temple resets you to the previous room",
+            "orElse": "go through the servants' arch: one Turn, and it is beneath you"
+          }
+        },
+        {
+          "cue": "a cup being passed along a line with a gap where you stand",
+          "cost": "taking it commits you; refusing breaks the line",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take, pass and are counted a celebrant for the rest of the delve",
+            "failure": "you fumble the pass and the line stops: everything turns to look",
+            "orElse": "step out of the line before it reaches you: the rite pauses, and resumes without you"
+          }
+        },
+        {
+          "cue": "a tablet with an error scratched out hard enough to split the stone",
+          "cost": "the correction matters more than the error",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you read the correction and know one thing the temple insists on",
+            "failure": "you read only the error and act on it once, wrongly",
+            "orElse": "leave it; you go on not knowing"
+          }
+        },
+        {
+          "cue": "lamps arranged in a pattern with one lamp out of place",
+          "cost": "restoring it is either piety or interference",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you set it right and the pattern completes — the temple opens a way it had closed",
+            "failure": "you move the wrong lamp and the pattern is broken worse: roll the clock",
+            "orElse": "leave the pattern; the way stays shut"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "eleven Celebrants",
+          "doing": "stepping a measure with a gap in the line where one is missing",
+          "onArrival": "the gap arrives in front of you",
+          "because": "the measure requires eleven and there are ten",
+          "offer": "step the measure and they will carry you to the middle sanctum"
+        },
+        {
+          "occupant": "the Hierophant",
+          "doing": "correcting a carved line with a chisel, again",
+          "onArrival": "it offers you the chisel, handle first",
+          "because": "the text has never once been right",
+          "offer": "cut one correct character and it will read you the whole rite"
+        },
+        {
+          "occupant": "two living looters",
+          "doing": "copying wall-text they cannot read onto wax",
+          "onArrival": "they look up, guilty, and offer to share",
+          "because": "they are selling the rite to somebody",
+          "offer": "tell them what it says and they will tell you what is in the treasury"
+        },
+        {
+          "occupant": "a cup",
+          "doing": "travelling along a line of hands toward you",
+          "onArrival": "the hand before yours holds it out",
+          "because": "the passing must not stop",
+          "offer": "take it and pass it, and the line lets you through"
+        },
+        {
+          "occupant": "one of the Celebrants",
+          "doing": "holding a gesture and waiting to be released from it",
+          "onArrival": "its arms are shaking, which should not be possible",
+          "because": "the next word of the rite was never spoken",
+          "offer": "say any word with authority and it lowers its arms and thanks you"
+        },
+        {
+          "occupant": "the lamps",
+          "doing": "going out one at a time in the pattern's order",
+          "onArrival": "the nearest gutters as you enter",
+          "because": "the pattern is completing itself, wrongly",
+          "offer": "relight one out of order and the temple loses count, which helps you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "tablet",
+          "cue": "a tablet with the rite cut correctly",
+          "benefit": "once, perform any rite here exactly right",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the temple expects you to perform the rest of it"
+        },
+        {
+          "id": "floormark",
+          "cue": "a chip of a floor-mark",
+          "benefit": "once, take somebody's place in a formal order",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whoever you displaced is looking for their place"
+        },
+        {
+          "id": "leadsheet",
+          "cue": "a lead sheet with the words punched in",
+          "benefit": "once, say something so exactly it cannot be argued with",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot say the same thing twice differently"
+        },
+        {
+          "id": "chisel",
+          "cue": "the Hierophant's chisel",
+          "benefit": "once, correct something written and make it true",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the previous version begins to want to be restored",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "lamppattern",
+          "cue": "one lamp from the pattern",
+          "benefit": "once, make a place behave as the temple intends",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the pattern is short a lamp and the temple is searching"
+        }
+      ]
+    },
+    "sacrifice": {
+      "danger": "hunger",
+      "dangerLine": "the altar is dry, and the temple has been waiting a long time",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "channels cut into the floor, all sloping the same way",
+          "a stone with a hollow and a lip at one end",
+          "hooks in a beam at the height of a hanging thing"
+        ],
+        "ritual": [
+          "a beast led up the steps by nobody, nightly",
+          "a knife laid out, cleaned, and laid out again",
+          "a bowl carried in full and carried out empty"
+        ],
+        "demand": [
+          "a stone with a hollow exactly the size of a person's chest",
+          "a channel that runs toward you when you stand still",
+          "a room that makes you count how many of you there are"
+        ],
+        "wound": [
+          "channels scoured white by too much use",
+          "a pit under the floor, filled and filled again",
+          "a knife broken deliberately and the pieces kept apart"
+        ],
+        "anchor": [
+          "the knife itself, clean, on a folded cloth",
+          "a bowl that has never been washed",
+          "a ledger of what was given and on what day"
+        ]
+      },
+      "features": [
+        "a channel scrubbed clean, recently",
+        "a beast tethered and left",
+        "a knife laid out on fresh cloth",
+        "the pit lid moved aside",
+        "blood that has not dried in a dry room",
+        "a bowl set out, empty and waiting"
+      ],
+      "decisions": [
+        {
+          "cue": "an altar with a hollow and a channel, and nothing on it",
+          "cost": "the temple will take something either way",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you give something that costs you and the altar is satisfied for the delve",
+            "failure": "you give something worthless and it is refused: +1 Bane",
+            "orElse": "give nothing; the altar takes an opportunity later instead"
+          }
+        },
+        {
+          "cue": "a beast tethered at the steps, left by somebody",
+          "cost": "freeing it or offering it are both decisions",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you make the offering properly and the temple grants you passage",
+            "failure": "you free it and the temple takes the loss out of your reckoning: +1 Bane",
+            "orElse": "leave it tethered; it is still there when you come back"
+          }
+        },
+        {
+          "cue": "a knife broken in two and the halves kept apart",
+          "cost": "joining them is the obvious thing and obviously unwise",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you join them and hold the only thing the altar accepts",
+            "failure": "you join them and the knife wants using: it is +1 Bane per area to carry",
+            "orElse": "leave the halves apart; nothing is armed"
+          }
+        },
+        {
+          "cue": "a pit under a moved lid, and something at the bottom",
+          "cost": "what is down there was given, not thrown",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you go down and come back with what was given, and the temple allows it",
+            "failure": "you fall the last of it: 2 Grit, and something down there notices",
+            "orElse": "leave the lid; the pit keeps what it was given"
+          }
+        },
+        {
+          "cue": "a bowl carried in full and set down empty in front of you",
+          "cost": "the bowl is asking",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you fill it with something of yours and the Celebrants become helpful",
+            "failure": "you fill it with water and the insult is understood: +1 Bane",
+            "orElse": "hand it back empty; the bowl waits for someone else"
+          }
+        },
+        {
+          "cue": "a ledger of what was given and on what day, with today blank",
+          "cost": "writing in it commits you to giving",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you enter something already spent and the day is counted paid",
+            "failure": "you enter a promise and the temple will collect: +1 Bane at the ending",
+            "orElse": "leave the day blank; the temple notices the gap"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a beast",
+          "doing": "standing tethered at the top of the steps, quite calm",
+          "onArrival": "it turns its head and looks at you without alarm",
+          "because": "it was led up and nobody came to take it",
+          "offer": "untie it and lead it out, and the temple counts the debt deferred"
+        },
+        {
+          "occupant": "the Last Priest",
+          "doing": "cleaning a knife that is already clean",
+          "onArrival": "it sets the knife down between you and it",
+          "because": "the offering hour came and nothing was brought",
+          "offer": "bring it anything living and it will open the inner doors"
+        },
+        {
+          "occupant": "two living looters",
+          "doing": "arguing beside an open pit about who goes down",
+          "onArrival": "they stop and one offers you a rope",
+          "because": "what is down there is worth having",
+          "offer": "hold the rope and they will share what comes up"
+        },
+        {
+          "occupant": "the channels",
+          "doing": "running with something in a room where nothing has been cut",
+          "onArrival": "the flow moves toward your feet",
+          "because": "the altar is being fed from somewhere",
+          "offer": "follow the channels back and you find what is being given"
+        },
+        {
+          "occupant": "one of the Celebrants",
+          "doing": "holding a bowl out at arm's length, waiting",
+          "onArrival": "its arms do not lower",
+          "because": "the bowl has not been filled in three centuries",
+          "offer": "fill it and every Celebrant in the temple will stand aside"
+        },
+        {
+          "occupant": "the altar",
+          "doing": "sitting warm in a cold room with the hollow wet",
+          "onArrival": "the wetness is fresh",
+          "because": "something was given here very recently",
+          "offer": "find out what, and the temple treats you as party to it"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "knife",
+          "cue": "the offering knife, clean",
+          "benefit": "once, an attack cannot be defended against",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the temple counts what you take with it as given to it"
+        },
+        {
+          "id": "bowl",
+          "cue": "a bowl that has never been washed",
+          "benefit": "once, make an offering count double",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the bowl must not leave the temple, and you will want to take it"
+        },
+        {
+          "id": "tether",
+          "cue": "a tether from the steps",
+          "benefit": "once, bind something so it cannot leave",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "whatever you bind is now yours to give",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "givenledger",
+          "cue": "the ledger of what was given",
+          "benefit": "once, prove a debt to the temple is paid",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "an unpaid day of yours is written in it"
+        },
+        {
+          "id": "pitstone",
+          "cue": "a stone from the bottom of the pit",
+          "benefit": "once, survive something that should have taken you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the pit is owed a substitution"
+        }
+      ]
+    },
+    "silence": {
+      "danger": "utterance",
+      "dangerLine": "the name must not be said, and the temple is listening for it",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "inscriptions with one word chiselled out of every line",
+          "a hall built to swallow sound rather than carry it",
+          "hangings doubled on every wall"
+        ],
+        "ritual": [
+          "a rite performed entirely in gesture",
+          "a bell with the clapper removed and hung anyway",
+          "lips touched before crossing every threshold"
+        ],
+        "demand": [
+          "a room that makes your breathing audible",
+          "a veil you are expected to speak behind, not through",
+          "a doorway where your own voice does not follow you in"
+        ],
+        "wound": [
+          "jaws wired shut on every figure in a frieze",
+          "a mouth chiselled out of a statue and the hole smoothed",
+          "tongues in a jar, counted"
+        ],
+        "anchor": [
+          "a veil that has never been lifted",
+          "a sealed box that hums when carried",
+          "a name written once and buried face-down"
+        ]
+      },
+      "features": [
+        "a hanging pulled aside and left",
+        "fresh wax on lips of a statue",
+        "a jar moved from a shelf",
+        "a clapper found on the floor",
+        "a word scratched into plaster and rubbed at",
+        "a door muffled with cloth, recently"
+      ],
+      "decisions": [
+        {
+          "cue": "a veil you are expected to speak behind, not through",
+          "cost": "speaking through it says the name into the room",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you speak behind it correctly and the Tongueless treat you as initiated",
+            "failure": "you speak through it and something hears its own name: roll the clock, +1 Bane",
+            "orElse": "say nothing at all: safe, and you learn nothing"
+          }
+        },
+        {
+          "cue": "an inscription with one word cut out of every line",
+          "cost": "reconstructing the word is possible and is the whole point",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work it out and do not say it — knowing it is enough to open the way",
+            "failure": "you say it aloud without meaning to: everything in the temple turns",
+            "orElse": "leave it unreconstructed: one Turn to find another way"
+          }
+        },
+        {
+          "cue": "a bell with the clapper hung beside it",
+          "cost": "ringing it would be the loudest thing here in centuries",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you strike it once, deliberately, and everything hostile withdraws for a scene",
+            "failure": "the note goes on far too long and brings what it was meant to keep out",
+            "orElse": "leave the clapper down; the silence holds"
+          }
+        },
+        {
+          "cue": "a jar of tongues, counted, with a gap",
+          "cost": "the count matters to something",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out whose is missing and can use the name of the one who kept it",
+            "failure": "you disturb the count and the Tongueless follow you thereafter",
+            "orElse": "leave the jar; the count stays wrong"
+          }
+        },
+        {
+          "cue": "a sealed box that hums when it is carried",
+          "cost": "opening it is how the name got out last time",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you carry it without opening it and it opens doors for you",
+            "failure": "you open it: the name is loose in the room, +1 Bane and roll the clock",
+            "orElse": "leave it sealed and where it is"
+          }
+        },
+        {
+          "cue": "a name written once and buried face-down",
+          "cost": "turning it over reads it",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you read it with your eyes only and hold something the temple fears",
+            "failure": "you read it aloud out of habit: the temple stops treating you as a guest",
+            "orElse": "leave it face-down; whatever is written stays buried"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Tongueless",
+          "doing": "mouthing a word it cannot make a sound with",
+          "onArrival": "it takes your hand and shapes it into a gesture",
+          "because": "it kept the name and lost the means to say it",
+          "offer": "let it shape your hand and you will be able to say the word once, safely"
+        },
+        {
+          "occupant": "the hangings",
+          "doing": "doubling along the wall as you watch, muffling further",
+          "onArrival": "the room becomes noticeably quieter",
+          "because": "something is about to be said and must not be heard",
+          "offer": "speak first, quietly, and the hangings still"
+        },
+        {
+          "occupant": "a living scholar",
+          "doing": "copying an inscription and leaving the cut-out word blank",
+          "onArrival": "they hold a finger to their lips and keep writing",
+          "because": "they know what the gap is and will not write it",
+          "offer": "promise not to say it and they will show you where it is written whole"
+        },
+        {
+          "occupant": "the Veiled One's chair",
+          "doing": "standing empty behind a veil that moves without air",
+          "onArrival": "the veil bellies toward you",
+          "because": "something behind it is waiting to be addressed",
+          "offer": "address it without using any name and it will answer one question"
+        },
+        {
+          "occupant": "three of the Tongueless",
+          "doing": "standing in a line with their hands over their mouths",
+          "onArrival": "they part to let you through and do not lower their hands",
+          "because": "the silence must be kept by somebody",
+          "offer": "cover your own mouth and walk through, and they follow and guard you"
+        },
+        {
+          "occupant": "a bell",
+          "doing": "hanging with its clapper on the floor beneath it",
+          "onArrival": "the bell moves very slightly",
+          "because": "the hour is due and cannot be struck",
+          "offer": "strike it with your hand — no clapper, no name — and the temple opens"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "veil",
+          "cue": "a length of the veil, unlifted",
+          "benefit": "once, say something without anything hearing who said it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your voice is not recognised by allies either"
+        },
+        {
+          "id": "sealedbox",
+          "cue": "a small sealed box that hums",
+          "benefit": "once, open it and unmake something with a word",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the name is loose afterwards and looking for a mouth",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "clapper",
+          "cue": "a bell clapper, heavy",
+          "benefit": "once, make a sound that nothing here can ignore",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything comes to see what rang"
+        },
+        {
+          "id": "tonguejar",
+          "cue": "a jar with one tongue in it",
+          "benefit": "once, speak with the voice of whoever it belonged to",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they say something of their own each time"
+        },
+        {
+          "id": "buriedname",
+          "cue": "a tablet, face-down, unread",
+          "benefit": "once, read a name and know what it commands",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the name knows it has been read"
+        }
+      ]
+    },
+    "exclusion": {
+      "danger": "rivalry",
+      "dangerLine": "the temple will not share, and it can smell another god on you",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "niches all along a wall, every one of them emptied",
+          "a floor of broken idols laid face-down as paving",
+          "a single lamp where a row of lamps was fixed"
+        ],
+        "ritual": [
+          "a censing of the doorway against something that keeps returning",
+          "tokens of other faiths collected in a basket at the door",
+          "a rite of exclusion cut beside every entrance"
+        ],
+        "demand": [
+          "a doorway that will not admit anything with two allegiances",
+          "a room where only one thing may be venerated at a time",
+          "a plinth built for one and made larger since"
+        ],
+        "wound": [
+          "idols broken carefully rather than in anger, and stacked",
+          "a frieze with every rival figure chiselled to a blank",
+          "a shrine walled up with the offerings still inside"
+        ],
+        "anchor": [
+          "the last idol standing, undamaged",
+          "a basket of confiscated tokens, still full",
+          "a list of gods forbidden here, complete"
+        ]
+      },
+      "features": [
+        "a niche recently emptied",
+        "a token dropped at the doorway",
+        "fresh mortar sealing a small shrine",
+        "broken idol-pieces sorted by size",
+        "a censer used at a door and left",
+        "a name scratched off a frieze, this year"
+      ],
+      "decisions": [
+        {
+          "cue": "a basket at the door for tokens of other faiths",
+          "cost": "giving up a token is a real cost to whoever carries it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you give one up properly and the temple treats the party as its own",
+            "failure": "you keep one and it is smelled on you: the next encounter starts hostile",
+            "orElse": "hand over everything: safe, and something you valued is gone"
+          }
+        },
+        {
+          "cue": "a shrine walled up with the offerings still inside",
+          "cost": "opening it frees a rival the temple beat",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open it and what is inside is grateful and useful",
+            "failure": "you open it and the temple treats you as its enemy from here",
+            "orElse": "leave it sealed; it has been sealed a long time"
+          }
+        },
+        {
+          "cue": "a floor of broken idols laid face-down as paving",
+          "cost": "turning one over is a small resurrection",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find one still whole beneath and it will speak for you once",
+            "failure": "you turn over a broken one and it is angry with everybody",
+            "orElse": "walk over them without looking; the temple approves"
+          }
+        },
+        {
+          "cue": "the last idol standing, undamaged, and a hammer beside it",
+          "cost": "the hammer was left there on purpose",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you refuse the invitation and the temple is satisfied you are loyal",
+            "failure": "you take up the hammer and something in the temple decides what you are",
+            "orElse": "take the hammer away and hide it: the invitation stands for someone else"
+          }
+        },
+        {
+          "cue": "a list of gods forbidden here, complete and long",
+          "cost": "one of them is one you know",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the name that matters and can use it against the temple later",
+            "failure": "you are seen reading it and are assumed to be one of them: +1 Bane",
+            "orElse": "do not read the list; ignorance is safest here"
+          }
+        },
+        {
+          "cue": "a censer at a doorway, still warm, used against something",
+          "cost": "using it yourself declares a side",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you cense the doorway and whatever keeps returning is held off for the delve",
+            "failure": "you use it wrongly and it clears the way in instead",
+            "orElse": "leave it; the door is uncensed and something uses it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Celebrants",
+          "doing": "emptying a niche that has been empty for centuries",
+          "onArrival": "it dusts the empty shelf and moves to the next",
+          "because": "the niches must be kept clear",
+          "offer": "help it dust and it will show you where what was in them went"
+        },
+        {
+          "occupant": "a broken god",
+          "doing": "standing assembled wrongly from pieces off the floor",
+          "onArrival": "the assembly shifts as you look at it",
+          "because": "it has been trying to stand up for a long time",
+          "offer": "assemble it correctly and it will owe you, and it is still strong"
+        },
+        {
+          "occupant": "two living pilgrims",
+          "doing": "hiding a token in a wall before going in",
+          "onArrival": "they beg you, silently, not to say anything",
+          "because": "they cannot give it up and cannot carry it in",
+          "offer": "hide it better for them and they will guide you inside"
+        },
+        {
+          "occupant": "the last idol",
+          "doing": "standing alone on a plinth built for a row",
+          "onArrival": "the lamp before it is freshly lit",
+          "because": "it outlasted the others and knows it",
+          "offer": "praise it aloud and it will let you pass anywhere in the temple"
+        },
+        {
+          "occupant": "the basket at the door",
+          "doing": "filling further than when you last passed it",
+          "onArrival": "something in it is yours",
+          "because": "the confiscation continues without a doorkeeper",
+          "offer": "take back only what is yours and the temple allows it"
+        },
+        {
+          "occupant": "the Last Priest",
+          "doing": "chiselling a rival's name off a frieze it has already cleared",
+          "onArrival": "it hands you the chisel and points at a blank",
+          "because": "the frieze must be clean and always has more names",
+          "offer": "chisel one blank and it will name every god it drove out"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "lastidol",
+          "cue": "a small idol, undamaged",
+          "benefit": "once, be protected as the temple protects its own",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you may carry no other token while you hold it"
+        },
+        {
+          "id": "tokenbasket",
+          "cue": "a confiscated token from the basket",
+          "benefit": "once, call on a god this temple hates",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the temple knows, and stops treating you as a guest",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "hammer",
+          "cue": "the hammer left beside the idol",
+          "benefit": "once, break something that should not be breakable",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the temple counts you a breaker of gods, approvingly"
+        },
+        {
+          "id": "forbiddenlist",
+          "cue": "the list of forbidden gods",
+          "benefit": "once, name what something is afraid of",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are assumed to worship whatever you name"
+        },
+        {
+          "id": "facepaving",
+          "cue": "a face-down idol-fragment",
+          "benefit": "once, hide your allegiance entirely",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "nothing recognises you, including help"
+        }
+      ]
+    }
+  }
+}
