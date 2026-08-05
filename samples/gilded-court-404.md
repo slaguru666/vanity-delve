@@ -41,175 +41,133 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ---
 
 ### AREA 1 — The Threshold Stones
-*approach · facet: institution · no encounter*
+*approach · institution*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a stair too grand for the door it serves
-- the queue disturbed — three of the dead pushed aside
+> A stair too grand for the door it serves. The queue disturbed — three of the dead pushed aside. One of the Host is reading out an order of precedence to an empty hall — when you walk in, it pauses and asks where you fall in it. None of it is accident — it was done this way on purpose.
 
-**Truth.** this is how the place was ordered, and it still is. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** The list must be read in full before anyone may proceed. This is how the place was ordered, and it still is.
+**They can:** name your own place in the order and it will be honoured, exactly. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a stair too grand for the door it serves — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**Banners in strict order, and one you could move.** *reordering them opens a way and insults everyone buried here.*
+`[Wits 2]` → you reorder them correctly and a way opens
+**Miss** → you reorder wrongly and insult everyone buried here: +1 Bane
+**Or** leave them: the way stays shut, one Turn to find another.
 
-**The decision.** banners in strict order, and one you could move — *reordering them opens a way and insults everyone buried here*
-
-
-**Attention trigger:** announced.
-**Bane beat — announcing.** Who: *the whole party*. When: *once, on entering loudly*. once only. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: announced · bane beat: announcing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 2 — The Lesser Vault
-*complication · facet: ritual · no encounter*
+*complication · ritual*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- banners in sequence, each house a place further back
-- a seat at the head of the hall dragged back, as if to sit in
+> Banners in sequence, each house a place further back. A seat at the head of the hall dragged back, as if to sit in. Two of the Host is each refusing to go through a door second — when you walk in, they both look at you to break it. None of it is accident — it was done this way on purpose.
 
-**Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** Neither may be seen to yield. The office is still being performed, for someone who is no longer served by it.
+**They can:** rule between them and the loser attaches to you as a lesser. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** banners in sequence, each house a place further back — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A corridor that will not let two walk abreast.** *whoever goes first meets whatever is there first.*
+`[Poise 1]` → you settle the order and whoever leads meets what is there, ready
+**Miss** → you argue in the corridor and something arrives while you do
+**Or** send one scout: slow, one Turn, and they are alone.
 
-**The decision.** a corridor that will not let two walk abreast — *whoever goes first meets whatever is there first*
-
-
-**Attention trigger:** loud.
-**Bane beat — noticing.** Who: *whoever lingers on their own reflection*. When: *once per hero here*. repeatable across areas. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: loud · bane beat: noticing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 3 — The Waiting Room
-*complication · facet: ritual · no encounter*
+*complication · ritual*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a herald's script with the order still marked
-- someone has walked the corridor the wrong way, scuffing one side
+> A herald's script with the order still marked. Someone has walked the corridor the wrong way, scuffing one side. One of the Host with a herald's staff is announcing arrivals to an empty stair — when you walk in, it announces you, inventing a rank. None of it is accident — it was done this way on purpose.
 
-**Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** The post requires arrivals and there have been none. The office is still being performed, for someone who is no longer served by it.
+**They can:** accept the invented rank and the barrow will treat you as it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a herald's script with the order still marked — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A door that opens only for the foremost of a party.** *someone must be named first, aloud, and the others must accept it.*
+`[Flair 2]` → someone is named first, aloud, and the door opens for them
+**Miss** → the naming is disputed and the door reads that as no answer
+**Or** let the barrow choose: it picks the loudest, and remembers.
 
-**The decision.** a door that opens only for the foremost of a party — *someone must be named first, aloud, and the others must accept it*
-
-
-**Attention trigger:** announced.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: announced · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 4 — The Records Room
-*turn · facet: demand · encounter: fight · hoard: cache*
+*turn · demand · fight · cache*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a door only one person may pass at a time, and only first
-- a numbered flagstone lifted and not replaced
+> A door only one person may pass at a time, and only first. A numbered flagstone lifted and not replaced. A living robber is prising number-plates off the flagstones — when you walk in, they freeze, then offer you one. None of it is accident — it was done this way on purpose.
 
-**Truth.** here the want is explicit — the place asks something of whoever enters. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** They worked out the order is what keeps the doors shut. Here the want is explicit — the place asks something of whoever enters.
+**They can:** take a plate and go first anywhere — the Host will hate you for it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a door only one person may pass at a time, and only first — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A queue of the dead, and a way to step round it.** *waiting costs two Turns; pushing in costs the Host's patience.*
+`[Poise 2]` → you step round without breaking the order, and the Host allows it
+**Miss** → you push in: +1 Bane and the queue closes behind you
+**Or** wait: two Turns, and the Host thinks better of you.
 
-**The decision.** a queue of the dead, and a way to step round it — *waiting costs two Turns; pushing in costs the Host's patience*
-
-**Encounter — fight.** 1 Ghoul and 2 Skeletons
+**Fight — 1 Ghoul and 2 Skeletons.** Harmed by anything. *the Ghoul goes for court dress first — send someone plain.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Ghoul | 4 | 3 | 4 | 5 | on a hit, a free Called Shot to freeze for a round |
 | 2× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** anything
-- **Avoidable:** the Ghoul goes for court dress first — send someone plain
-- *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
-**Hoard.** Tier **cache**.
-**Temptation — flagstone.** a numbered flagstone, prised up, number one
-- *Benefit:* once, insist on going first and be obeyed
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you go first into everything from now on
+**Cache hoard.** **Flagstone** — a numbered flagstone, prised up, number one: once, insist on going first and be obeyed.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, you go first into everything from now on.*
 
-**Attention trigger:** announced.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: announced · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 5 — The Sunken Nave
-*descent · facet: wound · no encounter · hoard: pocket*
+*descent · wound · pocket*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a procession that doubled back on itself
-- banners pulled down and stacked without regard for order
+> A procession that doubled back on itself. Banners pulled down and stacked without regard for order. Nobody is a procession is passing through, unhurried, and you are in its way — when you walk in, it does not stop or go round. None of it is accident — it was done this way on purpose.
 
-**Truth.** this is the damage the want did to those who had to satisfy it. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** It has right of way and has had for three centuries. This is the damage the want did to those who had to satisfy it.
+**They can:** stand aside and be counted courteous; join it and be counted one of them. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a procession that doubled back on itself — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A stair where the order of descent is visibly recorded.** *whoever goes last is remembered as having gone last.*
+`[Poise 2]` → you settle the order before you descend and the record reads as a party, not a rabble
+**Miss** → you descend in a scramble: whoever is recorded last is treated as least by the Host from here
+**Or** descend however you like and accept the record as it falls.
 
-**The decision.** a stair where the order of descent is visibly recorded — *whoever goes last is remembered as having gone last*
+**Pocket hoard.** **Staffprec** — a staff of precedence, laid down and not taken up: once, decide the order of anything, and be obeyed.
+*Take it take the Vice **Pride**; using it costs **+2 Banes** on the tab; while you carry it, you may never be second while you hold it.*
 
-**Hoard.** Tier **pocket**.
-**Temptation — staffprec.** a staff of precedence, laid down and not taken up
-- *Benefit:* once, decide the order of anything, and be obeyed
-- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
-- *Standing:* you may never be second while you hold it
-
-**Attention trigger:** seenTwice.
-**Bane beat — refusal.** Who: *whoever refuses the offer*. When: *once*. once only. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: seenTwice · bane beat: refusal · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 6 — The Last Door
-*threshold · facet: anchor · encounter: battle · hoard: chest*
+*threshold · anchor · battle · chest*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a seat at the head of everything, occupied
-- a rank-plate prised off and dropped, still shiny where it sat
+> A seat at the head of everything, occupied. A rank-plate prised off and dropped, still shiny where it sat. A queue of the Host is waiting to pass a door, in strict order, not moving — when you walk in, the queue opens a gap at exactly your rank. None of it is accident — it was done this way on purpose.
 
-**Truth.** the thing the whole barrow is arranged around is close. The Patient Lord bound a procession by oath they could not break, so that someone would always go behind them.
+**GM.** The first in line is waiting for someone who never arrived. The thing the whole barrow is arranged around is close.
+**They can:** take the gap and go with them; take the front and they will remember it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a seat at the head of everything, occupied — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A claim to settle: which of you the barrow should address.** *settling it opens the way; refusing to settle it does not.*
+`[Poise 2]` → the claim is settled and the barrow addresses one of you from now on
+**Miss** → it is not settled, and the barrow keeps asking, in worse places
+**Or** refuse to settle: the way on does not open.
 
-**The decision.** a claim to settle: which of you the barrow should address — *settling it opens the way; refusing to settle it does not*
-
-**Encounter — battle.** 1 Wraith and 3 Skeletons
+**Battle — 1 Wraith and 3 Skeletons.** Harmed by blessed, silvered or magical weapons ONLY — **say so before initiative**. *it will take an appeasement over a fight every time.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Wraith | 5 | 3 | 10 | 5 | INCORPOREAL — chill touch ignores armour and drains 1 max Grit |
 | 3× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** blessed, silvered or magical weapons ONLY — **say this before initiative**
-- **Avoidable:** it will take an appeasement over a fight every time
-- *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
-**Hoard.** Tier **chest**.
-**Temptation — coronet.** a small crown, sized for someone who never grew
-- *Benefit:* +1 die when others must defer to you
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you must be addressed correctly or lose the benefit
+**Chest hoard.** **Coronet** — a small crown, sized for someone who never grew: +1 die when others must defer to you.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, you must be addressed correctly or lose the benefit.*
 
-**Attention trigger:** disturbed.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, the ending opens with them holding nothing the bottom problem wants.
+`trigger: disturbed · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: the ending opens with them holding nothing the bottom problem wants.`
 
 ---
 

@@ -41,197 +41,115 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ---
 
 ### AREA 1 — The Weeping Stair
-*approach · facet: institution · no encounter*
+*approach · institution*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- servants' bones arranged as though mid-errand
-- someone has been talking here, and stopped when you arrived
+> Servants' bones arranged as though mid-errand. Someone has been talking here, and stopped when you arrived. Three of the Host in servants' dress is carrying out an errand that has no destination left — when you walk in, they stop, and wait to be told what to do. None of it is accident — it was done this way on purpose.
 
-**The situation.** three of the Host in servants' dress — carrying out an errand that has no destination left.
-**When you walk in:** they stop, and wait to be told what to do.
-- *Why (GM):* the order was never rescinded and nobody outranks it
-- *What it offers:* tell them where to go, and they go
+**GM.** The order was never rescinded and nobody outranks it. This is how the place was ordered, and it still is.
+**They can:** tell them where to go, and they go. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**Truth.** this is how the place was ordered, and it still is. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
+**An order carved into the floor, still legible.** *obey it and the Host counts you as household; step over it and they do not.*
+`[Poise 2]` → you obey exactly enough to be counted household — Skeletons stand down for you
+**Miss** → you obey wrongly, which is worse than not obeying: +1 Bane
+**Or** step over it: no cost now, and the Host does not count you as theirs.
 
-**The clue is automatic:** servants' bones arranged as though mid-errand — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
-
-**The decision.** an order carved into the floor, still legible — *obey it and the Host counts you as household; step over it and they do not*
-- **Attempt it:** `[VANITY: Poise 2]`
-- **Success:** you obey exactly enough to be counted household — Skeletons stand down for you
-- **Failure:** you obey wrongly, which is worse than not obeying: +1 Bane
-- **Or simply:** step over it: no cost now, and the Host does not count you as theirs
-
-
-**Attention trigger:** seenTwice.
-**Bane beat — announcing.** Who: *the whole party*. When: *once, on entering loudly*. once only. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: seenTwice · bane beat: announcing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 2 — The Lesser Vault
-*complication · facet: ritual · encounter: fight · hoard: cache*
+*complication · ritual · fight · cache*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- orders scratched into the floor, the last one unfinished
-- a door braced shut from within by furniture
+> Orders scratched into the floor, the last one unfinished. A door braced shut from within by furniture. A living grave-robber is repeating a phrase over and over, trying to get the intonation right — when you walk in, they go quiet and put their back to the wall. None of it is accident — it was done this way on purpose.
 
-**The situation.** a living grave-robber — repeating a phrase over and over, trying to get the intonation right.
-**When you walk in:** they go quiet and put their back to the wall.
-- *Why (GM):* they heard the password and cannot say it correctly
-- *What it offers:* trade something for the phrase, badly remembered
+**GM.** They heard the password and cannot say it correctly. The office is still being performed, for someone who is no longer served by it.
+**They can:** trade something for the phrase, badly remembered. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**Truth.** the office is still being performed, for someone who is no longer served by it. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
+**Two doors, and behind one a voice giving instructions to nobody.** *the quiet door is longer; the voice would tell you exactly where to go.*
+`[Poise 2]` → you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service
+**Miss** → you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now
+**Or** take the quiet door and never speak to it: one extra Turn, no obligation.
 
-**The clue is automatic:** orders scratched into the floor, the last one unfinished — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
-
-**The decision.** two doors, and behind one a voice giving instructions to nobody — *the quiet door is longer; the voice would tell you exactly where to go*
-- **Attempt it:** `[VANITY: Poise 2]`
-- **Success:** you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service
-- **Failure:** you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now
-- **Or simply:** take the quiet door and never speak to it: one extra Turn, no obligation
-
-**Encounter — fight.** 1 Ghoul and 2 Skeletons
+**Fight — 1 Ghoul and 2 Skeletons.** Harmed by anything. *the Ghoul goes for court dress first — send someone plain.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Ghoul | 4 | 3 | 4 | 5 | on a hit, a free Called Shot to freeze for a round |
 | 2× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** anything
-- **Avoidable:** the Ghoul goes for court dress first — send someone plain
-- *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
-**Hoard.** Tier **cache**.
-**Temptation — tube.** a short length of speaking-tube, cut and carried
-- *Benefit:* ask one question and get one true answer
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* whatever answers can now hear you
+**Cache hoard.** **Tube** — a short length of speaking-tube, cut and carried: ask one question and get one true answer.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, whatever answers can now hear you.*
 
-**Attention trigger:** loud.
-**Bane beat — noticing.** Who: *whoever lingers on their own reflection*. When: *once per hero here*. repeatable across areas. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: loud · bane beat: noticing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 3 — The Crossing
-*turn · facet: demand · no encounter*
+*turn · demand*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a hall where your own voice arrives before you speak
-- an order half-scratched out and rewritten by a different hand
+> A hall where your own voice arrives before you speak. An order half-scratched out and rewritten by a different hand. Nobody — but the bells are moving is a summons is being rung, room by room, coming closer — when you walk in, the bell in this room begins. None of it is accident — it was done this way on purpose.
 
-**The situation.** nobody — but the bells are moving — a summons is being rung, room by room, coming closer.
-**When you walk in:** the bell in this room begins.
-- *Why (GM):* something has called for service and the house is obliging
-- *What it offers:* answer the bell yourself before whatever is meant to arrives
+**GM.** Something has called for service and the house is obliging. Here the want is explicit — the place asks something of whoever enters.
+**They can:** answer the bell yourself before whatever is meant to arrives. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**Truth.** here the want is explicit — the place asks something of whoever enters. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
+**A bell-pull that would summon someone.** *ring it and help comes, and it is not the kind you wanted.*
+`[Poise 2]` → what comes is answerable to you for one scene
+**Miss** → what comes is not the kind of help you wanted
+**Or** do not ring: the way on is longer by one Turn.
 
-**The clue is automatic:** a hall where your own voice arrives before you speak — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
-
-**The decision.** a bell-pull that would summon someone — *ring it and help comes, and it is not the kind you wanted*
-- **Attempt it:** `[VANITY: Poise 2]`
-- **Success:** what comes is answerable to you for one scene
-- **Failure:** what comes is not the kind of help you wanted
-- **Or simply:** do not ring: the way on is longer by one Turn
-
-
-**Attention trigger:** loud.
-**Bane beat — noticing.** Who: *whoever lingers on their own reflection*. When: *once per hero here*. repeatable across areas. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: loud · bane beat: noticing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 4 — The Servants' Deep
-*descent · facet: wound · no encounter · hoard: pocket*
+*descent · wound · pocket*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- an instruction repeated until the stone gave out
-- boot-prints that stop mid-corridor and do not resume
+> An instruction repeated until the stone gave out. Boot-prints that stop mid-corridor and do not resume. A single figure at a speaking-tube is reporting, at length, to a listener who died first — when you walk in, it pauses mid-sentence and asks whether you are the reply. None of it is accident — it was done this way on purpose.
 
-**The situation.** a single figure at a speaking-tube — reporting, at length, to a listener who died first.
-**When you walk in:** it pauses mid-sentence and asks whether you are the reply.
-- *Why (GM):* it has never once been answered
-- *What it offers:* answer as the listener would, and learn what it has been reporting
+**GM.** It has never once been answered. This is the damage the want did to those who had to satisfy it.
+**They can:** answer as the listener would, and learn what it has been reporting. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**Truth.** this is the damage the want did to those who had to satisfy it. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
+**A door that opens to a spoken password nobody living knows.** *guessing costs a Bane per attempt; the long way costs two Turns.*
+`[Wits 2]` → the word is already in your notes. It is in something you passed earlier — *someone has been talking here, and stopped when you arrived*. Say it and the door opens; if nobody wrote it down, the roll tells them now
+**Miss** → you have the shape of it but not the word: one more attempt, or take the long way
+**Or** the long way: two Turns, no guessing, no Banes.
 
-**The clue is automatic:** an instruction repeated until the stone gave out — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**Pocket hoard.** **Bell** — a small bell from a servant's board: ring it and one order is obeyed, by anything.
+*Take it free; using it costs **+2 Banes** on the tab; while you carry it, it rings faintly when someone gives you an order.*
 
-**The decision.** a door that opens to a spoken password nobody living knows — *guessing costs a Bane per attempt; the long way costs two Turns*
-- **Attempt it:** `[VANITY: Wits 2]`
-- **Success:** the word is already in your notes. It is in something you passed earlier — *someone has been talking here, and stopped when you arrived*. Say it and the door opens; if nobody wrote it down, the roll tells them now
-- **Failure:** you have the shape of it but not the word: one more attempt, or take the long way
-- **Or simply:** the long way: two Turns, no guessing, no Banes
-
-**Hoard.** Tier **pocket**.
-**Temptation — bell.** a small bell from a servant's board
-- *Benefit:* ring it and one order is obeyed, by anything
-- *Accept:* free · *Use:* **+2 Banes** on the tab
-- *Standing:* it rings faintly when someone gives you an order
-
-**Attention trigger:** disturbed.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: disturbed · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 5 — The Last Door
-*threshold · facet: anchor · encounter: battle · hoard: chest*
+*threshold · anchor · battle · chest*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a key that fits nothing here
-- wax jammed into a speaking-tube, still soft
+> A key that fits nothing here. Wax jammed into a speaking-tube, still soft. One of the Host, kneeling is waiting for an instruction that was promised and never came — when you walk in, it addresses the first of you to speak as its superior. None of it is accident — it was done this way on purpose.
 
-**The situation.** one of the Host, kneeling — waiting for an instruction that was promised and never came.
-**When you walk in:** it addresses the first of you to speak as its superior.
-- *Why (GM):* it was told to await further orders and did
-- *What it offers:* give it the instruction and it will carry it out to the letter, wherever that leads
+**GM.** It was told to await further orders and did. The thing the whole barrow is arranged around is close.
+**They can:** give it the instruction and it will carry it out to the letter, wherever that leads. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**Truth.** the thing the whole barrow is arranged around is close. The Patient Lord bought a household from those with nothing left, so that someone would always obey.
+**An instruction you can obey, ignore, or countermand.** *countermanding it works once and marks you as someone who gives orders.*
+`[Poise 2]` → you countermand it and the dead obey you instead — this marks you as someone who gives orders: from now on the Host brings you their disputes, and once per delve you may issue one order they must follow
+**Miss** → the order stands and you have been seen to fail at giving one: +1 Bane, and the Host addresses someone else from now on
+**Or** obey it, or ignore it and go round: ignoring costs one Turn.
 
-**The clue is automatic:** a key that fits nothing here — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
-
-**The decision.** an instruction you can obey, ignore, or countermand — *countermanding it works once and marks you as someone who gives orders*
-- **Attempt it:** `[VANITY: Poise 2]`
-- **Success:** you countermand it and the dead obey you instead — this marks you as someone who gives orders: from now on the Host brings you their disputes, and once per delve you may issue one order they must follow
-- **Failure:** the order stands and you have been seen to fail at giving one: +1 Bane, and the Host addresses someone else from now on
-- **Or simply:** obey it, or ignore it and go round: ignoring costs one Turn
-
-**Encounter — battle.** 1 Wraith and 3 Skeletons
+**Battle — 1 Wraith and 3 Skeletons.** Harmed by blessed, silvered or magical weapons ONLY — **say so before initiative**. *it will take an appeasement over a fight every time.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Wraith | 5 | 3 | 10 | 5 | INCORPOREAL — chill touch ignores armour and drains 1 max Grit |
 | 3× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** blessed, silvered or magical weapons ONLY — **say this before initiative**
-- **Avoidable:** it will take an appeasement over a fight every time
-- *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
-**Hoard.** Tier **chest**.
-**Temptation — staff.** a staff of office, propped where it was set down
-- *Benefit:* give one order the dead must follow
-- *Accept:* take the Vice **Pride** · *Use:* **+2 Banes** on the tab
-- *Standing:* you may not refuse an order given to you
+**Chest hoard.** **Staff** — a staff of office, propped where it was set down: give one order the dead must follow.
+*Take it take the Vice **Pride**; using it costs **+2 Banes** on the tab; while you carry it, you may not refuse an order given to you.*
 
-**Attention trigger:** disturbed.
-**Bane beat — refusal.** Who: *whoever refuses the offer*. When: *once*. once only. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, the ending opens with them holding nothing the bottom problem wants.
+`trigger: disturbed · bane beat: refusal · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: the ending opens with them holding nothing the bottom problem wants.`
 
 ---
 

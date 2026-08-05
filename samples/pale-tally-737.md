@@ -41,190 +41,143 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ---
 
 ### AREA 1 — The Outer Cut
-*approach · facet: institution · no encounter*
+*approach · institution*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- lamps trimmed and filled, all of them
-- a seal broken and the contents already spoiled
+> Lamps trimmed and filled, all of them. A seal broken and the contents already spoiled. Two of the Host is repairing something that is not damaged — when you walk in, they set the work down and wait for inspection. None of it is accident — it was done this way on purpose.
 
-**Truth.** this is how the place was ordered, and it still is. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** The standing order was to maintain, and there is nothing left to maintain. This is how the place was ordered, and it still is.
+**They can:** find them a genuine fault and they will fix a door you cannot. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** lamps trimmed and filled, all of them — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A room you can search, or leave exactly as you found it.** *searching disturbs a preservation three centuries old — roll the clock.*
+`[Wits 2]` → you search without disturbing the arrangement
+**Miss** → the preservation breaks: roll the clock, and something here begins to rot
+**Or** leave it exactly as found: nothing gained, nothing woken.
 
-**The decision.** a room you can search, or leave exactly as you found it — *searching disturbs a preservation three centuries old — roll the clock*
-
-
-**Attention trigger:** disturbed.
-**Bane beat — noticing.** Who: *whoever lingers on their own reflection*. When: *once per hero here*. repeatable across areas. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: disturbed · bane beat: noticing · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 2 — The Lesser Vault
-*complication · facet: ritual · encounter: fight · hoard: cache*
+*complication · ritual · fight · cache*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a meal laid out, still warm, for people long past eating
-- one preserved thing removed, leaving a clean shape in the dust
+> A meal laid out, still warm, for people long past eating. One preserved thing removed, leaving a clean shape in the dust. One of the Host is trimming a lamp that has never gone out — when you walk in, it will not stop, and speaks without looking up. None of it is accident — it was done this way on purpose.
 
-**Truth.** the office is still being performed, for someone who is no longer served by it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** The task is what has kept it from ending. The office is still being performed, for someone who is no longer served by it.
+**They can:** take the task from it, and it will finally rest — and tell you something first. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a meal laid out, still warm, for people long past eating — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A bed, made, and a body-shaped hollow that has not filled in.** *lie in it and you rest fully; you also stop, and the barrow prefers that.*
+`[Wits 1]` → you see what the hollow is for and rest without lying in it — regain Grit, lose a Turn
+**Miss** → someone lies in it: they rest fully, and the barrow now counts them among what it keeps
+**Or** press on tired: no rest, no cost, no attention.
 
-**The decision.** a bed, made, and a body-shaped hollow that has not filled in — *lie in it and you rest fully; you also stop, and the barrow prefers that*
-
-**Encounter — fight.** 1 Ghoul and 2 Skeletons
+**Fight — 1 Ghoul and 2 Skeletons.** Harmed by anything. *the Ghoul goes for court dress first — send someone plain.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Ghoul | 4 | 3 | 4 | 5 | on a hit, a free Called Shot to freeze for a round |
 | 2× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** anything
-- **Avoidable:** the Ghoul goes for court dress first — send someone plain
-- *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
-**Hoard.** Tier **cache**.
-**Temptation — flower.** a flower that has not wilted
-- *Benefit:* once, halt a condition where it stands
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* it also halts something you wanted to finish
+**Cache hoard.** **Flower** — a flower that has not wilted: once, halt a condition where it stands.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, it also halts something you wanted to finish.*
 
-**Attention trigger:** lingering.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: lingering · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 3 — The Attendants' Row
-*complication · facet: ritual · encounter: fight · hoard: cache*
+*complication · ritual · fight · cache*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a clock wound by somebody, recently
-- a fire built recently, of furniture that was three centuries old
+> A clock wound by somebody, recently. A fire built recently, of furniture that was three centuries old. Something young is waiting, exactly as instructed, and has been — when you walk in, it asks whether it is allowed to stop now. None of it is accident — it was done this way on purpose.
 
-**Truth.** the office is still being performed, for someone who is no longer served by it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** Nobody ever came back to release it. The office is still being performed, for someone who is no longer served by it.
+**They can:** release it, and it gives you what it was guarding. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a clock wound by somebody, recently — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A door held shut by nothing but the fact it has never been opened.** *open it and something that had not changed, changes.*
+`[Brawn 2]` → you move it and it survives, just
+**Miss** → it does not survive, and the barrow notices what you cost it: +1 Bane
+**Or** squeeze past: one Turn and some skin.
 
-**The decision.** a door held shut by nothing but the fact it has never been opened — *open it and something that had not changed, changes*
-
-**Encounter — fight.** 1 Ghoul and 2 Skeletons
+**Fight — 1 Ghoul and 2 Skeletons.** Harmed by anything. *the Ghoul goes for court dress first — send someone plain.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Ghoul | 4 | 3 | 4 | 5 | on a hit, a free Called Shot to freeze for a round |
 | 2× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** anything
-- **Avoidable:** the Ghoul goes for court dress first — send someone plain
-- *Forge:* `forgeEncounter({heat:"fight", hoard:false, post:false, folderId})`
-**Hoard.** Tier **cache**.
-**Temptation — lamp.** a lamp still burning on three-century-old oil
-- *Benefit:* light that never gutters
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* nothing near it changes, including wounds you want to heal
+**Cache hoard.** **Lamp** — a lamp still burning on three-century-old oil: light that never gutters.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, nothing near it changes, including wounds you want to heal.*
 
-**Attention trigger:** lingering.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: lingering · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 4 — The Turning Hall
-*turn · facet: demand · no encounter · hoard: pocket*
+*turn · demand · pocket*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a room that resets itself if you look away
-- a clock stopped by hand — the pendulum caught and tied
+> A room that resets itself if you look away. A clock stopped by hand — the pendulum caught and tied. A living robber, badly hurt is refusing to bleed, and frightened by it — when you walk in, they grab you and ask what is wrong with them. None of it is accident — it was done this way on purpose.
 
-**Truth.** here the want is explicit — the place asks something of whoever enters. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** The barrow has begun keeping them too. Here the want is explicit — the place asks something of whoever enters.
+**They can:** carry them out and the wound resumes; leave them and they stay perfect. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a room that resets itself if you look away — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A preserved thing blocking the way, which will not survive being moved.** *move it and something here ends; leave it and lose a Turn.*
+`[Wits 1]` → you open it having understood what changes
+**Miss** → something that had not changed, changes, and it was holding something back
+**Or** leave it shut; the way on is longer.
 
-**The decision.** a preserved thing blocking the way, which will not survive being moved — *move it and something here ends; leave it and lose a Turn*
+**Pocket hoard.** **Shoes** — a child's shoes, unworn, in your size: you do not tire; ignore fatigue for a scene.
+*Take it free; using it costs **+1 Bane** on the tab; while you carry it, you have stopped ageing, and it shows in the wrong light.*
 
-**Hoard.** Tier **pocket**.
-**Temptation — shoes.** a child's shoes, unworn, in your size
-- *Benefit:* you do not tire; ignore fatigue for a scene
-- *Accept:* free · *Use:* **+1 Bane** on the tab
-- *Standing:* you have stopped ageing, and it shows in the wrong light
-
-**Attention trigger:** lingering.
-**Bane beat — flattery.** Who: *whoever performs the appeasement*. When: *each time it is used*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: lingering · bane beat: flattery · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 5 — The Sunken Nave
-*descent · facet: wound · no encounter*
+*descent · wound*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- something kept so well it has forgotten how to end
-- rot, in exactly one place, spreading
+> Something kept so well it has forgotten how to end. Rot, in exactly one place, spreading. Nobody is a room is undoing your presence — footprints filling, dust returning — when you walk in, it works faster. None of it is accident — it was done this way on purpose.
 
-**Truth.** this is the damage the want did to those who had to satisfy it. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** Nothing here is permitted to change, including evidence of you. This is the damage the want did to those who had to satisfy it.
+**They can:** leave something deliberately and see whether it is allowed to remain. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** something kept so well it has forgotten how to end — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**A sealed jar, and a way on that needs what is inside.** *breaking the seal spends the year it holds, in front of you.*
+`[Poise 2]` → you break the seal cleanly and spend the year deliberately
+**Miss** → the year escapes all at once, in front of everyone: +1 Bane
+**Or** find another way: one Turn.
 
-**The decision.** a sealed jar, and a way on that needs what is inside — *breaking the seal spends the year it holds, in front of you*
-
-
-**Attention trigger:** seenTwice.
-**Bane beat — relicUse.** Who: *whoever spends the relic*. When: *each use*. repeatable. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, move its cue fragment into the next area so the motif still completes.
+`trigger: seenTwice · bane beat: relicUse · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: move its cue fragment into the next area so the motif still completes.`
 
 ---
 
 ### AREA 6 — The Antechamber Royal
-*threshold · facet: anchor · encounter: battle · hoard: chest*
+*threshold · anchor · battle · chest*
 
-**Cue** — *assemble aloud; these are fragments, not read-aloud text*
-- a casket sized for something smaller than a body
-- something here has been eaten, which should not be possible
+> A casket sized for something smaller than a body. Something here has been eaten, which should not be possible. Two of the Host is setting a table for a meal that is always about to happen — when you walk in, they lay two more places. None of it is accident — it was done this way on purpose.
 
-**Truth.** the thing the whole barrow is arranged around is close. The Silent Margrave bought the young from those with nothing left, so that nothing would ever age.
+**GM.** The household was told to expect guests, and does. The thing the whole barrow is arranged around is close.
+**They can:** sit and eat — full restoration, and the barrow adds you to its inventory. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
+**Looking closer:** `[Observation — 1 success]` buys who did it, and roughly when
 
-**The clue is automatic:** a casket sized for something smaller than a body — and it was done deliberately.
-[VANITY: Observation — 1 success] buys who did it, and roughly when
+**Food and water laid out, still good.** *eating restores you fully and the barrow adds you to what it keeps.*
+`[Poise 1]` → you eat and are restored entirely
+**Miss** → you are restored, and the barrow has added you to what it keeps: +1 Bane
+**Or** do not eat; you keep your Grit as it is.
 
-**The decision.** food and water laid out, still good — *eating restores you fully and the barrow adds you to what it keeps*
-
-**Encounter — battle.** 1 Wraith and 3 Skeletons
+**Battle — 1 Wraith and 3 Skeletons.** Harmed by blessed, silvered or magical weapons ONLY — **say so before initiative**. *it will take an appeasement over a fight every time.*
 
 | Foe | atk | def | Grit | Nerve | |
 |---|---|---|---|---|---|
 | 1× Wraith | 5 | 3 | 10 | 5 | INCORPOREAL — chill touch ignores armour and drains 1 max Grit |
 | 3× Skeleton | 3 | 2 | 1 | 5 | fearless |
 
-- **Harmed by:** blessed, silvered or magical weapons ONLY — **say this before initiative**
-- **Avoidable:** it will take an appeasement over a fight every time
-- *Forge:* `forgeEncounter({heat:"battle", hoard:false, post:false, folderId})`
-**Hoard.** Tier **chest**.
-**Temptation — jar.** a sealed jar holding one good year
-- *Benefit:* open it to undo a wound entirely, once
-- *Accept:* free · *Use:* **+2 Banes** on the tab
-- *Standing:* the year is spent in front of everyone, visibly
+**Chest hoard.** **Jar** — a sealed jar holding one good year: open it to undo a wound entirely, once.
+*Take it free; using it costs **+2 Banes** on the tab; while you carry it, the year is spent in front of everyone, visibly.*
 
-**Attention trigger:** seenTwice.
-**Bane beat — refusal.** Who: *whoever refuses the offer*. When: *once*. once only. Say it aloud when it banks.
-**Fallback route.** The Silent Host will receive anyone who behaves as a guest — cost: one Bane on the tab, and they will expect it again.
-
-*Failure case.* If they skip this, the ending opens with them holding nothing the bottom problem wants.
+`trigger: seenTwice · bane beat: refusal · fallback: The Silent Host will receive anyone who behaves as a guest (one Bane on the tab, and they will expect it again) · if skipped: the ending opens with them holding nothing the bottom problem wants.`
 
 ---
 

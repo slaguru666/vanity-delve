@@ -126,5 +126,27 @@ t('every area arrives as a situation', noSit === 0, `${noSit} bare areas`);
 t('situations come from the delve\'s own motif', offMotifSit === 0, `${offMotifSit} off-motif`);
 t('no repeated situation inside one delve', dupSit === 0, `${dupSit}/40`);
 
+// the subtraction pass must remove BLOCKS, not information
+let lost = [];
+for (let i = 0; i < 20; i++) {
+  const d = generateDelve({ pack, seed: `keep-${i}`, areas: 6 });
+  const md = renderMarkdown(d);
+  for (const a of d.areas) {
+    const must = [
+      ['situation', a.situation?.occupant], ['onArrival', a.situation?.onArrival],
+      ['because', a.situation?.because], ['offer', a.situation?.offer],
+      ['decision', a.decision?.cue], ['orElse', a.decision?.resolve?.orElse],
+      ['trigger', a.trigger], ['fallback', a.fallback?.route],
+      ['temptation', a.temptation?.cue], ['roster', a.encounter?.roster?.line],
+    ];
+    for (const [name, v] of must) {
+      if (!v) continue;
+      const probe = String(v).replace(/^./, c => c.toUpperCase());
+      if (!md.includes(String(v)) && !md.includes(probe)) lost.push(`${name}@a${a.index}`);
+    }
+  }
+}
+t('subtraction removed blocks, not information', lost.length === 0, lost.slice(0,4).join(', ') || 'all fields still rendered');
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

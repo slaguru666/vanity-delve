@@ -47,7 +47,7 @@ export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = n
       because: situation.because, offer: situation.offer,
     } : null,
 
-    truth: `${FACET_TRUTH[fs.facet] ?? ''}. ${skeleton.knot.transgression}`,
+    truth: (t => t ? t[0].toUpperCase() + t.slice(1) : '')(FACET_TRUTH[fs.facet] ?? ''),
 
     decision,
     encounter: planned.heat

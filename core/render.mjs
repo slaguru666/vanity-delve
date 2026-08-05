@@ -3,6 +3,9 @@ import { skeletonBlurb } from './skeleton.mjs';
 
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 
+/** The appeasement, in the compact form used inside an area. */
+const skeletonAppeasement = d => `${d.skeleton.appeasement.attribute} ${d.skeleton.appeasement.successes}: ${d.skeleton.appeasement.move}`;
+
 /** Costs read as English in a GM document, never as JSON. */
 const cost = c => {
   if (!c) return 'free';
@@ -63,77 +66,66 @@ export function renderMarkdown(d) {
   L.push('');
 
   for (const a of d.areas) {
+    const S = a.situation;
+    const rv = a.decision?.resolve ?? {};
+    const R = a.encounter?.roster;
+
     L.push(`### AREA ${a.index} — ${a.name}`);
-    L.push(`*${a.role} · facet: ${a.facet}${a.encounter ? ` · encounter: ${a.encounter.heat}` : ' · no encounter'}` +
-           `${a.hoard ? ` · hoard: ${a.hoard}` : ''}*`);
+    L.push(`*${a.role} · ${a.facet}${a.encounter ? ` · ${a.encounter.heat}` : ''}${a.hoard ? ` · ${a.hoard}` : ''}*`);
     L.push('');
-    L.push('**Cue** — *assemble aloud; these are fragments, not read-aloud text*');
-    for (const c of a.cueFragments) L.push(`- ${c}`);
+
+    // ONE opening: image, situation and the automatic clue as a single thing to read aloud from.
+    // Previously these were three stacked blocks; the review's word for the whole document was
+    // "integration" — image, situation, pressure and choice reading as one, not as components.
+    const opening = [
+      a.cueFragments.map(c => cap(c)).join('. ') + '.',
+      S ? `${cap(S.occupant)} is ${S.doing} — when you walk in, ${S.onArrival}.` : '',
+      a.clue.automatic ? `None of it is accident — it was done this way on purpose.` : '',
+    ].filter(Boolean).join(' ');
+    L.push(`> ${opening}`);
     L.push('');
-    if (a.situation) {
-      const S = a.situation;
-      L.push(`**The situation.** ${S.occupant} — ${S.doing}.`);
-      L.push(`**When you walk in:** ${S.onArrival}.`);
-      L.push(`- *Why (GM):* ${S.because}`);
-      L.push(`- *What it offers:* ${S.offer}`);
+
+    const gm = [
+      S ? `${cap(S.because)}.` : '',
+      a.truth ? `${a.truth.replace(/\.?$/, '.')}` : '',
+    ].filter(Boolean).join(' ');
+    L.push(`**GM.** ${gm}`);
+    if (S) L.push(`**They can:** ${S.offer}. \`[${skeletonAppeasement(d)}]\` also works here, as everywhere.`);
+    L.push(`**Looking closer:** ${a.clue.extra.replace(/^\[VANITY: /, '`[').replace(/\]/, ']`')}`);
+    L.push('');
+
+    // The decision on one line where it can be: attempt → hit → miss → or.
+    L.push(`**${cap(a.decision.cue)}.** *${a.decision.cost}.*`);
+    if (rv.roll) {
+      L.push(`\`[${rv.roll}]\` → ${rv.success}`);
+      L.push(`**Miss** → ${rv.failure}`);
+    }
+    if (rv.orElse) L.push(`**Or** ${rv.orElse}.`);
+    L.push('');
+
+    if (R) {
+      L.push(`**${cap(a.encounter.heat)} — ${R.line}.** Harmed by ${R.harmedBy}` +
+             `${R.harmedBy.includes('ONLY') ? ' — **say so before initiative**' : ''}. *${R.avoid}.*`);
+      L.push('');
+      L.push('| Foe | atk | def | Grit | Nerve | |');
+      L.push('|---|---|---|---|---|---|');
+      for (const f of R.foes) L.push(`| ${f.n}× ${f.name} | ${f.atk} | ${f.def} | ${f.grit} | ${f.nerve} | ${f.note} |`);
       L.push('');
     }
-    L.push(`**Truth.** ${a.truth}`);
-    L.push('');
-    if (a.clue.automatic) {
-      L.push(`**The clue is automatic:** ${a.clue.automatic}.`);
-      L.push(`${a.clue.extra}`);
-      L.push('');
-    }
-    L.push(`**The decision.** ${a.decision.cue} — *${a.decision.cost}*`);
-    const rv = a.decision.resolve;
-    if (rv) {
-      if (rv.roll) {
-        L.push(`- **Attempt it:** \`[VANITY: ${rv.roll}]\``);
-        L.push(`- **Success:** ${rv.success}`);
-        L.push(`- **Failure:** ${rv.failure}`);
-      }
-      L.push(`- **Or simply:** ${rv.orElse}`);
-    }
-    L.push('');
-    if (a.encounter) {
-      const R = a.encounter.roster;
-      L.push(`**Encounter — ${a.encounter.heat}.** ${R ? R.line : a.encounter.kind}`);
-      if (R) {
-        L.push('');
-        L.push('| Foe | atk | def | Grit | Nerve | |');
-        L.push('|---|---|---|---|---|---|');
-        for (const f of R.foes) L.push(`| ${f.n}× ${f.name} | ${f.atk} | ${f.def} | ${f.grit} | ${f.nerve} | ${f.note} |`);
-        L.push('');
-        L.push(`- **Harmed by:** ${R.harmedBy}${R.harmedBy.includes('ONLY') ? ' — **say this before initiative**' : ''}`);
-        L.push(`- **Avoidable:** ${R.avoid}`);
-      }
-      L.push(`- *Forge:* \`forgeEncounter({heat:"${a.encounter.heat}", hoard:false, post:false, folderId})\``);
-    }
-    if (a.hoard) L.push(`**Hoard.** Tier **${a.hoard}**.`);
+
     if (a.temptation) {
       const t = a.temptation;
-      L.push(`**Temptation — ${t.id}.** ${t.cue}`);
-      L.push(`- *Benefit:* ${t.benefit}`);
-      L.push(`- *Accept:* ${cost(t.acceptanceCost)} · *Use:* ${cost(t.useCost)}`);
-      L.push(`- *Standing:* ${t.standingDrawback}`);
+      L.push(`**${cap(a.hoard)} hoard.** **${cap(t.id)}** — ${t.cue}: ${t.benefit}.`);
+      L.push(`*Take it ${cost(t.acceptanceCost)}; using it costs ${cost(t.useCost)}; while you carry it, ${t.standingDrawback}.*`);
+      L.push('');
+    } else if (a.hoard) {
+      L.push(`**${cap(a.hoard)} hoard.**`);
+      L.push('');
     }
-    L.push('');
-    L.push(`**Attention trigger:** ${a.trigger}.`);
-    if (a.baneBeat) {
-      const rules = {
-        flattery: ['whoever performs the appeasement', 'each time it is used', 'repeatable'],
-        noticing: ['whoever lingers on their own reflection', 'once per hero here', 'repeatable across areas'],
-        relicUse: ['whoever spends the relic', 'each use', 'repeatable'],
-        announcing: ['the whole party', 'once, on entering loudly', 'once only'],
-        refusal: ['whoever refuses the offer', 'once', 'once only'],
-      };
-      const [who, when, rep] = rules[a.baneBeat] ?? ['a hero', 'once', 'once only'];
-      L.push(`**Bane beat — ${a.baneBeat}.** Who: *${who}*. When: *${when}*. ${rep}. Say it aloud when it banks.`);
-    }
-    L.push(`**Fallback route.** ${a.fallback.route} — cost: ${a.fallback.cost}.`);
-    L.push('');
-    L.push(`*Failure case.* ${a.failureCase}`);
+
+    // Everything the GM needs but never reads aloud, on one line.
+    const beat = a.baneBeat ? ` · bane beat: ${a.baneBeat}` : '';
+    L.push(`\`trigger: ${a.trigger}${beat} · fallback: ${a.fallback.route} (${a.fallback.cost}) · if skipped: ${a.failureCase.replace(/^If they skip this, /, '')}\``);
     L.push('');
     L.push('---');
     L.push('');
