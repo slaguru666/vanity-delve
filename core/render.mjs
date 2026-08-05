@@ -1,5 +1,6 @@
 /** Render a delve to GM-readable markdown, in the house style. */
 import { skeletonBlurb } from './skeleton.mjs';
+import { initiativeWarning } from './roster.mjs';
 
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 
@@ -104,8 +105,9 @@ export function renderMarkdown(d) {
     L.push('');
 
     if (R) {
+      const warn = initiativeWarning(R);
       L.push(`**${cap(a.encounter.heat)} — ${R.line}.** Harmed by ${R.harmedBy}.`
-             + `${R.beforeInitiative ? ` **${R.beforeInitiative}**` : ''} *${R.avoid}.*`);
+             + `${warn ? ` **${warn}**` : ''} *${R.avoid}.*`);
       L.push('');
       L.push('| Foe | atk | def | Grit | Nerve | |');
       L.push('|---|---|---|---|---|---|');

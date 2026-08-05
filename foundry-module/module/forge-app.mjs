@@ -13,6 +13,7 @@
 import { generateDelve } from './core/delve.mjs';
 import { coinSeed, Rng } from './core/rng.mjs';
 import { foeStats, classifyFoes } from './foes.mjs';
+import { initiativeWarning } from './core/roster.mjs';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
@@ -158,7 +159,7 @@ export async function raiseDungeon(params = {}) {
       <span class="delve-sub">${d.areas.length} areas · ${esc(d.params.theme)} · depth ${d.params.depth} · seed ${esc(seed)}</span></header>
       <p>${scenes.filter(Boolean).length} scenes, ${game.actors.filter(a => a.folder?.id === folders.Actor.id).length} actors and a journal, all in the folder <b>${esc(title)}</b>.</p>
       <p>@UUID[${journal.uuid}]{Open the adventure}</p>
-      ${seams ? '' : '<p><b>⚠ Forge seams missing</b> — update the VANITY system to 0.10.5 for quiet output.</p>'}
+      ${seams ? '' : '<p><b>⚠ Forge seams missing</b> — update the VANITY system to 0.10.4 for quiet output.</p>'}
     </div>`,
   });
 
@@ -172,7 +173,7 @@ export async function raiseDungeon(params = {}) {
  * The roster's tactical notes name particular monsters, so they print only where the plan is
  * itself the encounter.
  */
-function foeSection(c) {
+export function foeSection(c) {
   const table = rows => `<table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
   if (c.kind === 'forged') return `
     <p><b>${esc(cap(c.heat))} — in the world.</b> These are the actors the Forge created; run the fight off these.</p>
@@ -181,7 +182,7 @@ function foeSection(c) {
   if (c.kind === 'planned') return `
     <p><b>${esc(cap(c.heat))} — not cast.</b> Nothing was forged for this area, so the plan is the encounter. Cast it by hand:</p>
     ${table(c.roster.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join(''))}
-    <p>Harmed by ${esc(c.roster.harmedBy)}.${c.roster.beforeInitiative ? ` <b>${esc(c.roster.beforeInitiative)}</b>` : ''} <i>${esc(c.roster.avoid)}.</i></p>`;
+    <p>Harmed by ${esc(c.roster.harmedBy)}.${initiativeWarning(c.roster) ? ` <b>${esc(initiativeWarning(c.roster))}</b>` : ''} <i>${esc(c.roster.avoid)}.</i></p>`;
   if (c.kind === 'unavailable') return `
     <p><b>${esc(cap(c.heat))} — nothing to run.</b> No actors were created and this theme has no roster at this heat. Improvise the fight or skip it; the area's decision and fallback still stand.</p>`;
   return '';

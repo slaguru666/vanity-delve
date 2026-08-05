@@ -8,6 +8,7 @@
  * Run: node validate-pack.mjs [name ...]     (default: every pack in content/)
  */
 import { readFileSync, readdirSync } from 'fs';
+import { RESTRICTS } from './roster.mjs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -112,7 +113,7 @@ export function validatePack(pack, name = pack?.id ?? '?') {
      */
     if (/say so before initiative/i.test(`${r.harmedBy} ${r.avoid ?? ''}`))
       E(`rosters.${h}: put the initiative warning in beforeInitiative, not in the prose — it renders twice otherwise`);
-    if (r.harmedBy.includes('ONLY') && !r.beforeInitiative)
+    if (RESTRICTS.test(r.harmedBy) && !r.beforeInitiative)
       E(`rosters.${h}: harmedBy restricts what works, so it needs beforeInitiative — the party cannot discover this safely`);
     for (const f of r.foes ?? [])
       for (const k of ['n', 'name', 'atk', 'def', 'grit', 'nerve'])

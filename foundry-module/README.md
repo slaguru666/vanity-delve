@@ -21,5 +21,5 @@ dungeon**, and it builds — in one folder per document type:
 Every document is stamped with a `dungeonId`, so the 🗑 button removes a whole dungeon and
 nothing else.
 
-Requires the VANITY system **0.10.5+** for quiet output; on older versions the Forge posts its
+Requires the VANITY system **0.10.4+** for quiet output; on older versions the Forge posts its
 own cards over DELVE's and the module says so on startup.

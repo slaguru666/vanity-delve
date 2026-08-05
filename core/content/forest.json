@@ -349,7 +349,8 @@
         }
       ],
       "harmedBy": "anything, but the Troll only stays down if fire closes the wound",
-      "avoid": "it is territorial and will not follow past the treeline"
+      "avoid": "it is territorial and will not follow past the treeline",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "the Hunt: 1 Wraith mounted, 1 Troll and 4 Dire Wolves",

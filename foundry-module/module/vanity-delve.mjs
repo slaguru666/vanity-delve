@@ -24,7 +24,13 @@ const FLAG = 'state';
 
 let PACK = null;
 let seamsPresent = false;
+// enter() is bound to a button a GM can double-press, and it awaits the Forge for seconds at a
+// time. Two overlapping calls would both read the same st.at and stage the same area twice.
+let staging = false;
 let loadPack = async () => null;
+
+/** The geometries VANITY's Forge can actually build — mirrors validate-pack.mjs. */
+const GEOMETRIES = ['barrow', 'cave', 'fen', 'village', 'forest'];
 
 const getState = () => game.settings.get(MOD, FLAG) ?? null;
 const setState = async s => game.settings.set(MOD, FLAG, s);
@@ -43,9 +49,10 @@ const setState = async s => game.settings.set(MOD, FLAG, s);
  */
 async function packById(id) {
   if (!id) return null;
-  if (PACK?.id === id && PACK.forgeStageType) return PACK;    // validate the cache too
+  const usable = p => GEOMETRIES.includes(p?.forgeStageType);
+  if (PACK?.id === id && usable(PACK)) return PACK;           // validate the cache too
   const p = await loadPack(id);
-  if (!p?.forgeStageType) return null;
+  if (!usable(p)) return null;
   PACK = p;
   return p;
 }
@@ -116,6 +123,12 @@ async function draft(params = {}) {
 }
 
 async function enter() {
+  if (staging) return ui.notifications.warn('DELVE: already raising an area — wait for it to finish.');
+  staging = true;
+  try { return await enterOnce(); } finally { staging = false; }
+}
+
+async function enterOnce() {
   const st = getState();
   if (!st) return ui.notifications.warn('DELVE: nothing loaded.');
   const d = st.delve;

@@ -17,6 +17,7 @@
  * invisible and the old population failure lie about a roster that did not exist.
  */
 import { foeStats, foeLine, classifyFoes } from './foes.mjs';
+import { initiativeWarning } from './core/roster.mjs';
 
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const list = items => `<ul>${items.filter(Boolean).map(i => `<li>${i}</li>`).join('')}</ul>`;
@@ -37,7 +38,7 @@ export function foeBlock(c) {
     c.planned ? `<p><i>DELVE planned ${c.planned.line}; the Forge rolled its own, so the plan's tactics do not describe these.</i></p>` : ''}`;
   if (c.kind === 'planned') return `<p><b>${cap(c.heat)} — not cast.</b> Nothing was forged; run the plan by hand:</p>${
       list(c.roster.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))
-    }<p><b>Harmed by ${c.roster.harmedBy}.</b>${c.roster.beforeInitiative ? ` <b>${c.roster.beforeInitiative}</b>` : ''} ${c.roster.avoid}.</p>`;
+    }<p><b>Harmed by ${c.roster.harmedBy}.</b>${initiativeWarning(c.roster) ? ` <b>${initiativeWarning(c.roster)}</b>` : ''} ${c.roster.avoid}.</p>`;
   if (c.kind === 'unavailable') return `<p><b>${cap(c.heat)} — nothing to run.</b> No actors, and no roster at this heat. Improvise or skip; the decision and fallback still stand.</p>`;
   return '';
 }
@@ -74,8 +75,11 @@ export async function stageArea(fx, { area, name, authored = {} }) {
   }
 
   // The scene exists, so this area has been entered. Commit before anything that may fail, or a
-  // retry restages it.
-  await fx.commit();
+  // retry restages it. If the commit itself fails the scene is still real and the delve is still
+  // playable, but the index no longer matches the world — say so, because the next press of ⏩
+  // would raise this area a second time.
+  const committed = await attempt(fx, () => fx.commit());
+  if (!committed.ok) fx.warn(`DELVE: ${name} is staged, but the delve's progress could not be saved. Pressing ⏩ again will raise it a second time — reload and check before continuing.`);
 
   let forged = [];
   if (area.encounter) {
@@ -99,5 +103,5 @@ export async function stageArea(fx, { area, name, authored = {} }) {
   const told = (await attempt(fx, () => fx.gm(cards.gm.label, cards.gm.sub, cards.gm.body))).ok;
   if (!said || !told) fx.warn(`DELVE: ${name} is staged but its ${!said && !told ? 'cards' : !said ? 'read-aloud' : 'GM card'} did not post. The turn has advanced; read from the worksheet.`);
 
-  return { entered: true, kind: classification.kind };
+  return { entered: true, committed: committed.ok, kind: classification.kind };
 }

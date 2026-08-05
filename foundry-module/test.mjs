@@ -9,6 +9,7 @@
  */
 import { foeStats, foeLine, classifyFoes } from './module/foes.mjs';
 import { stageArea, areaCards, foeBlock } from './module/stage.mjs';
+import { initiativeWarning } from '../core/roster.mjs';
 
 let pass = 0, fail = 0;
 const t = (name, cond, detail = '') => { cond ? pass++ : fail++; console.log(`${cond ? ' ok ' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`); };
@@ -153,6 +154,54 @@ const ctx = (a = withEnc()) => ({ area: { ...a, hoard: 'cache' }, name: 'The Sai
   const { fx, log } = spy({ stage: () => null });
   const r = await stageArea(fx, ctx());
   t('a Forge that returns nothing counts as a failed scene', !r.entered && log.committed === 0);
+}
+{
+  const { fx, log } = spy({ commit: () => { throw new Error('settings write failed'); } });
+  const r = await stageArea(fx, ctx());
+  t('a failed commit does not take down staging', r.entered && r.committed === false);
+  t('a failed commit warns that a retry will restage',
+    log.warns.some(w => /raise it a second time/.test(w)),
+    'the scene is real but the index does not know it');
+  t('a failed commit still posts the cards', log.cards === 2);
+}
+
+// ---------------------------------------------------------------- the warning
+t('the field is used when present', initiativeWarning({ harmedBy: 'anything', beforeInitiative: 'Say so.' }) === 'Say so.');
+t('a plain roster needs no warning', initiativeWarning({ harmedBy: 'anything' }) === null);
+t('a legacy ONLY roster still gets one', initiativeWarning({ harmedBy: 'blessed weapons ONLY' }) === 'Say so before initiative.',
+  'delve files generated before the field existed must not lose it');
+t('a legacy Wraith roster spelled without ONLY still gets one',
+  initiativeWarning({ harmedBy: 'blessed, silvered or magical weapons for the Wraith; anything for the rest' }) !== null,
+  'the spelling was never the semantics — barrow/nightmare had no ONLY');
+t('a legacy roster that says it in prose is not given it twice',
+  initiativeWarning({ harmedBy: 'blessed weapons ONLY — say so before initiative' }) === null);
+t('null roster is safe', initiativeWarning(null) === null);
+
+// ---------------------------------------------------------------- surface parity
+// forge-app destructures three Foundry symbols at import time. Everything under test is pure, so
+// the smallest possible shim makes the journal renderer importable and its parity with the chat
+// renderer checkable — the two drifted apart twice before they shared a classifier.
+{
+  globalThis.foundry ??= {
+    applications: { api: { ApplicationV2: class {}, HandlebarsApplicationMixin: c => c } },
+    utils: { escapeHTML: s => String(s ?? '') },
+  };
+  const { foeSection } = await import('./module/forge-app.mjs').catch(() => ({ foeSection: null }));
+  if (!foeSection) { t('journal renderer importable for parity checks', false, 'needs a foundry shim'); }
+  else for (const [kind, c] of [
+    ['forged', classifyFoes(withEnc(), [f])],
+    ['planned', classifyFoes(withEnc(), [])],
+    ['unavailable', classifyFoes(area({ encounter: { heat: 'fight' } }), [])],
+    ['none', classifyFoes(area(), [])],
+  ]) {
+    const chat = foeBlock(c), journal = foeSection(c);
+    t(`both surfaces agree on ${kind}: both render or both stay silent`,
+      (chat.trim() === '') === (journal.trim() === ''));
+    if (kind === 'planned') t('both surfaces carry the warning on planned',
+      /say so before initiative/i.test(chat) && /say so before initiative/i.test(journal));
+    if (kind === 'forged') t('neither surface asserts the plan on forged',
+      !/blessed, silvered/.test(chat) && !/blessed, silvered/.test(journal));
+  }
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

@@ -346,7 +346,7 @@
           "note": "douses open flames on a hit"
         }
       ],
-      "harmedBy": "anything, but the Troll only stays down if fire touches it, and note the swarm is putting your fires out",
+      "harmedBy": "anything, but the Troll only stays down if fire touches it; the swarm douses open flames",
       "avoid": "it will not leave the water; stay off the streamway and it stays in",
       "beforeInitiative": "Say so before initiative."
     },
@@ -382,7 +382,8 @@
         }
       ],
       "harmedBy": "anything; fire for the Troll",
-      "avoid": "do not run this without an appeasement route open and a way out at your back"
+      "avoid": "do not run this without an appeasement route open and a way out at your back",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

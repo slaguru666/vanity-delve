@@ -9,6 +9,7 @@
  * GM what matters faster" — and the only way to be fast is to carry less.
  */
 import { outstanding, isLocked, REROLLABLE } from './authoring.mjs';
+import { initiativeWarning } from './roster.mjs';
 
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const cost = c => {
@@ -76,7 +77,7 @@ export function renderWorksheet(d) {
     if (a.encounter?.roster) {
       const R = a.encounter.roster;
       L.push(`**ENCOUNTER** ${R.line} — ${R.foes.map(f => `${f.n}× ${f.name} atk${f.atk}/def${f.def}/G${f.grit}`).join(', ')}`);
-      L.push(`  · harmed by ${R.harmedBy} · ${R.avoid}`);
+      L.push(`  · harmed by ${R.harmedBy}${initiativeWarning(R) ? ` · ${initiativeWarning(R)}` : ''} · ${R.avoid}`);
     }
     if (a.temptation) {
       const t = a.temptation;
@@ -143,7 +144,8 @@ export function renderPlay(d) {
     L.push(`**${cap(a.decision.cue)}** — ${rv.roll ? `\`[${rv.roll}]\` ${rv.success}` : ''}${rv.failure ? ` · **miss** ${rv.failure}` : ''}${rv.orElse ? ` · **or** ${rv.orElse}` : ''}`);
     if (a.encounter?.roster) {
       const R = a.encounter.roster;
-      L.push(`**${cap(a.encounter.heat)}:** ${R.foes.map(f => `${f.n}× ${f.name} \`${f.atk}/${f.def}/${f.grit}\``).join(' · ')} — harmed by ${R.harmedBy}.`);
+      L.push(`**${cap(a.encounter.heat)}:** ${R.foes.map(f => `${f.n}× ${f.name} \`${f.atk}/${f.def}/${f.grit}\``).join(' · ')} — harmed by ${R.harmedBy}.`
+             + `${initiativeWarning(R) ? ` **${initiativeWarning(R)}**` : ''}`);
     }
     if (a.temptation) L.push(`**${cap(a.temptation.id)}:** ${a.temptation.benefit}. *Use: ${cost(a.temptation.useCost)}. ${a.temptation.standingDrawback}.*`);
     if (w.notes) L.push(`**Note:** ${w.notes}`);
