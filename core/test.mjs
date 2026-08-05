@@ -148,5 +148,31 @@ for (let i = 0; i < 20; i++) {
 }
 t('subtraction removed blocks, not information', lost.length === 0, lost.slice(0,4).join(', ') || 'all fields still rendered');
 
+// the opening sentence is built as "<occupant> is <doing> — when you walk in, <onArrival>".
+// If occupant carries a verb, or doing is a full clause, that renders as garbage. A live read
+// caught exactly that: "Nobody — but the bells are moving is a summons is being rung...".
+let badOcc = 0, badDoing = 0;
+for (const m of Object.values(pack.motifs)) {
+  for (const sit of m.situations ?? []) {
+    if (/\b(is|are|but)\b|—/.test(sit.occupant)) badOcc++;
+    if (!/^\w+ing\b/.test(sit.doing) || /^(some|no|any|every)thing\b/.test(sit.doing)) badDoing++;
+  }
+}
+t('situation occupants are noun phrases', badOcc === 0, `${badOcc} carry a verb`);
+t('situation actions are participle phrases', badDoing === 0, `${badDoing} are full clauses`);
+
+// the rendered opener must read as English: no stray copula, no doubled dash
+let badOpener = 0;
+for (let i = 0; i < 30; i++) {
+  const md = renderMarkdown(generateDelve({ pack, seed: `open-${i}`, areas: 6 }));
+  for (const line of md.split('\n').filter(l => l.startsWith('> '))) {
+    // The real bug was a hardcoded copula colliding with plural occupants:
+    // "The bells is ringing a summons...". Em-dashes inside cue fragments are legitimate,
+    // so counting those flagged 191 false positives — the test was wrong, not the output.
+    if (/\b(is|are) \w+ing\b/.test(line)) badOpener++;
+  }
+}
+t('openers read as English', badOpener === 0, `${badOpener} malformed`);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

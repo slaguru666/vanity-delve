@@ -43,7 +43,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 1 — The Weeping Stair
 *approach · institution*
 
-> A coat-rack, full. Two cups set out and one of them recently drunk from. One of the Host is holding a door open for someone who is not coming — when you walk in, it looks relieved and gestures you through. None of it is accident — it was done this way on purpose.
+> A coat-rack, full. Two cups set out and one of them recently drunk from. One of the Host — holding a door open for someone who is not coming. When you walk in, it looks relieved and gestures you through. None of it is accident — it was done this way on purpose.
 
 **GM.** It was told to wait and hold the door. This is how the place was ordered, and it still is.
 **They can:** walk through and it may finally follow — it will not leave you afterwards. `[Poise 2: sit down and stay a while]` also works here, as everywhere.
@@ -61,7 +61,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 2 — The First Hall
 *complication · ritual · pocket*
 
-> Places set every evening for three hundred years. Someone has been counting the dead — tally marks by the entrance. Two of the Host, hand in hand is refusing to be parted to let anyone past — when you walk in, they look at you and do not move. None of it is accident — it was done this way on purpose.
+> Places set every evening for three hundred years. Someone has been counting the dead — tally marks by the entrance. Two of the Host, hand in hand — refusing to be parted to let anyone past. When you walk in, they look at you and do not move. None of it is accident — it was done this way on purpose.
 
 **GM.** They were separated once and will not be again. The office is still being performed, for someone who is no longer served by it.
 **They can:** find them a way to pass together and they open every door ahead. `[Poise 2: sit down and stay a while]` also works here, as everywhere.
@@ -82,7 +82,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 3 — The Waiting Room
 *complication · ritual · fight · cache*
 
-> Chairs drawn up in a circle, all facing one seat. A bedroll, used, and not by anyone buried here. A dozen of the Host is sitting in a circle, facing one empty chair — when you walk in, they shuffle round to make room for you. None of it is accident — it was done this way on purpose.
+> Chairs drawn up in a circle, all facing one seat. A bedroll, used, and not by anyone buried here. A dozen of the Host — sitting in a circle, facing one empty chair. When you walk in, they shuffle round to make room for you. None of it is accident — it was done this way on purpose.
 
 **GM.** The gathering may not end while anyone remains. The office is still being performed, for someone who is no longer served by it.
 **They can:** sit, and they will answer anything while you do. `[Poise 2: sit down and stay a while]` also works here, as everywhere.
@@ -110,7 +110,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 4 — The Turning Hall
 *turn · demand · fight · cache*
 
-> A doorway with the hinges taken off. A name carved beside another, joining them, badly. Nobody is a second set of footsteps is keeping pace with yours — when you walk in, they stop when you stop, close. None of it is accident — it was done this way on purpose.
+> A doorway with the hinges taken off. A name carved beside another, joining them, badly. A second set of footsteps — keeping pace with yours, close. When you walk in, they stop when you stop, close. None of it is accident — it was done this way on purpose.
 
 **GM.** Something attached itself in an earlier room. Here the want is explicit — the place asks something of whoever enters.
 **They can:** acknowledge it and it becomes useful; ignore it and it becomes insistent. `[Poise 2: sit down and stay a while]` also works here, as everywhere.
@@ -138,7 +138,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 5 — The Servants' Deep
 *descent · wound*
 
-> A name called so often it wore into the wall. A door tied open with a belt, so it could not close. Three of the Host is laying out a game for four — when you walk in, they look up and count you. None of it is accident — it was done this way on purpose.
+> A name called so often it wore into the wall. A door tied open with a belt, so it could not close. Three of the Host — laying out a game for four. When you walk in, they look up and count you. None of it is accident — it was done this way on purpose.
 
 **GM.** The fourth left and the game has never finished. This is the damage the want did to those who had to satisfy it.
 **They can:** play a round and they will tell you how the fourth got out. `[Poise 2: sit down and stay a while]` also works here, as everywhere.
@@ -156,7 +156,7 @@ On success it is not alone, and The Silent Host will not open hostilities first.
 ### AREA 6 — The Quiet Room
 *threshold · anchor · battle · chest*
 
-> A chair kept empty and dusted. A chair dragged out of position and left where it was needed. A living robber, alone is talking steadily to a companion who is not there — when you walk in, they introduce you to the empty air. None of it is accident — it was done this way on purpose.
+> A chair kept empty and dusted. A chair dragged out of position and left where it was needed. A living robber, alone — talking steadily to a companion who is not there. When you walk in, they introduce you to the empty air. None of it is accident — it was done this way on purpose.
 
 **GM.** The barrow does not like people leaving, and one of them did. The thing the whole barrow is arranged around is close.
 **They can:** play along and they will guide you; correct them and they stop speaking. `[Poise 2: sit down and stay a while]` also works here, as everywhere.

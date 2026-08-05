@@ -43,7 +43,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ### AREA 1 — The Weeping Stair
 *approach · institution*
 
-> Servants' bones arranged as though mid-errand. Someone has been talking here, and stopped when you arrived. Three of the Host in servants' dress is carrying out an errand that has no destination left — when you walk in, they stop, and wait to be told what to do. None of it is accident — it was done this way on purpose.
+> Servants' bones arranged as though mid-errand. Someone has been talking here, and stopped when you arrived. Three of the Host in servants' dress — carrying out an errand that has no destination left. When you walk in, they stop, and wait to be told what to do. None of it is accident — it was done this way on purpose.
 
 **GM.** The order was never rescinded and nobody outranks it. This is how the place was ordered, and it still is.
 **They can:** tell them where to go, and they go. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
@@ -61,7 +61,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ### AREA 2 — The Lesser Vault
 *complication · ritual · fight · cache*
 
-> Orders scratched into the floor, the last one unfinished. A door braced shut from within by furniture. A living grave-robber is repeating a phrase over and over, trying to get the intonation right — when you walk in, they go quiet and put their back to the wall. None of it is accident — it was done this way on purpose.
+> Orders scratched into the floor, the last one unfinished. A door braced shut from within by furniture. A living grave-robber — repeating a phrase over and over, trying to get the intonation right. When you walk in, they go quiet and put their back to the wall. None of it is accident — it was done this way on purpose.
 
 **GM.** They heard the password and cannot say it correctly. The office is still being performed, for someone who is no longer served by it.
 **They can:** trade something for the phrase, badly remembered. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
@@ -89,7 +89,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ### AREA 3 — The Crossing
 *turn · demand*
 
-> A hall where your own voice arrives before you speak. An order half-scratched out and rewritten by a different hand. Nobody — but the bells are moving is a summons is being rung, room by room, coming closer — when you walk in, the bell in this room begins. None of it is accident — it was done this way on purpose.
+> A hall where your own voice arrives before you speak. An order half-scratched out and rewritten by a different hand. The bells — ringing a summons room by room, coming closer. When you walk in, the bell in this room begins. None of it is accident — it was done this way on purpose.
 
 **GM.** Something has called for service and the house is obliging. Here the want is explicit — the place asks something of whoever enters.
 **They can:** answer the bell yourself before whatever is meant to arrives. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
@@ -107,7 +107,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ### AREA 4 — The Servants' Deep
 *descent · wound · pocket*
 
-> An instruction repeated until the stone gave out. Boot-prints that stop mid-corridor and do not resume. A single figure at a speaking-tube is reporting, at length, to a listener who died first — when you walk in, it pauses mid-sentence and asks whether you are the reply. None of it is accident — it was done this way on purpose.
+> An instruction repeated until the stone gave out. Boot-prints that stop mid-corridor and do not resume. A single figure at a speaking-tube — reporting, at length, to a listener who died first. When you walk in, it pauses mid-sentence and asks whether you are the reply. None of it is accident — it was done this way on purpose.
 
 **GM.** It has never once been answered. This is the damage the want did to those who had to satisfy it.
 **They can:** answer as the listener would, and learn what it has been reporting. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.
@@ -128,7 +128,7 @@ On success it was obeyed, and The Silent Host will not open hostilities first.
 ### AREA 5 — The Last Door
 *threshold · anchor · battle · chest*
 
-> A key that fits nothing here. Wax jammed into a speaking-tube, still soft. One of the Host, kneeling is waiting for an instruction that was promised and never came — when you walk in, it addresses the first of you to speak as its superior. None of it is accident — it was done this way on purpose.
+> A key that fits nothing here. Wax jammed into a speaking-tube, still soft. One of the Host, kneeling — waiting for an instruction that was promised and never came. When you walk in, it addresses the first of you to speak as its superior. None of it is accident — it was done this way on purpose.
 
 **GM.** It was told to await further orders and did. The thing the whole barrow is arranged around is close.
 **They can:** give it the instruction and it will carry it out to the letter, wherever that leads. `[Poise 2: do one small thing it asks, without arguing]` also works here, as everywhere.

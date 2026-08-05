@@ -43,7 +43,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 1 — The Threshold Stones
 *approach · institution*
 
-> A stair too grand for the door it serves. The queue disturbed — three of the dead pushed aside. One of the Host is reading out an order of precedence to an empty hall — when you walk in, it pauses and asks where you fall in it. None of it is accident — it was done this way on purpose.
+> A stair too grand for the door it serves. The queue disturbed — three of the dead pushed aside. One of the Host — reading out an order of precedence to an empty hall. When you walk in, it pauses and asks where you fall in it. None of it is accident — it was done this way on purpose.
 
 **GM.** The list must be read in full before anyone may proceed. This is how the place was ordered, and it still is.
 **They can:** name your own place in the order and it will be honoured, exactly. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
@@ -61,7 +61,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 2 — The Lesser Vault
 *complication · ritual*
 
-> Banners in sequence, each house a place further back. A seat at the head of the hall dragged back, as if to sit in. Two of the Host is each refusing to go through a door second — when you walk in, they both look at you to break it. None of it is accident — it was done this way on purpose.
+> Banners in sequence, each house a place further back. A seat at the head of the hall dragged back, as if to sit in. Two of the Host — refusing, each of them, to go through a door second. When you walk in, they both look at you to break it. None of it is accident — it was done this way on purpose.
 
 **GM.** Neither may be seen to yield. The office is still being performed, for someone who is no longer served by it.
 **They can:** rule between them and the loser attaches to you as a lesser. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
@@ -79,7 +79,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 3 — The Waiting Room
 *complication · ritual*
 
-> A herald's script with the order still marked. Someone has walked the corridor the wrong way, scuffing one side. One of the Host with a herald's staff is announcing arrivals to an empty stair — when you walk in, it announces you, inventing a rank. None of it is accident — it was done this way on purpose.
+> A herald's script with the order still marked. Someone has walked the corridor the wrong way, scuffing one side. One of the Host with a herald's staff — announcing arrivals to an empty stair. When you walk in, it announces you, inventing a rank. None of it is accident — it was done this way on purpose.
 
 **GM.** The post requires arrivals and there have been none. The office is still being performed, for someone who is no longer served by it.
 **They can:** accept the invented rank and the barrow will treat you as it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
@@ -97,7 +97,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 4 — The Records Room
 *turn · demand · fight · cache*
 
-> A door only one person may pass at a time, and only first. A numbered flagstone lifted and not replaced. A living robber is prising number-plates off the flagstones — when you walk in, they freeze, then offer you one. None of it is accident — it was done this way on purpose.
+> A door only one person may pass at a time, and only first. A numbered flagstone lifted and not replaced. A living robber — prising number-plates off the flagstones. When you walk in, they freeze, then offer you one. None of it is accident — it was done this way on purpose.
 
 **GM.** They worked out the order is what keeps the doors shut. Here the want is explicit — the place asks something of whoever enters.
 **They can:** take a plate and go first anywhere — the Host will hate you for it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
@@ -125,7 +125,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 5 — The Sunken Nave
 *descent · wound · pocket*
 
-> A procession that doubled back on itself. Banners pulled down and stacked without regard for order. Nobody is a procession is passing through, unhurried, and you are in its way — when you walk in, it does not stop or go round. None of it is accident — it was done this way on purpose.
+> A procession that doubled back on itself. Banners pulled down and stacked without regard for order. A procession — passing through, unhurried, with you in its way. When you walk in, it does not stop or go round. None of it is accident — it was done this way on purpose.
 
 **GM.** It has right of way and has had for three centuries. This is the damage the want did to those who had to satisfy it.
 **They can:** stand aside and be counted courteous; join it and be counted one of them. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.
@@ -146,7 +146,7 @@ On success it goes first, and The Silent Host will not open hostilities first.
 ### AREA 6 — The Last Door
 *threshold · anchor · battle · chest*
 
-> A seat at the head of everything, occupied. A rank-plate prised off and dropped, still shiny where it sat. A queue of the Host is waiting to pass a door, in strict order, not moving — when you walk in, the queue opens a gap at exactly your rank. None of it is accident — it was done this way on purpose.
+> A seat at the head of everything, occupied. A rank-plate prised off and dropped, still shiny where it sat. A queue of the Host — waiting to pass a door, in strict order, not moving. When you walk in, the queue opens a gap at exactly your rank. None of it is accident — it was done this way on purpose.
 
 **GM.** The first in line is waiting for someone who never arrived. The thing the whole barrow is arranged around is close.
 **They can:** take the gap and go with them; take the front and they will remember it. `[Poise 2: stand aside and let it go ahead of you]` also works here, as everywhere.

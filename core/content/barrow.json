@@ -422,8 +422,8 @@
           "offer": "agree, and it will show you what it is not allowed to look at"
         },
         {
-          "occupant": "nobody visible",
-          "doing": "something is turning to follow you, one mirror at a time",
+          "occupant": "something unseen",
+          "doing": "turning to follow you, one mirror at a time",
           "onArrival": "the movement stops when you look directly at it",
           "because": "it may only move unobserved",
           "offer": "stare it down — hold your gaze and it cannot advance"
@@ -611,8 +611,8 @@
           "offer": "give a name — any name — and it will read you the entry beside it"
         },
         {
-          "occupant": "nobody",
-          "doing": "something is calling a name in the next room, patiently",
+          "occupant": "something in the next room",
+          "doing": "calling a name, patiently",
           "onArrival": "it starts calling yours instead",
           "because": "it learned your names when you were announced",
           "offer": "answer once and it will lead you somewhere; answer twice and it will not stop"
@@ -639,8 +639,8 @@
           "offer": "take the plate and the household obeys you — and expects you to stay"
         },
         {
-          "occupant": "nobody",
-          "doing": "a name is being written on the wall, letter by letter, as you watch",
+          "occupant": "the wall itself",
+          "doing": "taking down a name, letter by letter, as you watch",
           "onArrival": "the letters stop",
           "because": "the barrow is recording who came in",
           "offer": "finish the name yourself with something false and it is accepted"
@@ -814,8 +814,8 @@
           "offer": "answer as the listener would, and learn what it has been reporting"
         },
         {
-          "occupant": "nobody — but the bells are moving",
-          "doing": "a summons is being rung, room by room, coming closer",
+          "occupant": "the bells",
+          "doing": "ringing a summons room by room, coming closer",
           "onArrival": "the bell in this room begins",
           "because": "something has called for service and the house is obliging",
           "offer": "answer the bell yourself before whatever is meant to arrives"
@@ -1000,8 +1000,8 @@
           "offer": "take the task from it, and it will finally rest — and tell you something first"
         },
         {
-          "occupant": "nobody",
-          "doing": "a room is undoing your presence — footprints filling, dust returning",
+          "occupant": "the room",
+          "doing": "undoing your presence, footprints filling behind you, dust returning",
           "onArrival": "it works faster",
           "because": "nothing here is permitted to change, including evidence of you",
           "offer": "leave something deliberately and see whether it is allowed to remain"
@@ -1203,8 +1203,8 @@
           "offer": "decide for them and take the other"
         },
         {
-          "occupant": "nobody",
-          "doing": "a case is being restocked — items arriving in it, one at a time",
+          "occupant": "a display case",
+          "doing": "restocking itself, items arriving one at a time",
           "onArrival": "a space clears, sized for something you carry",
           "because": "the collection is still being completed",
           "offer": "contribute, and the barrow counts you a benefactor"
@@ -1406,8 +1406,8 @@
           "offer": "play along and they will guide you; correct them and they stop speaking"
         },
         {
-          "occupant": "nobody",
-          "doing": "a second set of footsteps is keeping pace with yours",
+          "occupant": "a second set of footsteps",
+          "doing": "keeping pace with yours, close",
           "onArrival": "they stop when you stop, close",
           "because": "something attached itself in an earlier room",
           "offer": "acknowledge it and it becomes useful; ignore it and it becomes insistent"
@@ -1592,8 +1592,8 @@
           "offer": "help them word it and they will hand over what they took"
         },
         {
-          "occupant": "nobody",
-          "doing": "the room is repeating a confession, quietly, on a loop",
+          "occupant": "the room",
+          "doing": "repeating a confession, quietly, on a loop",
           "onArrival": "it changes to your voice",
           "because": "it keeps the last honest thing said in it",
           "offer": "say something true and worse, and it will let you take the old one away"
@@ -1789,7 +1789,7 @@
         },
         {
           "occupant": "two of the Host",
-          "doing": "each refusing to go through a door second",
+          "doing": "refusing, each of them, to go through a door second",
           "onArrival": "they both look at you to break it",
           "because": "neither may be seen to yield",
           "offer": "rule between them and the loser attaches to you as a lesser"
@@ -1802,8 +1802,8 @@
           "offer": "take a plate and go first anywhere — the Host will hate you for it"
         },
         {
-          "occupant": "nobody",
-          "doing": "a procession is passing through, unhurried, and you are in its way",
+          "occupant": "a procession",
+          "doing": "passing through, unhurried, with you in its way",
           "onArrival": "it does not stop or go round",
           "because": "it has right of way and has had for three centuries",
           "offer": "stand aside and be counted courteous; join it and be counted one of them"

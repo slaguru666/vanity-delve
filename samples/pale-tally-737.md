@@ -43,7 +43,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 1 — The Outer Cut
 *approach · institution*
 
-> Lamps trimmed and filled, all of them. A seal broken and the contents already spoiled. Two of the Host is repairing something that is not damaged — when you walk in, they set the work down and wait for inspection. None of it is accident — it was done this way on purpose.
+> Lamps trimmed and filled, all of them. A seal broken and the contents already spoiled. Two of the Host — repairing something that is not damaged. When you walk in, they set the work down and wait for inspection. None of it is accident — it was done this way on purpose.
 
 **GM.** The standing order was to maintain, and there is nothing left to maintain. This is how the place was ordered, and it still is.
 **They can:** find them a genuine fault and they will fix a door you cannot. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
@@ -61,7 +61,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 2 — The Lesser Vault
 *complication · ritual · fight · cache*
 
-> A meal laid out, still warm, for people long past eating. One preserved thing removed, leaving a clean shape in the dust. One of the Host is trimming a lamp that has never gone out — when you walk in, it will not stop, and speaks without looking up. None of it is accident — it was done this way on purpose.
+> A meal laid out, still warm, for people long past eating. One preserved thing removed, leaving a clean shape in the dust. One of the Host — trimming a lamp that has never gone out. When you walk in, it will not stop, and speaks without looking up. None of it is accident — it was done this way on purpose.
 
 **GM.** The task is what has kept it from ending. The office is still being performed, for someone who is no longer served by it.
 **They can:** take the task from it, and it will finally rest — and tell you something first. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
@@ -89,7 +89,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 3 — The Attendants' Row
 *complication · ritual · fight · cache*
 
-> A clock wound by somebody, recently. A fire built recently, of furniture that was three centuries old. Something young is waiting, exactly as instructed, and has been — when you walk in, it asks whether it is allowed to stop now. None of it is accident — it was done this way on purpose.
+> A clock wound by somebody, recently. A fire built recently, of furniture that was three centuries old. Something young — waiting, exactly as instructed, and has been. When you walk in, it asks whether it is allowed to stop now. None of it is accident — it was done this way on purpose.
 
 **GM.** Nobody ever came back to release it. The office is still being performed, for someone who is no longer served by it.
 **They can:** release it, and it gives you what it was guarding. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
@@ -117,7 +117,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 4 — The Turning Hall
 *turn · demand · pocket*
 
-> A room that resets itself if you look away. A clock stopped by hand — the pendulum caught and tied. A living robber, badly hurt is refusing to bleed, and frightened by it — when you walk in, they grab you and ask what is wrong with them. None of it is accident — it was done this way on purpose.
+> A room that resets itself if you look away. A clock stopped by hand — the pendulum caught and tied. A living robber, badly hurt — refusing to bleed, and frightened by it. When you walk in, they grab you and ask what is wrong with them. None of it is accident — it was done this way on purpose.
 
 **GM.** The barrow has begun keeping them too. Here the want is explicit — the place asks something of whoever enters.
 **They can:** carry them out and the wound resumes; leave them and they stay perfect. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
@@ -138,7 +138,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 5 — The Sunken Nave
 *descent · wound*
 
-> Something kept so well it has forgotten how to end. Rot, in exactly one place, spreading. Nobody is a room is undoing your presence — footprints filling, dust returning — when you walk in, it works faster. None of it is accident — it was done this way on purpose.
+> Something kept so well it has forgotten how to end. Rot, in exactly one place, spreading. The room — undoing your presence, footprints filling behind you, dust returning. When you walk in, it works faster. None of it is accident — it was done this way on purpose.
 
 **GM.** Nothing here is permitted to change, including evidence of you. This is the damage the want did to those who had to satisfy it.
 **They can:** leave something deliberately and see whether it is allowed to remain. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.
@@ -156,7 +156,7 @@ On success it hears that nothing has aged, and The Silent Host will not open hos
 ### AREA 6 — The Antechamber Royal
 *threshold · anchor · battle · chest*
 
-> A casket sized for something smaller than a body. Something here has been eaten, which should not be possible. Two of the Host is setting a table for a meal that is always about to happen — when you walk in, they lay two more places. None of it is accident — it was done this way on purpose.
+> A casket sized for something smaller than a body. Something here has been eaten, which should not be possible. Two of the Host — setting a table for a meal that is always about to happen. When you walk in, they lay two more places. None of it is accident — it was done this way on purpose.
 
 **GM.** The household was told to expect guests, and does. The thing the whole barrow is arranged around is close.
 **They can:** sit and eat — full restoration, and the barrow adds you to its inventory. `[Flair 2: tell it that it has not changed]` also works here, as everywhere.

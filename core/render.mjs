@@ -79,7 +79,7 @@ export function renderMarkdown(d) {
     // "integration" — image, situation, pressure and choice reading as one, not as components.
     const opening = [
       a.cueFragments.map(c => cap(c)).join('. ') + '.',
-      S ? `${cap(S.occupant)} is ${S.doing} — when you walk in, ${S.onArrival}.` : '',
+      S ? `${cap(S.occupant)} — ${S.doing}. When you walk in, ${S.onArrival}.` : '',
       a.clue.automatic ? `None of it is accident — it was done this way on purpose.` : '',
     ].filter(Boolean).join(' ');
     L.push(`> ${opening}`);
