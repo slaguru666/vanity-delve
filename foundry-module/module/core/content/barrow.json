@@ -1,0 +1,2150 @@
+{
+  "id": "barrow",
+  "label": "Barrow",
+  "forgeStageType": "barrow",
+  "schema": 1,
+  "_model": "Everything derives from one kernel: an APPETITE and the ACCOMMODATION made for it. The motif, danger, prize kind and faction all follow from the appetite. Cue fragments hang off the MOTIF and are tagged by FACET (institution/ritual/demand/wound/anchor) and level, so two delves sharing a motif draw different imagery. The foreshadow chain is a fixed facet progression mapped onto the arc — which is why area 2's bows and area 4's scratched eyes both point at the same wound.",
+  "appetites": [
+    {
+      "id": "seen",
+      "want": "to be looked at",
+      "motif": "looking",
+      "prize": "likeness",
+      "conscript": "an audience",
+      "lack": "unlooked-at",
+      "purpose": "someone would always be looking",
+      "appeasement": {
+        "move": "look at it and say plainly what you see",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it is being looked at, which is all it ever wanted",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "remembered",
+      "want": "never to be forgotten",
+      "motif": "naming",
+      "prize": "record",
+      "conscript": "witnesses",
+      "lack": "forgotten",
+      "purpose": "someone would always remember",
+      "appeasement": {
+        "move": "say its name aloud, correctly, unprompted",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "someone remembered",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "obeyed",
+      "want": "to be obeyed without asking",
+      "motif": "voices",
+      "prize": "seal",
+      "conscript": "a household",
+      "lack": "disobeyed",
+      "purpose": "someone would always obey",
+      "appeasement": {
+        "move": "do one small thing it asks, without arguing",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was obeyed",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "young",
+      "want": "never to age",
+      "motif": "keeping",
+      "prize": "vessel",
+      "conscript": "the young",
+      "lack": "old",
+      "purpose": "nothing would ever age",
+      "appeasement": {
+        "move": "tell it that it has not changed",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it hears that nothing has aged",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "envied",
+      "want": "to be envied",
+      "motif": "display",
+      "prize": "ornament",
+      "conscript": "rivals",
+      "lack": "unenvied",
+      "purpose": "someone would always envy them",
+      "appeasement": {
+        "move": "admire something of its openly, and mean it",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it is envied again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "attended",
+      "want": "never to be alone",
+      "motif": "company",
+      "prize": "token",
+      "conscript": "servants",
+      "lack": "alone",
+      "purpose": "someone would always be there",
+      "appeasement": {
+        "move": "sit down and stay a while",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is not alone",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "forgiven",
+      "want": "to be told it was not a sin",
+      "motif": "confession",
+      "prize": "testament",
+      "conscript": "confessors",
+      "lack": "unforgiven",
+      "purpose": "someone would always absolve them",
+      "appeasement": {
+        "move": "tell it that what it did was not a sin",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it is absolved, for a moment",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "first",
+      "want": "to be first in all things",
+      "motif": "precedence",
+      "prize": "regalia",
+      "conscript": "a procession",
+      "lack": "second",
+      "purpose": "someone would always go behind them",
+      "appeasement": {
+        "move": "stand aside and let it go ahead of you",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it goes first",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "interred",
+      "text": "had {conscript} interred alive alongside them",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "remembered",
+        "attended",
+        "forgiven",
+        "obeyed",
+        "first"
+      ]
+    },
+    {
+      "id": "bound",
+      "text": "bound {conscript} by oath they could not break",
+      "cruelty": 2,
+      "fits": [
+        "obeyed",
+        "attended",
+        "forgiven",
+        "first",
+        "remembered"
+      ]
+    },
+    {
+      "id": "replaced",
+      "text": "replaced {conscript} with something more obedient",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "obeyed",
+        "envied",
+        "young",
+        "attended"
+      ]
+    },
+    {
+      "id": "unmade",
+      "text": "had the faces struck from {conscript}",
+      "cruelty": 3,
+      "fits": [
+        "seen",
+        "remembered",
+        "envied",
+        "first"
+      ]
+    },
+    {
+      "id": "purchased",
+      "text": "bought {conscript} from those with nothing left",
+      "cruelty": 2,
+      "fits": [
+        "envied",
+        "attended",
+        "young",
+        "obeyed"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "would not let {conscript} leave, and then could not",
+      "cruelty": 1,
+      "fits": [
+        "young",
+        "attended",
+        "seen",
+        "remembered"
+      ]
+    }
+  ],
+  "motifs": {
+    "looking": {
+      "danger": "attention",
+      "dangerLine": "the barrow notices those who are seen",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "mourners carved beside every step, their faces smooth blank ovals",
+          "attendants posed facing an empty centre, heads all turned the same way",
+          "seats arranged in a half-circle around one chair"
+        ],
+        "ritual": [
+          "courtiers bent in a bow they have been holding for three hundred years",
+          "a receiving line of the dead, still waiting to be presented",
+          "gloves laid out for hands that would be kissed"
+        ],
+        "demand": [
+          "hand-mirrors set into the walls, hundreds, every one angled inward",
+          "a chamber where every surface has been polished to show you back",
+          "a chair placed so that whoever sits in it must be looked at"
+        ],
+        "wound": [
+          "portraits of the same woman, the eyes scratched out by fingernails",
+          "likenesses turned to face the wall, every one of them",
+          "a face chiselled off a statue, and the chisel left behind"
+        ],
+        "anchor": [
+          "a covered frame the height of a person, facing away from the door",
+          "a wardrobe of three hundred dresses in a room with no dust in it",
+          "one thing under cloth, and the cloth is clean"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "a doorway you can only reach by crossing open floor, in full view",
+          "cost": "cross it and you are seen — roll the clock; go the long way and lose a Turn",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you time the crossing between whatever is watching — no clock roll",
+            "failure": "you are seen: roll the clock now",
+            "orElse": "go the long way: one Turn, no risk"
+          }
+        },
+        {
+          "cue": "a mirror blocking the passage, angled to catch whoever passes",
+          "cost": "cover it and something notices the dark; pass it and something notices you",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you cover it without meeting your own eye — pass freely",
+            "failure": "you meet your own eye: +1 Bane and roll the clock",
+            "orElse": "smash it — loud, roll the clock, but done"
+          }
+        },
+        {
+          "cue": "a portrait that must be moved to open the way behind it",
+          "cost": "turn it to the wall and the Host takes offence; carry it and you are announced everywhere",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you turn it aside with enough ceremony that the Host takes no offence",
+            "failure": "the Host is offended: they will not receive you until someone appeases",
+            "orElse": "leave it and squeeze past: one Turn, and you are watched"
+          }
+        },
+        {
+          "cue": "a gallery lit end to end, and an unlit servants' crawl beside it",
+          "cost": "the gallery is quick and bright; the crawl costs a Turn and a Brawn roll",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you make the crawl in good order",
+            "failure": "you arrive filthy and stuck: lose a Turn, +1 Bane",
+            "orElse": "take the gallery: fast, bright, and you are seen"
+          }
+        },
+        {
+          "cue": "a shuttered window onto the next room, and a choice about opening it",
+          "cost": "looking through costs nothing; being seen looking costs a Bane",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you see through without being framed in the opening",
+            "failure": "you are framed: whatever is beyond has your description",
+            "orElse": "do not look; you go in blind but unannounced"
+          }
+        },
+        {
+          "cue": "a room you must cross either quickly or quietly",
+          "cost": "quick is one Turn and a clock roll; quiet is two Turns and none",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read which way the room is watched and pick the right speed — cross unremarked",
+            "failure": "you pick wrong: roll the clock, and whatever is watching now knows your pace",
+            "orElse": "cross without judging it: quick costs a clock roll, quiet costs two Turns"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "mask",
+          "cue": "a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile",
+          "benefit": "the Host receives you as court, automatically",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "while worn you cannot be recognised by name — allies aiding you take −1 die"
+        },
+        {
+          "id": "glass",
+          "cue": "a hand-mirror that shows the room a moment behind",
+          "benefit": "once per scene, see what was just here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your reflection lags, and other people notice"
+        },
+        {
+          "id": "likeness",
+          "cue": "a small portrait of someone who is not you, painted beautifully",
+          "benefit": "show it and be taken for them, once",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they will eventually want it back"
+        },
+        {
+          "id": "veil",
+          "cue": "a mourning veil, fine enough to see through",
+          "benefit": "pass unremarked through the Host once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you see everyone as the barrow does — posed, waiting"
+        },
+        {
+          "id": "eyes",
+          "cue": "a pair of painted eyes cut from a portrait",
+          "benefit": "once, know exactly who is watching",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they are watching you back"
+        }
+      ],
+      "features": [
+        "a mirror smashed deliberately, and recently — the pieces swept into a corner",
+        "scorch-marks where someone burned a portrait and did not stay to watch",
+        "a sheet thrown over something, by living hands, in a hurry",
+        "eyeholes bored through a wall at three different heights",
+        "a lamp set facing the wall so it lights nothing but stone",
+        "dust disturbed in a wide circle, as though someone turned slowly on the spot"
+      ],
+      "situations": [
+        {
+          "occupant": "a half-dozen of the Host",
+          "doing": "holding a bow, waiting to be acknowledged",
+          "onArrival": "they hold it deeper, and wait longer",
+          "because": "nobody has returned the courtesy in three centuries",
+          "offer": "acknowledge them properly and be received as court"
+        },
+        {
+          "occupant": "one of the Host at a mirror",
+          "doing": "describing its own reflection aloud, incorrectly",
+          "onArrival": "it asks you to confirm the description",
+          "because": "it was taught to say what the Lord wished to hear",
+          "offer": "agree, and it will show you what it is not allowed to look at"
+        },
+        {
+          "occupant": "something unseen",
+          "doing": "turning to follow you, one mirror at a time",
+          "onArrival": "the movement stops when you look directly at it",
+          "because": "it may only move unobserved",
+          "offer": "stare it down — hold your gaze and it cannot advance"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "covering mirrors with a torn shirt, working fast",
+          "onArrival": "they hiss at you to keep your face down",
+          "because": "they have learned what being seen twice costs",
+          "offer": "help, and they will tell you which rooms are watched"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "presenting an absent noble to an empty chair",
+          "onArrival": "they present you instead",
+          "because": "the ceremony cannot be abandoned, only redirected",
+          "offer": "accept the presentation and the barrow treats you as its guest of honour"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "sketching the room, badly, by feel",
+          "onArrival": "they ask you not to look at the drawing",
+          "because": "they have learned that what gets looked at gets noticed",
+          "offer": "leave the sketch alone and they will mark your map with the watched rooms"
+        }
+      ]
+    },
+    "naming": {
+      "danger": "recognition",
+      "dangerLine": "to say a name here is to be answered",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "names cut into the lintel, each one struck through",
+          "the dead laid out in the order their names were entered",
+          "a register stone, filled edge to edge"
+        ],
+        "ritual": [
+          "a roll of the dead being read aloud by nobody",
+          "grave-goods labelled in a hand that keeps correcting itself",
+          "an oath cut into the floor, to be spoken on entering"
+        ],
+        "demand": [
+          "a wall of tongues in wax, each with a name pressed into it",
+          "a chamber that repeats the last name spoken in it",
+          "a blank plate at the head of the hall, waiting"
+        ],
+        "wound": [
+          "a name gouged out so deeply it went through the stone",
+          "a ledger with one line scraped away and rewritten forty times",
+          "monuments to someone whose name nobody kept"
+        ],
+        "anchor": [
+          "a book of names with one line left blank",
+          "a seal cut with a name worn smooth by rubbing",
+          "a tally-stick longer than a person"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "a door with a name cut into it, and a space beneath for a reply",
+          "cost": "answer with your own name and it opens — and it is written down",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you give a name that is true enough to open it and thin enough to cost nothing",
+            "failure": "the door takes your real name: it is written down, and things here now use it",
+            "orElse": "refuse to answer: the door stays shut, find another way at one Turn"
+          }
+        },
+        {
+          "cue": "a roll of the dead, and one line you could strike out",
+          "cost": "striking a name frees something; it also puts you where the name was",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you strike the name cleanly and something long-bound is released, grateful",
+            "failure": "the strike is crooked: you are entered where the name was, +1 Bane",
+            "orElse": "leave the roll alone; nothing is freed and nothing is owed"
+          }
+        },
+        {
+          "cue": "someone's name called softly from two directions at once",
+          "cost": "answer either and the other stops calling",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you work out which call is the real one",
+            "failure": "you answer the wrong one and the other keeps calling, closer",
+            "orElse": "answer neither: both keep calling for the rest of the delve"
+          }
+        },
+        {
+          "cue": "a lintel you must be announced under, or crawl beneath",
+          "cost": "announced costs a Bane; crawling costs your dignity and a Turn",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you are announced as something grander than you are, and it holds",
+            "failure": "the announcement is thin and the Host hears it: +1 Bane",
+            "orElse": "crawl beneath: undignified, one Turn, entirely safe"
+          }
+        },
+        {
+          "cue": "a list of the dead with one name you recognise",
+          "cost": "saying it aloud helps; it also tells the barrow you are connected",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the hand is recent — you learn who else is down here and roughly when",
+            "failure": "you learn nothing but leave your own mark on the page",
+            "orElse": "do not touch it; the name stays unread"
+          }
+        },
+        {
+          "cue": "two passages, and someone is being called down one of them",
+          "cost": "follow the voice and be expected; take the other and arrive unannounced",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you follow the voice and arrive expected, which opens doors",
+            "failure": "you arrive expected by the wrong thing",
+            "orElse": "take the other passage: unannounced, one extra Turn"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "ledger",
+          "cue": "a book of names, one line left blank",
+          "benefit": "write a name and the Host obeys it once",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own name is now in it"
+        },
+        {
+          "id": "nameplate",
+          "cue": "a plate cut with a name worn smooth by rubbing",
+          "benefit": "doors that check a name open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you answer to that name whether you mean to or not"
+        },
+        {
+          "id": "tally",
+          "cue": "a tally-stick longer than a person, one notch unfilled",
+          "benefit": "call in a debt the barrow owes — once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the stick keeps counting what you owe too"
+        },
+        {
+          "id": "seal",
+          "cue": "a wax seal bearing a name struck through",
+          "benefit": "once, be forgotten by something hunting you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your allies find your name hard to recall"
+        },
+        {
+          "id": "lintel",
+          "cue": "a chip of lintel-stone with three names on it",
+          "benefit": "once, summon one of the named dead to answer",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they come whenever your name is said aloud"
+        }
+      ],
+      "features": [
+        "a name freshly scratched over an old one, in a modern hand",
+        "a page torn out and the stub still in the binding",
+        "someone has been writing their own name on things, repeatedly",
+        "a gravestone laid face-down, which takes two people",
+        "chalk marks numbering the doorways, not old",
+        "a name spoken so recently the air still feels used"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host with a ledger",
+          "doing": "reading the roll of the dead aloud, and has reached the Ns",
+          "onArrival": "it asks for your names, politely, pen ready",
+          "because": "the roll must be complete or the reading starts again",
+          "offer": "give a name — any name — and it will read you the entry beside it"
+        },
+        {
+          "occupant": "something in the next room",
+          "doing": "calling a name, patiently",
+          "onArrival": "it starts calling yours instead",
+          "because": "it learned your names when you were announced",
+          "offer": "answer once and it will lead you somewhere; answer twice and it will not stop"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "chiselling their own name over an older one",
+          "onArrival": "they stop, caught, and try to look casual",
+          "because": "they think a name on the wall means the barrow lets you leave",
+          "offer": "tell them the truth for a share of what they have found"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "searching for someone by name, room to room",
+          "onArrival": "they ask whether you are that person",
+          "because": "the summons was never fulfilled",
+          "offer": "say yes and be taken directly to whoever wanted them"
+        },
+        {
+          "occupant": "one of the Host, silent",
+          "doing": "holding a nameplate out, waiting for someone to claim it",
+          "onArrival": "it offers the plate to each of you in turn",
+          "because": "the post has been vacant and the household needs it filled",
+          "offer": "take the plate and the household obeys you — and expects you to stay"
+        },
+        {
+          "occupant": "the wall itself",
+          "doing": "taking down a name, letter by letter, as you watch",
+          "onArrival": "the letters stop",
+          "because": "the barrow is recording who came in",
+          "offer": "finish the name yourself with something false and it is accepted"
+        }
+      ]
+    },
+    "voices": {
+      "danger": "obedience",
+      "dangerLine": "the dead here still take instruction, and give it",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a bell-pull beside every alcove, all of them still taut",
+          "servants' bones arranged as though mid-errand",
+          "a board of numbered bells, one still swinging"
+        ],
+        "ritual": [
+          "orders scratched into the floor, the last one unfinished",
+          "a speaking-tube running the barrow's length, warm to the touch",
+          "a queue of the dead outside a door that never opened"
+        ],
+        "demand": [
+          "a hall where your own voice arrives before you speak",
+          "a seat that expects to be addressed",
+          "a room that will not carry sound away from its centre"
+        ],
+        "wound": [
+          "jaws wired shut, every one of them",
+          "an instruction repeated until the stone gave out",
+          "a tongue-shaped hollow worn into a step"
+        ],
+        "anchor": [
+          "a signet still warm, sized for a thumb",
+          "a staff of office propped where it was set down",
+          "a key that fits nothing here"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "an order carved into the floor, still legible",
+          "cost": "obey it and the Host counts you as household; step over it and they do not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you obey exactly enough to be counted household — Skeletons stand down for you",
+            "failure": "you obey wrongly, which is worse than not obeying: +1 Bane",
+            "orElse": "step over it: no cost now, and the Host does not count you as theirs"
+          }
+        },
+        {
+          "cue": "a speaking-tube that is warm, and asking a question down it",
+          "cost": "an answer comes back — and now something knows where you are",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the tube answers truly, and you learn the way on",
+            "failure": "something answers and now knows where you are: roll the clock",
+            "orElse": "do not speak into it; you keep your position but learn nothing"
+          }
+        },
+        {
+          "cue": "a bell-pull that would summon someone",
+          "cost": "ring it and help comes, and it is not the kind you wanted",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "what comes is answerable to you for one scene",
+            "failure": "what comes is not the kind of help you wanted",
+            "orElse": "do not ring: the way on is longer by one Turn"
+          }
+        },
+        {
+          "cue": "two doors, and behind one a voice giving instructions to nobody",
+          "cost": "the quiet door is longer; the voice would tell you exactly where to go",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer the voice as a subordinate would — it tells you the route AND answers one question about what lies on it, without taking you into its service",
+            "failure": "you engage and it takes that as enlistment: it will give you orders for the rest of the delve, and the first is now",
+            "orElse": "take the quiet door and never speak to it: one extra Turn, no obligation"
+          }
+        },
+        {
+          "cue": "an instruction you can obey, ignore, or countermand",
+          "cost": "countermanding it works once and marks you as someone who gives orders",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you countermand it and the dead obey you instead — this marks you as someone who gives orders: from now on the Host brings you their disputes, and once per delve you may issue one order they must follow",
+            "failure": "the order stands and you have been seen to fail at giving one: +1 Bane, and the Host addresses someone else from now on",
+            "orElse": "obey it, or ignore it and go round: ignoring costs one Turn"
+          }
+        },
+        {
+          "cue": "a door that opens to a spoken password nobody living knows",
+          "cost": "guessing costs a Bane per attempt; the long way costs two Turns",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "the word is already in your notes. It is in something you passed earlier — *{priorCue}*. Say it and the door opens; if nobody wrote it down, the roll tells them now",
+            "failure": "you have the shape of it but not the word: one more attempt, or take the long way",
+            "orElse": "the long way: two Turns, no guessing, no Banes"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "signet",
+          "cue": "a signet, still warm, sized for a thumb",
+          "benefit": "doors that answer to rank open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the barrow's servants bring you their problems"
+        },
+        {
+          "id": "tube",
+          "cue": "a short length of speaking-tube, cut and carried",
+          "benefit": "ask one question and get one true answer",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever answers can now hear you"
+        },
+        {
+          "id": "staff",
+          "cue": "a staff of office, propped where it was set down",
+          "benefit": "give one order the dead must follow",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you may not refuse an order given to you"
+        },
+        {
+          "id": "bell",
+          "cue": "a small bell from a servant's board",
+          "benefit": "ring it and one order is obeyed, by anything",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it rings faintly when someone gives you an order"
+        },
+        {
+          "id": "wax",
+          "cue": "a plug of wax, moulded to a mouth",
+          "benefit": "once, refuse to hear a compulsion",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot hear warnings either"
+        }
+      ],
+      "features": [
+        "a bell-rope cut through, cleanly, from this side",
+        "wax jammed into a speaking-tube, still soft",
+        "an order half-scratched out and rewritten by a different hand",
+        "a door braced shut from within by furniture",
+        "boot-prints that stop mid-corridor and do not resume",
+        "someone has been talking here, and stopped when you arrived"
+      ],
+      "situations": [
+        {
+          "occupant": "three of the Host in servants' dress",
+          "doing": "carrying out an errand that has no destination left",
+          "onArrival": "they stop, and wait to be told what to do",
+          "because": "the order was never rescinded and nobody outranks it",
+          "offer": "tell them where to go, and they go"
+        },
+        {
+          "occupant": "a single figure at a speaking-tube",
+          "doing": "reporting, at length, to a listener who died first",
+          "onArrival": "it pauses mid-sentence and asks whether you are the reply",
+          "because": "it has never once been answered",
+          "offer": "answer as the listener would, and learn what it has been reporting"
+        },
+        {
+          "occupant": "the bells",
+          "doing": "ringing a summons room by room, coming closer",
+          "onArrival": "the bell in this room begins",
+          "because": "something has called for service and the house is obliging",
+          "offer": "answer the bell yourself before whatever is meant to arrives"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "arguing, soundlessly, over an instruction each was given",
+          "onArrival": "both turn to you as the obvious arbiter",
+          "because": "the orders contradict and neither may disobey",
+          "offer": "rule between them — the loser stands down and the winner is yours for a scene"
+        },
+        {
+          "occupant": "a living grave-robber",
+          "doing": "repeating a phrase over and over, trying to get the intonation right",
+          "onArrival": "they go quiet and put their back to the wall",
+          "because": "they heard the password and cannot say it correctly",
+          "offer": "trade something for the phrase, badly remembered"
+        },
+        {
+          "occupant": "one of the Host, kneeling",
+          "doing": "waiting for an instruction that was promised and never came",
+          "onArrival": "it addresses the first of you to speak as its superior",
+          "because": "it was told to await further orders and did",
+          "offer": "give it the instruction and it will carry it out to the letter, wherever that leads"
+        }
+      ]
+    },
+    "keeping": {
+      "danger": "preservation",
+      "dangerLine": "nothing here is allowed to change, including you",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "flowers on the steps that have not wilted or dried",
+          "a bed made fresh this morning, three centuries running",
+          "lamps trimmed and filled, all of them"
+        ],
+        "ritual": [
+          "a meal laid out, still warm, for people long past eating",
+          "clothes brushed and hung in the order they would be worn",
+          "a clock wound by somebody, recently"
+        ],
+        "demand": [
+          "jars along the wall, each holding a single year",
+          "a mirror that shows the room a little younger than it is",
+          "a room that resets itself if you look away"
+        ],
+        "wound": [
+          "a child's shoes, unworn, in eleven sizes",
+          "portraits ageing in sequence, then stopping",
+          "something kept so well it has forgotten how to end"
+        ],
+        "anchor": [
+          "a vessel, sealed, still faintly warm",
+          "an hourglass that has never been turned",
+          "a casket sized for something smaller than a body"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "a room you can search, or leave exactly as you found it",
+          "cost": "searching disturbs a preservation three centuries old — roll the clock",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you search without disturbing the arrangement",
+            "failure": "the preservation breaks: roll the clock, and something here begins to rot",
+            "orElse": "leave it exactly as found: nothing gained, nothing woken"
+          }
+        },
+        {
+          "cue": "a sealed jar, and a way on that needs what is inside",
+          "cost": "breaking the seal spends the year it holds, in front of you",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you break the seal cleanly and spend the year deliberately",
+            "failure": "the year escapes all at once, in front of everyone: +1 Bane",
+            "orElse": "find another way: one Turn"
+          }
+        },
+        {
+          "cue": "a bed, made, and a body-shaped hollow that has not filled in",
+          "cost": "lie in it and you rest fully; you also stop, and the barrow prefers that",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you see what the hollow is for and rest without lying in it — regain Grit, lose a Turn",
+            "failure": "someone lies in it: they rest fully, and the barrow now counts them among what it keeps",
+            "orElse": "press on tired: no rest, no cost, no attention"
+          }
+        },
+        {
+          "cue": "a door held shut by nothing but the fact it has never been opened",
+          "cost": "open it and something that had not changed, changes",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you move it and it survives, just",
+            "failure": "it does not survive, and the barrow notices what you cost it: +1 Bane",
+            "orElse": "squeeze past: one Turn and some skin"
+          }
+        },
+        {
+          "cue": "a preserved thing blocking the way, which will not survive being moved",
+          "cost": "move it and something here ends; leave it and lose a Turn",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you open it having understood what changes",
+            "failure": "something that had not changed, changes, and it was holding something back",
+            "orElse": "leave it shut; the way on is longer"
+          }
+        },
+        {
+          "cue": "food and water laid out, still good",
+          "cost": "eating restores you fully and the barrow adds you to what it keeps",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you eat and are restored entirely",
+            "failure": "you are restored, and the barrow has added you to what it keeps: +1 Bane",
+            "orElse": "do not eat; you keep your Grit as it is"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "jar",
+          "cue": "a sealed jar holding one good year",
+          "benefit": "open it to undo a wound entirely, once",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the year is spent in front of everyone, visibly"
+        },
+        {
+          "id": "stillglass",
+          "cue": "a mirror showing the room a little younger",
+          "benefit": "once, refuse a condition — the glass takes it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the glass cracks a little each time, and so do you"
+        },
+        {
+          "id": "shoes",
+          "cue": "a child's shoes, unworn, in your size",
+          "benefit": "you do not tire; ignore fatigue for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you have stopped ageing, and it shows in the wrong light"
+        },
+        {
+          "id": "lamp",
+          "cue": "a lamp still burning on three-century-old oil",
+          "benefit": "light that never gutters",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "nothing near it changes, including wounds you want to heal"
+        },
+        {
+          "id": "flower",
+          "cue": "a flower that has not wilted",
+          "benefit": "once, halt a condition where it stands",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it also halts something you wanted to finish"
+        }
+      ],
+      "features": [
+        "something here has been eaten, which should not be possible",
+        "a seal broken and the contents already spoiled",
+        "a clock stopped by hand — the pendulum caught and tied",
+        "one preserved thing removed, leaving a clean shape in the dust",
+        "a fire built recently, of furniture that was three centuries old",
+        "rot, in exactly one place, spreading"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host",
+          "doing": "trimming a lamp that has never gone out",
+          "onArrival": "it will not stop, and speaks without looking up",
+          "because": "the task is what has kept it from ending",
+          "offer": "take the task from it, and it will finally rest — and tell you something first"
+        },
+        {
+          "occupant": "the room",
+          "doing": "undoing your presence, footprints filling behind you, dust returning",
+          "onArrival": "it works faster",
+          "because": "nothing here is permitted to change, including evidence of you",
+          "offer": "leave something deliberately and see whether it is allowed to remain"
+        },
+        {
+          "occupant": "a living robber, badly hurt",
+          "doing": "refusing to bleed, and frightened by it",
+          "onArrival": "they grab you and ask what is wrong with them",
+          "because": "the barrow has begun keeping them too",
+          "offer": "carry them out and the wound resumes; leave them and they stay perfect"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "setting a table for a meal that is always about to happen",
+          "onArrival": "they lay two more places",
+          "because": "the household was told to expect guests, and does",
+          "offer": "sit and eat — full restoration, and the barrow adds you to its inventory"
+        },
+        {
+          "occupant": "something young",
+          "doing": "waiting, exactly as instructed, and has been",
+          "onArrival": "it asks whether it is allowed to stop now",
+          "because": "nobody ever came back to release it",
+          "offer": "release it, and it gives you what it was guarding"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "repairing something that is not damaged",
+          "onArrival": "they set the work down and wait for inspection",
+          "because": "the standing order was to maintain, and there is nothing left to maintain",
+          "offer": "find them a genuine fault and they will fix a door you cannot"
+        }
+      ]
+    },
+    "display": {
+      "danger": "comparison",
+      "dangerLine": "the barrow measures you against its host",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "plinths along the stair, each holding a rival's finest thing",
+          "a gallery of gifts, none of them opened",
+          "cases arranged so the best is always further in"
+        ],
+        "ritual": [
+          "trophies mounted at a height that forces you to look up",
+          "a book recording who admired what, and for how long",
+          "a ribbon for every visitor who conceded the point"
+        ],
+        "demand": [
+          "an empty plinth, larger than the rest, waiting",
+          "a room that leaves you nowhere to stand but the centre",
+          "a case angled so you see yourself beside the prize"
+        ],
+        "wound": [
+          "a case of crowns, each slightly better than the last, all of them scratched",
+          "gifts defaced by whoever gave them",
+          "a plinth toppled, and the label kept"
+        ],
+        "anchor": [
+          "the piece every rival was meant to want, still under glass",
+          "a case holding one item and a great deal of space",
+          "a lock polished more often than the thing it guards"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "an empty plinth, sized for something you are carrying",
+          "cost": "leave a thing and the Host approves; keep it and they compare you unfavourably",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you leave the offering with enough style that the Host counts you a peer",
+            "failure": "your gift is judged and found wanting: +1 Bane, and they compare you aloud",
+            "orElse": "keep everything: the next door stays shut, find the long way at one Turn"
+          }
+        },
+        {
+          "cue": "a case of trophies and one obviously missing",
+          "cost": "replacing it opens the next door; nothing else will",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what the gap held and what would satisfy it",
+            "failure": "you fill it with the wrong thing and the Host notices the substitution",
+            "orElse": "force the case: loud, roll the clock, and the display is ruined"
+          }
+        },
+        {
+          "cue": "two ways on: one you must be invited down, one you may simply take",
+          "cost": "the invitation costs an act of admiration; taking it costs their good opinion",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "the invitation is given and you go down honoured",
+            "failure": "your admiration rings false: +1 Bane",
+            "orElse": "take the open way instead — free, and they think less of you for it"
+          }
+        },
+        {
+          "cue": "a gift left for you, unopened, with your description on it",
+          "cost": "opening it accepts the comparison; leaving it is a refusal, and noted",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you open it and find something chosen for someone like you",
+            "failure": "you open it and find it was not for you at all",
+            "orElse": "leave it: a refusal, noted, and the Host is cooler from here"
+          }
+        },
+        {
+          "cue": "a comparison invited — your gear against theirs",
+          "cost": "engage and gain their favour; decline and be marked as beneath notice",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you win the comparison and their favour with it",
+            "failure": "you lose it publicly: +1 Bane and the Host addresses someone else",
+            "orElse": "decline: you are beneath notice, which is its own kind of safe"
+          }
+        },
+        {
+          "cue": "a display you could improve, or rob",
+          "cost": "improving it opens the next door; robbing it opens all of them, badly",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you improve the display and the next door opens for a benefactor",
+            "failure": "your improvement is vandalism to them: +1 Bane",
+            "orElse": "rob it: every door in the barrow opens badly from now on"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "prize",
+          "cue": "the piece every rival was meant to want, still under glass",
+          "benefit": "+1 die whenever someone must be impressed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everyone who sees it wants it"
+        },
+        {
+          "id": "ribbon",
+          "cue": "a ribbon awarded to whoever conceded the point",
+          "benefit": "end one argument in your favour, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot decline a challenge while wearing it"
+        },
+        {
+          "id": "gift",
+          "cue": "a gift, unopened, addressed to no one in particular",
+          "benefit": "open it for exactly the thing you needed",
+          "acceptanceCost": {
+            "vice": "Greed"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it was for someone, and they know"
+        },
+        {
+          "id": "case",
+          "cue": "a display case, small, with a good lock",
+          "benefit": "anything inside is beyond casual theft",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is in it is on show, always"
+        },
+        {
+          "id": "plinth",
+          "cue": "a plinth-plate engraved FINEST OF ITS KIND",
+          "benefit": "once, make a thing you carry undeniably the best",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "someone will want to test that"
+        }
+      ],
+      "features": [
+        "an empty case with the lock forced and the label left",
+        "a plinth pushed over, and nobody righted it",
+        "price marks chalked on the exhibits by someone practical",
+        "the best piece gone and a worse one moved into its place",
+        "a trophy defaced with a knife, thoroughly",
+        "sacking and rope left behind by people who meant to carry a lot"
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Host",
+          "doing": "polishing a piece that is already flawless",
+          "onArrival": "they turn it toward you to be admired",
+          "because": "it was never admired enough while the Lord lived",
+          "offer": "admire it properly and they will show you the better one"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "weighing two trophies, unable to choose",
+          "onArrival": "they ask which is worth more, genuinely",
+          "because": "they can carry one and have been here an hour deciding",
+          "offer": "decide for them and take the other"
+        },
+        {
+          "occupant": "a display case",
+          "doing": "restocking itself, items arriving one at a time",
+          "onArrival": "a space clears, sized for something you carry",
+          "because": "the collection is still being completed",
+          "offer": "contribute, and the barrow counts you a benefactor"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "comparing every visitor against a portrait and recording the result",
+          "onArrival": "it begins comparing you",
+          "because": "the Lord required to know he was the finest thing here",
+          "offer": "lose the comparison deliberately and it relaxes entirely"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "setting out gifts nobody will open",
+          "onArrival": "they present one to you",
+          "because": "the giving was the point; the opening never was",
+          "offer": "accept without opening it, and they will carry your burdens"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "dusting an empty plinth with great care",
+          "onArrival": "it asks whether you have brought the replacement",
+          "because": "the finest piece was stolen and the post has been vacant since",
+          "offer": "give it anything at all and it treats you as the restorer of the collection"
+        }
+      ]
+    },
+    "company": {
+      "danger": "attachment",
+      "dangerLine": "the barrow does not like it when people leave",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "two sets of footprints in the dust, going in only",
+          "bedding laid for more than were ever buried",
+          "a coat-rack, full"
+        ],
+        "ritual": [
+          "chairs drawn up in a circle, all facing one seat",
+          "places set every evening for three hundred years",
+          "a table laid for more than were ever buried here"
+        ],
+        "demand": [
+          "hands, skeletal, holding other hands, the length of a hall",
+          "a doorway with the hinges taken off",
+          "a room arranged for a conversation that never ended"
+        ],
+        "wound": [
+          "a door barred from the inside, and the marks of it",
+          "scratches on the inside of a lid",
+          "a name called so often it wore into the wall"
+        ],
+        "anchor": [
+          "a keepsake still warm from being held",
+          "a chair kept empty and dusted",
+          "a second cup, always out"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "one of the dead follows you and will not be told otherwise",
+          "cost": "let it come and doors open; send it back and they close",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you let it come, courteously — it opens doors and stays close",
+            "failure": "it attaches: it will not be sent back, and it follows you out",
+            "orElse": "send it back firmly: doors close, and the way on costs a Turn"
+          }
+        },
+        {
+          "cue": "a chair drawn out, and a place laid, and time to sit",
+          "cost": "sitting costs a Turn and buys the Host's goodwill entirely",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sit, are courteous, and leave — the Host's goodwill for the whole delve, one Turn spent",
+            "failure": "you sit too long: +1 Bane, and they expect you at every table from here",
+            "orElse": "walk past the setting: no goodwill, no obligation"
+          }
+        },
+        {
+          "cue": "a door that will only admit one of you at a time",
+          "cost": "splitting the party is exactly what this place wants",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the order that gets everyone through without splitting for long",
+            "failure": "you are separated: the party is in two places when the clock next fires",
+            "orElse": "refuse to split: the door is not passed, one Turn to find another"
+          }
+        },
+        {
+          "cue": "a hand, skeletal, held out to be taken",
+          "cost": "take it and you are not alone; you are also not alone later",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you take it and are not alone — once, something comes when you call",
+            "failure": "you take it and are not alone later either, whether you call or not",
+            "orElse": "do not take it: it is left held out, and the Host remembers"
+          }
+        },
+        {
+          "cue": "a way on that only works if someone stays behind",
+          "cost": "whoever stays is not alone, and that is the problem",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "whoever stays holds the way open and rejoins later, shaken",
+            "failure": "whoever stays is kept: they rejoin at the ending, changed",
+            "orElse": "nobody stays: the way is impassable, two Turns to go round"
+          }
+        },
+        {
+          "cue": "an invitation to stay the night, meant sincerely",
+          "cost": "accepting restores everything and costs a Turn and a Bane",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you accept, rest fully, and the Host is yours for the delve",
+            "failure": "you accept and the barrow counts you as staying: +1 Bane",
+            "orElse": "decline politely: no rest, no cost, slightly colder welcome"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "keepsake",
+          "cue": "a keepsake still warm from being held",
+          "benefit": "once, someone comes when you call",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "something else comes too"
+        },
+        {
+          "id": "cup",
+          "cue": "a second cup, always set out",
+          "benefit": "share it and gain an ally among the dead for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they expect to be included from now on"
+        },
+        {
+          "id": "hand",
+          "cue": "a skeletal hand that closes gently on yours",
+          "benefit": "you cannot be separated from the party by force",
+          "acceptanceCost": {
+            "vice": "Attachment"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "nor can you leave one behind"
+        },
+        {
+          "id": "chair",
+          "cue": "a folding chair, kept dusted",
+          "benefit": "set it down and something friendly sits",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it follows you if you leave it"
+        },
+        {
+          "id": "coat",
+          "cue": "a coat from a full rack, still shaped to someone",
+          "benefit": "once, be treated as expected and welcome",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to come back"
+        }
+      ],
+      "features": [
+        "a bedroll, used, and not by anyone buried here",
+        "a chair dragged out of position and left where it was needed",
+        "two cups set out and one of them recently drunk from",
+        "a door tied open with a belt, so it could not close",
+        "someone has been counting the dead — tally marks by the entrance",
+        "a name carved beside another, joining them, badly"
+      ],
+      "situations": [
+        {
+          "occupant": "a dozen of the Host",
+          "doing": "sitting in a circle, facing one empty chair",
+          "onArrival": "they shuffle round to make room for you",
+          "because": "the gathering may not end while anyone remains",
+          "offer": "sit, and they will answer anything while you do"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "holding a door open for someone who is not coming",
+          "onArrival": "it looks relieved and gestures you through",
+          "because": "it was told to wait and hold the door",
+          "offer": "walk through and it may finally follow — it will not leave you afterwards"
+        },
+        {
+          "occupant": "a living robber, alone",
+          "doing": "talking steadily to a companion who is not there",
+          "onArrival": "they introduce you to the empty air",
+          "because": "the barrow does not like people leaving, and one of them did",
+          "offer": "play along and they will guide you; correct them and they stop speaking"
+        },
+        {
+          "occupant": "a second set of footsteps",
+          "doing": "keeping pace with yours, close",
+          "onArrival": "they stop when you stop, close",
+          "because": "something attached itself in an earlier room",
+          "offer": "acknowledge it and it becomes useful; ignore it and it becomes insistent"
+        },
+        {
+          "occupant": "two of the Host, hand in hand",
+          "doing": "refusing to be parted to let anyone past",
+          "onArrival": "they look at you and do not move",
+          "because": "they were separated once and will not be again",
+          "offer": "find them a way to pass together and they open every door ahead"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "laying out a game for four",
+          "onArrival": "they look up and count you",
+          "because": "the fourth left and the game has never finished",
+          "offer": "play a round and they will tell you how the fourth got out"
+        }
+      ]
+    },
+    "confession": {
+      "danger": "judgement",
+      "dangerLine": "the barrow is still listening for the right answer",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a kneeler worn through to the stone",
+          "a screen with a hole cut at the height of a mouth",
+          "benches facing one small window"
+        ],
+        "ritual": [
+          "written confessions, thousands, all in the same hand",
+          "a bell rung to begin, still roped",
+          "a queue of the dead facing a curtain"
+        ],
+        "demand": [
+          "a chamber where the echo answers differently than you spoke",
+          "a scale with a feather on one side and nothing on the other",
+          "a seat that will not let you rise until you have spoken"
+        ],
+        "wound": [
+          "a page torn from every book at the same place",
+          "a mouth chiselled off a statue",
+          "absolutions burned, and the ash kept"
+        ],
+        "anchor": [
+          "a confession nobody ever heard, sealed",
+          "a ledger of sins with the last page blank",
+          "a box that has only ever been opened once"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "a screen, a kneeler, and a question you can hear being asked",
+          "cost": "answer honestly and the way opens; lie and it opens anyway, differently",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer honestly and the way opens, cleanly",
+            "failure": "you lie and it opens anyway, onto somewhere else",
+            "orElse": "go round: two Turns, and the question is still waiting"
+          }
+        },
+        {
+          "cue": "a scale, one pan holding a feather, the other empty",
+          "cost": "put something of yours in and it is weighed; walk past and you are not",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you weigh something small and true, and pass",
+            "failure": "you weigh something you needed: it is kept",
+            "orElse": "walk past unweighed: the way on is longer by a Turn"
+          }
+        },
+        {
+          "cue": "a book of absolutions with room for one more",
+          "cost": "signing it forgives someone; it does not say who",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sign and someone long-accused is released",
+            "failure": "you sign and the accusation transfers to you: +1 Bane",
+            "orElse": "leave it unsigned: nothing forgiven, nothing owed"
+          }
+        },
+        {
+          "cue": "a door that opens to whoever admits something first",
+          "cost": "whoever speaks pays; whoever stays silent owes",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "someone admits something and the door opens for them",
+            "failure": "nobody speaks: the door stays shut and the silence is counted",
+            "orElse": "force it: loud, roll the clock"
+          }
+        },
+        {
+          "cue": "a question asked directly of one hero, by name",
+          "cost": "answering costs privacy; refusing costs the way forward",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the screen's angle and learn who has been here answering",
+            "failure": "you learn nothing and your own voice is now in the echo",
+            "orElse": "do not investigate: the room keeps its question"
+          }
+        },
+        {
+          "cue": "a penance offered instead of a fight",
+          "cost": "perform it and pass freely; it takes a Turn and it is humiliating",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you perform the penance and pass freely",
+            "failure": "the penance is refused as insincere: +1 Bane",
+            "orElse": "fight instead — the way is open either way, at a cost"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "testament",
+          "cue": "a confession nobody ever heard, sealed",
+          "benefit": "read it aloud to unmake one accusation",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the thing confessed to becomes yours to answer for"
+        },
+        {
+          "id": "feather",
+          "cue": "the feather from the scale, weightless",
+          "benefit": "once, be believed absolutely",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot lie while carrying it, even usefully"
+        },
+        {
+          "id": "kneeler",
+          "cue": "a fragment of stone worn through by knees",
+          "benefit": "once, take a condition from someone else",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you keep every condition you take this way a little longer"
+        },
+        {
+          "id": "screen",
+          "cue": "a splinter from the confessional screen",
+          "benefit": "once, hear whether someone is lying",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they can tell you are listening for it"
+        },
+        {
+          "id": "ash",
+          "cue": "a twist of ash from burned absolutions",
+          "benefit": "once, erase a wrong you did here",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you cannot remember it either, and it mattered"
+        }
+      ],
+      "features": [
+        "a confessional screen forced open from the wrong side",
+        "a page of absolutions torn out and burned separately",
+        "a kneeler moved to face a different way entirely",
+        "someone has answered the question aloud, and the echo has not settled",
+        "a knife left on the ledge where hands should rest",
+        "fresh ash in a place designed for keeping things"
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Host at a screen",
+          "doing": "hearing a confession from nobody, and nodding",
+          "onArrival": "it slides the panel and waits for yours",
+          "because": "it may not leave the box until someone is absolved",
+          "offer": "confess something true and it will absolve you — and tell you what it heard last"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "writing a confession they cannot finish",
+          "onArrival": "they ask you how to word it",
+          "because": "they think the barrow will let them go if they admit it properly",
+          "offer": "help them word it and they will hand over what they took"
+        },
+        {
+          "occupant": "the room",
+          "doing": "repeating a confession, quietly, on a loop",
+          "onArrival": "it changes to your voice",
+          "because": "it keeps the last honest thing said in it",
+          "offer": "say something true and worse, and it will let you take the old one away"
+        },
+        {
+          "occupant": "three of the Host",
+          "doing": "kneeling in a row, waiting to be heard",
+          "onArrival": "they turn, hopefully, toward you",
+          "because": "the confessor died and nobody replaced him",
+          "offer": "hear one of them, and the rest will stand aside for you permanently"
+        },
+        {
+          "occupant": "one of the Host with a scale",
+          "doing": "weighing small objects against a feather, all night",
+          "onArrival": "it holds out its hand for something of yours",
+          "because": "the Lord wanted to know he was not the heaviest thing here",
+          "offer": "give it something that matters and it will weigh a door open"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "reciting the same admission, over and over, getting no answer",
+          "onArrival": "it stops and asks whether that was sufficient",
+          "because": "nobody has ever told it yes",
+          "offer": "tell it yes and it will open the way it has been guarding out of gratitude"
+        }
+      ]
+    },
+    "precedence": {
+      "danger": "procession",
+      "dangerLine": "the barrow keeps its order, and you have joined the queue",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a stair too grand for the door it serves",
+          "the dead laid in strict order of rank, heads toward the centre",
+          "numbered flagstones, counting down"
+        ],
+        "ritual": [
+          "banners in sequence, each house a place further back",
+          "a herald's script with the order still marked",
+          "a queue that has not moved"
+        ],
+        "demand": [
+          "a corridor that will not let two walk abreast",
+          "a door only one person may pass at a time, and only first",
+          "a threshold worn on one side only"
+        ],
+        "wound": [
+          "rank-plates prised off and swapped",
+          "a name moved to the front by force, repeatedly",
+          "a procession that doubled back on itself"
+        ],
+        "anchor": [
+          "the crown worn first, and only once",
+          "a staff of precedence, laid down",
+          "a seat at the head of everything, occupied"
+        ]
+      },
+      "decisions": [
+        {
+          "cue": "a corridor that will not let two walk abreast",
+          "cost": "whoever goes first meets whatever is there first",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you settle the order and whoever leads meets what is there, ready",
+            "failure": "you argue in the corridor and something arrives while you do",
+            "orElse": "send one scout: slow, one Turn, and they are alone"
+          }
+        },
+        {
+          "cue": "a queue of the dead, and a way to step round it",
+          "cost": "waiting costs two Turns; pushing in costs the Host's patience",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you step round without breaking the order, and the Host allows it",
+            "failure": "you push in: +1 Bane and the queue closes behind you",
+            "orElse": "wait: two Turns, and the Host thinks better of you"
+          }
+        },
+        {
+          "cue": "a door that opens only for the foremost of a party",
+          "cost": "someone must be named first, aloud, and the others must accept it",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "someone is named first, aloud, and the door opens for them",
+            "failure": "the naming is disputed and the door reads that as no answer",
+            "orElse": "let the barrow choose: it picks the loudest, and remembers"
+          }
+        },
+        {
+          "cue": "banners in strict order, and one you could move",
+          "cost": "reordering them opens a way and insults everyone buried here",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you reorder them correctly and a way opens",
+            "failure": "you reorder wrongly and insult everyone buried here: +1 Bane",
+            "orElse": "leave them: the way stays shut, one Turn to find another"
+          }
+        },
+        {
+          "cue": "a stair where the order of descent is visibly recorded",
+          "cost": "whoever goes last is remembered as having gone last",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you settle the order before you descend and the record reads as a party, not a rabble",
+            "failure": "you descend in a scramble: whoever is recorded last is treated as least by the Host from here",
+            "orElse": "descend however you like and accept the record as it falls"
+          }
+        },
+        {
+          "cue": "a claim to settle: which of you the barrow should address",
+          "cost": "settling it opens the way; refusing to settle it does not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "the claim is settled and the barrow addresses one of you from now on",
+            "failure": "it is not settled, and the barrow keeps asking, in worse places",
+            "orElse": "refuse to settle: the way on does not open"
+          }
+        }
+      ],
+      "temptations": [
+        {
+          "id": "coronet",
+          "cue": "a small crown, sized for someone who never grew",
+          "benefit": "+1 die when others must defer to you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must be addressed correctly or lose the benefit"
+        },
+        {
+          "id": "rankplate",
+          "cue": "a rank-plate prised off something and pocketed",
+          "benefit": "go first through any door the barrow guards",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "going first is now expected of you"
+        },
+        {
+          "id": "staffprec",
+          "cue": "a staff of precedence, laid down and not taken up",
+          "benefit": "once, decide the order of anything, and be obeyed",
+          "acceptanceCost": {
+            "vice": "Pride"
+          },
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you may never be second while you hold it"
+        },
+        {
+          "id": "herald",
+          "cue": "a herald's script with your name pencilled in",
+          "benefit": "once, be announced as whatever you claim",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must live up to it in front of the Host"
+        },
+        {
+          "id": "flagstone",
+          "cue": "a numbered flagstone, prised up, number one",
+          "benefit": "once, insist on going first and be obeyed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you go first into everything from now on"
+        }
+      ],
+      "features": [
+        "banners pulled down and stacked without regard for order",
+        "a rank-plate prised off and dropped, still shiny where it sat",
+        "someone has walked the corridor the wrong way, scuffing one side",
+        "the queue disturbed — three of the dead pushed aside",
+        "a numbered flagstone lifted and not replaced",
+        "a seat at the head of the hall dragged back, as if to sit in"
+      ],
+      "situations": [
+        {
+          "occupant": "a queue of the Host",
+          "doing": "waiting to pass a door, in strict order, not moving",
+          "onArrival": "the queue opens a gap at exactly your rank",
+          "because": "the first in line is waiting for someone who never arrived",
+          "offer": "take the gap and go with them; take the front and they will remember it"
+        },
+        {
+          "occupant": "one of the Host",
+          "doing": "reading out an order of precedence to an empty hall",
+          "onArrival": "it pauses and asks where you fall in it",
+          "because": "the list must be read in full before anyone may proceed",
+          "offer": "name your own place in the order and it will be honoured, exactly"
+        },
+        {
+          "occupant": "two of the Host",
+          "doing": "refusing, each of them, to go through a door second",
+          "onArrival": "they both look at you to break it",
+          "because": "neither may be seen to yield",
+          "offer": "rule between them and the loser attaches to you as a lesser"
+        },
+        {
+          "occupant": "a living robber",
+          "doing": "prising number-plates off the flagstones",
+          "onArrival": "they freeze, then offer you one",
+          "because": "they worked out the order is what keeps the doors shut",
+          "offer": "take a plate and go first anywhere — the Host will hate you for it"
+        },
+        {
+          "occupant": "a procession",
+          "doing": "passing through, unhurried, with you in its way",
+          "onArrival": "it does not stop or go round",
+          "because": "it has right of way and has had for three centuries",
+          "offer": "stand aside and be counted courteous; join it and be counted one of them"
+        },
+        {
+          "occupant": "one of the Host with a herald's staff",
+          "doing": "announcing arrivals to an empty stair",
+          "onArrival": "it announces you, inventing a rank",
+          "because": "the post requires arrivals and there have been none",
+          "offer": "accept the invented rank and the barrow will treat you as it"
+        }
+      ]
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Barrow of the",
+      "The Tomb of the",
+      "The Vault of the",
+      "The Halls of the",
+      "The Cairn of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Mourners' Steps",
+      "The Long Descent",
+      "The Threshold Stones",
+      "The Weeping Stair",
+      "The Outer Cut"
+    ],
+    "complication": [
+      "The Antechamber",
+      "The Attendants' Row",
+      "The Lesser Vault",
+      "The First Hall",
+      "The Waiting Room"
+    ],
+    "turn": [
+      "The Gallery",
+      "The Turning Hall",
+      "The Records Room",
+      "The Middle Vault",
+      "The Crossing"
+    ],
+    "descent": [
+      "The Under-Vault",
+      "The Cold Gallery",
+      "The Servants' Deep",
+      "The Sunken Nave",
+      "The Lower Cut"
+    ],
+    "threshold": [
+      "The Robing Room",
+      "The Antechamber Royal",
+      "The Last Door",
+      "The Inner Vault",
+      "The Quiet Room"
+    ],
+    "ending": [
+      "The Audience",
+      "The Throne Beneath",
+      "The Long Hall",
+      "The Seat of the Host"
+    ]
+  },
+  "factions": [
+    {
+      "id": "host",
+      "name": "The Silent Host",
+      "kind": "undead",
+      "essence": "still performing the ritual they were buried for",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "robbers",
+      "name": "grave-robbers",
+      "kind": "living",
+      "essence": "got in first and cannot get out",
+      "handledBy": "trade"
+    },
+    {
+      "id": "wardens",
+      "name": "the Barrow-Wardens",
+      "kind": "undead",
+      "essence": "sealed this place and stayed to make sure",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "scavengers",
+      "name": "things that moved in",
+      "kind": "beast",
+      "essence": "neither know nor care whose tomb this is",
+      "handledBy": "force or food"
+    }
+  ],
+  "features": [
+    "a door that has been wedged open from the inside",
+    "a hole broken through a wall, recently, and not by you",
+    "water that has got in and taken three centuries to do it",
+    "a lamp still burning on oil that should be long gone",
+    "a collapse that has opened a way the builders never meant",
+    "grave-goods stacked with obsessive neatness",
+    "a floor mosaic worn only along one path",
+    "an alcove emptied in a hurry"
+  ],
+  "decisions": [
+    {
+      "cue": "two ways on: one narrow and dark, one wide and announced",
+      "cost": "the wide way is faster and the barrow hears it"
+    },
+    {
+      "cue": "a sealed door, and a crack you could squeeze through",
+      "cost": "the crack costs skin and a Bane on a failure"
+    },
+    {
+      "cue": "something valuable, awkward to carry",
+      "cost": "carrying it slows you and it is not yours"
+    },
+    {
+      "cue": "a member of the faction, alone and not yet hostile",
+      "cost": "talking costs time; not talking costs later"
+    },
+    {
+      "cue": "a shortcut down, through water",
+      "cost": "everything gets wet, including what burns"
+    },
+    {
+      "cue": "a way back, still open",
+      "cost": "leaving now means it will be worse when you return"
+    }
+  ],
+  "temptations": [
+    {
+      "id": "mask",
+      "cue": "a courtier's mask, gold leaf over lime-wood, the mouth fixed in a small smile",
+      "benefit": "the Host receives you as court",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "while worn you cannot be recognised by name"
+    },
+    {
+      "id": "ring",
+      "cue": "a signet, still warm",
+      "benefit": "doors that answer to rank open for you",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "the barrow's servants bring you their problems"
+    },
+    {
+      "id": "glass",
+      "cue": "a hand-mirror that shows the room a moment behind",
+      "benefit": "once per scene, see what was just here",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "your reflection lags, and others notice"
+    },
+    {
+      "id": "ledger",
+      "cue": "a book of names, one line left blank",
+      "benefit": "write a name and the Host obeys it once",
+      "acceptanceCost": {
+        "vice": "Pride"
+      },
+      "useCost": {
+        "bane": 2
+      },
+      "standingDrawback": "your own name is now in it"
+    },
+    {
+      "id": "coronet",
+      "cue": "a small crown, sized for someone who never grew",
+      "benefit": "+1 die when others must defer to you",
+      "useCost": {
+        "bane": 1
+      },
+      "standingDrawback": "you must be addressed correctly or lose the benefit"
+    }
+  ],
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "prizes": {
+    "likeness": {
+      "label": "a portrait painted while they still had a face",
+      "function": "the only place they can be seen"
+    },
+    "record": {
+      "label": "the one complete roll of the dead",
+      "function": "the only place the name survives"
+    },
+    "seal": {
+      "label": "the signet that is still obeyed",
+      "function": "the only thing the household answers to"
+    },
+    "vessel": {
+      "label": "a sealed jar holding one good year",
+      "function": "the only thing here that has not aged"
+    },
+    "ornament": {
+      "label": "the piece every rival was meant to want",
+      "function": "the reason the others came"
+    },
+    "token": {
+      "label": "a keepsake they would not be parted from",
+      "function": "the promise that someone would stay"
+    },
+    "testament": {
+      "label": "a confession nobody ever heard",
+      "function": "the only account of what was done"
+    },
+    "regalia": {
+      "label": "the crown worn first, and only once",
+      "function": "the proof of precedence"
+    }
+  },
+  "claimants": [
+    "Vain Queen",
+    "Hollow King",
+    "Peacock Prince",
+    "Patient Lord",
+    "Gilded Abbess",
+    "Unlooked-For Heir",
+    "Silent Margrave"
+  ],
+  "rosters": {
+    "skirmish": {
+      "line": "3 Skeletons",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; half harm from arrows"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they do not open hostilities on a guest"
+    },
+    "fight": {
+      "line": "1 Ghoul and 2 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "on a hit, a free Called Shot to freeze for a round"
+        },
+        {
+          "n": 2,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "the Ghoul goes for court dress first — send someone plain"
+    },
+    "battle": {
+      "line": "1 Wraith and 3 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour and drains 1 max Grit"
+        },
+        {
+          "n": 3,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons ONLY",
+      "avoid": "it will take an appeasement over a fight every time"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ghoul and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL"
+        },
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "freezes on a hit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "triggerGlossary": {
+    "announced": "entered somewhere grandly — the big doors, a shout, a herald",
+    "seenTwice": "reflected, echoed or witnessed twice over in one place",
+    "loud": "a raised voice, a broken door, steel on stone",
+    "lingering": "stayed in one place longer than it takes to search it",
+    "disturbed": "struck or moved something that had not moved in centuries"
+  },
+  "_globalPoolsNote": "decisions/temptations/features below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>."
+}
