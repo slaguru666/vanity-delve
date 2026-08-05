@@ -1,0 +1,1164 @@
+{
+  "id": "river",
+  "label": "River",
+  "forgeStageType": "fen",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Wild kernel in moving water. The appetite belongs to the river — it wants to be asked before it is crossed, to carry things away, to run where it has always run, and to be given somebody rather than have to take them. Claimants are the river's own names.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Old Man",
+    "The Grey",
+    "Mother of Eels",
+    "First Water",
+    "The Drowner",
+    "Long Wet",
+    "She Who Takes One"
+  ],
+  "appetites": [
+    {
+      "id": "crossed",
+      "want": "that nothing should get over it without asking",
+      "lack": "gone over",
+      "purpose": "every crossing would be by its leave",
+      "motif": "crossing",
+      "prize": "pole",
+      "conscript": "the fordmen",
+      "asks": "\"Did you ask?\"",
+      "appeasement": {
+        "move": "ask the water leave before you set foot in it",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was asked",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "carrying",
+      "want": "that everything given to it should be carried away for good",
+      "lack": "given back",
+      "purpose": "nothing would ever come back upstream",
+      "motif": "current",
+      "prize": "float",
+      "conscript": "the salvagers",
+      "asks": "\"Are you going to let go of that?\"",
+      "appeasement": {
+        "move": "put something into the water and let it go",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "something went downstream",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "running",
+      "want": "that it should run exactly where it has always run",
+      "lack": "straightened",
+      "purpose": "the old channel would still be the channel",
+      "motif": "course",
+      "prize": "mark",
+      "conscript": "the engineers",
+      "asks": "\"This isn't where I go.\"",
+      "appeasement": {
+        "move": "walk a stretch of the old course, end to end",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "the old way was used",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "given",
+      "want": "to be given somebody, rather than to have to take them",
+      "lack": "taking",
+      "purpose": "nobody would ever have to be taken",
+      "motif": "drowned",
+      "prize": "gift",
+      "conscript": "the yearly one",
+      "asks": "\"Who's coming in, then?\"",
+      "appeasement": {
+        "move": "give the water something you could not afford to lose",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was given, not taken",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "took",
+      "text": "took {conscript} at the ford, one at a time, in low water",
+      "cruelty": 3,
+      "fits": [
+        "given",
+        "crossed"
+      ]
+    },
+    {
+      "id": "carried",
+      "text": "carried {conscript} away and put them down a long way off",
+      "cruelty": 2,
+      "fits": [
+        "carrying",
+        "crossed",
+        "given"
+      ]
+    },
+    {
+      "id": "changed",
+      "text": "changed its course through {conscript}'s ground while they slept",
+      "cruelty": 2,
+      "fits": [
+        "running",
+        "carrying"
+      ]
+    },
+    {
+      "id": "partly",
+      "text": "gave {conscript} back, but not all at once",
+      "cruelty": 3,
+      "fits": [
+        "given",
+        "carrying",
+        "running"
+      ]
+    },
+    {
+      "id": "turning",
+      "text": "kept {conscript} at the bend, turning, where everyone could see",
+      "cruelty": 3,
+      "fits": [
+        "given",
+        "running"
+      ]
+    },
+    {
+      "id": "letcross",
+      "text": "let {conscript} cross the first time, and the second",
+      "cruelty": 2,
+      "fits": [
+        "crossed",
+        "given",
+        "carrying"
+      ]
+    }
+  ],
+  "prizes": {
+    "pole": {
+      "label": "the pole the ferry was worked with",
+      "function": "the only thing that ever got anybody over and back"
+    },
+    "float": {
+      "label": "the one thing the river ever brought back upstream",
+      "function": "the only thing it gave up after it had it"
+    },
+    "mark": {
+      "label": "the mark cut where the old channel ran",
+      "function": "the only record of where the water actually belongs"
+    },
+    "gift": {
+      "label": "what was given willingly, the one year",
+      "function": "the only time it did not have to take anybody"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Water of the",
+      "The River of the",
+      "Along the",
+      "The Reach of the",
+      "The Run of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Ford",
+      "The Landing",
+      "The Towpath",
+      "The Willow Holt",
+      "The Bank Below"
+    ],
+    "complication": [
+      "The Weir",
+      "The Mill Race",
+      "The Withy Beds",
+      "The Eyot",
+      "The Staithe"
+    ],
+    "turn": [
+      "The Bridge",
+      "The Ferry",
+      "The Deep Pool",
+      "The Confluence",
+      "The Lock"
+    ],
+    "descent": [
+      "The Old Channel",
+      "The Ox-Bow",
+      "The Drowned Meadow",
+      "The Sluice",
+      "The Undercut Bank"
+    ],
+    "threshold": [
+      "The Head of the Reach",
+      "The Last Ford",
+      "The Eel Trap",
+      "The Slack Water",
+      "The Bend"
+    ],
+    "ending": [
+      "Where the Water Turns",
+      "The Deep",
+      "Under the Bridge",
+      "The Given Place"
+    ]
+  },
+  "factions": [
+    {
+      "id": "given",
+      "name": "the Given",
+      "kind": "undead",
+      "essence": "went in willingly, once a year, and are still down there being polite about it",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "bargees",
+      "name": "the bargees",
+      "kind": "living",
+      "essence": "were working the reach when the water changed and cannot get off it",
+      "handledBy": "trade"
+    },
+    {
+      "id": "eels",
+      "name": "what lives in the deep pool",
+      "kind": "beast",
+      "essence": "was here before the river had a name",
+      "handledBy": "force"
+    },
+    {
+      "id": "oldchannel",
+      "name": "what the river left behind",
+      "kind": "beast",
+      "essence": "is still in the old course, waiting for the water to come back",
+      "handledBy": "a toll paid"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came down to the water in the open and stood at the edge",
+    "seenTwice": "seen from the water twice, on both banks",
+    "loud": "a raised voice over water, which carries the length of a reach",
+    "lingering": "stayed on the bank long enough for the water to work at it",
+    "disturbed": "set foot in the ford, moved a mark, or took something off the water"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Giant Rats in the withy beds",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Giant Rat",
+          "atk": 2,
+          "def": 3,
+          "grit": 2,
+          "nerve": 2,
+          "note": "swim as fast as you wade"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "get onto dry ground and they will not follow up the bank"
+    },
+    "fight": {
+      "line": "3 Ghouls of the drowned on the bank",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit; they fight better in water"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they will not leave the waterline — ten paces up the bank and they stop"
+    },
+    "battle": {
+      "line": "1 Troll under the bridge and 2 Ghouls in the shallows",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES 2 Grit a round unless the wound was burnt; wet, so fire is hard here"
+        },
+        {
+          "n": 2,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire touches it, and everything here is wet — say so before initiative",
+      "avoid": "it holds the bridge and takes a toll; pay it and it lets you over"
+    },
+    "nightmare": {
+      "line": "1 Wraith at the ford, 1 Troll and 4 Ghouls",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES unless burnt"
+        },
+        {
+          "n": 4,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll and it is wet",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "crossing": {
+      "danger": "the ford",
+      "dangerLine": "the river is crossable in four places and it is paying attention to all of them",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a ford, a ferry, a bridge and a weir, and forty miles of nothing between them",
+          "a crossing that is safe at one state of water and at no other",
+          "banks cut down on both sides where everybody goes in"
+        ],
+        "ritual": [
+          "leave asked at the water's edge before anybody steps in",
+          "the ferry worked across and back empty, each time",
+          "a coin put on the parapet by everyone who uses the bridge"
+        ],
+        "demand": [
+          "a ford with the water at exactly the height it is safe at",
+          "a ferry lying at the far bank with the rope slack",
+          "a parapet with a row of coins and one gap"
+        ],
+        "wound": [
+          "a ford with the bottom washed out and the marker poles still standing",
+          "a ferry rope cut on the far side",
+          "a bridge with the parapet gone and the coins in the water"
+        ],
+        "anchor": [
+          "the pole the ferry was worked with",
+          "a set of marker poles that still read true",
+          "a bridge that has never been taken by the water"
+        ]
+      },
+      "features": [
+        "marker poles standing in the ford",
+        "a ferry lying at the far bank",
+        "a row of coins with one gap",
+        "a cut rope end at a landing",
+        "a bottom washed out under the poles",
+        "a parapet down into the water"
+      ],
+      "decisions": [
+        {
+          "cue": "a ford with the water at exactly the height it is safe at",
+          "cost": "the height is right and the bottom may not be",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the bottom off the marker poles and cross dry-shod, all of you",
+            "failure": "you go in on the height alone and the bottom is gone under you: roll the clock",
+            "orElse": "go round to the bridge, costing a Turn and a toll"
+          }
+        },
+        {
+          "cue": "a ferry lying at the far bank with the rope gone slack",
+          "cost": "hauling it over takes both banks and there is only one of you on this side",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you get the ferry across and have a crossing you control for the whole delve",
+            "failure": "you haul on a rope that is cut and go in with it",
+            "orElse": "swim it; you cross wet, cold and without your gear, and the water notes it"
+          }
+        },
+        {
+          "cue": "a parapet with a row of coins along it and one gap",
+          "cost": "the coin is a toll and the gap is somebody who did not pay",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you fill the gap and the bridge is yours to cross, both ways, unbothered",
+            "failure": "you take a coin instead and the bridge takes the equivalent: +1 Bane",
+            "orElse": "cross without paying; something under the bridge follows you the whole reach"
+          }
+        },
+        {
+          "cue": "marker poles standing in a ford with the bottom washed out under them",
+          "cost": "the poles say safe and the river disagrees",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you reset the poles honestly and the crossing works for whoever comes after",
+            "failure": "you leave them and somebody uses them later, and that is on you",
+            "orElse": "pull the poles down; nothing crosses here again, including you"
+          }
+        },
+        {
+          "cue": "a ferry rope cut clean on the far side",
+          "cost": "somebody cut it from the bank you are not on",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out who cut it and why, and it is the whole shape of the transgression",
+            "failure": "you splice and cross, and it is cut again while you are mid-stream",
+            "orElse": "leave it; the far bank is reachable only by the deep pool"
+          }
+        },
+        {
+          "cue": "a bridge with the parapet gone and coins visible in the water beneath",
+          "cost": "somebody swept the tolls off into the river",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you retrieve enough to pay the arrears and the bridge lets everything over",
+            "failure": "you take them for yourself and every crossing after costs you double",
+            "orElse": "leave them; the toll is outstanding and the bridge collects it another way"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a ferryman",
+          "doing": "working an empty ferry across and back with a pole",
+          "onArrival": "he brings it in to your bank and waits without speaking",
+          "because": "the ferry is worked across and back and nobody has been aboard",
+          "offer": "get aboard and he will take you across anything, once"
+        },
+        {
+          "occupant": "one of the Given",
+          "doing": "standing waist-deep at the ford, facing the far bank",
+          "onArrival": "it turns its head and asks whether you are going over",
+          "because": "it was taken at the ford and never got over",
+          "offer": "cross beside it and the water lets you both over"
+        },
+        {
+          "occupant": "two living bargees",
+          "doing": "waiting at a landing with a boat and nowhere to take it",
+          "onArrival": "they ask whether the weir is passable yet",
+          "because": "the reach closed at both ends with them on it",
+          "offer": "tell them and they will carry you the whole length of the water"
+        },
+        {
+          "occupant": "a row of coins",
+          "doing": "lying along a parapet with one gap in the line",
+          "onArrival": "the coins are bright and the stone under them is not",
+          "because": "everybody pays and one did not",
+          "offer": "put a coin in the gap and the bridge will not let anything follow you"
+        },
+        {
+          "occupant": "the ford",
+          "doing": "running at exactly the height it is safe at, and no other",
+          "onArrival": "the water is glass-flat and there is a wind on the trees",
+          "because": "it is crossable here and it likes to be asked first",
+          "offer": "ask leave aloud and it will be crossable whenever you come back"
+        },
+        {
+          "occupant": "the Mother of Eels",
+          "doing": "standing in the shallows in the shape of a woman up to the knee",
+          "onArrival": "the water around her does not move at all",
+          "because": "she takes one at every crossing and has not been given one",
+          "offer": "offer her something instead and she will let the whole party over"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "pole",
+          "cue": "the ferryman's pole",
+          "benefit": "once, cross anything on foot",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ferry cannot be worked while you have it"
+        },
+        {
+          "id": "coin",
+          "cue": "a toll coin off the parapet",
+          "benefit": "once, pass a thing that takes tolls",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the toll is now outstanding in your name",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "poles",
+          "cue": "a set of true marker poles",
+          "benefit": "read any crossing correctly",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the crossing you left unmarked catches somebody"
+        },
+        {
+          "id": "rope",
+          "cue": "a spliced ferry rope",
+          "benefit": "once, get everybody across together",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is on the far bank comes over on it too"
+        },
+        {
+          "id": "leave",
+          "cue": "leave asked at the water",
+          "benefit": "once, enter water safely",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "leave is given for one crossing, and it counts them"
+        }
+      ]
+    },
+    "current": {
+      "danger": "what it carries",
+      "dangerLine": "the river takes things away and it has been taking them away from here for a long time",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a reach that runs one way and has never once run the other",
+          "eddies at every bend where everything it carries collects",
+          "a mill race that takes whatever the river is carrying and stops it"
+        ],
+        "ritual": [
+          "something floated off at the head of the reach every year",
+          "the eddies raked out each spring and what is in them laid on the bank",
+          "a float sent down to see whether the reach is clear"
+        ],
+        "demand": [
+          "an eddy turning slowly with something in it that has not come out",
+          "a float sent down and not arrived",
+          "a mill race with the hatch up and nothing coming through"
+        ],
+        "wound": [
+          "an eddy raked out and everything in it left on the bank, named",
+          "a reach with the current running backwards for a hundred yards",
+          "a race choked with what it stopped"
+        ],
+        "anchor": [
+          "the one thing the river ever brought back upstream",
+          "a float that always arrives",
+          "an eddy that gives up what it holds"
+        ]
+      },
+      "features": [
+        "an eddy turning with something in it",
+        "a float that has not arrived",
+        "a race hatch up and nothing coming",
+        "things laid out on a bank, named",
+        "current running the wrong way",
+        "a mill race choked"
+      ],
+      "decisions": [
+        {
+          "cue": "an eddy turning slowly with something in it that has not come out",
+          "cost": "reaching in gets it and puts you in the turn",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you get it out clean and it is what somebody at the ending needs to see",
+            "failure": "you go in after it and the eddy has you for a round: roll the clock",
+            "orElse": "leave it turning; it turns behind you the whole delve, and you know what is in it"
+          }
+        },
+        {
+          "cue": "a float sent down the reach that has not arrived",
+          "cost": "something between here and there stopped it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out where it stopped and what is there, before you get to it",
+            "failure": "you send another and follow it, and arrive where the first one did",
+            "orElse": "send nothing; you walk the reach blind, and it is not clear"
+          }
+        },
+        {
+          "cue": "a mill race with the hatch up and nothing at all coming through",
+          "cost": "the race is stopped and the river is not",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you clear the race and what it has been stopping comes through, and it is a lot",
+            "failure": "you open it wider and it comes through all at once, onto you",
+            "orElse": "leave the hatch; the water is going somewhere else and that is where the ending is"
+          }
+        },
+        {
+          "cue": "things raked out of the eddies and laid on the bank, each with a name",
+          "cost": "somebody has been recovering and naming them for years",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you find who has been doing it and they know every name the river has taken",
+            "failure": "you disturb the row and the names come off, and cannot be put back",
+            "orElse": "walk past; you have no names for anything at the ending"
+          }
+        },
+        {
+          "cue": "a reach with the current running backwards for a hundred yards",
+          "cost": "the river is doing something it does not do",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find what is making it run back and can use it to go up the reach",
+            "failure": "you go into it and are carried the wrong way, fast, into the pool",
+            "orElse": "stay on the bank; the reach is walked, slowly, and the water watches"
+          }
+        },
+        {
+          "cue": "a thing lying on the shingle that the river brought back up",
+          "cost": "the river gave something back, once, and that is the leverage",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take it and understand what makes it give things up, and can ask again",
+            "failure": "you take it as salvage and the river takes the equivalent off you",
+            "orElse": "leave it; nothing here is negotiable and the ending is fought"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "an eddy",
+          "doing": "turning slowly at a bend with something pale in it",
+          "onArrival": "the turn slows while you watch and then resumes",
+          "because": "everything the river carries collects here and one thing will not go on",
+          "offer": "take what is in it and the river will carry you rather than take you"
+        },
+        {
+          "occupant": "a living rake-man",
+          "doing": "laying things out along the bank in a row and naming each one",
+          "onArrival": "he asks whether you have lost anybody",
+          "because": "he has been recovering and naming since before the reach closed",
+          "offer": "give him a name and he will give you what the water took with it"
+        },
+        {
+          "occupant": "one of the Given",
+          "doing": "standing chest-deep in the current facing upstream",
+          "onArrival": "it does not move at all and the water goes round it",
+          "because": "it went in willingly and the river never carried it off",
+          "offer": "ask it to move and it will, and the reach clears the whole way down"
+        },
+        {
+          "occupant": "a mill race",
+          "doing": "standing with the hatch up and nothing coming through it",
+          "onArrival": "the water above the hatch is higher than it should be",
+          "because": "the race stops what the river carries and it is full",
+          "offer": "clear it and everything the river has been holding comes down at once, usefully"
+        },
+        {
+          "occupant": "the current",
+          "doing": "running backwards along a hundred yards of the reach",
+          "onArrival": "sticks on the surface go up past you at walking pace",
+          "because": "the river is doing something it does not do",
+          "offer": "go up with it and it will put you where nothing else could"
+        },
+        {
+          "occupant": "the Old Man",
+          "doing": "lying full length in the shallows in the shape of a drowned man",
+          "onArrival": "the water around him runs uphill an inch",
+          "because": "he carries things away and he has stopped",
+          "offer": "give him something to carry and the reach runs true again"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "float",
+          "cue": "the thing the river brought back",
+          "benefit": "once, get back something the water took",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the river takes something of equal weight, and chooses",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "rake",
+          "cue": "the rake-man's rake",
+          "benefit": "once, recover what an eddy holds",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the eddy takes you in to the waist each time"
+        },
+        {
+          "id": "name",
+          "cue": "a name off the row on the bank",
+          "benefit": "once, be known to the drowned",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they take you for that person"
+        },
+        {
+          "id": "hatch",
+          "cue": "a race hatch pin",
+          "benefit": "once, stop what the water is carrying",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it stacks up behind, and then comes at once"
+        },
+        {
+          "id": "stick",
+          "cue": "a float that always arrives",
+          "benefit": "once, know what is ahead of you on the water",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is ahead sees it coming too"
+        }
+      ]
+    },
+    "course": {
+      "danger": "where it belongs",
+      "dangerLine": "the river was moved and it has never accepted that it was",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "an old channel running dry beside a new one running full",
+          "embankments raised on both sides for eight miles",
+          "a straight cut where every other stretch of the water wanders"
+        ],
+        "ritual": [
+          "the banks walked each spring and the marks checked",
+          "the old course kept clear of building, by custom, though it is dry",
+          "a stone cut where the water used to run"
+        ],
+        "demand": [
+          "a dry channel with water standing in the bottom of it after no rain",
+          "an embankment with a wet patch on the dry side",
+          "a mark cut for the old course, still legible"
+        ],
+        "wound": [
+          "an embankment cut through in the night, from the field side",
+          "a drowned meadow where the old channel came back",
+          "marks for the old course chiselled off"
+        ],
+        "anchor": [
+          "the mark cut where the old channel ran",
+          "a survey of both courses, old and new",
+          "a stretch of bank that has never been raised"
+        ]
+      },
+      "features": [
+        "water standing in a dry channel",
+        "a wet patch on a dry bank",
+        "a mark cut for the old course",
+        "an embankment cut from the field side",
+        "a drowned meadow",
+        "a straight cut in a winding river"
+      ],
+      "decisions": [
+        {
+          "cue": "a dry channel with water standing in the bottom after weeks of no rain",
+          "cost": "the river is coming back to it, slowly",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you trace how far it has come back and can be somewhere else when it arrives",
+            "failure": "you camp in the old channel and wake in it: roll the clock",
+            "orElse": "leave the channel alone; you take the long way round on the raised ground"
+          }
+        },
+        {
+          "cue": "an embankment with a wet patch showing on the dry side",
+          "cost": "the bank is going, from the inside",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you find and stop the leak and the meadow behind stays dry, and they are grateful",
+            "failure": "you dig at it to see and it goes while you are standing on it",
+            "orElse": "leave it; the meadow floods behind you and the way back is under water"
+          }
+        },
+        {
+          "cue": "a mark cut where the old channel ran, still legible",
+          "cost": "the mark is the only proof the water was ever moved",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you record the mark and can prove at the ending exactly what was done",
+            "failure": "you chisel it out and there is no proof of anything, for anybody",
+            "orElse": "leave it; somebody else takes it off before you come back"
+          }
+        },
+        {
+          "cue": "an embankment cut through in the night from the field side",
+          "cost": "somebody let the river out on purpose, onto somebody",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find whose field it was cut from and the transgression is laid bare",
+            "failure": "you close the cut and the water goes where it was going before, onto others",
+            "orElse": "leave the cut; the water keeps coming through and the ending is under it"
+          }
+        },
+        {
+          "cue": "a straight cut where every other stretch of this water wanders",
+          "cost": "the cut is engineering and the river hates it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the engineer's survey and know exactly what was promised and to whom",
+            "failure": "you use the cut as a road and the water rises in it, quickly",
+            "orElse": "go round by the ox-bow, costing a Turn in soft ground"
+          }
+        },
+        {
+          "cue": "a drowned meadow where the old channel has come back",
+          "cost": "the river has taken part of its course back already",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you cross the meadow on the old causeway, which is still there under it",
+            "failure": "you wade it and the old channel takes you as belonging to the field",
+            "orElse": "go round the meadow entirely; it costs a Turn and the light"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Given",
+          "doing": "standing in a dry channel with water round its ankles that has no source",
+          "onArrival": "it points down the dry course and waits",
+          "because": "the water was moved and it stayed with the old line",
+          "offer": "walk the old course with it and the river treats you as belonging to it"
+        },
+        {
+          "occupant": "a living engineer",
+          "doing": "pacing an embankment and writing nothing down",
+          "onArrival": "she asks whether you think the bank will hold",
+          "because": "she cut the new course and has been walking it ever since",
+          "offer": "tell her the truth and she will give you the survey of both channels"
+        },
+        {
+          "occupant": "the old channel",
+          "doing": "lying dry with water standing in the bottom of it",
+          "onArrival": "the standing water is moving very slightly, downstream",
+          "because": "the river was moved and is coming back a foot a year",
+          "offer": "walk it end to end and the water will not rise on you anywhere"
+        },
+        {
+          "occupant": "two of the Given",
+          "doing": "standing in a drowned meadow up to the chest",
+          "onArrival": "they are facing the way the water used to run",
+          "because": "the meadow is the old course and it has come back",
+          "offer": "stand with them a moment and the meadow gives up what is under it"
+        },
+        {
+          "occupant": "a mark",
+          "doing": "standing cut into a stone where the old channel ran",
+          "onArrival": "the cut is sharp and the stone around it is weathered soft",
+          "because": "it records where the water belongs and somebody kept it legible",
+          "offer": "read it aloud and the river will hear a claim made on its behalf"
+        },
+        {
+          "occupant": "the Grey",
+          "doing": "running in a straight cut where nothing else here runs straight",
+          "onArrival": "the water in the cut is flat and fast and does not sound like water",
+          "because": "it was straightened and never forgave it",
+          "offer": "offer to walk its old line and it will carry you where you ask"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "mark",
+          "cue": "the old-course mark, cut portable",
+          "benefit": "once, prove where something belongs",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the river expects you to put it back"
+        },
+        {
+          "id": "survey",
+          "cue": "the engineer's survey",
+          "benefit": "know every channel here, old and new",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know whose ground was sold to make it"
+        },
+        {
+          "id": "pin",
+          "cue": "an embankment pin",
+          "benefit": "once, hold a bank that is going",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the water goes somewhere else instead, onto somebody"
+        },
+        {
+          "id": "sod",
+          "cue": "a sod off the never-raised bank",
+          "benefit": "once, stand on ground the water respects",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the river treats the ground you left as forfeit",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "causeway",
+          "cue": "a knowledge of the drowned causeway",
+          "benefit": "cross flooded ground dry",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what is under the meadow uses it too"
+        }
+      ]
+    },
+    "drowned": {
+      "danger": "the one it takes",
+      "dangerLine": "the river has one a year and it has not been given one in a long time",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a deep pool at the bend that has never been sounded",
+          "a stretch where everybody who goes in comes out at the same place",
+          "a village that has always known the number and never said it"
+        ],
+        "ritual": [
+          "something given to the water at the turn of the year, willingly",
+          "the drowned brought out at the same slack water and laid on the same stone",
+          "a wreath put on the pool each spring by somebody who lost one"
+        ],
+        "demand": [
+          "a pool lying dead flat in a wind",
+          "a laying-out stone, wet, with nothing on it",
+          "a wreath on the water that has not gone downstream"
+        ],
+        "wound": [
+          "a year when nobody was given and three were taken",
+          "the laying-out stone dry and cracked",
+          "wreaths from every year piled at the bank, none of them ever floated"
+        ],
+        "anchor": [
+          "what was given willingly, the one year",
+          "a list of every one it took, in order",
+          "a pool that gives them back"
+        ]
+      },
+      "features": [
+        "a pool flat in a wind",
+        "a wet laying-out stone with nothing on it",
+        "a wreath not going downstream",
+        "wreaths piled on a bank",
+        "a list of names in order",
+        "water going still around you"
+      ],
+      "decisions": [
+        {
+          "cue": "a pool lying dead flat while there is wind on the trees",
+          "cost": "the pool is attending to you specifically",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you address it properly, out loud, and it will trade rather than take",
+            "failure": "you throw something in to test it and it accepts that as the offering: +1 Bane",
+            "orElse": "go past on the far bank; it follows the bank you are on, all the way"
+          }
+        },
+        {
+          "cue": "a laying-out stone, wet, with nothing on it",
+          "cost": "the stone is kept wet by somebody, or by something being laid on it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who lays them out and they know every name the river has",
+            "failure": "you lie down on it to look and the water comes up over the stone",
+            "orElse": "leave it; you never learn what the count is or who is keeping it"
+          }
+        },
+        {
+          "cue": "a wreath on the water that has not gone downstream",
+          "cost": "the river is refusing it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you find out whose it is and why it was refused, and can put that right",
+            "failure": "you push it off and it comes back and stays with you",
+            "orElse": "leave it turning; the refusal stands and the ending has no way to be given"
+          }
+        },
+        {
+          "cue": "wreaths from every year piled at the bank, none of them ever floated",
+          "cost": "nobody has given willingly for a very long time",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you count the years and know exactly how long the debt has been running",
+            "failure": "you float them all at once and the river takes the arrears at once",
+            "orElse": "leave the pile; the debt is unmeasured and the ending comes due anyway"
+          }
+        },
+        {
+          "cue": "a list of every one it took, in order, cut into a post",
+          "cost": "the last name is recent and the post is not finished",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the list and can name the one it wants at the ending",
+            "failure": "you cut a name of your own into it and the water accepts the entry",
+            "orElse": "leave the post; you go to the ending with nothing to say"
+          }
+        },
+        {
+          "cue": "water going still around your legs where you are standing in it",
+          "cost": "it has chosen and it is being polite about the timing",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you get out and give it something instead, immediately, and it accepts",
+            "failure": "you stay in and it takes what it came for: -1 max Grit for the delve",
+            "orElse": "refuse to enter the water at all; every crossing after this is contested"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the deep pool",
+          "doing": "lying flat and dark in a wind that is moving everything else",
+          "onArrival": "it goes flatter when you come to the edge",
+          "because": "it takes one a year and has not been given one",
+          "offer": "offer it something of your own and it will let the reach alone"
+        },
+        {
+          "occupant": "one of the Given",
+          "doing": "lying on a laying-out stone with its hands crossed",
+          "onArrival": "it turns its head to you without sitting up",
+          "because": "it went in willingly the year it was asked",
+          "offer": "tell it that it was thanked and it will name the one the river wants"
+        },
+        {
+          "occupant": "a living wreath-maker",
+          "doing": "piling wreaths on a bank that have never been floated",
+          "onArrival": "she asks whether you are here for this year's",
+          "because": "nobody will give and she keeps making them",
+          "offer": "float one with her and the pool will trade with you"
+        },
+        {
+          "occupant": "a wreath",
+          "doing": "turning on the water without going downstream",
+          "onArrival": "it holds against the current in front of you",
+          "because": "it was offered and refused",
+          "offer": "learn whose it is and the river will take an offering again"
+        },
+        {
+          "occupant": "the Drowner",
+          "doing": "standing at the edge of the pool in the shape of somebody you almost know",
+          "onArrival": "the water is dead flat behind it and dead flat in front",
+          "because": "it has to take one and would much rather be given one",
+          "offer": "give it something you cannot afford and it will let everybody go"
+        },
+        {
+          "occupant": "a post",
+          "doing": "standing at the head of the pool with names cut into it in order",
+          "onArrival": "the last name is fresh and the wood below it is clean",
+          "because": "every one taken is cut in and the post is not finished",
+          "offer": "cut nothing, and read them all aloud, and the pool comes level"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "gift",
+          "cue": "what was given willingly, the one year",
+          "benefit": "once, satisfy something that means to take somebody",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the river regards the account as reopened",
+          "acceptanceCost": {
+            "vice": "Envy"
+          }
+        },
+        {
+          "id": "wreath",
+          "cue": "a wreath the water refused",
+          "benefit": "once, be passed over by what takes one",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it takes the next nearest instead"
+        },
+        {
+          "id": "list",
+          "cue": "the list of the taken",
+          "benefit": "know every name the river has",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you can see where the next line goes"
+        },
+        {
+          "id": "stone",
+          "cue": "a chip off the laying-out stone",
+          "benefit": "once, be brought out rather than kept",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "somebody else is kept in your place"
+        },
+        {
+          "id": "still",
+          "cue": "a stretch of water gone still",
+          "benefit": "once, cross without being taken",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the stillness follows you onto dry land"
+        }
+      ]
+    }
+  }
+}

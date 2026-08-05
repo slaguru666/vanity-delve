@@ -1,0 +1,1173 @@
+{
+  "id": "valley",
+  "label": "Valley",
+  "forgeStageType": "forest",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Wild kernel that keeps you by being kind. The appetite belongs to the valley — it wants nothing to go over the top, everything to come in out of the wind, everything to end up at the bottom, and its own sky. Every cruelty here looks like hospitality, which is what makes it hard to leave.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Deep Place",
+    "Thing Between the Hills",
+    "Old Bottom",
+    "Mother of the Bottom",
+    "Shut Place",
+    "First Shelter",
+    "Cloud-Keeper"
+  ],
+  "appetites": [
+    {
+      "id": "enclosed",
+      "want": "that nothing should ever go over the top",
+      "lack": "gone over",
+      "purpose": "everything would stay in the bottom",
+      "motif": "ridges",
+      "prize": "col",
+      "conscript": "the ones who left",
+      "asks": "\"Where would you go, anyway?\"",
+      "appeasement": {
+        "move": "go up to the ridge and come back down without crossing",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "nobody went over",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "sheltering",
+      "want": "that everything should come in out of the wind",
+      "lack": "gone past",
+      "purpose": "nothing would ever be cold outside it",
+      "motif": "shelter",
+      "prize": "hearth",
+      "conscript": "the travellers",
+      "asks": "\"You'll stop the night, though?\"",
+      "appeasement": {
+        "move": "come in and sit down at a fire that is not yours",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "somebody came in",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "gathered",
+      "want": "that everything should come down to it and stay",
+      "lack": "carried out",
+      "purpose": "nothing would ever be taken back up",
+      "motif": "bottom",
+      "prize": "return",
+      "conscript": "the carriers",
+      "asks": "\"You're not taking that up with you?\"",
+      "appeasement": {
+        "move": "put something down at the bottom and leave it there",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "something stayed",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "clouded",
+      "want": "never to share a sky with anywhere else",
+      "lack": "cleared",
+      "purpose": "the weather would always be its own",
+      "motif": "weather",
+      "prize": "sky",
+      "conscript": "the ones who wanted a view",
+      "asks": "\"It'll clear. It always clears.\"",
+      "appeasement": {
+        "move": "wait out one turn of its weather without complaining",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "its weather was borne",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "keptin",
+      "text": "kept {conscript} in, and was kind about it the whole time",
+      "cruelty": 2,
+      "fits": [
+        "enclosed",
+        "sheltering",
+        "clouded"
+      ]
+    },
+    {
+      "id": "tookweather",
+      "text": "took {conscript}'s weather until they stopped looking up at all",
+      "cruelty": 2,
+      "fits": [
+        "clouded",
+        "enclosed"
+      ]
+    },
+    {
+      "id": "onenight",
+      "text": "let {conscript} shelter one night, and then every night after",
+      "cruelty": 2,
+      "fits": [
+        "sheltering",
+        "gathered",
+        "enclosed"
+      ]
+    },
+    {
+      "id": "brought",
+      "text": "brought {conscript} down to the bottom with everything else it has",
+      "cruelty": 3,
+      "fits": [
+        "gathered",
+        "clouded"
+      ]
+    },
+    {
+      "id": "closedtop",
+      "text": "closed the top so gently that {conscript} never noticed it had",
+      "cruelty": 3,
+      "fits": [
+        "enclosed",
+        "clouded",
+        "sheltering"
+      ]
+    },
+    {
+      "id": "onlywarm",
+      "text": "was the only warm place for {conscript}, and made certain of it",
+      "cruelty": 3,
+      "fits": [
+        "sheltering",
+        "gathered"
+      ]
+    }
+  ],
+  "prizes": {
+    "col": {
+      "label": "the one notch in the skyline that goes over",
+      "function": "the only way out that is not back the way you came"
+    },
+    "hearth": {
+      "label": "the fire that was kept in for whoever came",
+      "function": "the only warmth here that was never a trap"
+    },
+    "return": {
+      "label": "the thing that came down and was carried back up",
+      "function": "the only thing that ever left the bottom again"
+    },
+    "sky": {
+      "label": "the one clear day, kept",
+      "function": "the only time anybody here saw out"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Valley of the",
+      "The Bottom of the",
+      "Between the",
+      "The Dale of the",
+      "The Hollow of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Valley Mouth",
+      "The Lower Track",
+      "The Gate in the Wall",
+      "The First Field",
+      "The Bridge In"
+    ],
+    "complication": [
+      "The Bank Wood",
+      "The Terraces",
+      "The Byre",
+      "The Hanging Wood",
+      "The Beck"
+    ],
+    "turn": [
+      "The Head of the Valley",
+      "The Chapel",
+      "The Old Farm",
+      "The Long Meadow",
+      "The Standing Stone"
+    ],
+    "descent": [
+      "The Bottom Ground",
+      "The Slack",
+      "The Boggy Meadow",
+      "The Scree Foot",
+      "The Sunless Side"
+    ],
+    "threshold": [
+      "The Col",
+      "The Head Wall",
+      "The Last Wall",
+      "The Sheepfold",
+      "The Watershed"
+    ],
+    "ending": [
+      "The Valley Head",
+      "Where the Cloud Sits",
+      "The Bottom of It",
+      "Over the Top"
+    ]
+  },
+  "factions": [
+    {
+      "id": "keptin",
+      "name": "the Kept In",
+      "kind": "undead",
+      "essence": "came in out of the weather and have been very comfortable ever since",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "drove",
+      "name": "the drove",
+      "kind": "living",
+      "essence": "were taking stock through and the top closed on them",
+      "handledBy": "trade"
+    },
+    {
+      "id": "cloud",
+      "name": "the cloud that sits in it",
+      "kind": "beast",
+      "essence": "is not weather and does not lift",
+      "handledBy": "waiting"
+    },
+    {
+      "id": "beck",
+      "name": "what comes down the beck",
+      "kind": "beast",
+      "essence": "has only ever gone one way, which is down",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in at the valley mouth in daylight and were seen from the farms",
+    "seenTwice": "seen on the tops twice from the bottom",
+    "loud": "a raised voice in a bottom where every sound comes back off both sides",
+    "lingering": "stayed one night, which is how it starts",
+    "disturbed": "took a wall down, went over the col, or carried something up out of the bottom"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "2 Dire Wolves in the hanging wood",
+      "foes": [
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "work you back down toward the bottom"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they will not follow you up onto the open ridge"
+    },
+    "fight": {
+      "line": "4 Bandits who came in and could not get out again",
+      "foes": [
+        {
+          "n": 4,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "desperate rather than wicked; they want food and a way over"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "tell them where the col is and they will take it and go"
+    },
+    "battle": {
+      "line": "1 Troll at the head wall and 2 Dire Wolves",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES 2 Grit a round unless the wound was burnt"
+        },
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "hold the ground below it"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative; there is wood in the hanging wood",
+      "avoid": "it holds the head wall and nothing else; the col is a longer climb and it is clear"
+    },
+    "nightmare": {
+      "line": "1 Wraith on the col, 1 Troll, 1 Ogre and 2 Dire Wolves",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit; it stands in the one way out"
+        },
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES unless burnt"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "comes up from the bottom"
+        },
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "cut the way back"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "ridges": {
+      "danger": "the tops",
+      "dangerLine": "the valley has one way over and it would rather you did not know which",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "ridges on both sides running unbroken for miles",
+          "one notch in the skyline and cloud sitting in it",
+          "walls running up both sides to the very top, as though to finish the job"
+        ],
+        "ritual": [
+          "the tops walked once a year by somebody and nobody else ever",
+          "a cairn kept on the col by whoever goes over",
+          "a gate in the top wall left shut, always"
+        ],
+        "demand": [
+          "a skyline with one notch in it that you can only see from one field",
+          "a gate in the top wall standing shut with the ground worn on both sides",
+          "a track going up and stopping at the wall"
+        ],
+        "wound": [
+          "a col with the cairn thrown down into the valley",
+          "top walls built up higher than any stock needs",
+          "a track up to the ridge grassed over in one season"
+        ],
+        "anchor": [
+          "the one notch in the skyline that goes over",
+          "a cairn on the col that stands",
+          "a gate in the top wall that opens"
+        ]
+      },
+      "features": [
+        "a notch in the skyline seen from one field",
+        "a gate shut in a top wall",
+        "a track stopping at a wall",
+        "a cairn thrown down off a col",
+        "top walls built higher than needed",
+        "a path grassed over in one season"
+      ],
+      "decisions": [
+        {
+          "cue": "a skyline with one notch in it that you can only see from one field",
+          "cost": "the notch is the way over and the field is the only place it shows",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you fix the col from the field and can find it again from anywhere in the bottom",
+            "failure": "you set off for it from the wrong side and the ridge closes up as you climb",
+            "orElse": "stay in the bottom; there is no way over and the valley is very pleased"
+          }
+        },
+        {
+          "cue": "a gate in the top wall standing shut with the ground worn on both sides",
+          "cost": "things have gone through it both ways and it is shut now",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open it and the way over stays open behind you for everybody",
+            "failure": "you climb the wall instead and knock the top off, and the valley notices: +1 Bane",
+            "orElse": "leave it shut; the drove cannot get out either, and they were counting on you"
+          }
+        },
+        {
+          "cue": "a track going up the fell and stopping dead at a wall",
+          "cost": "the track was used and the wall is newer than the track",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find where the track resumed on the far side and the whole route is yours",
+            "failure": "you go over the wall on a guess and are on the tops in the cloud",
+            "orElse": "follow the wall along, costing a Turn and putting you at the head wall"
+          }
+        },
+        {
+          "cue": "a cairn thrown down off the col into the valley",
+          "cost": "somebody unmarked the way over deliberately",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you rebuild it and the col is findable from the bottom by anyone, for good",
+            "failure": "you leave it and can find the col once, by luck, and not again",
+            "orElse": "carry the stones down instead; nothing will ever cross here again"
+          }
+        },
+        {
+          "cue": "top walls built up higher than any stock ever needed",
+          "cost": "the walls are not for sheep",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you see what they are for and can get through or over at the one weak place",
+            "failure": "you climb them where they are strongest and are seen doing it from the bottom",
+            "orElse": "stay below the walls; the whole top of the valley is closed to you"
+          }
+        },
+        {
+          "cue": "a path up to the ridge grassed over in a single season",
+          "cost": "grass does not do that in a season without help",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the line under the grass and can walk it up in the dark if you have to",
+            "failure": "you take the obvious line instead, which is not the path, and it ends in crag",
+            "orElse": "leave it; every route up from here is unmade ground"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Kept In",
+          "doing": "standing in a field looking up at a notch in the skyline",
+          "onArrival": "it points at the notch and then does not move",
+          "because": "it can see the way over and has never once gone toward it",
+          "offer": "go up to the col with it and it will show you the true line"
+        },
+        {
+          "occupant": "a gate",
+          "doing": "standing shut in a wall on the very top of the ridge",
+          "onArrival": "the ground is worn deep on both sides of it and the latch is bright",
+          "because": "things went through both ways until somebody shut it",
+          "offer": "open it and the way over stays open behind you"
+        },
+        {
+          "occupant": "two living drovers",
+          "doing": "standing at a head wall with stock that cannot climb",
+          "onArrival": "they ask whether the col is passable",
+          "because": "the top closed while they were coming through",
+          "offer": "tell them the way and they will drive you out with them"
+        },
+        {
+          "occupant": "a cairn",
+          "doing": "lying thrown down in the scree below a col",
+          "onArrival": "the stones are stacked at the bottom rather than scattered",
+          "because": "somebody unmarked the crossing on purpose",
+          "offer": "rebuild it and everything in the bottom can find the way out"
+        },
+        {
+          "occupant": "the tops",
+          "doing": "standing unbroken in both directions with cloud lying along them",
+          "onArrival": "the cloud thins over exactly one point and closes again",
+          "because": "there is one way over and the valley hides it",
+          "offer": "watch for the thinning and it will show you the col, once"
+        },
+        {
+          "occupant": "the Shut Place",
+          "doing": "filling the whole head of the valley with walls that go up to the sky",
+          "onArrival": "the walls are higher at the top than at the bottom",
+          "because": "it wants nothing to go over and it has been building",
+          "offer": "tell it you are coming back and it will let you go up"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "col",
+          "cue": "a knowledge of the one notch",
+          "benefit": "once, find the way out from anywhere",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the valley closes the col to everyone else while you know it",
+          "acceptanceCost": {
+            "vice": "Envy"
+          }
+        },
+        {
+          "id": "gatepin",
+          "cue": "the pin out of the top gate",
+          "benefit": "once, open a way that was shut",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it cannot be shut again behind you"
+        },
+        {
+          "id": "cairnstone",
+          "cue": "a stone off the col cairn",
+          "benefit": "once, mark a crossing so it stays marked",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything in the bottom follows the mark"
+        },
+        {
+          "id": "track",
+          "cue": "a line of the grassed-over path",
+          "benefit": "walk up in the dark or the cloud",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the thing that grassed it over notices it being used"
+        },
+        {
+          "id": "wall",
+          "cue": "a through-stone out of the top wall",
+          "benefit": "once, get through what was built to hold you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the wall is one stone weaker for everything else too"
+        }
+      ]
+    },
+    "shelter": {
+      "danger": "the hospitality",
+      "dangerLine": "everything here wants you to come in and sit down, and it means it kindly",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a valley that is the only warm place for a day's walk in any direction",
+          "farms set so that no traveller ever has to pass a door",
+          "a chapel with the porch swept and the bench worn"
+        ],
+        "ritual": [
+          "a fire kept in overnight for anybody who comes",
+          "a bed made up in every house that is not being used",
+          "a traveller fed before being asked a single question"
+        ],
+        "demand": [
+          "a fire kept in with the chairs drawn round it and nobody in them",
+          "a bed made up and turned down in an empty house",
+          "a table laid for one more than there are"
+        ],
+        "wound": [
+          "fires kept in for years in houses with nobody left",
+          "a porch bench worn through by people waiting to be let out",
+          "beds made up in every room of a house with the door nailed"
+        ],
+        "anchor": [
+          "the fire that was kept in for whoever came",
+          "a house where the door opens outward as well",
+          "a bed that was slept in one night only"
+        ]
+      },
+      "features": [
+        "a fire kept in with chairs drawn round",
+        "a bed made up in an empty house",
+        "a table laid for one more",
+        "a porch bench worn through",
+        "a door that only opens inward",
+        "food set out and still warm"
+      ],
+      "decisions": [
+        {
+          "cue": "a fire kept in with the chairs drawn round it and nobody sitting in them",
+          "cost": "sitting down is the whole of it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sit, and get up again before you are settled, and the valley respects that",
+            "failure": "you sit and are comfortable, and the next area is a night later than you thought",
+            "orElse": "stay standing in the doorway; you are cold and nothing here will speak to you"
+          }
+        },
+        {
+          "cue": "a bed made up and turned down in a house with nobody in it",
+          "cost": "one night is one night, they always say",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sleep on the floor instead and wake rested and still your own",
+            "failure": "you sleep in the bed and the house counts you as staying: +1 Bane",
+            "orElse": "sleep out; the weather is the valley's and it knows where you are"
+          }
+        },
+        {
+          "cue": "a table laid for one more than there are people in the house",
+          "cost": "the extra place has been laid every night for years",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who it is laid for and can carry that name to the ending",
+            "failure": "you sit in the place and everything at the table welcomes you by their name",
+            "orElse": "eat nothing; the household is offended and closes to you"
+          }
+        },
+        {
+          "cue": "a porch bench worn through by people sitting on it a long time",
+          "cost": "they were waiting to be let out, not in",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you understand what the porch is really for and can leave any house at will",
+            "failure": "you sit on the bench to rest and find the door behind you has closed",
+            "orElse": "stand in the yard; you learn nothing and get wet doing it"
+          }
+        },
+        {
+          "cue": "a door that opens inward and has no latch on the inside",
+          "cost": "the house is not locked, exactly",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you fit a latch on the inside and the house cannot keep anybody again",
+            "failure": "you go in to look and the door is a door again, from the other side",
+            "orElse": "stay out of the house; what is in it is what you needed"
+          }
+        },
+        {
+          "cue": "food set out on a table and still warm in a cold house",
+          "cost": "somebody cooked it and there is nobody to have cooked it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you thank the house aloud and eat, and it feeds you honestly for the delve",
+            "failure": "you eat without thanking and are a guest now, in the full sense: +1 Bane",
+            "orElse": "go hungry; -1 die on Brawn until you eat somewhere else, and there is nowhere else"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a fire",
+          "doing": "burning in a grate with four chairs drawn round it and nobody in them",
+          "onArrival": "the chairs are warm and the fire has just been made up",
+          "because": "the fire is kept in for whoever comes and nobody has come",
+          "offer": "sit down for exactly as long as it takes to get warm, and the house will help you"
+        },
+        {
+          "occupant": "one of the Kept In",
+          "doing": "laying a table for one more than there are",
+          "onArrival": "it sets the extra place and looks up at you",
+          "because": "the place is laid every night for somebody who went over the top",
+          "offer": "take the place and it will tell you who left and how"
+        },
+        {
+          "occupant": "a living farmwife",
+          "doing": "making up a bed in a room nobody uses",
+          "onArrival": "she asks how many of you there are, and how long",
+          "because": "she has been making beds since before the top closed",
+          "offer": "tell her one night and she will tell you the way over"
+        },
+        {
+          "occupant": "a chapel porch",
+          "doing": "standing swept with a bench worn through in the middle",
+          "onArrival": "the bench is warm and the chapel door behind it is shut",
+          "because": "people sat here a long time waiting to be let out",
+          "offer": "sit and get up again, and the valley will let you go"
+        },
+        {
+          "occupant": "the Cloud-Keeper",
+          "doing": "standing in a doorway with a lamp, holding the door open",
+          "onArrival": "the wind at your back drops the moment it opens the door",
+          "because": "it is the only warm place and it knows it",
+          "offer": "accept one hour of it and it will give you the run of the valley"
+        },
+        {
+          "occupant": "a table",
+          "doing": "standing laid and steaming in a house with the fire out",
+          "onArrival": "the food is hot and the room is cold enough to see your breath",
+          "because": "the house feeds whoever comes and nobody comes",
+          "offer": "thank the house aloud before you eat and it will not keep you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "hearth",
+          "cue": "an ember off the fire kept in",
+          "benefit": "be welcome anywhere in the valley",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "welcome here is very hard to leave",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "latch",
+          "cue": "an inside latch off a door",
+          "benefit": "once, keep a place from keeping you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the door you took it from cannot be shut at all now"
+        },
+        {
+          "id": "place",
+          "cue": "the extra place at the table",
+          "benefit": "once, be expected and provided for",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected every night from now on"
+        },
+        {
+          "id": "bed",
+          "cue": "a night's rest in a made bed",
+          "benefit": "recover as though you had slept properly",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the house counts you as staying"
+        },
+        {
+          "id": "bench",
+          "cue": "a knowledge of the porch bench",
+          "benefit": "once, leave a place that wants you to stay",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "somebody else waits on the bench in your place"
+        }
+      ]
+    },
+    "bottom": {
+      "danger": "what comes down",
+      "dangerLine": "everything in this valley ends up at the bottom eventually, including you",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a bottom made entirely of what used to be on the sides",
+          "a beck that only ever runs one way and takes everything with it",
+          "fields at the bottom that have never once needed manuring"
+        ],
+        "ritual": [
+          "what comes down laid out at the bottom and left",
+          "nothing carried back up, by custom, by anybody",
+          "the beck walked down each spring and what is in it collected"
+        ],
+        "demand": [
+          "a heap of what has come down with the newest things on top",
+          "a beck with something in it that has stopped moving",
+          "a field at the bottom with a shape under the turf"
+        ],
+        "wound": [
+          "a bottom dug over by somebody looking for one thing",
+          "the beck dammed so that nothing more comes down",
+          "a heap gone through and everything of value taken up"
+        ],
+        "anchor": [
+          "the thing that came down and was carried back up",
+          "a record of everything the bottom has",
+          "a beck that runs clear"
+        ]
+      },
+      "features": [
+        "a heap with the newest things on top",
+        "something stopped in the beck",
+        "a shape under the turf of a field",
+        "a bottom dug over recently",
+        "a dam across a beck",
+        "things laid out and left"
+      ],
+      "decisions": [
+        {
+          "cue": "a heap of what has come down with the newest things on top",
+          "cost": "the newest things are recent and one of them is not a thing",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you go through the top of the heap and find what came down last, and when",
+            "failure": "you dig into the heap and the whole side of it comes down on you",
+            "orElse": "leave the heap; you never learn what has recently arrived at the bottom"
+          }
+        },
+        {
+          "cue": "a beck with something in it that has stopped moving",
+          "cost": "the beck takes everything down and this has stuck",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you free it and the beck runs clear, and what was behind it comes down usefully",
+            "failure": "you free it and everything held behind it comes down at once, onto you",
+            "orElse": "leave it stuck; the beck backs up and the bottom ground floods"
+          }
+        },
+        {
+          "cue": "a field at the bottom with a shape under the turf",
+          "cost": "the field has never needed manuring and this is why",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you identify what is under it without opening the ground, and it names the transgression",
+            "failure": "you open the ground and the field is no longer a field, and the valley minds",
+            "orElse": "leave the turf; the ending has no body and no proof"
+          }
+        },
+        {
+          "cue": "a bottom dug over recently by somebody looking for one particular thing",
+          "cost": "they were looking and they may have found it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what they were after and whether they got it, and both matter",
+            "failure": "you dig where they dug and find what they were careful to leave",
+            "orElse": "leave the diggings; somebody else has the thing and you do not know who"
+          }
+        },
+        {
+          "cue": "a dam thrown across the beck so that nothing more comes down",
+          "cost": "damming the beck is the only defiance anybody here has managed",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you keep the dam and the bottom stops taking; the valley is furious and constrained",
+            "failure": "you break it and everything held up behind it goes to the bottom at once",
+            "orElse": "leave it; it fails on its own within the Turn, which is worse"
+          }
+        },
+        {
+          "cue": "things laid out at the bottom in rows and left, none of them taken",
+          "cost": "carrying anything up is the one thing nobody here does",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you carry one thing up and the valley's hold breaks a little, permanently",
+            "failure": "you carry it up and something comes up after it, and it is not pleased",
+            "orElse": "leave the rows; nothing has ever left the bottom and nothing will"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a heap",
+          "doing": "lying at the bottom with everything the valley has taken, newest on top",
+          "onArrival": "something on the top of it is still warm",
+          "because": "everything comes down and nothing goes up",
+          "offer": "take one thing off the top and carry it up, and the valley loosens"
+        },
+        {
+          "occupant": "one of the Kept In",
+          "doing": "laying things out at the bottom in rows, carefully",
+          "onArrival": "it sets one down and looks up to see whether you approve",
+          "because": "what comes down is laid out and left",
+          "offer": "carry one row's worth up and it will tell you everything the bottom holds"
+        },
+        {
+          "occupant": "a living digger",
+          "doing": "turning over the bottom ground with a spade and no hurry",
+          "onArrival": "he asks whether you know what a thing looks like",
+          "because": "he has been looking for one particular thing for years",
+          "offer": "tell him and he will give you everything else he has turned up"
+        },
+        {
+          "occupant": "the beck",
+          "doing": "running down with something stuck in it that has stopped the water",
+          "onArrival": "the water above the block is rising and the water below is clear",
+          "because": "it takes everything down and this will not go",
+          "offer": "free it and the beck will carry you down anywhere, fast"
+        },
+        {
+          "occupant": "a field",
+          "doing": "lying green at the bottom with a shape showing under the turf",
+          "onArrival": "the grass over the shape is greener than the rest",
+          "because": "the field has never needed manuring",
+          "offer": "name what is under it and the valley will admit what it did"
+        },
+        {
+          "occupant": "Old Bottom",
+          "doing": "filling the whole floor of the valley with what used to be on the sides",
+          "onArrival": "the ground gives very slightly wherever you put your foot",
+          "because": "everything comes down to it and stays",
+          "offer": "leave it something willingly and it will let you take something up"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "return",
+          "cue": "the thing that was carried back up",
+          "benefit": "once, take something out of the bottom",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the valley takes something of yours down to replace it",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "spade",
+          "cue": "the digger's spade",
+          "benefit": "once, find what the bottom has",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ground opens for you wherever you carry it"
+        },
+        {
+          "id": "record",
+          "cue": "a record of what the bottom holds",
+          "benefit": "know everything this valley has taken",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know which of it was people"
+        },
+        {
+          "id": "dam",
+          "cue": "a knowledge of how the dam was built",
+          "benefit": "once, stop things coming down",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they come all at once when it goes"
+        },
+        {
+          "id": "row",
+          "cue": "something off the laid-out rows",
+          "benefit": "once, have exactly what somebody lost",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they are at the bottom, and they want it"
+        }
+      ]
+    },
+    "weather": {
+      "danger": "the cloud",
+      "dangerLine": "the valley makes its own weather and it has not shared a sky with anywhere else in years",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "cloud lying in the valley when the tops are clear",
+          "a bottom that gets the sun for two hours and the sides that get it all day",
+          "weather that comes in at the mouth and does not go out at the head"
+        ],
+        "ritual": [
+          "the sky looked at each morning and nothing said about it",
+          "washing hung out on the one good day and never since",
+          "a clear day marked on a doorframe with the date"
+        ],
+        "demand": [
+          "cloud lying at exactly head height and not lifting",
+          "a doorframe with one date cut into it and nothing after",
+          "washing on a line in weather that will not dry it"
+        ],
+        "wound": [
+          "a doorframe with the dates going up and then stopping",
+          "cloud that has been down so long the walls are green with it",
+          "a sundial in a garden that has not been used in living memory"
+        ],
+        "anchor": [
+          "the one clear day, kept",
+          "a doorframe with every clear day cut on it",
+          "a sky you can see out of"
+        ]
+      },
+      "features": [
+        "cloud lying at head height",
+        "a doorframe with one date cut in it",
+        "washing that will not dry",
+        "walls green with standing cloud",
+        "a sundial gone unused",
+        "two hours of sun in a bottom"
+      ],
+      "decisions": [
+        {
+          "cue": "cloud lying at exactly head height and showing no sign of lifting",
+          "cost": "you can go up through it or wait it out",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you wait it out without complaining and it lifts for you, properly, once",
+            "failure": "you push up through it and are on the tops in cloud, without a line",
+            "orElse": "go along the bottom instead; it costs a Turn and the cloud comes down further"
+          }
+        },
+        {
+          "cue": "a doorframe with clear days cut into it and the dates stopping",
+          "cost": "the last date is the last time anybody saw out",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the dates and know exactly when the valley closed its sky",
+            "failure": "you cut today's date in and the valley takes that as a claim about the weather",
+            "orElse": "leave the frame; you have no idea how long this has been going on"
+          }
+        },
+        {
+          "cue": "washing on a line in weather that has never been going to dry it",
+          "cost": "somebody hung it out hoping, and hopes still",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take it in for them and the household will do anything you ask",
+            "failure": "you leave it and the household takes that as a judgement on them",
+            "orElse": "take it in and keep it; you have dry cloth and an enemy in the house"
+          }
+        },
+        {
+          "cue": "walls green with cloud that has been lying against them for years",
+          "cost": "the green is the measure of it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the growth and know this is older than anybody living here",
+            "failure": "you scrape it off to see the stone and the cloud comes down to the ground",
+            "orElse": "ignore the walls; you take the valley's word for how long this has been"
+          }
+        },
+        {
+          "cue": "a sundial in a garden that nobody living has ever seen work",
+          "cost": "it was set up when there was sun to set it by",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you set it right and the valley remembers it had a sky, and thins, once",
+            "failure": "you take the gnomon and the garden loses its last claim on daylight",
+            "orElse": "leave it; there is no reckoning of time here at all and the Turns blur"
+          }
+        },
+        {
+          "cue": "two hours of sun reaching the bottom and the sides lit all day",
+          "cost": "the light is up there and you are down here",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you time the two hours and can be exactly where you need the light to be",
+            "failure": "you plan by the light on the sides and are in the dark at the bottom",
+            "orElse": "move by feel; every roll in the next area is at -1 die for the dark"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "cloud",
+          "doing": "lying in the valley at head height with the tops clear above it",
+          "onArrival": "it thins around you and closes again behind",
+          "because": "the valley makes its own weather and will not lift for anybody",
+          "offer": "wait in it without complaining and it will lift and show you out"
+        },
+        {
+          "occupant": "one of the Kept In",
+          "doing": "cutting a date into a doorframe with a knife",
+          "onArrival": "it stops and asks whether today counts as clear",
+          "because": "clear days are cut in and there has not been one",
+          "offer": "tell it today counts and the cloud lifts as far as the ridge"
+        },
+        {
+          "occupant": "a living woman",
+          "doing": "hanging washing in weather that will never dry it",
+          "onArrival": "she asks whether you think it will clear",
+          "because": "she has hung it out every day since it closed",
+          "offer": "take it in for her and she will tell you the two hours the sun reaches"
+        },
+        {
+          "occupant": "a sundial",
+          "doing": "standing in a garden with the gnomon bright and the dial green",
+          "onArrival": "a patch of sun crosses it while you stand there and then goes",
+          "because": "it was set when there was sun and nobody has seen it work",
+          "offer": "set it true and the valley will give you its one clear day"
+        },
+        {
+          "occupant": "the Cloud-Keeper",
+          "doing": "sitting in the head of the valley with the cloud coming off it",
+          "onArrival": "the cloud pours downhill from it and does not disperse",
+          "because": "it will not share a sky with anywhere else",
+          "offer": "bear its weather once, without complaint, and it will show you the top"
+        },
+        {
+          "occupant": "the sun",
+          "doing": "reaching the bottom of the valley for exactly two hours",
+          "onArrival": "the light comes and goes at the same points on the wall",
+          "because": "the sides get it all day and the bottom gets almost none",
+          "offer": "be where the light falls and everything here will deal with you honestly"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "sky",
+          "cue": "the one clear day, kept",
+          "benefit": "once, have the weather you need",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the valley takes it back double, and chooses when",
+          "acceptanceCost": {
+            "vice": "Wrath"
+          }
+        },
+        {
+          "id": "frame",
+          "cue": "a piece of the dated doorframe",
+          "benefit": "know when this place closed its sky",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the valley knows you have counted"
+        },
+        {
+          "id": "gnomon",
+          "cue": "the gnomon off the sundial",
+          "benefit": "once, know exactly what hour it is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the garden it came from has no time at all"
+        },
+        {
+          "id": "washing",
+          "cue": "dry cloth from a line that never dried",
+          "benefit": "once, be warm and dry in its weather",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "a household here is offended and stays that way"
+        },
+        {
+          "id": "light",
+          "cue": "a knowledge of the two hours",
+          "benefit": "be in the light when you need to be",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "so is everything that has been waiting for it"
+        }
+      ]
+    }
+  }
+}

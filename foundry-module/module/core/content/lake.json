@@ -1,0 +1,1164 @@
+{
+  "id": "lake",
+  "label": "Lake",
+  "forgeStageType": "fen",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Wild kernel in still water. Where the river wants movement, the lake wants none: to be left flat, to be looked into, to keep what is under it exactly as it was, and to be a little bigger every year. Claimants are the water's own names for itself.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "The Still",
+    "Mother of the Deep",
+    "Thing in the Middle",
+    "First Water",
+    "Under-Lady",
+    "The Wide Eye",
+    "The Level"
+  ],
+  "appetites": [
+    {
+      "id": "undisturbed",
+      "want": "never to be broken",
+      "lack": "broken",
+      "purpose": "the surface would never move again",
+      "motif": "stillness",
+      "prize": "stone",
+      "conscript": "the swimmers",
+      "asks": "\"Was that you?\"",
+      "appeasement": {
+        "move": "stand at the edge and put nothing at all into the water",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was left flat",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "lookedinto",
+      "want": "that everything should stop and look into it",
+      "lack": "looked past",
+      "purpose": "nobody would ever walk by",
+      "motif": "mirror",
+      "prize": "glass",
+      "conscript": "the passers-by",
+      "asks": "\"Don't you want to see?\"",
+      "appeasement": {
+        "move": "look into the water, properly, and do not look away first",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was looked into",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "remembered",
+      "want": "that what is under it should be remembered as it was",
+      "lack": "forgotten",
+      "purpose": "nothing down there would ever be given up",
+      "motif": "sunken",
+      "prize": "bell",
+      "conscript": "the drowned parish",
+      "asks": "\"Do you know what's down there?\"",
+      "appeasement": {
+        "move": "name something that is under the water, and where it stood",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it was remembered",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "rising",
+      "want": "to be a little wider every year",
+      "lack": "held to a line",
+      "purpose": "it would go on getting bigger forever",
+      "motif": "rising",
+      "prize": "shore",
+      "conscript": "the drainers",
+      "asks": "\"Where do you think my edge is?\"",
+      "appeasement": {
+        "move": "let the water have one thing it is reaching for",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it came up a little",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "middle",
+      "text": "took {conscript} out to the middle and let them look down",
+      "cruelty": 3,
+      "fits": [
+        "lookedinto",
+        "undisturbed"
+      ]
+    },
+    {
+      "id": "closed",
+      "text": "closed over {conscript} without a ripple",
+      "cruelty": 3,
+      "fits": [
+        "undisturbed",
+        "remembered",
+        "lookedinto"
+      ]
+    },
+    {
+      "id": "rose",
+      "text": "rose over {conscript}'s ground one summer and did not go back",
+      "cruelty": 2,
+      "fits": [
+        "rising",
+        "remembered"
+      ]
+    },
+    {
+      "id": "justunder",
+      "text": "kept {conscript} just under, where they can still be seen from the bank",
+      "cruelty": 3,
+      "fits": [
+        "remembered",
+        "lookedinto"
+      ]
+    },
+    {
+      "id": "showed",
+      "text": "showed {conscript} themselves until they went in",
+      "cruelty": 3,
+      "fits": [
+        "lookedinto",
+        "undisturbed",
+        "rising"
+      ]
+    },
+    {
+      "id": "furnished",
+      "text": "keeps {conscript}'s house, furnished, thirty feet down",
+      "cruelty": 2,
+      "fits": [
+        "remembered",
+        "rising",
+        "undisturbed"
+      ]
+    }
+  ],
+  "prizes": {
+    "stone": {
+      "label": "the stone that was thrown and made no ring",
+      "function": "the only thing that ever went in without disturbing it"
+    },
+    "glass": {
+      "label": "a piece of the surface that stayed hard",
+      "function": "the only reflection here that shows what is actually there"
+    },
+    "bell": {
+      "label": "the bell out of the drowned steeple",
+      "function": "the only thing down there that can still be heard from the bank"
+    },
+    "shore": {
+      "label": "the old shore mark, from before it started rising",
+      "function": "the only record of how big this water is supposed to be"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Water of the",
+      "The Mere of the",
+      "The Still Water of the",
+      "Under the",
+      "The Deep of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Shingle",
+      "The Boathouse",
+      "The Shore Path",
+      "The Reed Bed",
+      "The Jetty"
+    ],
+    "complication": [
+      "The Shallows",
+      "The Island",
+      "The Old Landing",
+      "The Alder Carr",
+      "The Cut"
+    ],
+    "turn": [
+      "The Middle Water",
+      "The Drowned Steeple",
+      "The Slipway",
+      "The Point",
+      "The Open Water"
+    ],
+    "descent": [
+      "The Weed Beds",
+      "The Sunken Village",
+      "The Cold Layer",
+      "The Silt",
+      "The Undercut Shore"
+    ],
+    "threshold": [
+      "The Last Jetty",
+      "The Water Line",
+      "The Bell Tower",
+      "The Flat Calm",
+      "The Far Shore"
+    ],
+    "ending": [
+      "The Middle",
+      "Where the Bell Is",
+      "Under the Still Water",
+      "The Old Shore"
+    ]
+  },
+  "factions": [
+    {
+      "id": "still",
+      "name": "the Still",
+      "kind": "undead",
+      "essence": "are under it, arranged as they were, and would rather not be moved",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "fishers",
+      "name": "the fishers",
+      "kind": "living",
+      "essence": "work a water that has stopped giving anything up",
+      "handledBy": "trade"
+    },
+    {
+      "id": "weed",
+      "name": "what lives in the weed beds",
+      "kind": "beast",
+      "essence": "has never been on the surface and does not want to be",
+      "handledBy": "force"
+    },
+    {
+      "id": "reflection",
+      "name": "what is in the reflection",
+      "kind": "undead",
+      "essence": "is on the other side of the surface doing what you do, nearly",
+      "handledBy": "not looking"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came down to the shore in the open and stood where the water could see you",
+    "seenTwice": "reflected twice, from two different points of the shore",
+    "loud": "a raised voice over flat water, which carries to the far bank",
+    "lingering": "stayed at the edge long enough to be looked at properly",
+    "disturbed": "threw a stone, put in an oar, or broke the surface in any way at all"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Giant Rats in the reed bed",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Giant Rat",
+          "atk": 2,
+          "def": 3,
+          "grit": 2,
+          "nerve": 2,
+          "note": "swim better than they run"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they will not come out of the reeds onto open shingle"
+    },
+    "fight": {
+      "line": "3 Ghouls out of the weed beds",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit; they come up without a sound"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they will not leave the water — get clear of the shallows and they stop at the line"
+    },
+    "battle": {
+      "line": "1 Troll in the shallows and 2 Ghouls",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES 2 Grit a round unless the wound was burnt; wet, so fire is hard here"
+        },
+        {
+          "n": 2,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire touches it, and everything here is wet — say so before initiative",
+      "avoid": "it will not go into deep water; the boat is safe from it and the shore is not"
+    },
+    "nightmare": {
+      "line": "1 Wraith standing on the water, 1 Troll and 4 Ghouls",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit; it does not break the surface"
+        },
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES unless burnt"
+        },
+        {
+          "n": 4,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll and it is wet",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "stillness": {
+      "danger": "the surface",
+      "dangerLine": "the water has been flat for a long time and it notices everything that touches it",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a water that is flat in weather that is moving the trees",
+          "a shore of shingle laid so fine that nothing rolls into the water",
+          "boats drawn up above the line and none of them wet"
+        ],
+        "ritual": [
+          "boats carried down and set in without a sound",
+          "nothing thrown, ever, by anybody who lives here",
+          "the surface read each morning for anything that broke it in the night"
+        ],
+        "demand": [
+          "a surface with one ring on it, spreading, from nothing",
+          "a slipway with the water lying against it and not lapping",
+          "a stone in your hand and a flat water in front of you"
+        ],
+        "wound": [
+          "a surface broken all over at once and set that way",
+          "boats swamped at their moorings on a calm night",
+          "a shore raked over to hide what came out of the water"
+        ],
+        "anchor": [
+          "the stone that was thrown and made no ring",
+          "a boat that goes in without a sound",
+          "a shore that shows what touched it"
+        ]
+      },
+      "features": [
+        "one ring spreading from nothing",
+        "boats drawn up dry above the line",
+        "a shore raked over recently",
+        "water lying flat against a slipway",
+        "a swamped boat at a mooring",
+        "fine shingle that does not roll"
+      ],
+      "decisions": [
+        {
+          "cue": "a surface with one ring on it, spreading, from nothing that fell",
+          "cost": "something came up, or something is about to",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the ring and know what is under it and how far off",
+            "failure": "you throw something to see and the water counts that against you: +1 Bane",
+            "orElse": "back off the shore; whatever made the ring surfaces behind you later"
+          }
+        },
+        {
+          "cue": "a slipway with the water lying against it and not lapping at all",
+          "cost": "putting a boat in will be the loudest thing that has happened here in years",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you launch without a sound and the water lets the boat cross the middle",
+            "failure": "you put it in badly and the whole lake registers it, at once: roll the clock",
+            "orElse": "stay ashore; the far side is a full day round, and it gets dark"
+          }
+        },
+        {
+          "cue": "a shore raked over recently to hide what came out of the water",
+          "cost": "somebody is tidying up after it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read what was raked over and know what comes ashore and how often",
+            "failure": "you rake it again yourself and are taken for the one who has been doing it",
+            "orElse": "leave the shingle; you camp on it not knowing what uses it"
+          }
+        },
+        {
+          "cue": "boats swamped at their moorings on a night with no wind at all",
+          "cost": "the water came up into them deliberately",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the one boat it left alone and understand why, and can use it",
+            "failure": "you bail one out and it is swamped again with you in it",
+            "orElse": "take no boat; every route is round the shore, and the shore is long"
+          }
+        },
+        {
+          "cue": "a stone in your hand and a flat water in front of you",
+          "cost": "throwing it is the most natural thing in the world",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you put the stone down and the water is pleased, and shows you something",
+            "failure": "you throw it, of course you do, and the rings do not stop spreading",
+            "orElse": "throw it deliberately, as a challenge; it answers, and it is bigger than you"
+          }
+        },
+        {
+          "cue": "fine shingle laid so nothing can roll into the water",
+          "cost": "somebody made this shore so that nothing would ever disturb it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who has been maintaining it and they know exactly what they are keeping calm",
+            "failure": "you walk it carelessly and send a stone in, and the flatness ends",
+            "orElse": "go along the bank above the shingle, costing a Turn in the alder carr"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the water",
+          "doing": "lying dead flat while the wind moves everything on the bank",
+          "onArrival": "a single ring spreads on it from nothing at all",
+          "because": "it has been flat a long time and something has just moved under it",
+          "offer": "put nothing in and stand still, and it will show you what is down there"
+        },
+        {
+          "occupant": "a living fisher",
+          "doing": "holding an oar above the water without putting it in",
+          "onArrival": "he asks whether you would mind waiting a moment",
+          "because": "he has not broken the surface in years and it is how he still has a boat",
+          "offer": "wait with him and he will row you anywhere on it"
+        },
+        {
+          "occupant": "one of the Still",
+          "doing": "standing waist-deep with the water flat against it",
+          "onArrival": "it does not ripple and neither does the water",
+          "because": "it went in without a sound and the lake approved",
+          "offer": "go in as quietly and it will take you across the middle"
+        },
+        {
+          "occupant": "a boat",
+          "doing": "lying drawn up dry on a slipway with the water against it",
+          "onArrival": "the water does not lap at the slip and the boat is warm",
+          "because": "boats go in silently here or not at all",
+          "offer": "launch it without a sound and the middle water opens to you"
+        },
+        {
+          "occupant": "a shore",
+          "doing": "lying raked flat with something dragged across it and smoothed over",
+          "onArrival": "the rake marks stop halfway and are not resumed",
+          "because": "somebody tidies up after what comes out and stopped mid-job",
+          "offer": "finish the raking and whatever comes ashore treats you as its keeper"
+        },
+        {
+          "occupant": "the Wide Eye",
+          "doing": "filling the whole middle of the lake with a flatness you can see from the bank",
+          "onArrival": "it goes flatter, visibly, as you come down to the water",
+          "because": "it wants no ring on it at all, ever",
+          "offer": "give it a still hour and it will let you cross without a boat"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "stone",
+          "cue": "the stone that made no ring",
+          "benefit": "once, do a thing without being noticed",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the lake watches you continuously instead",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "oar",
+          "cue": "a muffled oar",
+          "benefit": "cross the water without breaking it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot move fast on the water at all"
+        },
+        {
+          "id": "shingle",
+          "cue": "a handful of the fine shingle",
+          "benefit": "once, make ground that does not give you away",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it gives away whoever crosses it after you"
+        },
+        {
+          "id": "rake",
+          "cue": "the shore-keeper's rake",
+          "benefit": "once, hide that something came out",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are taken for its keeper by what comes out"
+        },
+        {
+          "id": "ring",
+          "cue": "a knack for reading rings",
+          "benefit": "know what is under the surface near you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know before you can do anything about it"
+        }
+      ]
+    },
+    "mirror": {
+      "danger": "the reflection",
+      "dangerLine": "the water shows you what is there, and lately it has been showing a little more than that",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "a water that reflects the far bank perfectly and the near bank not at all",
+          "a surface that is clearer looking down than the air is looking across",
+          "a shore where everyone stops and looks in, and always has"
+        ],
+        "ritual": [
+          "a look taken into the water at the same point by everyone passing",
+          "the reflection greeted, politely, before anything else",
+          "nobody looking in twice from the same place"
+        ],
+        "demand": [
+          "a reflection that is a half-second behind you",
+          "a still panel of water in the reeds, exactly face-height",
+          "a surface showing somebody standing beside you"
+        ],
+        "wound": [
+          "a reflection that stayed after the person left",
+          "reeds cut down all along the shore so nothing can be reflected",
+          "a surface showing a village that is not on the bank"
+        ],
+        "anchor": [
+          "a piece of the surface that stayed hard",
+          "a reflection that has never once been wrong",
+          "a mirror that shows the bank behind you"
+        ]
+      },
+      "features": [
+        "a reflection a half-second late",
+        "a panel of still water at face height",
+        "reeds cut down along a shore",
+        "a reflection with one extra figure",
+        "a reflected village not on the bank",
+        "a surface that stayed hard"
+      ],
+      "decisions": [
+        {
+          "cue": "a reflection that comes a half-second behind you",
+          "cost": "the delay is small and it is getting smaller",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you catch the delay and can tell reflection from thing for the rest of the delve",
+            "failure": "you watch it until it catches up and it is level with you now: +1 Bane",
+            "orElse": "stop looking in; you cannot tell, later, which of two things is which"
+          }
+        },
+        {
+          "cue": "a still panel of water in the reeds at exactly face height",
+          "cost": "it is at that height because that is where faces go",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you look in deliberately and do not look away first, and it yields something true",
+            "failure": "you look and look away, and it keeps the part you did not finish looking at",
+            "orElse": "do not look; the water asks you again in every area after this"
+          }
+        },
+        {
+          "cue": "a reflection showing somebody standing beside you who is not",
+          "cost": "the extra figure is doing what you do, nearly",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you speak to it rather than about it and it answers, and it is useful",
+            "failure": "you turn to look and it is behind you now instead of beside you",
+            "orElse": "ignore it entirely; it walks with the party from here and nobody says so"
+          }
+        },
+        {
+          "cue": "reeds cut down the whole length of a shore so nothing reflects",
+          "cost": "somebody stopped this water being able to show anything",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who cut them and what they were stopping being seen",
+            "failure": "you clear a panel to look and it shows you what they were preventing",
+            "orElse": "leave the shore bare; you never get a straight look at anything here"
+          }
+        },
+        {
+          "cue": "a surface showing a village that is not on the bank",
+          "cost": "the reflection is of what was there, not what is",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the reflected village and know the parish exactly as it stood",
+            "failure": "you go toward the reflected shore and are wading before you notice",
+            "orElse": "look away; you come to the ending without knowing what was drowned"
+          }
+        },
+        {
+          "cue": "a piece of the surface that has stayed hard, lying on the shingle",
+          "cost": "the water shed a bit of itself and it is still reflecting",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take it and can see what is actually in front of you, always",
+            "failure": "you look into it too long and what is in it is looking back, from close",
+            "orElse": "leave it; the lake keeps its one honest reflection"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a reflection",
+          "doing": "standing in the water beside yours and copying you a half-second late",
+          "onArrival": "it raises a hand slightly before you decide to",
+          "because": "the lake shows what is there and it has been embellishing",
+          "offer": "greet it rather than turn round, and it will show you what is under the water"
+        },
+        {
+          "occupant": "one of the Still",
+          "doing": "standing at the water's edge looking at its own reflection",
+          "onArrival": "it asks you whether that looks like it",
+          "because": "it went in looking at itself and cannot stop",
+          "offer": "tell it the truth and it will let you look in safely, once"
+        },
+        {
+          "occupant": "a living reed-cutter",
+          "doing": "cutting the last reeds along a shore that is already bare",
+          "onArrival": "he asks whether you have looked in yet",
+          "because": "he has been stopping the water reflecting anything for years",
+          "offer": "ask him why and he will tell you exactly what the lake shows"
+        },
+        {
+          "occupant": "a panel of still water",
+          "doing": "lying in the reeds at exactly the height of a face",
+          "onArrival": "the reeds around it are pressed back at shoulder width",
+          "because": "everyone who passes looks in here",
+          "offer": "look in and do not look away, and the water gives you something true"
+        },
+        {
+          "occupant": "the reflected village",
+          "doing": "showing under the surface with the lanes and the roofs clear",
+          "onArrival": "a light goes on in one of the reflected windows",
+          "because": "it shows what was there before the water rose",
+          "offer": "name a building aloud and the water will give up what is in it"
+        },
+        {
+          "occupant": "the Under-Lady",
+          "doing": "standing in the reflection of the bank you are on, facing out",
+          "onArrival": "she is not standing on the bank itself",
+          "because": "she is on the other side of the surface, doing what you do",
+          "offer": "match her, exactly, and she will let you through to what is under"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "glass",
+          "cue": "the piece of surface that stayed hard",
+          "benefit": "see what is actually there, always",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "what is actually there also sees you",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "panel",
+          "cue": "a knowledge of the face-height panels",
+          "benefit": "once, ask the water a question and be shown",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it shows you more than you asked"
+        },
+        {
+          "id": "reed",
+          "cue": "a cut reed off the bare shore",
+          "benefit": "once, stop a thing being reflected",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "including yourself, which has consequences"
+        },
+        {
+          "id": "double",
+          "cue": "a reflection that walks with you",
+          "benefit": "once, be in two places to anything watching",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it does what you do, nearly, and the difference grows"
+        },
+        {
+          "id": "village",
+          "cue": "a knowledge of the drowned parish as it stood",
+          "benefit": "know where everything under the water is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Still know that you know"
+        }
+      ]
+    },
+    "sunken": {
+      "danger": "what is under it",
+      "dangerLine": "there is a parish under this water and it has not been told that it drowned",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a steeple standing out of the water at low summer",
+          "a village kept whole thirty feet down, furnished",
+          "a shore with the road going into the water and out the other side"
+        ],
+        "ritual": [
+          "the bell heard from the bank at the turn of the year",
+          "names of the drowned parish read on the shore each spring",
+          "a boat rowed over the steeple and nothing said while above it"
+        ],
+        "demand": [
+          "a steeple showing with the weathercock just clear",
+          "a bell heard on a day that is not the turn of the year",
+          "a road going into the water with fresh tracks on it"
+        ],
+        "wound": [
+          "a steeple with the top courses taken for building stone",
+          "the reading of the names given up in somebody's lifetime",
+          "a village down there with the doors standing open"
+        ],
+        "anchor": [
+          "the bell out of the drowned steeple",
+          "a list of the parish as it was, house by house",
+          "a road that comes out the other side"
+        ]
+      },
+      "features": [
+        "a steeple showing at low water",
+        "a road going into the water",
+        "a bell heard out of season",
+        "doors standing open underwater",
+        "a parish list, house by house",
+        "stone robbed off a steeple top"
+      ],
+      "decisions": [
+        {
+          "cue": "a steeple showing above the water with the weathercock just clear",
+          "cost": "the tower is enterable at this level and will not be for long",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you get into the tower and the bell is there, and it can still be rung",
+            "failure": "you go in on a falling level and the water comes back over the door",
+            "orElse": "stay off it; the bell stays down there and the ending has no voice"
+          }
+        },
+        {
+          "cue": "a bell heard from the bank on a day that is not the turn of the year",
+          "cost": "something is ringing it, or something wants it rung",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer the bell properly and the drowned parish receives you as visitors",
+            "failure": "you row out to it and the ringing stops while you are over the tower",
+            "orElse": "ignore it; it rings every area from here, closer each time"
+          }
+        },
+        {
+          "cue": "a road going into the water with fresh tracks on it",
+          "cost": "something has been using the road, in or out",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the tracks and know which way and how recently, and can be elsewhere",
+            "failure": "you follow them in and the road goes on down for a long way",
+            "orElse": "take the shore path; it costs a Turn and passes the weed beds"
+          }
+        },
+        {
+          "cue": "a village thirty feet down with the doors standing open",
+          "cost": "open doors mean they left, or mean something got in",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out which and know what is down there before you have to meet it",
+            "failure": "you go down to look and one of the doors closes above you",
+            "orElse": "stay on the surface; you meet what is in the village without warning"
+          }
+        },
+        {
+          "cue": "stone robbed off the top courses of the drowned steeple",
+          "cost": "somebody has been taking the church for building",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find where the stone went and it is standing in something you will visit",
+            "failure": "you take a course yourself and the parish notices immediately",
+            "orElse": "leave it; the theft is unacknowledged and the parish blames whoever comes"
+          }
+        },
+        {
+          "cue": "a list of the parish as it was, house by house, in a dry hand",
+          "cost": "the list is the whole memory of the place",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read it and can name anything down there, which is the appeasement in your hand",
+            "failure": "you take it away and the parish loses the last record of itself",
+            "orElse": "leave it; you go to the ending unable to name a single one of them"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a steeple",
+          "doing": "standing out of flat water with the weathercock just clear",
+          "onArrival": "the vane turns although there is no wind on the water",
+          "because": "the parish is down there and the tower is how you reach it",
+          "offer": "go in at the belfry window and the bell will answer to you"
+        },
+        {
+          "occupant": "one of the Still",
+          "doing": "standing in a doorway thirty feet down, quite visible",
+          "onArrival": "it lifts a hand as your shadow crosses the water above",
+          "because": "it is at its own front door and has not been told",
+          "offer": "name its house aloud and it will open every door down there"
+        },
+        {
+          "occupant": "a living stone-robber",
+          "doing": "landing dressed stone off a boat at a slipway",
+          "onArrival": "he asks whether you are here about the church",
+          "because": "he has been taking the steeple down a course at a time",
+          "offer": "tell him to stop and the parish will treat you as its advocate"
+        },
+        {
+          "occupant": "a bell",
+          "doing": "sounding under the water on a day that is not the turn of the year",
+          "onArrival": "the sound arrives at the bank a moment after the water moves",
+          "because": "it is rung at the turn of the year and something has rung it early",
+          "offer": "answer it from the shore and the drowned parish comes up to talk"
+        },
+        {
+          "occupant": "a road",
+          "doing": "running down into the water with tracks on it going both ways",
+          "onArrival": "the tracks below the waterline are as fresh as the ones above",
+          "because": "the road went to the village and it still goes there",
+          "offer": "walk it in and the water lets you down as far as the crossroads"
+        },
+        {
+          "occupant": "the drowned parish",
+          "doing": "standing in its lanes under thirty feet of still water",
+          "onArrival": "every face down there turns up toward the boat at once",
+          "because": "they are kept as they were and would like to be remembered so",
+          "offer": "read them their own names and they will give you anything they have"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bell",
+          "cue": "the bell out of the steeple",
+          "benefit": "once, be heard by everything drowned here",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything drowned here comes when it hears it",
+          "acceptanceCost": {
+            "vice": "Wrath"
+          }
+        },
+        {
+          "id": "list",
+          "cue": "the parish list, house by house",
+          "benefit": "name anything under the water",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the parish expects to be visited"
+        },
+        {
+          "id": "vane",
+          "cue": "the weathercock off the steeple",
+          "benefit": "once, know which way a thing is turning",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the steeple has no mark and the water rises over it"
+        },
+        {
+          "id": "key",
+          "cue": "a house key off a drowned door",
+          "benefit": "once, open a door that is under water",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whoever lived there comes with you through it"
+        },
+        {
+          "id": "stone",
+          "cue": "a dressed stone off the church",
+          "benefit": "once, build something that will stand",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the parish knows exactly where its stone went"
+        }
+      ]
+    },
+    "rising": {
+      "danger": "the level",
+      "dangerLine": "the water is bigger than it was last year and nobody has ever seen it go down",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a shore with three old waterlines above the present one",
+          "trees standing dead in the shallows a long way out",
+          "a boathouse with the doors under water and the roof dry"
+        ],
+        "ritual": [
+          "the level read off a marked post each spring",
+          "a stone set at the edge each year and left",
+          "the drainage cut opened every summer and every summer refilled"
+        ],
+        "demand": [
+          "a level post with the water at the newest mark",
+          "a stone set at last year's edge, standing in water",
+          "a drainage cut with the water sitting level in it, not draining"
+        ],
+        "wound": [
+          "level posts pulled up and thrown in",
+          "a village street with water standing in the doorways",
+          "drainage cuts filled in by somebody in a hurry"
+        ],
+        "anchor": [
+          "the old shore mark, from before it started rising",
+          "a post with every year's level cut into it",
+          "a cut that still drains"
+        ]
+      },
+      "features": [
+        "a level post with the water at the newest mark",
+        "a marker stone standing in water",
+        "three old waterlines above the present one",
+        "dead trees out in the shallows",
+        "a drainage cut sitting level",
+        "water standing in doorways"
+      ],
+      "decisions": [
+        {
+          "cue": "a level post with the water standing at the newest mark",
+          "cost": "cutting a new mark records the rise; pulling the post denies it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you cut the year honestly and the water is satisfied to be measured, and eases",
+            "failure": "you pull the post up and the water comes to where the post was: +1 Bane",
+            "orElse": "leave it; the rise is unrecorded and nobody downstream is warned"
+          }
+        },
+        {
+          "cue": "a marker stone set at last year's edge, now standing in water",
+          "cost": "the stones say how fast, if you can find enough of them",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the run of stones and know exactly how fast it is coming and when it reaches you",
+            "failure": "you move one to where you would rather it were and the water follows it",
+            "orElse": "ignore the stones; you camp somewhere that is under water by morning"
+          }
+        },
+        {
+          "cue": "a drainage cut with the water sitting level in it and not draining",
+          "cost": "the cut works and the lake is refusing to use it",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you find the blockage and the cut runs, and one field comes back out of the water",
+            "failure": "you deepen it and the lake comes up the cut instead, faster",
+            "orElse": "fill the cut in; the lake is pleased and everything low is lost"
+          }
+        },
+        {
+          "cue": "three old waterlines showing on a shore above the present one",
+          "cost": "the lines are not evenly spaced and the gaps are the point",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the spacing and know when it rose fastest, and what happened that year",
+            "failure": "you read them wrong and are confident about a shore that is not safe",
+            "orElse": "leave the shore; you have no idea how quickly this can move"
+          }
+        },
+        {
+          "cue": "a village street with water standing in the doorways, ankle deep",
+          "cost": "people are still living in some of these houses",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you get the last of them out and they know every drain, cut and sluice here",
+            "failure": "you go through and leave them, and they are part of the water by the ending",
+            "orElse": "go round; the street is under to the sill by the time you come back"
+          }
+        },
+        {
+          "cue": "dead trees standing a long way out in the shallows",
+          "cost": "the water came up around them and they took years to die",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you count the rings on a fallen one and know how long this has been happening",
+            "failure": "you take one for a raft and the lake takes exception to being crossed on itself",
+            "orElse": "leave them; you have no idea how old this appetite is"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a level post",
+          "doing": "standing in water with every year cut into it and the newest mark under",
+          "onArrival": "the water is exactly at the top cut and is not moving",
+          "because": "the level is read each spring and the reading stopped",
+          "offer": "cut this year's mark and the water will not come further while you are here"
+        },
+        {
+          "occupant": "a living drainer",
+          "doing": "digging a cut that is already full of level water",
+          "onArrival": "she asks whether it looks like it is running to you",
+          "because": "she has been opening the same cut every summer for thirty years",
+          "offer": "tell her the truth and she will show you every low place here"
+        },
+        {
+          "occupant": "one of the Still",
+          "doing": "standing in a doorway with water to its knees, keeping house",
+          "onArrival": "it apologises for the state of the floor",
+          "because": "the water rose over it and it has not accepted that it has",
+          "offer": "help it bail and it will tell you how far this water means to come"
+        },
+        {
+          "occupant": "a run of marker stones",
+          "doing": "standing in a line out into the water from the shore",
+          "onArrival": "the nearest one is dry and the next one is not",
+          "because": "a stone is set at the edge each year and the line goes out a long way",
+          "offer": "set a stone at today's edge and the lake will stop at it for the delve"
+        },
+        {
+          "occupant": "dead trees",
+          "doing": "standing far out in the shallows with the bark long gone",
+          "onArrival": "the water around their roots is warmer than the rest",
+          "because": "the lake came up around them and they were years dying",
+          "offer": "count them and the lake will tell you what it is reaching for"
+        },
+        {
+          "occupant": "the Level",
+          "doing": "lying against a shore that is plainly not its original one",
+          "onArrival": "the water is a hand's width higher on the shingle than your first look",
+          "because": "it wants to be wider every year and nothing has ever stopped it",
+          "offer": "give it one thing it is reaching for and it will leave the rest"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "shore",
+          "cue": "the old shore mark",
+          "benefit": "once, hold the water to a line",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it takes the difference somewhere else, and lower",
+          "acceptanceCost": {
+            "vice": "Gluttony"
+          }
+        },
+        {
+          "id": "post",
+          "cue": "a level post with every year on it",
+          "benefit": "know exactly how fast this is happening",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know which night you should not be here"
+        },
+        {
+          "id": "stone",
+          "cue": "a marker stone off the run",
+          "benefit": "once, set where the edge is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the water accepts the mark and comes to it"
+        },
+        {
+          "id": "cut",
+          "cue": "a drainer's plan of the cuts",
+          "benefit": "move water off ground that is going under",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it goes onto ground somebody else is standing on"
+        },
+        {
+          "id": "ring",
+          "cue": "a section cut from a drowned tree",
+          "benefit": "know how old this appetite is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it is older than you would like, and it knows you counted"
+        }
+      ]
+    }
+  }
+}

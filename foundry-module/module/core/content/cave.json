@@ -1,0 +1,1173 @@
+{
+  "id": "cave",
+  "label": "Cave",
+  "forgeStageType": "cave",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Wild kernel underground. The appetite belongs to the hole itself — it wants to be gone into, gone down, spoken to, and to keep whatever comes. Claimants are the cave's own names for itself, and the accommodation is what it did to whoever came in.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Deep Dark",
+    "Stone Throat",
+    "Thing in the Sump",
+    "First Hollow",
+    "Lightless",
+    "Old Mouth",
+    "Long Swallow"
+  ],
+  "appetites": [
+    {
+      "id": "unlit",
+      "want": "never to have a light brought into it",
+      "lack": "lit",
+      "purpose": "it would be dark all the way down",
+      "motif": "dark",
+      "prize": "flame",
+      "conscript": "the lamp-carriers",
+      "asks": "\"Why did you bring that in here?\"",
+      "appeasement": {
+        "move": "put out a light of your own, deliberately, and stand in it",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the dark was let be",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "deepened",
+      "want": "that everything which comes in should go further down",
+      "lack": "turned back",
+      "purpose": "nothing would ever stop and go back up",
+      "motif": "deep",
+      "prize": "plumb",
+      "conscript": "the turners-back",
+      "asks": "\"Is that as far as you go?\"",
+      "appeasement": {
+        "move": "go down one level further than you meant to",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "something went deeper",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "answered",
+      "want": "that everything said in it should be said back",
+      "lack": "unanswered",
+      "purpose": "nothing would ever go unheard",
+      "motif": "echo",
+      "prize": "voice",
+      "conscript": "the silent",
+      "asks": "\"Say that again?\"",
+      "appeasement": {
+        "move": "say something aloud into the dark and wait for it to come back",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was answered",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "keeping",
+      "want": "that nothing which comes in should ever leave",
+      "lack": "emptied",
+      "purpose": "it would still have all of it",
+      "motif": "keeping",
+      "prize": "stone",
+      "conscript": "the ones who got out",
+      "asks": "\"You're not taking that out, are you?\"",
+      "appeasement": {
+        "move": "leave something of your own down here on purpose",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it kept something",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "swallowed",
+      "text": "took {conscript} in and closed behind them",
+      "cruelty": 3,
+      "fits": [
+        "keeping",
+        "deepened",
+        "unlit"
+      ]
+    },
+    {
+      "id": "unlit",
+      "text": "let {conscript}'s lights go out one by one",
+      "cruelty": 3,
+      "fits": [
+        "unlit",
+        "deepened"
+      ]
+    },
+    {
+      "id": "turned",
+      "text": "turned {conscript} around so gently they never noticed",
+      "cruelty": 2,
+      "fits": [
+        "deepened",
+        "unlit",
+        "keeping"
+      ]
+    },
+    {
+      "id": "grown",
+      "text": "grew over {conscript} where they sat down to rest",
+      "cruelty": 2,
+      "fits": [
+        "keeping",
+        "answered"
+      ]
+    },
+    {
+      "id": "answered",
+      "text": "answered {conscript} in their own voices until they followed",
+      "cruelty": 3,
+      "fits": [
+        "answered",
+        "unlit",
+        "deepened"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "kept {conscript} at the mouth, facing in, so the next lot would come",
+      "cruelty": 2,
+      "fits": [
+        "keeping",
+        "answered"
+      ]
+    }
+  ],
+  "prizes": {
+    "flame": {
+      "label": "the last flame that went out down here",
+      "function": "the only light that ever reached the bottom"
+    },
+    "plumb": {
+      "label": "the line that was let down and came back up",
+      "function": "the only thing here that ever measured the depth"
+    },
+    "voice": {
+      "label": "the one word the cave says in somebody else's voice",
+      "function": "the only thing down here that was ever answered honestly"
+    },
+    "stone": {
+      "label": "the stone that grew around something and let it go",
+      "function": "the only thing the cave ever gave back"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Hole of the",
+      "Under the",
+      "The Deep of the",
+      "The Mouth of the",
+      "The Swallow of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Mouth",
+      "The Entrance Chamber",
+      "The Daylight Hole",
+      "The Rift",
+      "The Spoil Slope"
+    ],
+    "complication": [
+      "The Crawl",
+      "The Boulder Choke",
+      "The Streamway",
+      "The Flowstone Gallery",
+      "The Traverse"
+    ],
+    "turn": [
+      "The Great Chamber",
+      "The Aven",
+      "The Cathedral",
+      "The Junction",
+      "The Bone Floor"
+    ],
+    "descent": [
+      "The Pitch",
+      "The Sump",
+      "The Muddy Way",
+      "The Squeeze",
+      "The Dead Passage"
+    ],
+    "threshold": [
+      "The Last Chamber",
+      "The Terminal Sump",
+      "The Deep Rift",
+      "The Curtain",
+      "The Airbell"
+    ],
+    "ending": [
+      "The Bottom",
+      "Where the Line Ended",
+      "The Lightless Room",
+      "Under the Stone"
+    ]
+  },
+  "factions": [
+    {
+      "id": "kept",
+      "name": "the Kept",
+      "kind": "undead",
+      "essence": "came in and never got out, and have stopped minding",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "miners",
+      "name": "the miners",
+      "kind": "living",
+      "essence": "came down for the workings and cannot find the way up",
+      "handledBy": "trade"
+    },
+    {
+      "id": "dark",
+      "name": "what the dark does when it is not watched",
+      "kind": "beast",
+      "essence": "has never once been seen whole",
+      "handledBy": "light"
+    },
+    {
+      "id": "deep",
+      "name": "what came up from the sump",
+      "kind": "beast",
+      "essence": "lives below the water and does not need to breathe",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in at the mouth in daylight, with a light burning",
+    "seenTwice": "passed the same formation twice, going different ways",
+    "loud": "a raised voice underground, which the cave repeats",
+    "lingering": "stayed still long enough for the cave to grow a little over you",
+    "disturbed": "broke a formation, moved a cairn, or let a stone go down a pitch"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "a Bat Swarm and 2 Giant Rats in the entrance chamber",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Bat Swarm",
+          "atk": 3,
+          "def": 4,
+          "grit": 4,
+          "nerve": 3,
+          "note": "douses open flames on a hit"
+        },
+        {
+          "n": 2,
+          "name": "Giant Rat",
+          "atk": 2,
+          "def": 3,
+          "grit": 2,
+          "nerve": 2,
+          "note": "go for the light-carrier"
+        }
+      ],
+      "harmedBy": "anything; area attacks and fire do best against the swarm",
+      "avoid": "shutter your lights and they lose interest entirely"
+    },
+    "fight": {
+      "line": "1 Ogre in the low passage",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "cannot follow into a crawl or a squeeze"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "it cannot fit where you can — the crawl is the answer, and say so"
+    },
+    "battle": {
+      "line": "1 Troll out of the sump and a Bat Swarm",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES 2 Grit a round unless the wound was burnt"
+        },
+        {
+          "n": 1,
+          "name": "Bat Swarm",
+          "atk": 3,
+          "def": 4,
+          "grit": 4,
+          "nerve": 3,
+          "note": "douses open flames on a hit"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative, and note the swarm is putting your fires out",
+      "avoid": "it will not leave the water; stay off the streamway and it stays in"
+    },
+    "nightmare": {
+      "line": "1 Troll, 1 Ogre and 3 Ghouls of the Kept",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES unless burnt"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "blocks the passage behind you"
+        },
+        {
+          "n": 3,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        }
+      ],
+      "harmedBy": "anything; fire for the Troll",
+      "avoid": "do not run this without an appeasement route open and a way out at your back"
+    }
+  },
+  "motifs": {
+    "dark": {
+      "danger": "the dark",
+      "dangerLine": "the cave has been dark for a very long time and it has not enjoyed the interruption",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a dark so complete that your eyes invent things in it",
+          "passages that have never had light in them at any point",
+          "a mouth where the daylight stops in a hard line"
+        ],
+        "ritual": [
+          "a candle set in a niche at every junction and lit going in",
+          "lights counted at the mouth and counted again coming out",
+          "a lamp left burning at the bottom for whoever is still down"
+        ],
+        "demand": [
+          "a niche with a candle in it, unlit, and the wick trimmed",
+          "a lamp guttering with the oil not yet gone",
+          "a hard line of daylight that stops exactly where you are standing"
+        ],
+        "wound": [
+          "candles in every niche, all of them burnt out together",
+          "a lamp smashed against the wall from the inside",
+          "a line of spent matches going one way down a passage"
+        ],
+        "anchor": [
+          "the last flame that went out down here",
+          "a lamp that has never needed filling",
+          "a candle that will light in any air"
+        ]
+      },
+      "features": [
+        "an unlit candle in a niche",
+        "a lamp guttering with oil left",
+        "spent matches in a line",
+        "a smashed lamp against a wall",
+        "burnt-out candles in every niche",
+        "daylight stopping in a hard line"
+      ],
+      "decisions": [
+        {
+          "cue": "a niche with a candle in it, unlit, with the wick trimmed ready",
+          "cost": "lighting it is a courtesy or an intrusion, depending",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you light it and the cave lets you pass this junction unmolested, both ways",
+            "failure": "you light it and something further in sees exactly where you are: +1 Bane",
+            "orElse": "leave the niche dark; the junction will not stay in the same place behind you"
+          }
+        },
+        {
+          "cue": "a lamp guttering on the floor with oil still in the reservoir",
+          "cost": "it is going out for a reason, not for want of fuel",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what is putting it out and can keep your own lights alive down here",
+            "failure": "you refill it and it goes out anyway, and takes your lights with it",
+            "orElse": "leave it; your own lights start to gutter within the Turn"
+          }
+        },
+        {
+          "cue": "a line of spent matches going one way down a passage",
+          "cost": "somebody was striking one at a time and losing them",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you follow the matches and find where they ran out, and what they had reached",
+            "failure": "you follow them the wrong way and come out somewhere you have already been",
+            "orElse": "ignore them; you have no line to follow through the middle passages"
+          }
+        },
+        {
+          "cue": "all the candles in every niche burnt out together, at the same length",
+          "cost": "they went out at once, which takes doing",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find what put them out and can force it back for one scene with fire",
+            "failure": "you relight the run and it happens again, to yours: roll the clock",
+            "orElse": "leave them; the dark here is not ordinary and you will not know why"
+          }
+        },
+        {
+          "cue": "a hard line of daylight stopping exactly where you stand",
+          "cost": "crossing it is the last unambiguous decision you will make",
+          "resolve": {
+            "roll": "Poise 1",
+            "success": "you mark the line and can find your way back to it from anywhere",
+            "failure": "you cross without marking it and the mouth is not where you left it",
+            "orElse": "turn back at the line; the delve does not happen, and the cave keeps everything"
+          }
+        },
+        {
+          "cue": "a lamp smashed against the wall from the inside",
+          "cost": "somebody down here chose the dark",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who broke it and why, and the reason is worth knowing",
+            "failure": "you leave your own light where theirs was and something takes it too",
+            "orElse": "leave the glass; you never learn what makes a person put their own light out"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Kept",
+          "doing": "sitting in a niche with an unlit candle in its hands",
+          "onArrival": "it holds the candle out toward you without looking up",
+          "because": "the candle is lit going in and it never went in",
+          "offer": "light the candle for it and it will walk you to any junction here"
+        },
+        {
+          "occupant": "a living miner",
+          "doing": "striking matches one at a time in a passage",
+          "onArrival": "he asks how many you have left",
+          "because": "he has been going through them since his lamp failed",
+          "offer": "give him a light and he will show you the way the workings run"
+        },
+        {
+          "occupant": "the dark",
+          "doing": "standing in a chamber where your lights do not reach the walls",
+          "onArrival": "your flames shorten as you come in and do not go out",
+          "because": "the cave has never had light this far in",
+          "offer": "put your lights out on purpose and it will let you through anything"
+        },
+        {
+          "occupant": "two of the Kept",
+          "doing": "carrying a lamp between them that is not burning",
+          "onArrival": "they stop and offer it to you, handle first",
+          "because": "the lamp goes to the bottom for whoever is still down",
+          "offer": "take the lamp down and everything here treats you as one of the party"
+        },
+        {
+          "occupant": "a candle",
+          "doing": "burning in a niche in a passage nobody has entered",
+          "onArrival": "the flame leans toward the way you came in",
+          "because": "somebody lit it going in and never came back past it",
+          "offer": "take the candle and the cave will not put your lights out"
+        },
+        {
+          "occupant": "the mouth",
+          "doing": "showing as a hard line of daylight a long way behind you",
+          "onArrival": "the line is narrower than when you passed it",
+          "because": "the cave keeps what comes in and the mouth is how it does that",
+          "offer": "go back and touch the line and it stops narrowing"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "flame",
+          "cue": "a stub of the last flame",
+          "benefit": "once, have light where light does not work",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the cave knows exactly where the flame is at all times",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "candle",
+          "cue": "a candle that lights in any air",
+          "benefit": "your lights cannot be put out by the dark",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the dark attends to you personally instead"
+        },
+        {
+          "id": "lamp",
+          "cue": "a lamp that has never needed filling",
+          "benefit": "light for as long as you want it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it was somebody's and they are still using it"
+        },
+        {
+          "id": "matches",
+          "cue": "a handful of dry matches",
+          "benefit": "once, buy yourself one scene of light",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the count is finite and you will know when it runs low"
+        },
+        {
+          "id": "line",
+          "cue": "a mark cut at the daylight line",
+          "benefit": "once, find your way back to the mouth",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever is between you and it also knows the way now"
+        }
+      ]
+    },
+    "deep": {
+      "danger": "the pitch",
+      "dangerLine": "the cave goes down further than anybody has been and it would like you to see",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a system that goes down in steps, each one further than the last",
+          "pitches rigged with somebody else's rope, still hanging",
+          "a survey that stops with the word CONTINUES"
+        ],
+        "ritual": [
+          "a stone dropped at every pitch head and counted down",
+          "the line let out and knotted at each ten fathoms",
+          "a cairn built at the deepest point reached"
+        ],
+        "demand": [
+          "a pitch head with a rope hanging down it and no knot at the bottom",
+          "a stone dropped that has not landed yet",
+          "a cairn half built at the lip of something"
+        ],
+        "wound": [
+          "a rope cut at the pitch head and the rest of it down there",
+          "cairns knocked flat all the way down",
+          "a survey ending mid-word"
+        ],
+        "anchor": [
+          "the line that was let down and came back up",
+          "a survey with a bottom marked on it",
+          "a rope that reaches"
+        ]
+      },
+      "features": [
+        "a rope hanging down a pitch",
+        "a half-built cairn at a lip",
+        "a survey ending mid-word",
+        "a cut rope end at a pitch head",
+        "knots at every ten fathoms",
+        "a stone that has not landed"
+      ],
+      "decisions": [
+        {
+          "cue": "a pitch head with a rope hanging down it and no knot at the bottom",
+          "cost": "the rope may not reach and there is no way to know from up here",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you rig it properly off your own gear and get down and back with the rope still there",
+            "failure": "you go down on it as found and it ends in air: you are down, and it is not coming back up",
+            "orElse": "do not descend; the way on is through the sump instead, and the sump is worse"
+          }
+        },
+        {
+          "cue": "a stone dropped at a pitch head that has not landed yet",
+          "cost": "the count is still going",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you count it out and know exactly what is below, and can plan for it",
+            "failure": "you stop counting and go down on an assumption",
+            "orElse": "throw nothing; you descend without knowing what is under you"
+          }
+        },
+        {
+          "cue": "a cairn half built at the lip of something",
+          "cost": "somebody was marking their deepest point and stopped",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you finish the cairn and the cave accepts the mark — everything below it is passable",
+            "failure": "you knock it and the cave stops acknowledging any depth you reach",
+            "orElse": "leave the cairn; nothing down here will treat you as having got anywhere"
+          }
+        },
+        {
+          "cue": "a survey ending mid-word with the word CONTINUES",
+          "cost": "whoever wrote it went on and did not come back to finish",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the survey and know the shape of everything below, including the way out",
+            "failure": "you take the survey as complete and trust a passage that closes",
+            "orElse": "leave it; you go down blind from here on"
+          }
+        },
+        {
+          "cue": "a rope cut clean at the pitch head with the rest of it below",
+          "cost": "somebody cut it from up here, on purpose",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who was cut off and why, and what they became down there",
+            "failure": "you splice on and go down after it, and it is cut again behind you",
+            "orElse": "leave the rope; whoever is down there stays down there"
+          }
+        },
+        {
+          "cue": "a line knotted at every ten fathoms, coiled and dry",
+          "cost": "the knots say how far it has been",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you use the line and can go down and come back up as often as you need",
+            "failure": "you let the whole line out and the end goes on falling: roll the clock",
+            "orElse": "leave the line; every descent from here is one-way"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a caver of the Kept",
+          "doing": "standing at a pitch head with a rope in its hands",
+          "onArrival": "it offers you the end and points down",
+          "because": "the pitch was never bottomed and it will not go alone",
+          "offer": "take the rope and it will hold it for you, indefinitely"
+        },
+        {
+          "occupant": "the pitch",
+          "doing": "dropping away into air at your feet with a rope hanging in it",
+          "onArrival": "a stone you did not throw is still falling",
+          "because": "it has never been bottomed and it wants to be",
+          "offer": "go down and the cave will let you back up, once"
+        },
+        {
+          "occupant": "two living miners",
+          "doing": "paying a line out over a lip and not stopping",
+          "onArrival": "they ask how deep you think it goes",
+          "because": "they have been letting it out since their lamps were full",
+          "offer": "tell them a depth and they will haul, and bring up what is on the end"
+        },
+        {
+          "occupant": "one of the Kept",
+          "doing": "building a cairn at a lip, stone by stone",
+          "onArrival": "it sets a stone and looks at you to approve it",
+          "because": "it was marking the deepest point reached and never reached further",
+          "offer": "add a stone and everything below this point lets you through"
+        },
+        {
+          "occupant": "a survey",
+          "doing": "hanging pinned to a boulder with the last word unfinished",
+          "onArrival": "the ink of the last word is still wet",
+          "because": "whoever wrote it went on and the page waits",
+          "offer": "finish the word and the cave shows you what is beyond it"
+        },
+        {
+          "occupant": "the Long Swallow",
+          "doing": "filling a chamber whose floor you cannot see",
+          "onArrival": "the air comes up warm and smells of somewhere else",
+          "because": "everything that comes in goes down and it is still waiting for you",
+          "offer": "go down willingly and it will not close behind you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "plumb",
+          "cue": "the line that came back up",
+          "benefit": "once, know exactly what is below you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what is below you knows the same about you"
+        },
+        {
+          "id": "rope",
+          "cue": "a rope that reaches",
+          "benefit": "once, get down and back up anything",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "it reaches because something at the bottom is holding it",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "survey",
+          "cue": "the survey with a bottom marked",
+          "benefit": "know the shape of the system below",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the marked bottom is not the bottom"
+        },
+        {
+          "id": "cairnstone",
+          "cue": "a stone off the deepest cairn",
+          "benefit": "once, be treated as having got there",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the cave expects you to go further next time"
+        },
+        {
+          "id": "knots",
+          "cue": "a knotted measuring line",
+          "benefit": "measure any drop before you take it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you will measure one you cannot avoid"
+        }
+      ]
+    },
+    "echo": {
+      "danger": "the answer",
+      "dangerLine": "everything said down here comes back, and lately it has been coming back changed",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "chambers shaped so that a word spoken at one end arrives whole at the other",
+          "a system that carries a voice further than a light",
+          "passages that answer in a different order than you spoke"
+        ],
+        "ritual": [
+          "a name called at every junction and waited for",
+          "the same phrase said at the entrance by everyone going in",
+          "a whistle used instead of shouting, three notes, always"
+        ],
+        "demand": [
+          "a chamber that has just stopped repeating something",
+          "a whistle answered from further in, correctly",
+          "your own voice arriving from a direction you have not gone"
+        ],
+        "wound": [
+          "a chamber that repeats a scream at the same interval",
+          "voices calling names of people who are not down here",
+          "an answer that comes before the call"
+        ],
+        "anchor": [
+          "the one word the cave says in somebody else's voice",
+          "a chamber that gives a true echo",
+          "a whistle that only carries to the living"
+        ]
+      },
+      "features": [
+        "a chamber still repeating something",
+        "a whistle answered from ahead",
+        "your own voice from the wrong direction",
+        "a name called at a junction",
+        "an answer arriving before the call",
+        "three notes with no whistler"
+      ],
+      "decisions": [
+        {
+          "cue": "a chamber that has just stopped repeating something you did not say",
+          "cost": "answering it starts a conversation",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer carefully and the cave tells you, truthfully, where somebody is",
+            "failure": "you answer freely and it has your voice now, and uses it: +1 Bane",
+            "orElse": "say nothing; whatever was calling calls somewhere else, to somebody else"
+          }
+        },
+        {
+          "cue": "a whistle of three notes answered correctly from further in",
+          "cost": "the answer means somebody living, or something that learned",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you test it with a fourth note and know which, before you meet it",
+            "failure": "you whistle back and go toward it, and it is the other one",
+            "orElse": "stay silent; you never establish whether anybody else is down here"
+          }
+        },
+        {
+          "cue": "your own voice arriving from a direction you have not gone",
+          "cost": "the cave has kept it and is using it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you recognise it as yours and are not drawn — and you learn which passage it came from",
+            "failure": "one of you follows it, briefly, and is separated",
+            "orElse": "block your ears; you also cannot hear each other, for a Turn"
+          }
+        },
+        {
+          "cue": "a name being called at a junction, over and over, for somebody not down here",
+          "cost": "the caller does not know they are alone",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you tell it the truth gently and it stops, and thanks you, and helps",
+            "failure": "you answer to the name and it takes you for them: +1 Bane",
+            "orElse": "walk past; the calling follows you at exactly the same distance"
+          }
+        },
+        {
+          "cue": "an answer that arrives before the call it answers",
+          "cost": "the cave is ahead of you in the conversation",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what you are about to say and choose not to say it, which unnerves it",
+            "failure": "you say the thing anyway and confirm that it knows you",
+            "orElse": "ignore it; every route from here is chosen for you, quietly"
+          }
+        },
+        {
+          "cue": "a chamber repeating a scream at exactly the same interval",
+          "cost": "the interval is the useful part",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you time it and use the gap to cross, or to be heard, exactly once",
+            "failure": "you cross on the scream and everything down here turns toward the chamber",
+            "orElse": "go the long way, costing a Turn, and hear it the whole way"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a voice",
+          "doing": "calling a name at a junction with nobody there to own it",
+          "onArrival": "it stops when you arrive and starts again when you move",
+          "because": "somebody called and was never answered",
+          "offer": "answer to the name and every passage here will carry your voice truly"
+        },
+        {
+          "occupant": "one of the Kept",
+          "doing": "whistling three notes and waiting for the reply",
+          "onArrival": "it whistles again when it sees you, and waits",
+          "because": "the reply comes from further in and it will not go alone",
+          "offer": "whistle the reply and it will lead you to whatever has been answering"
+        },
+        {
+          "occupant": "a living surveyor",
+          "doing": "shouting measurements to somebody who is not writing them down",
+          "onArrival": "she asks you to repeat the last one back",
+          "because": "her partner stopped answering a long time ago",
+          "offer": "repeat it back and she will give you the survey she has made"
+        },
+        {
+          "occupant": "the Stone Throat",
+          "doing": "filling a chamber with your own voice from a passage you have not entered",
+          "onArrival": "the voice says something you have not said yet",
+          "because": "the cave keeps voices and it has kept yours",
+          "offer": "let it finish and it will tell you one true thing in your own words"
+        },
+        {
+          "occupant": "two of the Kept",
+          "doing": "standing apart in a chamber and speaking in turn",
+          "onArrival": "they leave a gap in the exchange exactly the length of a sentence",
+          "because": "the third of them stopped speaking and they carried on",
+          "offer": "say anything into the gap and both will do whatever you ask"
+        },
+        {
+          "occupant": "an echo",
+          "doing": "repeating a scream at the same interval in an empty chamber",
+          "onArrival": "the interval shortens slightly while you listen",
+          "because": "it happened here and the chamber will not let it go",
+          "offer": "name what happened and the chamber goes quiet, and stays quiet"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "voice",
+          "cue": "the word the cave says in another voice",
+          "benefit": "once, be believed by anything that knew that person",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you say it in their voice and something of them comes with it",
+          "acceptanceCost": {
+            "vice": "Envy"
+          }
+        },
+        {
+          "id": "whistle",
+          "cue": "a caver's whistle",
+          "benefit": "once, be heard by everything living down here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "and by everything that is not"
+        },
+        {
+          "id": "chamber",
+          "cue": "a knack for the true-echo chamber",
+          "benefit": "once, ask the cave a question and get an answer",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it asks one back, and expects it answered"
+        },
+        {
+          "id": "name",
+          "cue": "a name called and never answered",
+          "benefit": "once, make something come to you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it comes expecting the person whose name it is"
+        },
+        {
+          "id": "silence",
+          "cue": "a stretch of passage that does not echo",
+          "benefit": "once, move or speak without the cave hearing",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot hear it coming either"
+        }
+      ]
+    },
+    "keeping": {
+      "danger": "what it kept",
+      "dangerLine": "the cave has kept everything that ever came in, and it is still adding",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "formations grown over things that were not stone to begin with",
+          "a floor of bones with the newest ones on top",
+          "a system where nothing rots and nothing goes away"
+        ],
+        "ritual": [
+          "a thing left at the mouth by everyone going in",
+          "stone laid down a hair a year over whatever is under it",
+          "the dead left where they fall and grown into the floor"
+        ],
+        "demand": [
+          "a formation with a shape under it you can nearly make out",
+          "a shelf of offerings at the mouth with a gap in the row",
+          "a hand of stone reaching out of a wall, worn smooth"
+        ],
+        "wound": [
+          "formations broken off and carried out",
+          "a bone floor dug through in one place, recently",
+          "the mouth shelf swept clean and the offerings gone"
+        ],
+        "anchor": [
+          "the stone that grew around something and let it go",
+          "a formation with a whole thing visible inside it",
+          "the offering shelf, complete"
+        ]
+      },
+      "features": [
+        "a formation with a shape inside it",
+        "a gap in a row of offerings",
+        "a bone floor dug through",
+        "a stone hand worn smooth",
+        "broken flowstone carried out",
+        "a shelf swept clean"
+      ],
+      "decisions": [
+        {
+          "cue": "a shelf of offerings at the mouth with a gap in the row",
+          "cost": "filling the gap pays your way in",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you leave something that genuinely costs you and the cave lets you back out",
+            "failure": "you leave something worthless and it is noticed and remembered: +1 Bane",
+            "orElse": "leave the gap; the mouth will be smaller on the way out than the way in"
+          }
+        },
+        {
+          "cue": "a formation with a shape under it you can nearly make out",
+          "cost": "breaking it open frees what is inside, or ends it",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open it carefully and what is inside is grateful, and knows the way",
+            "failure": "you break it and take the piece, and the cave starts growing over you",
+            "orElse": "leave it grown over; whatever is in there stays in there, and it was watching"
+          }
+        },
+        {
+          "cue": "a bone floor dug through in one place, recently",
+          "cost": "somebody was looking for something in the older layers",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find what they dug for and get it before they come back",
+            "failure": "you dig further and the floor gives out into what is under it",
+            "orElse": "leave the hole; you never learn what is worth digging a bone floor for"
+          }
+        },
+        {
+          "cue": "a hand of stone reaching out of a wall, worn smooth by touching",
+          "cost": "people have been shaking it for a long time",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take the hand properly and the Kept accept you as one who came in politely",
+            "failure": "you take it and it does not let go until you leave something behind",
+            "orElse": "do not touch it; the Kept treat you as having walked past them"
+          }
+        },
+        {
+          "cue": "broken flowstone stacked ready to be carried out",
+          "cost": "somebody is taking the cave away in pieces",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the carriers and can trade — they know every way out because they use them",
+            "failure": "you carry a piece yourself and the cave will not let you out with it",
+            "orElse": "leave the stack; the carriers stay hidden and unhelpful"
+          }
+        },
+        {
+          "cue": "a stone that has grown around something and split, leaving it loose",
+          "cost": "the cave gave one thing back, once",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you understand what it took to make that happen and can do it again at the ending",
+            "failure": "you pocket it and the cave takes the equivalent from you: +1 Bane",
+            "orElse": "leave it; there is no precedent for the cave giving anything up"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a stone hand",
+          "doing": "reaching out of a wall at the height of a handshake",
+          "onArrival": "the fingers are warm and worn smooth",
+          "because": "everyone who came in shook it and one of them did not let go",
+          "offer": "take the hand and the Kept will treat you as expected and welcome"
+        },
+        {
+          "occupant": "one of the Kept",
+          "doing": "sitting half grown into a flowstone curtain, still able to turn its head",
+          "onArrival": "it asks how long it has been",
+          "because": "it sat down to rest and the cave got on with it",
+          "offer": "give it a number and it will tell you where everything down here was left"
+        },
+        {
+          "occupant": "two living carriers",
+          "doing": "stacking broken formations by the passage mouth",
+          "onArrival": "they ask whether you are here to help carry",
+          "because": "they have been taking the cave out a sack at a time",
+          "offer": "carry a sack and they will show you every way out they use"
+        },
+        {
+          "occupant": "the offering shelf",
+          "doing": "standing at the mouth with a gap in the row",
+          "onArrival": "the objects on it are dusted and the gap is not",
+          "because": "everybody leaves something and somebody took theirs back",
+          "offer": "fill the gap and the cave lets you out again afterwards"
+        },
+        {
+          "occupant": "a formation",
+          "doing": "standing in a chamber with a shape clearly inside it",
+          "onArrival": "the shape is facing the way you came in",
+          "because": "the cave keeps things and this is how",
+          "offer": "speak to it and it answers, and it knows what the cave wants"
+        },
+        {
+          "occupant": "the bone floor",
+          "doing": "lying dug through in one place with the spoil beside it",
+          "onArrival": "the newest bones are on top and one of them is clean",
+          "because": "the dead are left where they fall and grown over",
+          "offer": "put the clean bone back and the floor lets you cross anywhere"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "stone",
+          "cue": "the stone that let something go",
+          "benefit": "once, get a thing out that the cave has kept",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the cave takes the nearest equivalent, and chooses",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "offering",
+          "cue": "something off the mouth shelf",
+          "benefit": "once, be owed a way out",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you took somebody's passage out, and they are still in here"
+        },
+        {
+          "id": "bone",
+          "cue": "a clean bone off the floor",
+          "benefit": "once, be recognised by the Kept",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they recognise you as one of them"
+        },
+        {
+          "id": "flowstone",
+          "cue": "a piece of broken formation",
+          "benefit": "once, have exactly the thing the cave grew over",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the cave grows over you a little each time you rest"
+        },
+        {
+          "id": "hand",
+          "cue": "a cast of the stone hand",
+          "benefit": "once, be greeted rather than swallowed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the greeting is binding both ways"
+        }
+      ]
+    }
+  }
+}

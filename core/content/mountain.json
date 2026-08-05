@@ -1,0 +1,1165 @@
+{
+  "id": "mountain",
+  "label": "Mountain",
+  "forgeStageType": "cave",
+  "schema": 1,
+  "placeNameStyle": "claimant",
+  "_model": "Wild kernel at altitude. The appetite belongs to the hill — it wants to be gone up, to be cold, to be the only way through, and to have everything come to rest at its foot. Claimants are the mountain's own names, and its cruelties are all things weather does anyway.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "White Head",
+    "Old Cold",
+    "Thing Above the Snow",
+    "First Stone",
+    "Grandfather",
+    "Cloud-Sitter",
+    "The Watcher"
+  ],
+  "appetites": [
+    {
+      "id": "climbed",
+      "want": "to be gone up and not come down from",
+      "lack": "descended",
+      "purpose": "everything that went up would stay up",
+      "motif": "ascent",
+      "prize": "cairn",
+      "conscript": "the climbers",
+      "asks": "\"Is that as high as you're going?\"",
+      "appeasement": {
+        "move": "go up one stretch you did not have to",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "something went higher",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "cold",
+      "want": "never to have anything warm on it",
+      "lack": "warmed",
+      "purpose": "nothing would ever be comfortable up here",
+      "motif": "cold",
+      "prize": "fire",
+      "conscript": "the fire-lighters",
+      "asks": "\"Are you cold yet?\"",
+      "appeasement": {
+        "move": "go without your fire for a night, on purpose",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "it was cold and you bore it",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "crossed",
+      "want": "that nothing should get past it without asking",
+      "lack": "gone round",
+      "purpose": "every crossing would come through it",
+      "motif": "pass",
+      "prize": "waystone",
+      "conscript": "the travellers",
+      "asks": "\"And where do you think you're going?\"",
+      "appeasement": {
+        "move": "ask the pass for leave, aloud, before you go through",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was asked",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "settled",
+      "want": "that everything should come down to it and stay",
+      "lack": "carried off",
+      "purpose": "nothing would ever be taken away again",
+      "motif": "weight",
+      "prize": "stone",
+      "conscript": "the carriers",
+      "asks": "\"Why are you carrying that?\"",
+      "appeasement": {
+        "move": "put something down and leave it where it falls",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "something came to rest",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "kepthigh",
+      "text": "kept {conscript} at the top, facing out, where they can still be seen",
+      "cruelty": 3,
+      "fits": [
+        "climbed",
+        "cold",
+        "settled"
+      ]
+    },
+    {
+      "id": "goodweather",
+      "text": "let {conscript} go up in good weather and did not let them down in it",
+      "cruelty": 3,
+      "fits": [
+        "climbed",
+        "cold"
+      ]
+    },
+    {
+      "id": "chilled",
+      "text": "took {conscript}'s warmth a finger at a time until they stopped noticing",
+      "cruelty": 2,
+      "fits": [
+        "cold",
+        "crossed",
+        "climbed"
+      ]
+    },
+    {
+      "id": "camedown",
+      "text": "came down on {conscript} in the night, all at once",
+      "cruelty": 3,
+      "fits": [
+        "settled",
+        "cold"
+      ]
+    },
+    {
+      "id": "closed",
+      "text": "closed the pass behind {conscript} and did not open it again",
+      "cruelty": 2,
+      "fits": [
+        "crossed",
+        "settled",
+        "climbed"
+      ]
+    },
+    {
+      "id": "landmark",
+      "text": "made a landmark of {conscript}, which travellers still steer by",
+      "cruelty": 2,
+      "fits": [
+        "settled",
+        "crossed",
+        "cold"
+      ]
+    }
+  ],
+  "prizes": {
+    "cairn": {
+      "label": "the topmost stone of the summit cairn",
+      "function": "the only proof anybody ever got all the way up"
+    },
+    "fire": {
+      "label": "the fire that stayed lit above the snowline",
+      "function": "the only warm thing this hill ever allowed"
+    },
+    "waystone": {
+      "label": "the waystone from the top of the pass",
+      "function": "the only thing that ever said which way was through"
+    },
+    "stone": {
+      "label": "the stone that stopped rolling",
+      "function": "the only thing here that ever came to rest of its own accord"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Mountain of the",
+      "Above the",
+      "The Head of the",
+      "The Cold of the",
+      "The High Place of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Corrie",
+      "The Shieling",
+      "The Lower Slopes",
+      "The Bothy",
+      "The Path Up"
+    ],
+    "complication": [
+      "The Scree",
+      "The Ridge",
+      "The Boulder Field",
+      "The Steep Ground",
+      "The Traverse Ledge"
+    ],
+    "turn": [
+      "The Bealach",
+      "The Snowline",
+      "The Cairn",
+      "The Great Buttress",
+      "The Plateau"
+    ],
+    "descent": [
+      "The Gully",
+      "The Cornice",
+      "The North Face",
+      "The Frozen Burn",
+      "The Avalanche Ground"
+    ],
+    "threshold": [
+      "The Last Cairn",
+      "The Shoulder",
+      "The Summit Ridge",
+      "The Windbreak",
+      "The Cleft"
+    ],
+    "ending": [
+      "The Summit",
+      "Where the Stones Are Piled",
+      "Above the Cloud",
+      "The Cold Place"
+    ]
+  },
+  "factions": [
+    {
+      "id": "left",
+      "name": "the Left",
+      "kind": "undead",
+      "essence": "went up and are still up, and are past minding about it",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "drovers",
+      "name": "the drovers",
+      "kind": "living",
+      "essence": "were taking stock over the pass when it closed",
+      "handledBy": "trade"
+    },
+    {
+      "id": "cold",
+      "name": "the cold itself",
+      "kind": "beast",
+      "essence": "is not hunting you and will kill you anyway",
+      "handledBy": "shelter"
+    },
+    {
+      "id": "above",
+      "name": "what walks above the snowline",
+      "kind": "beast",
+      "essence": "has never been down and does not intend to be",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came up the path in daylight, where the whole hill can see you",
+    "seenTwice": "skylined twice on the same ridge",
+    "loud": "a raised voice on a slope with snow above it",
+    "lingering": "stopped moving long enough for the cold to start working",
+    "disturbed": "took a stone off a cairn, crossed a cornice, or lit a fire above the snowline"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "2 Dire Wolves on the lower slopes",
+      "foes": [
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "work you downhill, away from the path"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "get above them and they will not come up at you"
+    },
+    "fight": {
+      "line": "1 Ogre on the ridge",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "one push and you are off the ridge — Poise 1 or fall"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "it holds the ridge and nothing else; the scree slope below is open the whole way"
+    },
+    "battle": {
+      "line": "1 Troll in the gully and 2 Dire Wolves above it",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES 2 Grit a round unless the wound was burnt"
+        },
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "hold the top of the gully"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative, and there is no fuel above the snowline",
+      "avoid": "it will not leave the gully; the buttress is longer and it is climbable"
+    },
+    "nightmare": {
+      "line": "1 Wraith above the snowline, 1 Troll and 3 Dire Wolves",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit; the cold is already doing that"
+        },
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 4,
+          "grit": 14,
+          "nerve": 4,
+          "note": "REGENERATES unless burnt"
+        },
+        {
+          "n": 3,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "cut the line of retreat"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll",
+      "avoid": "do not run this without an appeasement route open and shelter within a Turn"
+    }
+  },
+  "motifs": {
+    "ascent": {
+      "danger": "the height",
+      "dangerLine": "the hill takes everything that goes up and it has never once had to come and get it",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a path that only goes one way and does not branch",
+          "cairns set at every point where you might doubt the route",
+          "a summit that is visible from everywhere and reached from nowhere"
+        ],
+        "ritual": [
+          "a stone carried up and added to the cairn at the top",
+          "a rest taken at the same rock each time by everyone who goes",
+          "boots turned to face downhill when you stop"
+        ],
+        "demand": [
+          "a cairn one stone short and a flat stone beside it",
+          "a path going up with nothing coming down it",
+          "boots left turned to face uphill"
+        ],
+        "wound": [
+          "cairns pushed over in a line all the way to the top",
+          "a path worn deep in one direction only",
+          "a rest-rock with everything on it that somebody was carrying"
+        ],
+        "anchor": [
+          "the topmost stone of the summit cairn",
+          "a route description that reaches the top and back",
+          "a path that goes down as well as up"
+        ]
+      },
+      "features": [
+        "a cairn one stone short",
+        "boots turned to face uphill",
+        "a rest-rock with a pack still on it",
+        "cairns pushed over in a line",
+        "a path worn deep one way",
+        "a flat stone set ready"
+      ],
+      "decisions": [
+        {
+          "cue": "a cairn one stone short with a flat stone laid ready beside it",
+          "cost": "adding it finishes somebody else's climb",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you place the stone and the route ahead is marked all the way, both directions",
+            "failure": "you take a stone instead and the route unmarks itself behind you: +1 Bane",
+            "orElse": "leave it short; the cairns stop being where you remember them"
+          }
+        },
+        {
+          "cue": "boots left turned to face uphill at a rest place",
+          "cost": "they are turned downhill by anyone intending to go home",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you turn them down and whatever wore them can go, and tells you what it saw",
+            "failure": "you turn yours uphill to match and the hill counts you among the ones going up",
+            "orElse": "leave them; the rest place is not a place you can rest"
+          }
+        },
+        {
+          "cue": "a path worn deep in one direction and unworn in the other",
+          "cost": "everybody came up this and nobody went down it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the descent route that was actually used, which is not this one",
+            "failure": "you plan to go down the way you came and the way is not there",
+            "orElse": "accept it; every route from here is committed, and the hill knows"
+          }
+        },
+        {
+          "cue": "a rest-rock with a pack still on it and the straps done up",
+          "cost": "somebody sat down and went on without it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you go through the pack and learn how far they thought they had to go",
+            "failure": "you shoulder the pack and the hill treats you as the one who left it",
+            "orElse": "leave it; you carry your own weight and it tells at the top"
+          }
+        },
+        {
+          "cue": "cairns pushed over in a line all the way up",
+          "cost": "somebody unmade the route on purpose, going up or coming down",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out which direction they were going and what they were stopping",
+            "failure": "you rebuild them and everything that uses the route comes back to it",
+            "orElse": "leave them flat; nothing will find you up here, including help"
+          }
+        },
+        {
+          "cue": "a route description that reaches the top and describes the way back down",
+          "cost": "the descent half is the valuable half",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read it and can get off the hill from anywhere on it",
+            "failure": "you read only the ascent and are on the summit with no way described down",
+            "orElse": "leave the paper; the top is the easy part and you have not read the hard part"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Left",
+          "doing": "carrying a stone uphill with both hands",
+          "onArrival": "it stops and offers you the stone",
+          "because": "the cairn is one short and it has been carrying this a long time",
+          "offer": "take the stone up for it and it will show you the way down"
+        },
+        {
+          "occupant": "a living drover",
+          "doing": "sitting on a rest-rock with the stock long gone",
+          "onArrival": "he asks whether the pass is open above",
+          "because": "he came up to take them over and never got word",
+          "offer": "tell him the pass and he will point out every safe line on the face"
+        },
+        {
+          "occupant": "a pair of boots",
+          "doing": "standing turned to face uphill at a windbreak",
+          "onArrival": "they are dry inside and there is frost on the laces",
+          "because": "they are turned downhill by anyone meaning to go home",
+          "offer": "turn them down and whoever wore them speaks, and answers you"
+        },
+        {
+          "occupant": "two of the Left",
+          "doing": "standing on the skyline facing outward",
+          "onArrival": "they turn together as you come onto the ridge",
+          "because": "they were kept at the top facing out, so travellers could see them",
+          "offer": "stand between them once and every route off this hill opens to you"
+        },
+        {
+          "occupant": "the path",
+          "doing": "running up past you with nothing at all coming down it",
+          "onArrival": "the ground is worn a hand's depth in one direction",
+          "because": "everything went up and the hill kept it",
+          "offer": "go up willingly and it will let you come back down"
+        },
+        {
+          "occupant": "a cairn",
+          "doing": "standing one stone short on a false summit",
+          "onArrival": "the flat stone beside it has been placed ready and not set",
+          "because": "somebody was finishing the route and stopped here",
+          "offer": "set the stone and the true summit shows itself"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "cairnstone",
+          "cue": "the topmost stone off the summit cairn",
+          "benefit": "once, be counted as having got to the top",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the hill considers the top unmarked while you have it",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "route",
+          "cue": "a route description with the descent on it",
+          "benefit": "get off this hill from anywhere",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it is written for weather you do not have"
+        },
+        {
+          "id": "boots",
+          "cue": "a dead climber's boots, dry",
+          "benefit": "once, go up ground you could not",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they go up more readily than they come down"
+        },
+        {
+          "id": "pack",
+          "cue": "an abandoned pack, still full",
+          "benefit": "once, have what somebody prepared for",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they prepared for a night you have not had yet"
+        },
+        {
+          "id": "stone",
+          "cue": "a flat stone cut for a cairn",
+          "benefit": "once, mark a route so it stays marked",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything that reads cairns follows it too"
+        }
+      ]
+    },
+    "cold": {
+      "danger": "the cold",
+      "dangerLine": "the cold is not hunting anybody and it will still have all of you by morning",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a snowline that does not move all year",
+          "bothies built every few miles because the gaps kill people",
+          "ground that is frozen a spade deep in every season"
+        ],
+        "ritual": [
+          "a fire laid in every bothy by whoever leaves it",
+          "dry wood carried up and never burnt on the way",
+          "hands checked at every stop, each of the party in turn"
+        ],
+        "demand": [
+          "a bothy with the fire laid and no one to light it",
+          "dry wood stacked above the treeline where none grows",
+          "frost forming on the inside of something"
+        ],
+        "wound": [
+          "bothies with the doors off and the fires long cold",
+          "wood burnt all at once in a single night",
+          "frost on the inside of a shelter that was occupied"
+        ],
+        "anchor": [
+          "the fire that stayed lit above the snowline",
+          "a bothy that has never been let go out",
+          "dry wood that does not run out"
+        ]
+      },
+      "features": [
+        "a fire laid but unlit in a bothy",
+        "dry wood stacked above the treeline",
+        "frost on the inside of a wall",
+        "a door off a shelter",
+        "ash from a single great burning",
+        "hands going white at a stop"
+      ],
+      "decisions": [
+        {
+          "cue": "a bothy with the fire laid and nobody there to light it",
+          "cost": "lighting it is warm and visible for miles",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you light it and the party is warm, and the Left come in politely rather than otherwise",
+            "failure": "you light it and everything cold on this hill knows exactly where you are: +1 Bane",
+            "orElse": "sleep cold; -1 die on everything for the next area"
+          }
+        },
+        {
+          "cue": "dry wood stacked neatly above the treeline where none grows",
+          "cost": "somebody carried it up and did not burn it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who carried it and why they were saving it, and it matters",
+            "failure": "you burn it and whatever it was being saved for happens anyway, without fuel",
+            "orElse": "leave the stack; there is nothing to burn between here and the top"
+          }
+        },
+        {
+          "cue": "frost forming on the inside of a shelter that is occupied",
+          "cost": "the cold is getting in, or something cold is already in",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the way it is getting in and can shut it, and the shelter holds",
+            "failure": "you assume it is weather and sleep, and wake with one of you colder than the rest",
+            "orElse": "stay out of the shelter; the night is spent moving, and costs a Turn"
+          }
+        },
+        {
+          "cue": "ash from a great burning where somebody used everything at once",
+          "cost": "they burnt it all in a single night and had a reason",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the ash and learn what they were keeping off, and how well it worked",
+            "failure": "you scatter it and what was kept off comes back to the same place",
+            "orElse": "leave the ash; you camp there anyway and find out the hard way"
+          }
+        },
+        {
+          "cue": "a bothy door lying off its hinges in the snow",
+          "cost": "hanging it takes time and makes the place usable",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you hang the door and the bothy is shelter again — one safe rest for the delve",
+            "failure": "you hang it badly and it comes in on you in the night",
+            "orElse": "leave the door; there is no shelter on this side of the hill"
+          }
+        },
+        {
+          "cue": "hands going white at a stop, and one of you not saying so",
+          "cost": "the cold has already started and somebody is hiding it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you catch it in time and can keep everybody moving and whole",
+            "failure": "it goes unsaid and that person loses 1 max Grit for the rest of the delve",
+            "orElse": "stop and warm up properly, costing a Turn while the light goes"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a bothy",
+          "doing": "standing with the fire laid and the door pulled to",
+          "onArrival": "the kindling is dry and there is frost on the inside of the walls",
+          "because": "whoever laid it went out and did not come back",
+          "offer": "light the fire and the Left will come in and talk rather than take"
+        },
+        {
+          "occupant": "one of the Left",
+          "doing": "sitting against a wall with frost on the inside of its coat",
+          "onArrival": "it asks whether you would mind shutting the door",
+          "because": "it sat down out of the wind and never got up",
+          "offer": "shut the door and it will tell you where the wood is cached"
+        },
+        {
+          "occupant": "a living shepherd",
+          "doing": "stacking dry wood above the treeline, load by load",
+          "onArrival": "she asks whether you have come for it",
+          "because": "she has been carrying it up for a fire that was never lit",
+          "offer": "help her carry and she will show you every bothy on the hill"
+        },
+        {
+          "occupant": "the cold",
+          "doing": "filling a still, clear night with no wind at all",
+          "onArrival": "your breath stops showing while you stand there",
+          "because": "it is not hunting anybody and it will have you anyway",
+          "offer": "give up your fire for the night and it will let you through the high ground"
+        },
+        {
+          "occupant": "two of the Left",
+          "doing": "standing at a fire with no fuel in it",
+          "onArrival": "they hold their hands out over nothing at all",
+          "because": "the fire went out and nobody put it back",
+          "offer": "light anything at all in the grate and both will guide you to the pass"
+        },
+        {
+          "occupant": "frost",
+          "doing": "spreading on the inside of a shelter while you watch",
+          "onArrival": "it forms fastest on the wall you came in by",
+          "because": "the cold gets in somewhere and nobody found where",
+          "offer": "find the gap and the shelter holds for as long as you need"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "fire",
+          "cue": "an ember off the fire that stayed lit",
+          "benefit": "once, be warm anywhere on this hill",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything cold up here can see it burning",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "wood",
+          "cue": "dry wood that does not run out",
+          "benefit": "fuel wherever you are",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "somebody carried it up for a purpose you are spending"
+        },
+        {
+          "id": "coat",
+          "cue": "a dead climber's coat",
+          "benefit": "the cold works on you slower",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it works on whoever you took it from faster"
+        },
+        {
+          "id": "bothykey",
+          "cue": "the key of a locked bothy",
+          "benefit": "one guaranteed shelter",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever else needs the shelter comes to the door"
+        },
+        {
+          "id": "frost",
+          "cue": "a knack for reading the frost",
+          "benefit": "know when the cold is about to turn",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know, and you cannot always act on it"
+        }
+      ]
+    },
+    "pass": {
+      "danger": "the way through",
+      "dangerLine": "the pass is the only way through and it has views about who uses it",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a single notch in a ridge that runs forty miles either way",
+          "waystones set the whole length of the crossing, in sight of each other",
+          "a hospice at the top for the people the crossing catches"
+        ],
+        "ritual": [
+          "leave asked of the pass, out loud, before setting foot in it",
+          "a stone touched at every waystone going through",
+          "the crossing made before noon or not at all"
+        ],
+        "demand": [
+          "a waystone with the next one not visible from it",
+          "a pass standing open with nothing moving in it",
+          "a hospice door open and the bell rope hanging"
+        ],
+        "wound": [
+          "waystones thrown down along the whole crossing",
+          "a pass closed by a fall and the fall not cleared",
+          "a hospice with the door barred and the bell cut down"
+        ],
+        "anchor": [
+          "the waystone from the top of the pass",
+          "a bell that carries the whole length of the crossing",
+          "a line of stones you can always see the next of"
+        ]
+      },
+      "features": [
+        "a waystone with no next one visible",
+        "a hospice bell rope hanging",
+        "a fall of rock across the way",
+        "stones thrown down in a line",
+        "a door barred from inside",
+        "a track going in with none coming out"
+      ],
+      "decisions": [
+        {
+          "cue": "a waystone with the next one not visible from it",
+          "cost": "the line is broken and the crossing is committed either way",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the next stone by dead reckoning and the whole line comes back into sight",
+            "failure": "you press on by guess and are somewhere the stones do not go",
+            "orElse": "turn back down; the pass is not crossed and the ending is on the far side"
+          }
+        },
+        {
+          "cue": "a hospice with the door open and the bell rope hanging",
+          "cost": "ringing it calls whoever keeps the hospice",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you ring properly and are given shelter, and told what is on the crossing",
+            "failure": "you ring it and something answers that is not the keeper: +1 Bane",
+            "orElse": "go past; you cross in whatever weather comes, unwarned"
+          }
+        },
+        {
+          "cue": "a fall of rock lying across the way with old boots under it",
+          "cost": "clearing it opens the pass for everything, both ways",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you clear a line through and the pass is open — the drovers can get out, and will help",
+            "failure": "you bring the rest of the slope down and the pass is shut for good: roll the clock",
+            "orElse": "climb over the fall; the pass stays closed behind you and nothing follows, including help"
+          }
+        },
+        {
+          "cue": "waystones thrown down along the whole crossing, deliberately",
+          "cost": "somebody wanted this crossing to stop being possible",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you learn who threw them and why, and it is the transgression in miniature",
+            "failure": "you set one back up and whatever they were keeping out finds the line again",
+            "orElse": "leave them down; you cross by luck, which runs out on the descent"
+          }
+        },
+        {
+          "cue": "a hospice door barred from the inside with the bell cut down",
+          "cost": "whoever is in there stopped answering",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you talk them into opening and they have kept everything anybody left here",
+            "failure": "you force it and what is inside was barred in, not out",
+            "orElse": "leave it barred; the crossing is made without rest or news"
+          }
+        },
+        {
+          "cue": "a track going into the pass with none at all coming out",
+          "cost": "everything that went through is still in there",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read what went in and how long ago, and can time your crossing to miss it",
+            "failure": "you go in behind it and catch it up in the narrows",
+            "orElse": "go round the hill, costing a Turn and putting you on the wrong side at dark"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a waystone",
+          "doing": "standing at the top of the pass with the next one down",
+          "onArrival": "it is warm on the side out of the wind and the wind is not blowing",
+          "because": "the line is walked stone to stone and one is missing",
+          "offer": "set the fallen stone up and the whole crossing lets you through"
+        },
+        {
+          "occupant": "the hospice keeper",
+          "doing": "ringing a bell that has been cut down",
+          "onArrival": "it moves the rope and no sound comes",
+          "because": "the bell is rung for whoever is on the crossing and there is no bell",
+          "offer": "give it a bell and it will shelter you, and everything else stays outside"
+        },
+        {
+          "occupant": "two living drovers",
+          "doing": "waiting at a rockfall with stock they cannot move",
+          "onArrival": "they ask whether the far side is any clearer",
+          "because": "the pass closed with them on the wrong side of it",
+          "offer": "clear a line and they will drive you through anything on this hill"
+        },
+        {
+          "occupant": "one of the Left",
+          "doing": "standing in the narrows facing the way out",
+          "onArrival": "it steps aside and then steps back",
+          "because": "the pass asks leave and it never gave any",
+          "offer": "ask leave aloud and it will let you and everything behind you through"
+        },
+        {
+          "occupant": "the pass",
+          "doing": "standing open and empty with tracks going in and none out",
+          "onArrival": "the wind in it drops entirely as you come to the mouth",
+          "because": "it is the only way through and it likes being asked",
+          "offer": "ask it properly and it will be a road rather than a trap"
+        },
+        {
+          "occupant": "a bell",
+          "doing": "hanging in a frame at the top of the crossing with the rope gone",
+          "onArrival": "it sounds once when the wind moves and not again",
+          "because": "it is rung to bring people in off the pass",
+          "offer": "ring it and everything still out on the crossing comes in"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "waystone",
+          "cue": "the waystone from the top",
+          "benefit": "once, always know which way is through",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the crossing has no top stone while you carry it, and closes",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "bell",
+          "cue": "a hand-bell that carries the crossing",
+          "benefit": "once, be heard the whole length of the pass",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything on the crossing hears it"
+        },
+        {
+          "id": "hospicekey",
+          "cue": "the hospice key",
+          "benefit": "shelter at the top of the crossing",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are the keeper now, and callers come"
+        },
+        {
+          "id": "leave",
+          "cue": "leave asked and granted",
+          "benefit": "once, pass anything that guards a way",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "leave given can be withdrawn"
+        },
+        {
+          "id": "stock",
+          "cue": "a drover's stock-stick",
+          "benefit": "once, move something that will not move",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever you move, the hill wants back at the bottom"
+        }
+      ]
+    },
+    "weight": {
+      "danger": "what comes down",
+      "dangerLine": "everything on this hill is on its way to the bottom and most of it has not started yet",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "scree slopes that move a little every time anything crosses them",
+          "a corrie floor made entirely of what used to be above it",
+          "boulders standing where nothing else is, having stopped"
+        ],
+        "ritual": [
+          "a stone rolled down at the same place by everyone who passes",
+          "the avalanche ground crossed one at a time, never together",
+          "nothing carried down that was not carried up"
+        ],
+        "demand": [
+          "a boulder balanced with a clear run below it",
+          "a cornice overhanging with a crack behind it",
+          "scree with one line of prints across it and no more"
+        ],
+        "wound": [
+          "a whole slope come down at once onto the path",
+          "a corrie floor with something under it that was walking",
+          "boulders stacked by hands rather than fallen"
+        ],
+        "anchor": [
+          "the stone that stopped rolling",
+          "a slope that has finished moving",
+          "a line across the scree that has held"
+        ]
+      },
+      "features": [
+        "a boulder balanced with a run below",
+        "a crack behind a cornice",
+        "one line of prints across scree",
+        "a slope come down onto a path",
+        "boulders stacked by hands",
+        "a stone that stopped rolling"
+      ],
+      "decisions": [
+        {
+          "cue": "a boulder standing balanced with a clear run below it",
+          "cost": "it is going down; the only question is when and onto what",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you put it down deliberately, into nothing, and the slope settles for good",
+            "failure": "you cross beneath it and it goes while you are under: roll the clock",
+            "orElse": "go round above it, costing a Turn on ground that also moves"
+          }
+        },
+        {
+          "cue": "a cornice overhanging the gully with a crack behind it",
+          "cost": "it will not hold and the gully is the fast way down",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the crack and take the buttress instead, and watch the cornice go behind you",
+            "failure": "you take the gully and it comes off above you",
+            "orElse": "wait for the cold to firm it, costing a Turn and a night out"
+          }
+        },
+        {
+          "cue": "scree with one line of prints across it and nothing since",
+          "cost": "one crossing held; a second might not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you cross one at a time on the same line and the slope holds for all of you",
+            "failure": "you cross together and take the slope with you",
+            "orElse": "go round the scree entirely, adding a Turn and putting you on the skyline"
+          }
+        },
+        {
+          "cue": "a whole slope come down at once onto the path below",
+          "cost": "there is something under it and it was recent",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find what is under it and get it out, and it is owed to somebody at the ending",
+            "failure": "you dig and start the rest of the slope moving",
+            "orElse": "leave it; whatever is under there is not accounted for and the ending is poorer"
+          }
+        },
+        {
+          "cue": "boulders stacked by hands rather than fallen, in a line",
+          "cost": "somebody built this and it is holding something back",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you see what it holds back and can keep it holding",
+            "failure": "you take one out to see and the line goes, and so does what it held",
+            "orElse": "leave it; you never learn what somebody thought worth stacking against"
+          }
+        },
+        {
+          "cue": "a stone lying at the foot of a slope that clearly stopped rolling short",
+          "cost": "everything else went to the bottom and this did not",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you understand why it stopped and can make one other thing stop too",
+            "failure": "you move it and it resumes, immediately, taking the slope with it",
+            "orElse": "leave it; nothing you set down on this hill stays where you put it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Left",
+          "doing": "standing under a balanced boulder with its hands up",
+          "onArrival": "it has been holding the boulder and it is not holding the boulder",
+          "because": "it was under the slope when the slope came down",
+          "offer": "take the weight for a moment and it will step out and tell you everything"
+        },
+        {
+          "occupant": "a living stone-man",
+          "doing": "stacking boulders into a line, one at a time",
+          "onArrival": "he asks whether you can hear it moving yet",
+          "because": "he has been building against the slope for years",
+          "offer": "help him place one and he will tell you which ground will hold you"
+        },
+        {
+          "occupant": "a boulder",
+          "doing": "standing alone on a corrie floor with a clear run behind it",
+          "onArrival": "the ground around it is undisturbed and it is warm to touch",
+          "because": "it stopped rolling and nothing else here did",
+          "offer": "ask it how and it will hold whatever you need held"
+        },
+        {
+          "occupant": "the scree",
+          "doing": "lying with one line of prints across it and nothing since",
+          "onArrival": "the whole slope shifts an inch as you set foot on it",
+          "because": "it moves when anything crosses and it has been crossed once",
+          "offer": "cross one at a time and the slope will hold for you every time after"
+        },
+        {
+          "occupant": "two of the Left",
+          "doing": "digging at a slope that came down on the path",
+          "onArrival": "they dig with their hands and do not get anywhere",
+          "because": "there is somebody under it and there always has been",
+          "offer": "dig with them and what comes out is owed at the ending"
+        },
+        {
+          "occupant": "a cornice",
+          "doing": "overhanging a gully with a crack running behind it",
+          "onArrival": "snow slides off the lip while you are looking at it",
+          "because": "it is going to come off and it has not chosen when",
+          "offer": "bring it down on your terms and the gully is safe the whole way"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "stone",
+          "cue": "the stone that stopped rolling",
+          "benefit": "once, make a thing stay where you put it",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything else you have set down starts moving",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "wedge",
+          "cue": "a wedge cut for a balanced boulder",
+          "benefit": "once, hold back what is coming down",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it holds until you need it somewhere else"
+        },
+        {
+          "id": "line",
+          "cue": "a knowledge of which line holds",
+          "benefit": "cross moving ground safely",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the line holds for you and not for those behind you"
+        },
+        {
+          "id": "stack",
+          "cue": "a stone off the built line",
+          "benefit": "once, know what a thing is holding back",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the line is one stone weaker"
+        },
+        {
+          "id": "print",
+          "cue": "a set of prints that held",
+          "benefit": "once, follow ground that will take your weight",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they lead where the maker was going, not where you are"
+        }
+      ]
+    }
+  }
+}

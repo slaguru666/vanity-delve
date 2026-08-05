@@ -14,6 +14,12 @@
       "motifs": 4
     },
     {
+      "id": "cave",
+      "label": "Cave",
+      "geometry": "cave",
+      "motifs": 4
+    },
+    {
       "id": "church",
       "label": "Church",
       "geometry": "barrow",
@@ -32,9 +38,21 @@
       "motifs": 4
     },
     {
+      "id": "lake",
+      "label": "Lake",
+      "geometry": "fen",
+      "motifs": 4
+    },
+    {
       "id": "market",
       "label": "Market",
       "geometry": "village",
+      "motifs": 4
+    },
+    {
+      "id": "mountain",
+      "label": "Mountain",
+      "geometry": "cave",
       "motifs": 4
     },
     {
@@ -50,6 +68,12 @@
       "motifs": 4
     },
     {
+      "id": "river",
+      "label": "River",
+      "geometry": "fen",
+      "motifs": 4
+    },
+    {
       "id": "temple",
       "label": "Temple",
       "geometry": "barrow",
@@ -59,6 +83,12 @@
       "id": "town",
       "label": "Town",
       "geometry": "village",
+      "motifs": 4
+    },
+    {
+      "id": "valley",
+      "label": "Valley",
+      "geometry": "forest",
       "motifs": 4
     },
     {

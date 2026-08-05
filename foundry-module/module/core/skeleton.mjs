@@ -22,7 +22,13 @@
 import { arcRole } from './director.mjs';
 
 /** Fills {conscript}-style slots. */
-const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`)
+  // Conscripts are plural noun phrases ("the climbers"), so a template's `{conscript}'s`
+  // renders "the climbers's". English takes a bare apostrophe on a plural already ending in s.
+  .replace(/s's\b/g, "s'");
+
+/** Claimants may already carry their own article — "The Grey" must not become "The The Grey". */
+const named = c => (/^(the|a|an) /i.test(c) ? c : `The ${c}`);
 
 /** Facet order used when a facet is exhausted — borrow from a neighbour before repeating. */
 const FACET_ORDER = ['institution', 'ritual', 'demand', 'wound', 'anchor'];
@@ -62,12 +68,12 @@ export function generateSkeleton({ pack, areas = 6, ending = 'authored', rng }) 
   const prize = { kind: appetite.prize, ...(pack.prizes?.[appetite.prize] ?? {}) };
 
   const transgression =
-    `The ${claimant} ${fill(accommodation.text, { conscript: appetite.conscript })}, ` +
+    `${named(claimant)} ${fill(accommodation.text, { conscript: appetite.conscript })}, ` +
     `so that ${appetite.purpose}.`;
   // The bottom problem is the claimant itself — a person in a tomb, an office in a town.
 
   const bottomProblem = {
-    label: `The ${claimant}`,
+    label: named(claimant),
     wantNow: appetite.want,
     failureState: `is ${appetite.lack} now, and cannot bear it`,
     handledBy: 'giving them what they want, at a price',
