@@ -25,8 +25,11 @@ export const RESTRICTS = /\bONLY\b|blessed|silvered|magical|only stays down|fire
  */
 export function initiativeWarning(roster) {
   if (!roster) return null;
-  if (roster.beforeInitiative) return roster.beforeInitiative;
+  // Prose wins, and is checked first. A hand-edited file can carry both the field and the old
+  // sentence; returning the field before looking would print it twice, which is the fault this
+  // whole migration exists to remove.
   const prose = `${roster.harmedBy ?? ''} ${roster.avoid ?? ''}`;
-  if (/say so before initiative/i.test(prose)) return null;     // a legacy file that says it itself
+  if (/say so before initiative/i.test(prose)) return null;
+  if (roster.beforeInitiative) return roster.beforeInitiative;
   return RESTRICTS.test(roster.harmedBy ?? '') ? 'Say so before initiative.' : null;
 }

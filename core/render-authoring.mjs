@@ -144,8 +144,12 @@ export function renderPlay(d) {
     L.push(`**${cap(a.decision.cue)}** — ${rv.roll ? `\`[${rv.roll}]\` ${rv.success}` : ''}${rv.failure ? ` · **miss** ${rv.failure}` : ''}${rv.orElse ? ` · **or** ${rv.orElse}` : ''}`);
     if (a.encounter?.roster) {
       const R = a.encounter.roster;
+      // `avoid` earns its place here — it is how the table gets past the fight without one, which
+      // is table-facing by definition. It also keeps every surface rendering both prose fields, so
+      // initiativeWarning's "the prose already says it" rule means the same thing everywhere; when
+      // the play sheet alone omitted `avoid`, a legacy warning living there vanished from it.
       L.push(`**${cap(a.encounter.heat)}:** ${R.foes.map(f => `${f.n}× ${f.name} \`${f.atk}/${f.def}/${f.grit}\``).join(' · ')} — harmed by ${R.harmedBy}.`
-             + `${initiativeWarning(R) ? ` **${initiativeWarning(R)}**` : ''}`);
+             + `${initiativeWarning(R) ? ` **${initiativeWarning(R)}**` : ''} *${R.avoid}.*`);
     }
     if (a.temptation) L.push(`**${cap(a.temptation.id)}:** ${a.temptation.benefit}. *Use: ${cost(a.temptation.useCost)}. ${a.temptation.standingDrawback}.*`);
     if (w.notes) L.push(`**Note:** ${w.notes}`);

@@ -8,7 +8,7 @@
  * Run: node foundry-module/test.mjs
  */
 import { foeStats, foeLine, classifyFoes } from './module/foes.mjs';
-import { stageArea, areaCards, foeBlock } from './module/stage.mjs';
+import { stageArea, areaCards, foeBlock, singleFlight } from './module/stage.mjs';
 import { initiativeWarning } from '../core/roster.mjs';
 
 let pass = 0, fail = 0;
@@ -175,7 +175,31 @@ t('a legacy Wraith roster spelled without ONLY still gets one',
   'the spelling was never the semantics — barrow/nightmare had no ONLY');
 t('a legacy roster that says it in prose is not given it twice',
   initiativeWarning({ harmedBy: 'blessed weapons ONLY — say so before initiative' }) === null);
+t('prose in avoid also suppresses the fallback',
+  initiativeWarning({ harmedBy: 'blessed weapons ONLY', avoid: 'burn it — say so before initiative' }) === null);
+t('the field never overrides prose that already says it',
+  initiativeWarning({ harmedBy: 'blessed weapons ONLY — say so before initiative', beforeInitiative: 'Say so before initiative.' }) === null,
+  'a hand-edited file can carry both; returning the field first printed it twice');
 t('null roster is safe', initiativeWarning(null) === null);
+
+// ---------------------------------------------------------------- single flight
+{
+  let running = 0, peak = 0, refused = 0;
+  const guarded = singleFlight(async () => {
+    running++; peak = Math.max(peak, running);
+    await new Promise(r => setTimeout(r, 5));
+    running--; return 'done';
+  }, () => { refused++; return 'busy'; });
+  const [a, b] = await Promise.all([guarded(), guarded()]);
+  t('two overlapping calls never run together', peak === 1, `peak concurrency ${peak}`);
+  t('the second is refused, not queued', a === 'done' && b === 'busy' && refused === 1);
+  t('the guard clears so a later call still runs', (await guarded()) === 'done');
+}
+{
+  const guarded = singleFlight(async () => { throw new Error('boom'); }, () => 'busy');
+  await guarded().catch(() => {});
+  t('a throw does not leave the guard stuck', (await guarded().catch(() => 'threw')) === 'threw');
+}
 
 // ---------------------------------------------------------------- surface parity
 // forge-app destructures three Foundry symbols at import time. Everything under test is pure, so

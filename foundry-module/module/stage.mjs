@@ -32,6 +32,23 @@ const attempt = async (fx, fn) => {
   catch (e) { fx.log?.(e); return { ok: false, value: null }; }
 };
 
+/**
+ * Wrap an async function so overlapping calls are refused rather than interleaved.
+ *
+ * enter() hangs off a button, and it awaits the Forge for seconds at a time. Two overlapping calls
+ * both read the same index and stage the same area twice. This closes that within one client; two
+ * separate GM browsers still race, and the durable fix for that is a world-level lock rather than
+ * a module variable.
+ */
+export function singleFlight(fn, onBusy) {
+  let busy = false;
+  return async (...args) => {
+    if (busy) return onBusy?.();
+    busy = true;
+    try { return await fn(...args); } finally { busy = false; }
+  };
+}
+
 /** The foe section of the GM card. Mirrors forge-app's foeSection; both switch on the same kind. */
 export function foeBlock(c) {
   if (c.kind === 'forged') return `<p><b>${cap(c.heat)} — in the world:</b></p>${list(c.foes.map(foeLine))}${

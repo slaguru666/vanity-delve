@@ -17,16 +17,13 @@
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
 import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes } from './forge-app.mjs';
-import { stageArea } from './stage.mjs';
+import { stageArea, singleFlight } from './stage.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
 
 let PACK = null;
 let seamsPresent = false;
-// enter() is bound to a button a GM can double-press, and it awaits the Forge for seconds at a
-// time. Two overlapping calls would both read the same st.at and stage the same area twice.
-let staging = false;
 let loadPack = async () => null;
 
 /** The geometries VANITY's Forge can actually build — mirrors validate-pack.mjs. */
@@ -122,11 +119,10 @@ async function draft(params = {}) {
   return load(d);
 }
 
-async function enter() {
-  if (staging) return ui.notifications.warn('DELVE: already raising an area — wait for it to finish.');
-  staging = true;
-  try { return await enterOnce(); } finally { staging = false; }
-}
+const enter = singleFlight(
+  () => enterOnce(),
+  () => ui.notifications.warn('DELVE: already raising an area — wait for it to finish.'),
+);
 
 async function enterOnce() {
   const st = getState();
@@ -152,7 +148,9 @@ async function enterOnce() {
       ...(seamsPresent ? { hoard: false, post: false, folderId: st.folderId } : {}),
     }),
     hoard: size => game.vanity.forge.hoard({ size, ...(seamsPresent ? { post: false } : {}) }),
-    commit: async () => { st.at += 1; st.turn += 1; await setState(st); },
+    // An incremented copy, never a mutation of st: a failed write must leave the in-memory state
+    // exactly as it was, or the retry advice in the warning is wrong.
+    commit: () => setState({ ...st, at: st.at + 1, turn: st.turn + 1 }),
     readAloud: readAloudCard,
     gm: gmCard,
     warn: m => ui.notifications.warn(m),
