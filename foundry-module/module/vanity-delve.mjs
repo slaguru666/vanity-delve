@@ -16,6 +16,7 @@
  */
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
+import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog } from './forge-app.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
@@ -151,6 +152,7 @@ async function clock(cause = 'timer') {
 
 Hooks.once('init', () => {
   game.settings.register(MOD, FLAG, { scope: 'world', config: false, type: Object, default: null });
+  game.settings.register(MOD, 'lastParams', { scope: 'world', config: false, type: Object, default: null });
 });
 
 Hooks.once('ready', async () => {
@@ -159,7 +161,9 @@ Hooks.once('ready', async () => {
     .catch(() => fetch(`modules/${MOD}/module/core/content/barrow.json`).then(r => r.json()));
   seamsPresent = /post\s*=\s*true/.test(String(game.vanity?.forge?.hoard ?? ''));
 
-  game.delve = { load, loadFile, draft, enter, ending, bane, clock, state: getState,
+  game.delve = { forge: () => new DelveForgeApp().render(true), raise: raiseDungeon,
+                 list: listDungeons, remove: removeDungeon, removeDialog: removeDungeonDialog,
+                 load, loadFile, draft, enter, ending, bane, clock, state: getState,
                  outstanding: () => outstanding(getState()?.delve ?? { areas: [] }),
                  ready: () => readyToPlay(getState()?.delve ?? { areas: [] }),
                  get pack() { return PACK; } };
@@ -172,10 +176,18 @@ Hooks.on('getSceneControlButtons', controls => {
   const group = Array.isArray(controls) ? controls.find(c => c.name === 'token') : controls.token;
   if (!group) return;
   const tools = Array.isArray(group.tools) ? group.tools : Object.values(group.tools ?? {});
-  const warn = () => ui.notifications.warn('DELVE: load a finished delve first — game.delve.loadFile("name")');
+  const open = () => new DelveForgeApp().render(true);
   tools.push({
-    name: 'delve', title: 'DELVE — stage the next area', icon: 'fas fa-mountain', button: true,
-    onClick: () => (getState() ? enter() : warn()),
-    onChange: () => (getState() ? enter() : warn()),
+    name: 'delve-forge', title: 'DELVE — raise a dungeon', icon: 'fas fa-mountain', button: true,
+    onClick: open, onChange: open,
+  });
+  tools.push({
+    name: 'delve-remove', title: 'DELVE — remove a generated dungeon', icon: 'fas fa-trash', button: true,
+    onClick: () => removeDungeonDialog(), onChange: () => removeDungeonDialog(),
+  });
+  tools.push({
+    name: 'delve-next', title: 'DELVE — stage the next area (pre-authored delve)', icon: 'fas fa-forward', button: true,
+    onClick: () => (getState() ? enter() : ui.notifications.info('DELVE: no staged delve — use the ⛏ button to raise one.')),
+    onChange: () => (getState() ? enter() : ui.notifications.info('DELVE: no staged delve — use the ⛏ button to raise one.')),
   });
 });

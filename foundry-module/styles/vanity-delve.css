@@ -7,3 +7,12 @@
 
 .delve-read { border-left: 3px solid #e8c96a; font-size: 1.02em; }
 .delve-read p { margin: .2rem 0; }
+
+.delve-forge .hint { opacity: .8; font-size: .92em; margin: 0 0 .6rem; }
+.delve-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem .7rem; }
+.delve-grid label, .delve-toggles label { display: flex; flex-direction: column; font-size: .9em; gap: .15rem; }
+.delve-grid .sub, .delve-toggles .sub { opacity: .6; font-size: .85em; font-weight: normal; }
+.delve-toggles { margin-top: .6rem; display: flex; flex-direction: column; gap: .3rem; }
+.delve-toggles .checkbox { flex-direction: row; align-items: center; gap: .4rem; }
+.delve-actions { margin-top: .8rem; }
+.delve-actions button.bright { width: 100%; }

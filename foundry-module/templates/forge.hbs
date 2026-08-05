@@ -1,0 +1,62 @@
+<div class="delve-forge">
+  <p class="hint">Generates a complete dungeon — fiction, areas, maps, encounters, hoards and a
+    journal you can read cold — and drops it into this world in one folder.</p>
+
+  <div class="delve-grid">
+    <label>Theme
+      <select name="theme">
+        {{#each themes}}<option value="{{this}}" {{#if (eq this ../v.theme)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Areas
+      <input type="number" name="areas" value="{{v.areas}}" min="3" max="12" step="1">
+    </label>
+    <label>Depth
+      <select name="depth">
+        {{#each picks.depth}}<option value="{{this}}" {{#if (eq this ../v.depth)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Heroes
+      <select name="party">
+        {{#each picks.party}}<option value="{{this}}" {{#if (eq this ../v.party)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Deadliness
+      <select name="deadliness">
+        {{#each picks.deadliness}}<option value="{{this}}" {{#if (eq this ../v.deadliness)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Density
+      <select name="density">
+        {{#each picks.density}}<option value="{{this}}" {{#if (eq this ../v.density)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Greed
+      <select name="greed">
+        {{#each picks.greed}}<option value="{{this}}" {{#if (eq this ../v.greed)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Clock
+      <select name="clock">
+        {{#each picks.clock}}<option value="{{this}}" {{#if (eq this ../v.clock)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Ending
+      <select name="ending">
+        {{#each picks.ending}}<option value="{{this}}" {{#if (eq this ../v.ending)}}selected{{/if}}>{{this}}</option>{{/each}}
+      </select>
+    </label>
+    <label>Seed <span class="sub">blank = random</span>
+      <input type="text" name="seed" value="{{v.seed}}" placeholder="gilded-court-404">
+    </label>
+  </div>
+
+  <div class="delve-toggles">
+    <label class="checkbox"><input type="checkbox" name="maps" {{#if v.maps}}checked{{/if}}> Build the maps <span class="sub">(slower — about a second per area)</span></label>
+    <label class="checkbox"><input type="checkbox" name="populate" {{#if v.populate}}checked{{/if}}> Roll the encounters</label>
+  </div>
+
+  <footer class="delve-actions">
+    <button type="submit" class="bright"><i class="fas fa-mountain"></i> Raise the dungeon</button>
+  </footer>
+</div>
