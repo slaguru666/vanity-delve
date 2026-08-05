@@ -36,18 +36,28 @@ const setState = async s => game.settings.set(MOD, FLAG, s);
  * says quayside and the geometry says burial chamber. Resolved per call rather than once at load,
  * because the global resets on a page reload while the staged delve in world state does not.
  *
- * `params.theme` is written from `pack.id` at generation time, so it is always present and always
- * right, whatever the caller passed.
+ * `params.theme` is written from `pack.id` at generation time, so every delve the generator made
+ * carries it. `load()` also accepts hand-edited JSON, and there the field may be absent — which is
+ * why this fails closed rather than falling back to barrow. Guessing the geometry is the bug.
  */
-async function packFor(d) {
-  const id = d?.params?.theme ?? 'barrow';
+async function packById(id) {
+  if (!id) return null;
   if (PACK?.id === id) return PACK;
   const p = await loadPack(id);
-  if (!p) {
-    ui.notifications.error(`DELVE: could not load the ${id} theme — refusing to stage, it would use the wrong geometry.`);
+  if (!p?.forgeStageType) return null;
+  PACK = p;
+  return p;
+}
+
+/** The pack a staged delve was authored against. Never guesses. */
+async function packFor(d) {
+  const id = d?.params?.theme;
+  if (!id) {
+    ui.notifications.error('DELVE: that delve does not record a theme — refusing to stage, the geometry would be a guess.');
     return null;
   }
-  PACK = p;
+  const p = await packById(id);
+  if (!p) ui.notifications.error(`DELVE: could not load the ${id} theme — refusing to stage, it would use the wrong geometry.`);
   return p;
 }
 const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
@@ -99,8 +109,9 @@ async function loadFile(name) {
 /** Generate an unfinished draft in-world. Convenience only — the desk is the right place. */
 async function draft(params = {}) {
   const seed = params.seed || coinSeed(new Rng(String(game.world.id)));
-  const pack = await packFor({ params });
-  if (!pack) return;
+  const theme = params.theme ?? 'barrow';         // drafting picks a theme; staging must be told one
+  const pack = await packById(theme);
+  if (!pack) return ui.notifications.error(`DELVE: could not load the ${theme} theme.`);
   const d = newWorkingFile({ pack, ...params, seed });
   ui.notifications.warn('DELVE: unfinished draft. Write the read-aloud in the worksheet first.');
   return load(d);
@@ -136,12 +147,26 @@ async function enter() {
   const R = area.encounter?.roster;
   const foes = (enc?.actors ?? []).map(foeStats);
   const rv = area.decision?.resolve ?? {};
+
+  /**
+   * One rule, both surfaces: show what exists. The roster's tactical guidance — what harms it, how
+   * to avoid it — describes the planned foes, so it travels with the plan and only when the plan
+   * IS the encounter. With nothing forged (populate off, or the Forge failed) the plan is all
+   * there is, and it must stay runnable.
+   */
+  const foeBlock = foes.length
+    ? `<p><b>${cap(area.encounter.heat)} — in the world:</b></p>${list(foes.map(foeLine))}${
+        R ? `<p><i>DELVE planned ${R.line}; the Forge rolled its own, so the plan's tactics do not describe these.</i></p>` : ''}`
+    : R
+    ? `<p><b>${cap(area.encounter.heat)} — not cast.</b> Nothing was forged; run the plan by hand:</p>${
+        list(R.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))
+      }<p><b>Harmed by ${R.harmedBy}.</b> ${R.avoid}.</p>`
+    : '';
   await gmCard(`⛏ ${area.index} · ${name}`, `${area.role} · ${area.facet}`,
     `${area.situation ? `<p><b>Here:</b> ${cap(area.situation.occupant)}, ${area.situation.doing} — ${area.situation.onArrival}.<br>
         <b>They can:</b> ${area.situation.offer}. <i>${cap(area.situation.because)}.</i></p>` : ''}
      <p><b>${cap(area.decision.cue)}</b>${rv.roll ? ` — [${rv.roll}] ${rv.success}` : ''}${rv.failure ? `<br><b>Miss:</b> ${rv.failure}` : ''}${rv.orElse ? `<br><b>Or:</b> ${rv.orElse}` : ''}</p>
-     ${foes.length ? `<p><b>${cap(area.encounter.heat)} — in the world:</b></p>${list(foes.map(foeLine))}` : ''}
-     ${R ? `<p><b>DELVE planned ${R.line}</b> — the Forge rolled its own, so run the block above. ${R.avoid}.</p>` : ''}
+     ${foeBlock}
      ${area.temptation ? `<p><b>${cap(area.temptation.id)}:</b> ${area.temptation.benefit}. <i>Use: ${area.temptation.useCost?.bane ? `+${area.temptation.useCost.bane} Bane` : '—'}. ${area.temptation.standingDrawback}.</i></p>` : ''}
      ${w.notes ? `<p><b>Your note:</b> ${w.notes}</p>` : ''}
      <p><code>${area.trigger}${area.baneBeat ? ` · ${area.baneBeat}` : ''} · fallback: ${area.fallback.route}</code></p>`);

@@ -109,7 +109,9 @@ export async function raiseDungeon(params = {}) {
   const PACK = await game.delve.loadPack(params.theme ?? 'barrow');
   if (!PACK) return ui.notifications.error(`DELVE: could not load the ${params.theme} theme.`);
   const seed = params.seed || coinSeed(new Rng(String(Date.now())));
-  const d = generateDelve({ pack: PACK, ...params, seed });
+  // pack last: a programmatic caller passing params.pack would otherwise generate from one pack
+  // while the maps below are staged from the one actually loaded.
+  const d = generateDelve({ ...params, seed, pack: PACK });
   const sk = d.skeleton;
   const title = sk.placeName;
 
@@ -242,9 +244,13 @@ function buildPages(d, scenes) {
         ${a._foes?.length ? `<p><b>${esc(cap(a.encounter.heat))} — in the world.</b> These are the actors the Forge created; run the fight off these.</p>
           <table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>
           ${a._foes.map(f => `<tr><td>@UUID[${f.uuid}]{${esc(f.name)}}</td><td>${f.atk ?? '?'}</td><td>${f.def ?? '?'}</td><td>${f.grit ?? '?'}</td><td>${f.nerve ?? '?'}</td><td><i>${esc(f.trick)}</i></td></tr>`).join('')}
-          </tbody></table>` : ''}
-        ${R ? `<p><b>DELVE planned ${esc(R.line)}</b> — the Forge rolls its own foes, so the plan and the table above are different lists.
-          Its guidance still applies to the scene: harmed by ${esc(R.harmedBy)}${R.harmedBy.includes('ONLY') ? ' — <b>only true if you cast the fight yourself</b>' : ''}. <i>${esc(R.avoid)}.</i></p>` : ''}
+          </tbody></table>
+          ${R ? `<p><i>DELVE planned ${esc(R.line)}. The Forge rolls its own cast, so the plan's foes are not these — its tactical notes describe monsters that were not created.</i></p>` : ''}`
+        : R ? `<p><b>${esc(cap(a.encounter.heat))} — not cast.</b> Nothing was forged for this area, so the plan is the encounter. Cast it by hand:</p>
+          <table><thead><tr><th>Foe</th><th>atk</th><th>def</th><th>Grit</th><th>Nerve</th><th></th></tr></thead><tbody>
+          ${R.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join('')}
+          </tbody></table>
+          <p>Harmed by ${esc(R.harmedBy)}${R.harmedBy.includes('ONLY') ? ' — <b>say so before initiative</b>' : ''}. <i>${esc(R.avoid)}.</i></p>` : ''}
         ${a.temptation ? `<p><b>${esc(cap(a.temptation.id))}</b> — ${esc(a.temptation.cue)}: ${esc(a.temptation.benefit)}.<br>
           <i>Using it costs ${a.temptation.useCost?.bane ? `+${a.temptation.useCost.bane} Bane` : '—'}. While carried, ${esc(a.temptation.standingDrawback)}.</i></p>` : ''}
         ${a._hoard?.length ? `<p><b>Hoard.</b></p><ul>${a._hoard.map(l => `<li>${l}</li>`).join('')}</ul>` : ''}
