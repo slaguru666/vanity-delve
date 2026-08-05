@@ -1,0 +1,1189 @@
+{
+  "id": "village",
+  "label": "Village",
+  "forgeStageType": "village",
+  "schema": 1,
+  "placeNameStyle": "own",
+  "_model": "The settlement kernel at its smallest. The appetite belongs to the place; the claimant is an office, not a person; and what a village does to people who might leave is quieter and worse than what a town does.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Parish",
+    "Manor Court",
+    "Reeve",
+    "Elders",
+    "Vestry",
+    "Hayward",
+    "Commoners"
+  ],
+  "appetites": [
+    {
+      "id": "whole",
+      "want": "never to lose anybody",
+      "lack": "short of hands",
+      "purpose": "every name would stay on the register",
+      "motif": "kinship",
+      "prize": "register",
+      "conscript": "those who left",
+      "asks": "\"Who is missing?\"",
+      "appeasement": {
+        "move": "say a name off the register aloud, correctly, as though they were still here",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the count is right again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "fed",
+      "want": "never to go short again",
+      "lack": "hungry",
+      "purpose": "the harvest would always come in",
+      "motif": "harvest",
+      "prize": "sheaf",
+      "conscript": "the hungry year",
+      "asks": "\"Will it be enough?\"",
+      "appeasement": {
+        "move": "give something of your own to the store, and enough of it",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "the store is not empty",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "unchanged",
+      "want": "that nothing here should ever alter",
+      "lack": "altered",
+      "purpose": "it would be the same place forever",
+      "motif": "custom",
+      "prize": "stone",
+      "conscript": "the incomers",
+      "asks": "\"Is that how you do it?\"",
+      "appeasement": {
+        "move": "do one thing exactly the way it has always been done here",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it was done properly",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "unremarked",
+      "want": "that nothing here should ever be spoken of outside",
+      "lack": "spoken of",
+      "purpose": "nobody outside would ever know",
+      "motif": "quiet",
+      "prize": "book",
+      "conscript": "the talkers",
+      "asks": "\"You didn't see anything, did you?\"",
+      "appeasement": {
+        "move": "agree, out loud, that you saw nothing",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "nothing was said",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "married",
+      "text": "married {conscript} in so that they could not leave",
+      "cruelty": 1,
+      "fits": [
+        "whole",
+        "unchanged",
+        "unremarked"
+      ]
+    },
+    {
+      "id": "commoned",
+      "text": "gave {conscript} a strip of the common they could never sell",
+      "cruelty": 1,
+      "fits": [
+        "whole",
+        "fed",
+        "unchanged"
+      ]
+    },
+    {
+      "id": "renamed",
+      "text": "entered {conscript} in the register under a name that was not theirs",
+      "cruelty": 2,
+      "fits": [
+        "whole",
+        "unremarked"
+      ]
+    },
+    {
+      "id": "bound",
+      "text": "buried something of {conscript}'s under the boundary stone",
+      "cruelty": 3,
+      "fits": [
+        "unchanged",
+        "whole",
+        "unremarked"
+      ]
+    },
+    {
+      "id": "kept",
+      "text": "held {conscript} back each harvest until there was no season left to go",
+      "cruelty": 2,
+      "fits": [
+        "fed",
+        "whole"
+      ]
+    },
+    {
+      "id": "quieted",
+      "text": "agreed, all of them, never to speak of {conscript} again",
+      "cruelty": 3,
+      "fits": [
+        "unremarked",
+        "unchanged",
+        "fed"
+      ]
+    }
+  ],
+  "prizes": {
+    "register": {
+      "label": "the parish register, every name in one hand",
+      "function": "the only complete account of who was ever here"
+    },
+    "sheaf": {
+      "label": "the last sheaf of the last good harvest",
+      "function": "the only year the store was full"
+    },
+    "stone": {
+      "label": "the boundary stone, small enough to carry",
+      "function": "the only thing that says where this place stops"
+    },
+    "book": {
+      "label": "the book nobody has read since it was written",
+      "function": "the only place the thing was written down"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "Little",
+      "Nether",
+      "Church",
+      "Well",
+      "Bare",
+      "Long",
+      "Cold",
+      "Green"
+    ],
+    "second": [
+      "Hallow",
+      "Combe",
+      "Sturton",
+      "Anwick",
+      "Merrow",
+      "Thwaite",
+      "Barnhoe",
+      "Ledden",
+      "Ockham",
+      "Wray"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Green",
+      "The Lane In",
+      "The Lych Gate",
+      "The Ford",
+      "The Pound"
+    ],
+    "complication": [
+      "The Alehouse",
+      "The Smithy",
+      "The Mill",
+      "The Tithe Barn",
+      "The Well"
+    ],
+    "turn": [
+      "The Church",
+      "The Manor Yard",
+      "The Moot Stone",
+      "The Long Field",
+      "The Vestry"
+    ],
+    "descent": [
+      "The Ditch",
+      "The Common",
+      "The Marl Pit",
+      "The Back Lanes",
+      "The Pest House"
+    ],
+    "threshold": [
+      "The Boundary",
+      "The Old Enclosure",
+      "The Last Cottage",
+      "The Sheep Fold",
+      "The Coppice"
+    ],
+    "ending": [
+      "The Churchyard",
+      "Under the Boundary Stone",
+      "The Field Nobody Ploughs",
+      "Where They Are All Waiting"
+    ]
+  },
+  "factions": [
+    {
+      "id": "parish",
+      "name": "the Parish",
+      "kind": "undead",
+      "essence": "still counted, still on the register, still expected at church",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "hungry",
+      "name": "the hungry year",
+      "kind": "living",
+      "essence": "came for the store and stayed when the village did not",
+      "handledBy": "trade"
+    },
+    {
+      "id": "custom",
+      "name": "those who keep the custom",
+      "kind": "undead",
+      "essence": "will not be told this is not how it is done",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "common",
+      "name": "what came off the common",
+      "kind": "beast",
+      "essence": "was never entered on any roll",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "walked in down the lane, in daylight, and were seen doing it",
+    "seenTwice": "noticed by the same person twice in one day",
+    "loud": "a raised voice anywhere within the sound of the church",
+    "lingering": "stopped somewhere long enough for it to be remarked on",
+    "disturbed": "moved a boundary, opened a gate, or took something off the common"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Bandits off the common",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "local; will run for the ditches"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they want the store, not you; leave the store and they leave you"
+    },
+    "fight": {
+      "line": "4 Skeletons of the Parish and a Ghoul in the pest house",
+      "foes": [
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        },
+        {
+          "n": 1,
+          "name": "Ghoul",
+          "atk": 4,
+          "def": 3,
+          "grit": 4,
+          "nerve": 5,
+          "note": "free Called Shot to freeze on a hit"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "the Parish does not leave consecrated ground; step off it and they stop"
+    },
+    "battle": {
+      "line": "1 Wraith of the Reeve and 4 Skeletons of the Parish",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons — say so before initiative",
+      "avoid": "it wants the count right; give it a name off the register and it stops to check"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ogre off the common and 5 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "came off the common and was never entered anywhere"
+        },
+        {
+          "n": 5,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "kinship": {
+      "danger": "the count",
+      "dangerLine": "the parish is still counting, and it is short",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a register with every family in the same hand for two hundred years",
+          "cottages built onto other cottages as the families grew",
+          "a pew per household, named"
+        ],
+        "ritual": [
+          "names read out at the door before the service",
+          "a place laid for somebody at every table",
+          "the roll called on the green each quarter-day"
+        ],
+        "demand": [
+          "a gap in a row of names with the ruling still drawn",
+          "a chair kept back from a table that is otherwise full",
+          "a cottage kept swept for somebody"
+        ],
+        "wound": [
+          "a page torn out of the register and the stub still in",
+          "a pew with the name planed off",
+          "cottages standing open with the beds still made"
+        ],
+        "anchor": [
+          "the register, every name in one hand",
+          "a family bible with the births still being entered",
+          "a tally of the village cut into a beam"
+        ]
+      },
+      "features": [
+        "a place laid at a table for nobody",
+        "a pew with a name planed off",
+        "a cottage swept and empty",
+        "a torn stub in a register",
+        "a name read out at a door",
+        "a chair kept back from the table"
+      ],
+      "decisions": [
+        {
+          "cue": "a register with a gap in the names and the ruling still drawn",
+          "cost": "filling it enters somebody on the roll for good",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you enter a name that satisfies the count and the Parish stops looking at you",
+            "failure": "you enter one of your own and the village considers them settled here: +1 Bane",
+            "orElse": "leave the gap; the Parish keeps counting, and keeps coming back to you"
+          }
+        },
+        {
+          "cue": "a place laid at a table for somebody who is not coming",
+          "cost": "sitting in it accepts the place",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sit, eat, and are treated as family — every door in the village opens",
+            "failure": "you sit and cannot rise until somebody else takes the place",
+            "orElse": "stay standing; you are guests, and guests are watched"
+          }
+        },
+        {
+          "cue": "a pew with the name planed off and the wood pale",
+          "cost": "the name is recoverable from the register",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you match the pew to {priorCue} and learn who the village will not name",
+            "failure": "you say the name aloud in the church and something answers to it",
+            "orElse": "leave it blank; you never learn who this was"
+          }
+        },
+        {
+          "cue": "cottages standing open with the beds still made",
+          "cost": "somebody could be housed here tonight",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you make the cottage yours for the night and the Parish leaves you be until morning",
+            "failure": "you sleep and wake counted — the Parish now expects you at everything",
+            "orElse": "sleep outside the village; you lose the night and gain a Turn of pressure"
+          }
+        },
+        {
+          "cue": "a tally of the village cut into a beam, one notch short",
+          "cost": "cutting a notch is a claim; shaving one is a lie",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you shave a notch and the Parish believes the count already right",
+            "failure": "you cut one and are the notch: the village treats you as resident",
+            "orElse": "leave the beam; the shortfall keeps drawing the Parish to the living"
+          }
+        },
+        {
+          "cue": "a family bible with the births still being entered in fresh ink",
+          "cost": "somebody is still writing",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you find who is writing, and they will tell you who is missing and why",
+            "failure": "you write in it, and the ink takes: +1 Bane",
+            "orElse": "close it; the entries continue without you"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "an old woman of the Parish",
+          "doing": "laying a place at a table that is otherwise full",
+          "onArrival": "she asks whether you are the one they sent for",
+          "because": "the place has been laid every night since somebody left",
+          "offer": "sit in the place and she will tell you every name the village has lost"
+        },
+        {
+          "occupant": "two of the Parish",
+          "doing": "calling a roll on the green to nobody",
+          "onArrival": "they pause at a gap and look at you",
+          "because": "the roll must be got through and one name has no answer",
+          "offer": "answer to the name and the whole village receives you as its own"
+        },
+        {
+          "occupant": "the Reeve",
+          "doing": "counting cottages, out loud, and getting a different number twice",
+          "onArrival": "it starts again when it sees you",
+          "because": "the count has never come right since",
+          "offer": "give it a number it can accept and it will unlock the church"
+        },
+        {
+          "occupant": "a living pedlar",
+          "doing": "sorting through goods nobody came out to buy",
+          "onArrival": "they ask, quietly, whether the village has always been like this",
+          "because": "they came in this morning and cannot find the way back out",
+          "offer": "tell them the truth and they will show you the lane they came in by"
+        },
+        {
+          "occupant": "a child of the Parish",
+          "doing": "waiting at a gate with a bundle packed",
+          "onArrival": "it asks whether you are going, and whether it may come",
+          "because": "it was told to be ready and nobody came for it",
+          "offer": "take the bundle and it will lead you anywhere in the parish"
+        },
+        {
+          "occupant": "the whole village",
+          "doing": "standing at their doors, not coming out",
+          "onArrival": "every head turns to follow you down the lane",
+          "because": "strangers are counted before they are spoken to",
+          "offer": "greet one by name, correctly, and the doors open"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "register",
+          "cue": "a leaf out of the parish register",
+          "benefit": "once, be who a name on it was",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Parish expects that person's obligations of you"
+        },
+        {
+          "id": "bible",
+          "cue": "a family bible with the births in fresh ink",
+          "benefit": "know who belongs to whom, everywhere here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are entered in it too"
+        },
+        {
+          "id": "tally",
+          "cue": "a piece cut from the tally beam",
+          "benefit": "once, be counted as one of the village",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "one of yours goes uncounted while you hold it",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "keepsake",
+          "cue": "a keepsake left in an empty cottage",
+          "benefit": "once, the Parish takes you for the one who left",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whoever left is still owed something"
+        },
+        {
+          "id": "bundle",
+          "cue": "a packed bundle nobody came back for",
+          "benefit": "once, leave anywhere unhindered",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are leaving in somebody else's place"
+        }
+      ]
+    },
+    "harvest": {
+      "danger": "the store",
+      "dangerLine": "the store is empty and the village has not stopped filling it",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a tithe barn bigger than the church",
+          "strips of the common apportioned by a rule nobody wrote down",
+          "a store-book listing what each household owes in"
+        ],
+        "ritual": [
+          "the last sheaf cut and hung in the rafters",
+          "a portion set aside at every meal and not eaten",
+          "the store counted each week whether anything went in or not"
+        ],
+        "demand": [
+          "a scale set out with nothing on either pan",
+          "a barn door standing open onto empty boards",
+          "a sack held ready by somebody who does not put it down"
+        ],
+        "wound": [
+          "a barn stripped to the boards and swept clean",
+          "the last sheaf gone black in the rafters",
+          "a store-book where the entries stop mid-week"
+        ],
+        "anchor": [
+          "the last sheaf of the last good harvest",
+          "the store-book, complete",
+          "a full sack in an empty barn"
+        ]
+      },
+      "features": [
+        "a portion set aside and not eaten",
+        "the last sheaf hung black in the rafters",
+        "a scale with nothing in either pan",
+        "a barn swept to the boards",
+        "a sack nobody puts down",
+        "a store-book stopping mid-week"
+      ],
+      "decisions": [
+        {
+          "cue": "a scale set out with nothing on either pan and the weights beside it",
+          "cost": "weighing something in is a contribution",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you weigh in enough of your own and the village counts you as having paid your part",
+            "failure": "you weigh in short and the shortfall is remembered against you: +1 Bane",
+            "orElse": "walk past the scale; nothing here will feed you"
+          }
+        },
+        {
+          "cue": "the last sheaf hung black in the rafters, still tied",
+          "cost": "taking it down ends something",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take it down whole and the store will yield what you ask for once",
+            "failure": "it comes apart in your hands and the year goes with it: roll the clock",
+            "orElse": "leave it hanging; the barn stays shut to you"
+          }
+        },
+        {
+          "cue": "a store-book whose entries stop mid-week in a hurried hand",
+          "cost": "the last entry says why",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the last week and learn what the village did when the store ran out",
+            "failure": "you read it aloud and something that was there that week hears you",
+            "orElse": "close it; you go on not knowing what they did"
+          }
+        },
+        {
+          "cue": "a portion set aside at a table and not eaten",
+          "cost": "eating it takes a share; adding to it gives one",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you add to the portion and the household spirits attend you for the delve",
+            "failure": "you eat it and are hungry for the rest of the delve: -1 die on Brawn",
+            "orElse": "leave it; the portion sits there, and is noticed"
+          }
+        },
+        {
+          "cue": "a barn door standing open onto swept boards",
+          "cost": "closing it says the store is full",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you fill enough of the floor to shut the door honestly, and the village rests",
+            "failure": "you shut it on nothing and the lie is felt through the whole parish: +1 Bane",
+            "orElse": "leave it open; every night thing in the parish knows the barn is empty"
+          }
+        },
+        {
+          "cue": "strips of the common apportioned by a rule nobody wrote down",
+          "cost": "working one claims it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out the rule and can take a strip without offending anybody",
+            "failure": "you take the wrong strip and the Hayward has you for it",
+            "orElse": "take no strip; you have no standing here and doors stay shut"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Hayward",
+          "doing": "pacing out a strip of the common, over and over",
+          "onArrival": "it stops and asks whose strip you are standing on",
+          "because": "the apportionment was never finished",
+          "offer": "name a household and it will let you pass and tell you what is buried there"
+        },
+        {
+          "occupant": "three of the Parish",
+          "doing": "carrying an empty sack between them, carefully",
+          "onArrival": "they set it down in front of you and wait",
+          "because": "the sack must go to the barn full and never has",
+          "offer": "put anything at all in the sack and they will carry you anywhere in the parish"
+        },
+        {
+          "occupant": "a living miller",
+          "doing": "running a mill with nothing going through it",
+          "onArrival": "they ask what you have brought to grind",
+          "because": "the mill was never stopped and they cannot stop it",
+          "offer": "give them a handful of anything and they will tell you what the village eats now"
+        },
+        {
+          "occupant": "the store-keeper",
+          "doing": "counting an empty barn, slowly, by touch",
+          "onArrival": "it looks up and asks whether the carts have come",
+          "because": "the count is done each week whether or not there is anything to count",
+          "offer": "tell it the carts are coming and it will open the barn's inner room"
+        },
+        {
+          "occupant": "a scarecrow",
+          "doing": "standing in a field that has not been sown",
+          "onArrival": "its head turns as you cross the furrow",
+          "because": "it was set to watch the crop and the crop never came",
+          "offer": "dress it properly and the field lets you cross without being seen"
+        },
+        {
+          "occupant": "the last sheaf",
+          "doing": "hanging black in the rafters above a swept floor",
+          "onArrival": "it swings slightly in a barn with no draught",
+          "because": "it was cut in the last good year and never taken down",
+          "offer": "cut it down and the store gives up what it has been keeping"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "sheaf",
+          "cue": "a handful off the last good sheaf",
+          "benefit": "once, make a thing sufficient that was not",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the store is one portion shorter and knows it",
+          "acceptanceCost": {
+            "vice": "Gluttony"
+          }
+        },
+        {
+          "id": "storebook",
+          "cue": "the store-book",
+          "benefit": "know what every household here has and owes",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are entered as owing too"
+        },
+        {
+          "id": "weight",
+          "cue": "a scale weight, heavier than it looks",
+          "benefit": "once, make a bargain come out your way",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the other side always finds out afterwards"
+        },
+        {
+          "id": "seedcorn",
+          "cue": "a pocket of seed corn from the sealed sack",
+          "benefit": "once, make something grow where it should not",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it grows, and it keeps growing"
+        },
+        {
+          "id": "portion",
+          "cue": "a portion set aside and never eaten",
+          "benefit": "once, be fed anywhere",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you eat what somebody else was owed"
+        }
+      ]
+    },
+    "custom": {
+      "danger": "the way it is done",
+      "dangerLine": "there is a way things are done here and it is still being kept",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a moot stone with the worn places where feet go",
+          "a manor court that has met on the same day for four hundred years",
+          "gates hung so they can only be opened in one order"
+        ],
+        "ritual": [
+          "a procession walked round the bounds each year, in the same direction",
+          "a stone turned once a season by whoever is nearest",
+          "the same words said at the same gate before anybody passes"
+        ],
+        "demand": [
+          "a mark on a threshold that expects to be stepped over, not on",
+          "a gate standing shut in a fence with no fence either side",
+          "a place on the stone where somebody should be standing"
+        ],
+        "wound": [
+          "the bounds walked backwards, once, and the marks scuffed",
+          "a moot stone split and the halves set apart",
+          "gates rehung the wrong way round"
+        ],
+        "anchor": [
+          "the boundary stone, small enough to carry",
+          "a court roll listing every custom and its penalty",
+          "a staff cut for the beating of the bounds"
+        ]
+      },
+      "features": [
+        "a stone turned recently in its socket",
+        "a threshold mark worn only at the edges",
+        "a gate shut in a fence with no fence",
+        "a court roll open at a penalty",
+        "a staff leaning by a door",
+        "scuff marks going the wrong way round"
+      ],
+      "decisions": [
+        {
+          "cue": "a gate standing shut in a fence with no fence either side",
+          "cost": "it can be opened or walked round",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you open it properly and the village considers you to have come in the right way",
+            "failure": "you walk round it and everything here treats you as having climbed in: +1 Bane",
+            "orElse": "open it wrong; it will not shut again behind you"
+          }
+        },
+        {
+          "cue": "a moot stone with worn places where feet have stood",
+          "cost": "standing in the place is a claim to be heard",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you stand where the speaker stands and the Manor Court answers your question",
+            "failure": "you stand in the wrong place and are held in contempt of a court you cannot see",
+            "orElse": "stay off the stone; nothing here will hear you out"
+          }
+        },
+        {
+          "cue": "a threshold mark worn only at the edges",
+          "cost": "stepping over it is correct; standing on it is not",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you step over it and pass unremarked",
+            "failure": "you tread on it and everything indoors knows you are there",
+            "orElse": "go round to another door, costing a Turn"
+          }
+        },
+        {
+          "cue": "a staff cut for the beating of the bounds, leaning by a door",
+          "cost": "carrying it makes you part of the procession",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you take it up and can walk the bounds unhindered, in the right direction",
+            "failure": "you carry it widdershins and the bounds close behind you: roll the clock",
+            "orElse": "leave the staff; the bounds will not let you out where you came in"
+          }
+        },
+        {
+          "cue": "a court roll listing every custom and the penalty for breaking it",
+          "cost": "knowing the penalties is worth more than knowing the customs",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the one custom nobody here has kept, and can hold them to it",
+            "failure": "you read out a penalty and it is applied to you",
+            "orElse": "leave the roll; you will break something without knowing"
+          }
+        },
+        {
+          "cue": "a stone that is turned once a season by whoever is nearest",
+          "cost": "turning it early or late both mean something",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you turn it at the right season and the year here moves on, and the way clears",
+            "failure": "you turn it wrongly and it is the wrong season now: +1 Bane",
+            "orElse": "leave it unturned; the season here does not change and neither does anything else"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Manor Court",
+          "doing": "sitting on the moot stone with nothing before it",
+          "onArrival": "it stops and looks up as though your case were next",
+          "because": "the court sits on this day and has always sat",
+          "offer": "state a case and it will find in your favour, and enforce it"
+        },
+        {
+          "occupant": "the Hayward",
+          "doing": "walking the bounds in the wrong direction and stopping each time",
+          "onArrival": "it asks you which way round it goes",
+          "because": "somebody walked them backwards once and it has not recovered",
+          "offer": "tell it the right way and it will walk you out past anything"
+        },
+        {
+          "occupant": "a living surveyor",
+          "doing": "measuring a fence that runs between two fields of nothing",
+          "onArrival": "they ask whether you know where the boundary actually is",
+          "because": "the enclosure was never agreed and they were sent anyway",
+          "offer": "help them fix a line and they will show you where the stone is buried"
+        },
+        {
+          "occupant": "an old man of the Parish",
+          "doing": "turning a stone in its socket, back and forth, unable to stop",
+          "onArrival": "he asks what season it is",
+          "because": "he was told to turn it once and cannot remember whether he has",
+          "offer": "give him a season and the year here moves, and a door opens with it"
+        },
+        {
+          "occupant": "a gate",
+          "doing": "standing shut in a fence with no fence either side",
+          "onArrival": "the latch lifts slightly as you approach",
+          "because": "it was hung to be opened in an order and the order was broken",
+          "offer": "open it in the right order and every other gate in the parish opens with it"
+        },
+        {
+          "occupant": "the whole Manor Court",
+          "doing": "standing in a ring on the green in silence",
+          "onArrival": "they open the ring on the side you approach from",
+          "because": "the court cannot rise until somebody speaks",
+          "offer": "speak, and be answered, and be bound by the answer"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "staff",
+          "cue": "a bounds-staff, worn smooth",
+          "benefit": "once, walk through any boundary here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must finish the round you started"
+        },
+        {
+          "id": "courtroll",
+          "cue": "the court roll",
+          "benefit": "hold anyone here to a custom they have broken",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they can hold you to one too"
+        },
+        {
+          "id": "stone",
+          "cue": "a chip off the boundary stone",
+          "benefit": "once, decide where a line falls",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the line moves for everybody, not just you",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "keys",
+          "cue": "the gate keys, in order on a ring",
+          "benefit": "once, open a way that was closed in the right order",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the order matters, and you will get it wrong eventually"
+        },
+        {
+          "id": "mark",
+          "cue": "a threshold mark, cut into something portable",
+          "benefit": "once, be treated as having come in correctly",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what you left behind came in incorrectly"
+        }
+      ]
+    },
+    "quiet": {
+      "danger": "what is not said",
+      "dangerLine": "everybody here agreed not to speak of it and they are all still keeping to it",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a village where conversation stops at a certain topic and starts again after it",
+          "a vestry that keeps two sets of minutes",
+          "a pest house nobody mentions and everybody avoids"
+        ],
+        "ritual": [
+          "a subject changed at the same point every time",
+          "a door pulled to before certain words",
+          "the same answer given by everyone to the same question"
+        ],
+        "demand": [
+          "a silence held open, waiting for you to fill it",
+          "a question asked twice and left the second time",
+          "a room that goes quiet as you come in and does not start again"
+        ],
+        "wound": [
+          "minutes with a week cut out of them",
+          "a name gone out of every mouth in one season",
+          "a pest house with the door barred from outside"
+        ],
+        "anchor": [
+          "the book nobody has read since it was written",
+          "the second set of minutes, complete",
+          "a witness who never agreed to the silence"
+        ]
+      },
+      "features": [
+        "a subject changed mid-sentence",
+        "minutes with a week cut out",
+        "a door pulled to as you pass",
+        "a barred door on an empty house",
+        "the same answer from three people",
+        "a silence that does not fill"
+      ],
+      "decisions": [
+        {
+          "cue": "a room that goes quiet as you come in and does not start again",
+          "cost": "the silence can be broken or joined",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you wait it out and somebody breaks first, and tells you more than they meant to",
+            "failure": "you fill the silence and are marked as somebody who talks: +1 Bane",
+            "orElse": "leave the room; the talk resumes behind you, about you"
+          }
+        },
+        {
+          "cue": "vestry minutes with a week cut out of them and the stubs left",
+          "cost": "the same week exists in the second set",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the second minutes and read what the parish agreed to that week",
+            "failure": "you are found with the minutes open at that week",
+            "orElse": "leave them; the week stays missing, and so does the reason for everything"
+          }
+        },
+        {
+          "cue": "a pest house with the door barred from the outside",
+          "cost": "unbarring it is not undoing it",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open it and what is inside is grateful, and will name names",
+            "failure": "you open it and what is inside was barred in for a reason: roll the clock",
+            "orElse": "leave it barred; you will not learn what the village did"
+          }
+        },
+        {
+          "cue": "the same answer given to the same question by three different people",
+          "cost": "the fourth person is the one to ask",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who has not learned the answer and they tell you the truth of it",
+            "failure": "you press one of the three and the village closes to you entirely",
+            "orElse": "stop asking; every route from here on is the hard one"
+          }
+        },
+        {
+          "cue": "a name that has gone out of every mouth in one season",
+          "cost": "saying it aloud will get a reaction",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you say it to the right person alone and they break and tell you everything",
+            "failure": "you say it in company and the whole village turns: +1 Bane",
+            "orElse": "never say it; the thing it names is not addressed at the ending"
+          }
+        },
+        {
+          "cue": "a book nobody has read since it was written, still in its wrapping",
+          "cost": "reading it is the breach the village was avoiding",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read it and know the transgression whole, and can name it at the ending",
+            "failure": "you read it aloud and everything that agreed to the silence hears you",
+            "orElse": "leave it wrapped; the ending has to be improvised without the truth"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "four of the Parish",
+          "doing": "talking in a doorway and stopping at the same point",
+          "onArrival": "one of them changes the subject before you are close enough to hear",
+          "because": "the subject is changed at that point and always has been",
+          "offer": "let the subject stand changed and one of them will follow you out and tell you"
+        },
+        {
+          "occupant": "the Vestry clerk",
+          "doing": "copying minutes into a second book by candle",
+          "onArrival": "it turns the second book face down as you come in",
+          "because": "two sets have been kept since the week that is missing",
+          "offer": "promise not to say and it will let you read the true set"
+        },
+        {
+          "occupant": "a living constable",
+          "doing": "standing outside a barred door with no intention of opening it",
+          "onArrival": "they ask, flatly, whether you are here about that",
+          "because": "they were posted here and never relieved",
+          "offer": "tell them you are and they will hand over the bar and walk away"
+        },
+        {
+          "occupant": "an old woman of the Parish",
+          "doing": "answering a question nobody has asked her",
+          "onArrival": "she gives you the answer the village agreed on, word for word",
+          "because": "everybody was told what to say",
+          "offer": "ask her the question the answer does not fit and she will tell you the truth"
+        },
+        {
+          "occupant": "a child of the Parish",
+          "doing": "mouthing a name without sound",
+          "onArrival": "it looks to see whether anyone else heard it",
+          "because": "it was told never to say the name and has not stopped saying it",
+          "offer": "say the name back and it will take you to where the thing happened"
+        },
+        {
+          "occupant": "the pest house",
+          "doing": "standing barred with the thatch fallen in",
+          "onArrival": "something inside stops moving when you stop walking",
+          "because": "it was barred from outside and never opened",
+          "offer": "speak to what is inside and it will answer, honestly, which nothing else here will"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "minutes",
+          "cue": "the second set of vestry minutes",
+          "benefit": "know what the parish agreed and when",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the parish knows you know"
+        },
+        {
+          "id": "book",
+          "cue": "the book nobody has read",
+          "benefit": "once, name a truth that cannot be denied",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything that agreed to the silence comes to stop you",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "bar",
+          "cue": "the bar off the pest house door",
+          "benefit": "once, shut something in",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it was holding something shut and now is not"
+        },
+        {
+          "id": "name",
+          "cue": "the name nobody says",
+          "benefit": "once, make anyone here answer you truthfully",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they resent it afterwards, and remember"
+        },
+        {
+          "id": "silence",
+          "cue": "an agreement, given and taken",
+          "benefit": "once, be unremarked anywhere in the parish",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you owe the silence back"
+        }
+      ]
+    }
+  }
+}

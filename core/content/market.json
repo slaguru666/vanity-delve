@@ -1,0 +1,1189 @@
+{
+  "id": "market",
+  "label": "Market",
+  "forgeStageType": "village",
+  "schema": 1,
+  "placeNameStyle": "own",
+  "_model": "Settlement kernel, but the place is a transaction rather than a community. The appetite belongs to the market itself; the claimants are its offices; and everything it did to people it did by contract, which is why none of it can be undone by force.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Clerk of the Market",
+    "Piepowder Court",
+    "Company of Weighers",
+    "Toll House",
+    "Guild of Chapmen",
+    "Lord of the Fair",
+    "Standard-Keeper"
+  ],
+  "appetites": [
+    {
+      "id": "open",
+      "want": "never to close",
+      "lack": "closed",
+      "purpose": "the trading would never have to stop",
+      "motif": "crowd",
+      "prize": "bell",
+      "conscript": "the stallholders",
+      "asks": "\"Are we still open?\"",
+      "appeasement": {
+        "move": "sell something, to anybody, for anything at all",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "the market is trading again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "square",
+      "want": "that every dealing here should be exactly fair",
+      "lack": "cheated",
+      "purpose": "nobody would ever be wronged in it",
+      "motif": "weights",
+      "prize": "standard",
+      "conscript": "the false dealers",
+      "asks": "\"Is that a true measure?\"",
+      "appeasement": {
+        "move": "settle one dispute honestly, out loud, against your own interest",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it was dealt fair",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "dealt",
+      "want": "never to have a slow day",
+      "lack": "slow",
+      "purpose": "there would always be something moving",
+      "motif": "bargain",
+      "prize": "handsel",
+      "conscript": "the hagglers",
+      "asks": "\"What will you give me for it?\"",
+      "appeasement": {
+        "move": "strike a bargain here and shake on it",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "business was done",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "paid",
+      "want": "never to be owed anything by anybody",
+      "lack": "owed",
+      "purpose": "every account would come out clean",
+      "motif": "credit",
+      "prize": "bond",
+      "conscript": "the debtors",
+      "asks": "\"And the rest?\"",
+      "appeasement": {
+        "move": "pay something you owe, in full, in front of it",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the account is clear",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "tolled",
+      "text": "tolled {conscript} at every gate until they had nothing left to sell",
+      "cruelty": 2,
+      "fits": [
+        "paid",
+        "open",
+        "dealt"
+      ]
+    },
+    {
+      "id": "outcried",
+      "text": "had {conscript} cried down in the square so nobody would deal with them",
+      "cruelty": 3,
+      "fits": [
+        "square",
+        "dealt",
+        "open"
+      ]
+    },
+    {
+      "id": "bonded",
+      "text": "took a bond off {conscript} that could never be redeemed",
+      "cruelty": 3,
+      "fits": [
+        "paid",
+        "square"
+      ]
+    },
+    {
+      "id": "stalled",
+      "text": "gave {conscript} a stall they could not leave and could not give up",
+      "cruelty": 2,
+      "fits": [
+        "open",
+        "dealt",
+        "paid"
+      ]
+    },
+    {
+      "id": "weighed",
+      "text": "weighed everything {conscript} owned on a beam that was never true",
+      "cruelty": 2,
+      "fits": [
+        "square",
+        "paid"
+      ]
+    },
+    {
+      "id": "credited",
+      "text": "extended {conscript} credit until leaving would have been theft",
+      "cruelty": 3,
+      "fits": [
+        "paid",
+        "dealt",
+        "open"
+      ]
+    }
+  ],
+  "prizes": {
+    "bell": {
+      "label": "the bell that opens the market",
+      "function": "the only thing that ever started or stopped trading here"
+    },
+    "standard": {
+      "label": "the standard weight, sealed and true",
+      "function": "the only measure here that was never adjusted"
+    },
+    "handsel": {
+      "label": "the first coin of the first day's trading",
+      "function": "the only bargain here nobody regretted"
+    },
+    "bond": {
+      "label": "the bond that was never redeemed",
+      "function": "the only debt here that was written down honestly"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "Cheap",
+      "Corn",
+      "Cross",
+      "Shambles",
+      "Wool",
+      "Beast",
+      "Candle",
+      "Salt"
+    ],
+    "second": [
+      "Market",
+      "Fair",
+      "Row",
+      "Chipping",
+      "Staple",
+      "Cheaping",
+      "Mart",
+      "Charter",
+      "Green",
+      "Yard"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Toll Gate",
+      "The Beast Pens",
+      "The Approach Road",
+      "The Weigh-House",
+      "The Cross"
+    ],
+    "complication": [
+      "The Shambles",
+      "The Corn Row",
+      "The Cloth Hall",
+      "The Booths",
+      "The Drapery"
+    ],
+    "turn": [
+      "The Market Cross",
+      "The Piepowder Court",
+      "The Standard",
+      "The Charter House",
+      "The Great Stall"
+    ],
+    "descent": [
+      "The Cellars",
+      "The Undercroft",
+      "The Middens",
+      "The Back Rows",
+      "The Debtors' Yard"
+    ],
+    "threshold": [
+      "The Counting House",
+      "The Strong Room",
+      "The Toll House",
+      "The Clerk's Room",
+      "The Last Booth"
+    ],
+    "ending": [
+      "The Empty Square",
+      "Where the Bell Hangs",
+      "The Last Bargain",
+      "The Sealed Room"
+    ]
+  },
+  "factions": [
+    {
+      "id": "market",
+      "name": "the Market",
+      "kind": "undead",
+      "essence": "still trading, still crying its wares, still expecting to be dealt with",
+      "handledBy": "trade"
+    },
+    {
+      "id": "chapmen",
+      "name": "the chapmen",
+      "kind": "living",
+      "essence": "came for the fair and have not managed to leave",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "weighers",
+      "name": "the Company of Weighers",
+      "kind": "undead",
+      "essence": "will not pass anything that does not measure true",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "pens",
+      "name": "what got out of the pens",
+      "kind": "beast",
+      "essence": "was bought and paid for and never collected",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in through the toll gate and paid, as traders do",
+    "seenTwice": "passed the same stall twice without buying",
+    "loud": "a raised voice in a square built to carry one",
+    "lingering": "stood in one row long enough for the criers to work out what you want",
+    "disturbed": "handled goods, moved a weight, or opened a shuttered booth"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Bandits working the back rows",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "cutpurses; they want the purse, not the fight"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "show them you carry nothing worth taking and they move on"
+    },
+    "fight": {
+      "line": "4 Bandits and a Hobgoblin Soldier collecting toll",
+      "foes": [
+        {
+          "n": 4,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "scatter if the sergeant drops"
+        },
+        {
+          "n": 1,
+          "name": "Hobgoblin Soldier",
+          "atk": 4,
+          "def": 4,
+          "grit": 6,
+          "nerve": 4,
+          "note": "holds them together"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they are collecting a toll — pay it and they let you through"
+    },
+    "battle": {
+      "line": "1 Necromancer of the Company and 4 Skeletons in weighers' aprons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 3,
+          "def": 3,
+          "grit": 8,
+          "nerve": 4,
+          "note": "raises one Skeleton per round from the pens"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — the Necromancer is alive and bleeds",
+      "avoid": "it stops for a true measure; put the standard weight on the beam and it must check it"
+    },
+    "nightmare": {
+      "line": "1 Wraith of the Clerk, 1 Necromancer and 5 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 3,
+          "def": 3,
+          "grit": 8,
+          "nerve": 4,
+          "note": "raises one Skeleton per round"
+        },
+        {
+          "n": 5,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "bargain": {
+      "danger": "the deal",
+      "dangerLine": "everything here still wants to be haggled with, and it will hold you to what you agree",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a square laid out in rows, one trade to a row",
+          "a court that sits while the dust is still on your feet",
+          "stalls numbered and let by the day"
+        ],
+        "ritual": [
+          "a hand spat on and struck before anything moves",
+          "the first coin of the day kept back and not spent",
+          "a price cried three times before it is a price"
+        ],
+        "demand": [
+          "a hand held out, open, waiting to be struck",
+          "goods set out with no price on them at all",
+          "a stall with the boards down and nobody behind it"
+        ],
+        "wound": [
+          "a hand struck and then withdrawn, in front of everybody",
+          "a row of stalls with the goods still on them and no sellers",
+          "a price cried a fourth time, into silence"
+        ],
+        "anchor": [
+          "the first coin of the first day's trading",
+          "a book of bargains struck and honoured",
+          "a stall let in perpetuity to somebody who never came"
+        ]
+      },
+      "features": [
+        "a hand held open, waiting",
+        "goods set out with no price on them",
+        "a first coin kept back on a string",
+        "a price cried into an empty row",
+        "boards down on an empty stall",
+        "a book of bargains left open"
+      ],
+      "decisions": [
+        {
+          "cue": "a hand held out open, waiting to be struck",
+          "cost": "striking it makes the bargain, whatever it was",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you settle the terms before you strike, and the market honours them exactly",
+            "failure": "you strike first and find out the terms after: +1 Bane",
+            "orElse": "do not take the hand; the row closes to you and stays closed"
+          }
+        },
+        {
+          "cue": "goods set out with no price on them at all",
+          "cost": "naming a price is an offer you are held to",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you price it fairly and the Market deals with you as a trader from here on",
+            "failure": "you price it low and the seller accepts, and expects the difference",
+            "orElse": "offer nothing; you go through the market as a customer, and are treated as prey"
+          }
+        },
+        {
+          "cue": "the first coin of the day kept back on a string",
+          "cost": "spending it opens the day; keeping it does not",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you spend the handsel properly and the whole square begins trading around you",
+            "failure": "you pocket it and nothing here will deal with you again",
+            "orElse": "leave it hanging; the day never starts and the square stays dead"
+          }
+        },
+        {
+          "cue": "a price being cried three times into an empty row",
+          "cost": "answering the third cry closes the sale",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer and get the thing, and the crier owes you a hearing",
+            "failure": "you answer late and the sale goes to somebody you cannot see",
+            "orElse": "let it lapse; whatever it was is gone for good"
+          }
+        },
+        {
+          "cue": "a book of bargains struck and honoured, with a blank line ruled",
+          "cost": "entering a bargain in it makes it binding on both",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you write terms that bind the Market as much as you and it must keep them",
+            "failure": "you write loosely and it keeps the letter of what you wrote: +1 Bane",
+            "orElse": "leave the line blank; nothing here is bound to you at all"
+          }
+        },
+        {
+          "cue": "a stall let in perpetuity to somebody who never came",
+          "cost": "standing behind it takes the lease",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you take the stall and have standing in the market — the Court will hear you",
+            "failure": "you take it and cannot leave it while the market is open",
+            "orElse": "walk past; you have no standing and the Court will not sit for you"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a crier",
+          "doing": "calling a price three times into an empty row",
+          "onArrival": "it pauses on the third cry and looks at you",
+          "because": "the lot must be sold and nobody has bid",
+          "offer": "bid anything and it will cry your business through the whole square"
+        },
+        {
+          "occupant": "two of the Market",
+          "doing": "holding a bargain half-struck between them",
+          "onArrival": "both hands are open and neither will close",
+          "because": "the terms were never agreed and neither will speak first",
+          "offer": "name the terms and both will thank you, and owe you"
+        },
+        {
+          "occupant": "a living chapman",
+          "doing": "laying goods out on a stall that already has goods on it",
+          "onArrival": "they ask whether you are the one who has the pitch",
+          "because": "they arrived for the fair and the fair was already over",
+          "offer": "help them clear the pitch and they will tell you what sells here now"
+        },
+        {
+          "occupant": "the Lord of the Fair",
+          "doing": "holding a purse open with nothing in it",
+          "onArrival": "it asks what you have brought to sell",
+          "because": "the fair cannot be declared over while anything is unsold",
+          "offer": "sell it anything at all and it will declare you under its protection"
+        },
+        {
+          "occupant": "a stall",
+          "doing": "standing with the boards down and the goods laid out",
+          "onArrival": "the goods are arranged fresh and the dust is off them",
+          "because": "the stall is let in perpetuity and the tenant never came",
+          "offer": "stand behind it and the market treats you as one of its own"
+        },
+        {
+          "occupant": "the Guild of Chapmen",
+          "doing": "weighing a purse against a ledger, over and over",
+          "onArrival": "one of them slides the purse toward you",
+          "because": "the account will not come out and they cannot stop trying",
+          "offer": "balance it for them and they will open the counting house"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "handsel",
+          "cue": "the first coin of the first day",
+          "benefit": "once, make a deal go through that should not have",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the market's luck goes with it and the square knows",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "bargainbook",
+          "cue": "the book of bargains",
+          "benefit": "hold anyone here to what they agreed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are in the book too"
+        },
+        {
+          "id": "pitch",
+          "cue": "a stall's tally-stick",
+          "benefit": "standing in the market, and the Court will hear you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you owe the day's rent, and it accrues"
+        },
+        {
+          "id": "crier",
+          "cue": "a crier's bell, hand-sized",
+          "benefit": "once, be heard by everything in the square",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything in the square then knows where you are"
+        },
+        {
+          "id": "purse",
+          "cue": "a purse that is never quite empty",
+          "benefit": "once, pay what is asked",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the coin comes from somebody, and they notice"
+        }
+      ]
+    },
+    "weights": {
+      "danger": "the true measure",
+      "dangerLine": "the Company is still checking, and nothing you carry will pass",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a weigh-house on the square with the beam in full view",
+          "every measure in the market stamped and sealed once a year",
+          "a company whose only work is checking other people's scales"
+        ],
+        "ritual": [
+          "a beam swung empty each morning to prove it hangs true",
+          "seals cut off and restruck at the same hour",
+          "the standard brought out, shown, and locked away again"
+        ],
+        "demand": [
+          "a beam hanging with one pan lower than the other",
+          "a measure set out beside a thing that has not been measured",
+          "a seal pressed into wax that has not set"
+        ],
+        "wound": [
+          "a weigh-house with the beam bent and left bent",
+          "seals struck onto measures that were never checked",
+          "the standard gone from its case and the case still locked"
+        ],
+        "anchor": [
+          "the standard weight, sealed and true",
+          "a book of seals and what they were struck on",
+          "a beam that has never been out of true"
+        ]
+      },
+      "features": [
+        "a beam hanging with one pan low",
+        "a seal in wax that has not set",
+        "a measure set beside something unmeasured",
+        "a bent beam left bent",
+        "a case locked and empty",
+        "a book of seals open at a page"
+      ],
+      "decisions": [
+        {
+          "cue": "a beam hanging with one pan lower than the other and nothing in either",
+          "cost": "balancing it is a claim about the world",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the fault and true the beam, and the Company will vouch for you anywhere here",
+            "failure": "you weight the light pan to fake it and the Company finds out: +1 Bane",
+            "orElse": "leave it hanging false; every measure you are given here is short"
+          }
+        },
+        {
+          "cue": "a seal pressed into wax that has not set",
+          "cost": "the seal can still be lifted or spoiled",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you lift it clean and can reseal something the Company will not question",
+            "failure": "you smear it and whatever it sealed is now unsealed and known to be",
+            "orElse": "let it set; it seals something against you"
+          }
+        },
+        {
+          "cue": "a measure set out beside a thing that has not been measured",
+          "cost": "measuring it settles what it is worth",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you measure honestly and the market prices everything for you at true value",
+            "failure": "you measure short in your own favour and the beam remembers",
+            "orElse": "take it unmeasured; you will be charged whatever they like"
+          }
+        },
+        {
+          "cue": "a locked case with the standard weight gone out of it",
+          "cost": "the case says who had the key last",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the case and learn who took the standard, and where they went with it",
+            "failure": "you force the case and the Company treats you as the thief: +1 Bane",
+            "orElse": "leave it locked; nothing here can be proved true or false"
+          }
+        },
+        {
+          "cue": "a book of seals listing what each was struck on",
+          "cost": "one entry does not match the goods it sealed",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the false entry and can hold the Clerk to it",
+            "failure": "you are found reading it by something that struck those seals",
+            "orElse": "close the book; the false measures stay in circulation, including yours"
+          }
+        },
+        {
+          "cue": "a bent beam left bent in a weigh-house that is otherwise kept",
+          "cost": "straightening it undoes a great many old bargains",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you straighten it and every dishonest thing in the market is exposed at once",
+            "failure": "it snaps, and the market has no measure at all: roll the clock",
+            "orElse": "leave it bent; the Company will not pass anything you carry"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a weigher",
+          "doing": "swinging an empty beam to prove it hangs true",
+          "onArrival": "it stops the beam and offers you the pans",
+          "because": "the beam is proved each morning and the morning has not ended",
+          "offer": "put something in a pan and it will weigh anything else you ask"
+        },
+        {
+          "occupant": "the Standard-Keeper",
+          "doing": "holding a locked case and turning it over",
+          "onArrival": "it asks whether you have seen the weight",
+          "because": "the standard was taken and the case never opened since",
+          "offer": "tell it where the standard is and it will unseal any door here"
+        },
+        {
+          "occupant": "two of the Company",
+          "doing": "checking a measure against another measure, endlessly",
+          "onArrival": "they hand you a third and wait",
+          "because": "neither will serve as the standard and both know it",
+          "offer": "give them a true measure and they will pass anything you carry"
+        },
+        {
+          "occupant": "a living tinker",
+          "doing": "filing at a weight, carefully, in a doorway",
+          "onArrival": "they stop and grin rather than hide it",
+          "because": "nobody has checked anything here in a long time",
+          "offer": "let them finish and they will file you a weight that passes anywhere"
+        },
+        {
+          "occupant": "a beam",
+          "doing": "hanging with one pan lower and nothing in either",
+          "onArrival": "it swings level as you come near and then tips again",
+          "because": "it was bent once and nobody trued it",
+          "offer": "true it and the Company vouches for you across the whole market"
+        },
+        {
+          "occupant": "the Clerk of the Market",
+          "doing": "stamping seals onto measures without checking them",
+          "onArrival": "it holds a seal out to you, ready struck",
+          "because": "the sealing must be done and the checking cannot be",
+          "offer": "refuse the seal and it will tell you which measures are false"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "standard",
+          "cue": "the standard weight, sealed",
+          "benefit": "once, settle any dispute about what is true",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "nothing else here measures true while you hold it",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "seal",
+          "cue": "a weigher's seal",
+          "benefit": "once, make a thing pass as sound",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Company checks everything you have sealed, eventually"
+        },
+        {
+          "id": "beam",
+          "cue": "a pocket balance, honest",
+          "benefit": "know when you are being cheated",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know exactly how badly, which is worse"
+        },
+        {
+          "id": "filedweight",
+          "cue": "a weight filed light",
+          "benefit": "once, buy at your own price",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the beam it was used on stays wrong"
+        },
+        {
+          "id": "sealbook",
+          "cue": "the book of seals",
+          "benefit": "know which of anything here is false",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "so does whoever notices you reading it"
+        }
+      ]
+    },
+    "crowd": {
+      "danger": "the press",
+      "dangerLine": "the market is full and there is nobody in it",
+      "trigger": "loud",
+      "facets": {
+        "institution": [
+          "a square built to hold four thousand people",
+          "rows wide enough for carts and worn narrow by feet",
+          "a cross where the crowd is supposed to gather"
+        ],
+        "ritual": [
+          "a bell rung to open the trading and rung again to close it",
+          "the same rows filled in the same order every day",
+          "a crowd moving one way round the square and never the other"
+        ],
+        "demand": [
+          "a gap in the press, exactly one person wide",
+          "a cross with the steps worn and nobody on them",
+          "a row that stays empty while every other row fills"
+        ],
+        "wound": [
+          "a square emptied in an afternoon and the goods left standing",
+          "a bell rung to close and never rung to open",
+          "boots and baskets trodden into the mud in one direction"
+        ],
+        "anchor": [
+          "the bell that opens the market",
+          "a plan of the square with every pitch marked",
+          "a crowd that has never once dispersed"
+        ]
+      },
+      "features": [
+        "a gap in a press of nobody",
+        "baskets trodden into the mud",
+        "a bell rope hanging still",
+        "an empty row between full ones",
+        "worn steps at a market cross",
+        "goods left standing on a pitch"
+      ],
+      "decisions": [
+        {
+          "cue": "a bell rung to close the market and never rung to open it",
+          "cost": "ringing it starts everything again",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you ring the market open and the square fills, and the crowd carries you where you ask",
+            "failure": "you ring it and cannot stop it ringing: roll the clock",
+            "orElse": "leave the rope; the square stays shut and so does everything in it"
+          }
+        },
+        {
+          "cue": "a gap in the press exactly one person wide",
+          "cost": "stepping into it joins the crowd",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you step in and move through the market unseen, as one of the crowd",
+            "failure": "you step in and cannot step out until the crowd does",
+            "orElse": "push through instead; you are seen doing it, by everything"
+          }
+        },
+        {
+          "cue": "a row that stays empty while every other row fills",
+          "cost": "there is a reason nobody stands in it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you learn why the row is avoided and can use it to cross the square safely",
+            "failure": "you go down it in ignorance and something in it takes an interest",
+            "orElse": "go round the long way, costing a Turn"
+          }
+        },
+        {
+          "cue": "a market cross with the steps worn and nobody on them",
+          "cost": "the steps are for whoever will be listened to",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you speak from the cross and the whole market attends you, once",
+            "failure": "you are shouted down and cried through the square as a fool: +1 Bane",
+            "orElse": "stay off the steps; nothing here will hear you out"
+          }
+        },
+        {
+          "cue": "baskets and boots trodden into the mud, all pointing one way",
+          "cost": "the direction says where everybody went",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you follow the direction and find where the square emptied to",
+            "failure": "you follow it into the press and are carried the wrong way entirely",
+            "orElse": "ignore the mud; you will not know where the crowd went"
+          }
+        },
+        {
+          "cue": "a plan of the square with every pitch marked and one crossed out",
+          "cost": "the crossed pitch is still let to somebody",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the crossed pitch and what is still standing on it",
+            "failure": "you stand on it and the crowd forms around you: +1 Bane",
+            "orElse": "leave the plan; you will walk onto it by accident later"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the crowd",
+          "doing": "standing shoulder to shoulder in an empty square",
+          "onArrival": "it parts, exactly one person wide, in front of you",
+          "because": "the market is open and the crowd has never dispersed",
+          "offer": "walk the gap and the crowd will carry you anywhere in the square"
+        },
+        {
+          "occupant": "a bellman",
+          "doing": "holding a rope that is not moving",
+          "onArrival": "it asks whether it is time yet",
+          "because": "the market was closed and never opened",
+          "offer": "tell it to ring and the square comes to life around you"
+        },
+        {
+          "occupant": "a living ballad-seller",
+          "doing": "singing to nobody in a full row",
+          "onArrival": "they break off and ask if you know the second verse",
+          "because": "they will not stop until somebody buys a sheet",
+          "offer": "buy a sheet and they will sing you the truth of what happened here"
+        },
+        {
+          "occupant": "one of the Market",
+          "doing": "standing on the cross steps with its mouth open",
+          "onArrival": "no sound comes out and the crowd waits anyway",
+          "because": "it was crying something when the square emptied",
+          "offer": "give it words and the whole market will do what you say, once"
+        },
+        {
+          "occupant": "a press of the Market",
+          "doing": "moving one way around the square, endlessly",
+          "onArrival": "it slows where you stand and does not stop",
+          "because": "the crowd goes round this way and always has",
+          "offer": "go with it once round and every stall opens to you"
+        },
+        {
+          "occupant": "a child",
+          "doing": "holding a basket of something nobody bought",
+          "onArrival": "it holds the basket up without speaking",
+          "because": "it was sent out to sell and nobody came",
+          "offer": "buy the basket and it will show you the row nobody uses"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bell",
+          "cue": "a hand-bell from the cross",
+          "benefit": "once, gather or scatter everything in earshot",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the market opens when you ring it, and does not close",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "plan",
+          "cue": "the plan of the square",
+          "benefit": "know every pitch and who holds it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are marked on it now"
+        },
+        {
+          "id": "basket",
+          "cue": "a seller's basket, never empty",
+          "benefit": "once, have exactly the small thing you need",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it was somebody's stock and they want it back"
+        },
+        {
+          "id": "sheet",
+          "cue": "a ballad sheet about this place",
+          "benefit": "know one true thing about what happened here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ballad names you in the last verse"
+        },
+        {
+          "id": "cloak",
+          "cue": "a chapman's cloak off a peg",
+          "benefit": "once, be taken for part of the crowd",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the crowd expects you to move with it"
+        }
+      ]
+    },
+    "credit": {
+      "danger": "the account",
+      "dangerLine": "the market keeps accounts, and yours is open",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a counting house with a window onto the square",
+          "tally sticks split and matched, one half to each party",
+          "a court that can distrain on goods before the dust settles"
+        ],
+        "ritual": [
+          "accounts read out loud at quarter-day",
+          "a tally split in front of witnesses",
+          "a debt cried in the square before it is enforced"
+        ],
+        "demand": [
+          "a tally stick with only one half present",
+          "an account ruled off and left unsigned",
+          "a hand held out for a payment nobody has named"
+        ],
+        "wound": [
+          "a strong room with the boxes open and the tallies burnt",
+          "a debtors' yard with the gate off its hinges",
+          "accounts ruled off in the middle of a quarter"
+        ],
+        "anchor": [
+          "the bond that was never redeemed",
+          "a full set of tallies, both halves",
+          "an account book that balances"
+        ]
+      },
+      "features": [
+        "a tally stick with one half missing",
+        "an account ruled off unsigned",
+        "a hand held out for payment",
+        "burnt tallies in a grate",
+        "a strong-room box standing open",
+        "a bond with the seal intact"
+      ],
+      "decisions": [
+        {
+          "cue": "a tally stick with only one half present",
+          "cost": "the other half is somewhere and matching them settles the debt",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the matching half at {priorCue} and the debt is discharged in your favour",
+            "failure": "you match it wrongly and the debt is now yours: +1 Bane",
+            "orElse": "leave it unmatched; the Market treats the whole sum as outstanding against you"
+          }
+        },
+        {
+          "cue": "an account ruled off and left unsigned",
+          "cost": "signing it closes the account for good",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you sign it correctly and one thing here stops pursuing you, permanently",
+            "failure": "you sign without reading and take on what it says: +1 Bane",
+            "orElse": "leave it open; the account keeps running and the total keeps growing"
+          }
+        },
+        {
+          "cue": "a hand held out for a payment nobody has named",
+          "cost": "paying settles something; asking what for does not",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you make it name the debt first, and it is smaller than you feared",
+            "failure": "you pay blind and have settled somebody else's account, not yours",
+            "orElse": "refuse the hand; whatever it was owed is now owed by you"
+          }
+        },
+        {
+          "cue": "a strong room with the boxes open and the tallies burnt",
+          "cost": "somebody destroyed the record rather than pay",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find whose tallies were burnt and can hold the Clerk to the theft",
+            "failure": "you are found in the strong room with burnt tallies in your hand",
+            "orElse": "leave it; nobody here can prove anything, including you"
+          }
+        },
+        {
+          "cue": "a debtors' yard with the gate off its hinges",
+          "cost": "what was held here got out, or was let out",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out which and can bargain with what is loose in the market",
+            "failure": "you go in and the gate is back on its hinges behind you",
+            "orElse": "stay out of the yard; something in the market is owed and unaccounted for"
+          }
+        },
+        {
+          "cue": "a bond with the seal still intact, unredeemed",
+          "cost": "redeeming it ends the debt; breaking the seal voids it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you redeem it properly and the Market considers the whole affair closed",
+            "failure": "you break the seal and every debt it stood against comes due at once",
+            "orElse": "leave it sealed; the bond is the ending's whole leverage and you will not have it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Clerk of the Market",
+          "doing": "holding out half a tally stick",
+          "onArrival": "it does not speak; it waits for the other half",
+          "because": "the account cannot be closed with one half missing",
+          "offer": "give it any matching half and it will discharge one debt of yours"
+        },
+        {
+          "occupant": "a living debtor",
+          "doing": "sitting in a yard with the gate off its hinges",
+          "onArrival": "they ask whether you have come to collect",
+          "because": "they were distrained on and nobody came back",
+          "offer": "tell them the debt is settled and they will show you what is in the strong room"
+        },
+        {
+          "occupant": "the Piepowder Court",
+          "doing": "sitting with an account book open at a ruled line",
+          "onArrival": "it turns the book toward you and offers a pen",
+          "because": "the account must be signed off and there is nobody to sign",
+          "offer": "sign it and the Court will find for you in anything, once"
+        },
+        {
+          "occupant": "two of the Market",
+          "doing": "passing a purse back and forth without opening it",
+          "onArrival": "they stop and hold it out to you",
+          "because": "neither will accept it and neither will keep it",
+          "offer": "take the purse and both will owe you, and pay"
+        },
+        {
+          "occupant": "a bond",
+          "doing": "lying sealed on an empty table in a locked room",
+          "onArrival": "the seal is unbroken and the wax is still soft",
+          "because": "it was never redeemed and never destroyed",
+          "offer": "redeem it and the whole market considers its accounts closed"
+        },
+        {
+          "occupant": "the Lord of the Fair",
+          "doing": "reading an account aloud to an empty square",
+          "onArrival": "it reaches your name in the list and stops",
+          "because": "the quarter's accounts must be cried before they are enforced",
+          "offer": "let it finish and it will strike your name off with its own hand"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bond",
+          "cue": "the unredeemed bond",
+          "benefit": "once, call in a debt from anything here",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the Market opens an account against you at the same moment",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "tally",
+          "cue": "a matched pair of tallies",
+          "benefit": "prove any debt here settled or outstanding",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "tallies work both ways and yours is one of them"
+        },
+        {
+          "id": "purse",
+          "cue": "a distrained purse from the strong room",
+          "benefit": "spend freely, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it was distrained off somebody who is still owed it"
+        },
+        {
+          "id": "ledger",
+          "cue": "the counting-house ledger",
+          "benefit": "know what everything here owes and to whom",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know your own line, and it grows"
+        },
+        {
+          "id": "gate",
+          "cue": "the pin off the debtors' gate",
+          "benefit": "once, hold something where it is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever was in the yard is not, and knows you have the pin"
+        }
+      ]
+    }
+  }
+}

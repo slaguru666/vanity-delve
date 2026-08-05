@@ -1,0 +1,1187 @@
+{
+  "id": "port",
+  "label": "Port",
+  "forgeStageType": "village",
+  "schema": 1,
+  "placeNameStyle": "own",
+  "_model": "Settlement kernel on the water. The appetite belongs to the harbour, which is a place people are always about to leave — so every cruelty here is a way of stopping them, and every prize is something that makes leaving possible again.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Harbour Board",
+    "Custom House",
+    "Trinity Brethren",
+    "Master of the Quay",
+    "Company of Pilots",
+    "Water Bailiff",
+    "Merchant Venturers"
+  ],
+  "appetites": [
+    {
+      "id": "busy",
+      "want": "never to have an empty berth",
+      "lack": "empty",
+      "purpose": "there would always be something alongside",
+      "motif": "cargo",
+      "prize": "manifest",
+      "conscript": "the shippers",
+      "asks": "\"What have you brought me?\"",
+      "appeasement": {
+        "move": "land something on the quay, anything, and enter it",
+        "attribute": "Brawn",
+        "successes": 2,
+        "why": "the quay is working again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "returned",
+      "want": "that everything which sails from it should come back to it",
+      "lack": "left behind",
+      "purpose": "nothing would ever be lost to somewhere else",
+      "motif": "passage",
+      "prize": "light",
+      "conscript": "the outward bound",
+      "asks": "\"Are you coming back?\"",
+      "appeasement": {
+        "move": "come back to a place in this harbour you have already been",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "something came back",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "obeyed",
+      "want": "that nothing should ever fail to move when it says",
+      "lack": "ignored",
+      "purpose": "every tide would be kept",
+      "motif": "tide",
+      "prize": "glass",
+      "conscript": "the latecomers",
+      "asks": "\"Have you missed it?\"",
+      "appeasement": {
+        "move": "do one thing exactly when the harbour says, and not a moment after",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "the tide was kept",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "safe",
+      "want": "that nothing should ever be lost within sight of it",
+      "lack": "lost",
+      "purpose": "every soul would come ashore",
+      "motif": "wreck",
+      "prize": "bell",
+      "conscript": "the drowned",
+      "asks": "\"Who was aboard?\"",
+      "appeasement": {
+        "move": "name one thing the sea took, out loud, and where it went down",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it was accounted for",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "shipped",
+      "text": "shipped {conscript} out on a bottom that was never coming back",
+      "cruelty": 3,
+      "fits": [
+        "returned",
+        "busy"
+      ]
+    },
+    {
+      "id": "pressed",
+      "text": "pressed {conscript} aboard and would not sign them off again",
+      "cruelty": 3,
+      "fits": [
+        "busy",
+        "obeyed",
+        "returned"
+      ]
+    },
+    {
+      "id": "bonded",
+      "text": "held {conscript}'s goods in bond until there was nothing left to redeem them with",
+      "cruelty": 2,
+      "fits": [
+        "busy",
+        "obeyed"
+      ]
+    },
+    {
+      "id": "detained",
+      "text": "kept {conscript}'s ship in the harbour and never cleared her",
+      "cruelty": 2,
+      "fits": [
+        "returned",
+        "obeyed",
+        "busy"
+      ]
+    },
+    {
+      "id": "misled",
+      "text": "showed {conscript} a light that was not where they took it to be",
+      "cruelty": 3,
+      "fits": [
+        "safe",
+        "returned"
+      ]
+    },
+    {
+      "id": "lodged",
+      "text": "lodged {conscript} on the low quay, where the tide comes over",
+      "cruelty": 2,
+      "fits": [
+        "safe",
+        "obeyed"
+      ]
+    }
+  ],
+  "prizes": {
+    "manifest": {
+      "label": "the manifest of the last ship to clear",
+      "function": "the only complete account of what left here and with whom"
+    },
+    "light": {
+      "label": "the lamp out of the harbour light",
+      "function": "the only thing that ever brought anything home"
+    },
+    "glass": {
+      "label": "the tide glass, still running",
+      "function": "the only clock here the water agreed with"
+    },
+    "bell": {
+      "label": "the bell off the ship that went down in the roads",
+      "function": "the only marker over what the harbour lost"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "Salt",
+      "Old",
+      "North",
+      "Deep",
+      "Black",
+      "Kings",
+      "Low",
+      "Stone"
+    ],
+    "second": [
+      "Haven",
+      "Quay",
+      "Roads",
+      "Hythe",
+      "Wharf",
+      "Staithe",
+      "Pool",
+      "Mouth",
+      "Reach",
+      "Strand"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Sea Gate",
+      "The Long Quay",
+      "The Roads",
+      "The Bar",
+      "The Pilot Stair"
+    ],
+    "complication": [
+      "The Warehouses",
+      "The Bond Store",
+      "The Rope Walk",
+      "The Sail Loft",
+      "The Custom House Yard"
+    ],
+    "turn": [
+      "The Custom House",
+      "The Trinity Hall",
+      "The Harbour Office",
+      "The Great Crane",
+      "The Watch Tower"
+    ],
+    "descent": [
+      "The Mud Berth",
+      "The Hulks",
+      "The Careening Ground",
+      "The Under-Quay",
+      "The Drowned Street"
+    ],
+    "threshold": [
+      "The Light",
+      "The Chart Room",
+      "The Bond Room",
+      "The Master's Cabin",
+      "The Last Berth"
+    ],
+    "ending": [
+      "Where the Tide Turns",
+      "The Empty Roads",
+      "Under the Light",
+      "The Bell Buoy"
+    ]
+  },
+  "factions": [
+    {
+      "id": "board",
+      "name": "the Harbour Board",
+      "kind": "undead",
+      "essence": "still clearing, still entering, still refusing to sign anything off",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "crews",
+      "name": "the crews",
+      "kind": "living",
+      "essence": "came ashore for a night and the ship never sailed",
+      "handledBy": "trade"
+    },
+    {
+      "id": "trinity",
+      "name": "the Trinity Brethren",
+      "kind": "undead",
+      "essence": "still keeping a light for ships that are not coming",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "tidewrack",
+      "name": "what comes in on the tide",
+      "kind": "beast",
+      "essence": "was never on anybody's manifest",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came along the quay in the open and were hailed",
+    "seenTwice": "seen from the water twice, from different berths",
+    "loud": "a raised voice across water, which carries further than you think",
+    "lingering": "stayed alongside long enough to be entered as a vessel in port",
+    "disturbed": "cast off a line, opened a hatch, or moved something off the tideline"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Bandits off the hulks",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "wreckers; they take from the drowned and would rather not fight the living"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "give them something off the tideline and they take it and go"
+    },
+    "fight": {
+      "line": "4 Bandits and a Hobgoblin Soldier as bailiff's man",
+      "foes": [
+        {
+          "n": 4,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "scatter if the bailiff's man drops"
+        },
+        {
+          "n": 1,
+          "name": "Hobgoblin Soldier",
+          "atk": 4,
+          "def": 4,
+          "grit": 6,
+          "nerve": 4,
+          "note": "demands your papers before it strikes"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "show it any paper with a seal on it and it stands down to read"
+    },
+    "battle": {
+      "line": "1 Wraith of the Quay Master and 4 Skeletons of a drowned crew",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless; still working the ship they died on"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons — say so before initiative",
+      "avoid": "it wants the crew accounted for; name one of the drowned and it stops to enter them"
+    },
+    "nightmare": {
+      "line": "1 Wraith, 1 Ogre out of the mud berth and 5 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL"
+        },
+        {
+          "n": 1,
+          "name": "Ogre",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 3,
+          "note": "came in on a tide and was never entered anywhere"
+        },
+        {
+          "n": 5,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "cargo": {
+      "danger": "the lading",
+      "dangerLine": "the quay is still working, and it does not care that there is nothing to work on",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "warehouses running the length of the quay, all of them full",
+          "a bond store with the goods held and the duty unpaid",
+          "cranes standing over every berth"
+        ],
+        "ritual": [
+          "a manifest checked against the hold before anything is signed",
+          "goods weighed off at the quay edge and entered",
+          "the day's landings read back at the office each evening"
+        ],
+        "demand": [
+          "a sling loaded and hanging over an empty hold",
+          "a berth swept clean with the bollards polished",
+          "a manifest with a line left open at the bottom"
+        ],
+        "wound": [
+          "a warehouse packed with cargo nobody ever claimed",
+          "bond store doors sealed on goods that rotted",
+          "a crane left slewed over the water with the load down"
+        ],
+        "anchor": [
+          "the manifest of the last ship to clear",
+          "a bond book listing every hold and its duty",
+          "a crane that still runs"
+        ]
+      },
+      "features": [
+        "a sling hanging loaded over nothing",
+        "a berth swept with the bollards bright",
+        "a manifest open at a blank line",
+        "a bond seal broken and refixed",
+        "cargo stacked and unclaimed",
+        "a crane slewed out over the water"
+      ],
+      "decisions": [
+        {
+          "cue": "a manifest with a line left open at the bottom",
+          "cost": "entering something makes it landed here, on your account",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you enter something plausible and the Board treats you as a shipper in good standing",
+            "failure": "you enter it wrongly and the duty falls on you: +1 Bane",
+            "orElse": "leave the line open; the ship is not cleared and neither are you"
+          }
+        },
+        {
+          "cue": "a sling loaded and hanging over an empty hold",
+          "cost": "lowering it lands the cargo; cutting it loses it",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you land it properly and the quay works for you — the crane and the crews are yours",
+            "failure": "the sling parts and the load goes into the water: roll the clock",
+            "orElse": "leave it hanging; it hangs over the berth you have to cross"
+          }
+        },
+        {
+          "cue": "a bond store sealed on goods that were never redeemed",
+          "cost": "the seal is the Custom House's, not the owner's",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find whose goods were bonded and can trade what they need for what you need",
+            "failure": "you break the seal and the Custom House has you for smuggling: +1 Bane",
+            "orElse": "leave it sealed; whatever is in there stays in there"
+          }
+        },
+        {
+          "cue": "a warehouse packed to the roof with cargo nobody claimed",
+          "cost": "the marks on the bales say who shipped it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the marks and learn where the last ships were bound and why",
+            "failure": "you shift a bale and bring the stack down on the aisle behind you",
+            "orElse": "leave the warehouse; the shipping marks are the only trail there is"
+          }
+        },
+        {
+          "cue": "a berth swept clean with the bollards polished and nothing alongside",
+          "cost": "tying up in it makes you a vessel in port",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you make fast properly and the harbour enters you, and gives you a berth's protections",
+            "failure": "you tie up and cannot be cleared to leave: +1 Bane",
+            "orElse": "stay off the berth; the quay will not work for you at all"
+          }
+        },
+        {
+          "cue": "a crane left slewed out over the water with the load still down",
+          "cost": "bringing it in recovers what is on the hook",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you bring the load in and it is what somebody has been waiting years for",
+            "failure": "the crane runs away with itself and takes the quay edge with it",
+            "orElse": "leave it slewed; the thing on the hook stays under the water"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Board",
+          "doing": "checking a manifest against a hold with nothing in it",
+          "onArrival": "they run a finger down the page and look up at you",
+          "because": "the tally must agree and there is nothing to tally",
+          "offer": "give them one item for the list and they will clear you for anything"
+        },
+        {
+          "occupant": "a crane driver",
+          "doing": "swinging an empty sling over a berth, over and over",
+          "onArrival": "it stops the sling in front of you at chest height",
+          "because": "the load was never landed and the shift never ended",
+          "offer": "put anything in the sling and it will lift you anywhere along the quay"
+        },
+        {
+          "occupant": "a living factor",
+          "doing": "counting bales in a warehouse that is already counted",
+          "onArrival": "they ask whether you are here for the consignment",
+          "because": "the goods were never claimed and they cannot leave until they are",
+          "offer": "claim the consignment and they will hand you the shipping marks"
+        },
+        {
+          "occupant": "the Master of the Quay",
+          "doing": "standing at an empty berth with a fender in his hands",
+          "onArrival": "he asks when she is expected",
+          "because": "nothing has come alongside since and the berth is kept ready",
+          "offer": "tell him she is coming and he will open the bond store"
+        },
+        {
+          "occupant": "a stack of cargo",
+          "doing": "standing on the quay with the marks fresh and the ropes tight",
+          "onArrival": "the ropes creak as though something has just been added",
+          "because": "it was landed and never entered, so it cannot be moved",
+          "offer": "enter it on a manifest and the whole quay begins working again"
+        },
+        {
+          "occupant": "the bond store",
+          "doing": "standing sealed with the doors sweating",
+          "onArrival": "something inside shifts its weight when you stop walking",
+          "because": "the duty was never paid and the doors were never opened",
+          "offer": "pay something toward the duty and it opens, and gives up what it holds"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "manifest",
+          "cue": "a page off the last manifest",
+          "benefit": "once, prove a thing was landed here lawfully",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Custom House checks the entry, eventually"
+        },
+        {
+          "id": "bondkey",
+          "cue": "a bond store key",
+          "benefit": "open anything held in bond here",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the duty on it becomes yours, and it compounds",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "marks",
+          "cue": "a set of shipping marks",
+          "benefit": "once, make a thing appear to belong to somebody powerful",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they find out that their mark is at large"
+        },
+        {
+          "id": "sling",
+          "cue": "a crane sling and hook",
+          "benefit": "once, lift or lower anything you can rig",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever you lift, the quay enters against you"
+        },
+        {
+          "id": "bale",
+          "cue": "a bale nobody claimed",
+          "benefit": "once, have exactly the trade goods you need",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it was claimed, by somebody still looking"
+        }
+      ]
+    },
+    "passage": {
+      "danger": "the outward bound",
+      "dangerLine": "everything here is about to leave and none of it ever does",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a harbour office where every clearance is signed before a ship may sail",
+          "a pilot company that takes every vessel out and brings it back",
+          "a light kept burning at the harbour mouth"
+        ],
+        "ritual": [
+          "a ship cleared outward and her papers stamped at the gate",
+          "the pilot taken aboard at the bar and put off outside it",
+          "a lamp lit at dusk whether or not anything is expected"
+        ],
+        "demand": [
+          "a clearance made out and unstamped on a desk",
+          "a pilot boat lying off with the oars shipped and nobody in her",
+          "a light burning at noon"
+        ],
+        "wound": [
+          "clearances refused in a single day, every one of them",
+          "a pilot stair with the bottom steps gone",
+          "the light kept burning for a ship that had already gone down"
+        ],
+        "anchor": [
+          "the lamp out of the harbour light",
+          "a book of clearances with every sailing entered",
+          "a chart of the bar that has never been wrong"
+        ]
+      },
+      "features": [
+        "a clearance made out and unstamped",
+        "a pilot boat lying off, empty",
+        "a lamp burning in daylight",
+        "a pilot stair missing its bottom steps",
+        "a chart of the bar left open",
+        "a sea chest packed and corded"
+      ],
+      "decisions": [
+        {
+          "cue": "a clearance made out and never stamped",
+          "cost": "stamping it lets something sail",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you stamp it properly and one thing here is finally released, and it repays you",
+            "failure": "you stamp it blind and have cleared something that should have stayed: +1 Bane",
+            "orElse": "leave it unstamped; nothing here can leave, including you"
+          }
+        },
+        {
+          "cue": "a lamp burning in the harbour light at noon",
+          "cost": "putting it out ends the watch; keeping it lit continues it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you learn what the light is being kept for and can answer it",
+            "failure": "you put it out and something loses its way in, badly: roll the clock",
+            "orElse": "leave it burning; it goes on calling, and things go on coming"
+          }
+        },
+        {
+          "cue": "a pilot boat lying off the stair with her oars shipped and nobody aboard",
+          "cost": "taking her out means crossing the bar",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you take her out and can move on the water, which nothing ashore can follow",
+            "failure": "you take her out on the wrong tide and are set down on the bar",
+            "orElse": "stay ashore; every route from here is along the quay, in the open"
+          }
+        },
+        {
+          "cue": "a pilot stair with the bottom steps gone",
+          "cost": "the missing steps were taken, not worn",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find where the steps went and what was being kept from the water",
+            "failure": "you go down anyway and the stair puts you in the mud at low water",
+            "orElse": "use the next stair along, costing a Turn"
+          }
+        },
+        {
+          "cue": "a chart of the bar with a sounding altered in a different hand",
+          "cost": "the alteration put a ship on the sand",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who altered it and can prove what was done to whom",
+            "failure": "you take the chart as read and trust a channel that is not there",
+            "orElse": "leave the chart; you have no proof of the transgression at the ending"
+          }
+        },
+        {
+          "cue": "a sea chest packed and corded at the head of the stair",
+          "cost": "somebody was leaving and did not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you open it and learn who was going, and where, and what they were taking",
+            "failure": "you shoulder it and the harbour takes you for them: +1 Bane",
+            "orElse": "leave the chest; whoever it belonged to is not identified"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a pilot",
+          "doing": "standing at the head of the stair with a bag over his shoulder",
+          "onArrival": "he asks whether you are the ship he is taking out",
+          "because": "he was called for a vessel that never came to the bar",
+          "offer": "tell him you are and he will take you over the bar, safely, once"
+        },
+        {
+          "occupant": "the harbour clerk",
+          "doing": "holding a clearance and a stamp without bringing them together",
+          "onArrival": "it looks up and asks the vessel's name",
+          "because": "the clearance cannot be issued without a name and there are no ships",
+          "offer": "name a vessel and it will clear you out of anywhere"
+        },
+        {
+          "occupant": "a living mate",
+          "doing": "sitting on a corded chest at the top of the tide",
+          "onArrival": "he asks whether the tide has turned yet",
+          "because": "he has been waiting to sail since before you were born",
+          "offer": "tell him the tide and he will give you the chest and everything in it"
+        },
+        {
+          "occupant": "two of the Trinity Brethren",
+          "doing": "carrying oil up to a light that is already burning",
+          "onArrival": "they hand you the can rather than pass",
+          "because": "the light is kept and cannot be let out",
+          "offer": "carry the oil up and the light will show you a way through anything"
+        },
+        {
+          "occupant": "a pilot boat",
+          "doing": "lying off the stair with her oars shipped",
+          "onArrival": "she comes in to the stair as you reach the bottom step",
+          "because": "she was pulled out for a vessel that never signalled",
+          "offer": "get aboard and the water opens to you where the quay does not"
+        },
+        {
+          "occupant": "the Master of the Company",
+          "doing": "reading a book of clearances aloud to the water",
+          "onArrival": "it stops at a sailing with no return entered against it",
+          "because": "every vessel is entered out and in, and one never came in",
+          "offer": "supply the ending of that voyage and it will sign anything you ask"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "clearance",
+          "cue": "a stamped clearance, blank",
+          "benefit": "once, leave anywhere without being stopped",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you leave in the name on the paper, not your own"
+        },
+        {
+          "id": "lamp",
+          "cue": "oil out of the harbour light",
+          "benefit": "once, be found by whatever is looking for you",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything looking for you finds you, not only the friendly",
+          "acceptanceCost": {
+            "vice": "Sloth"
+          }
+        },
+        {
+          "id": "chart",
+          "cue": "the chart of the bar",
+          "benefit": "know the true channel through anything here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know which channels were altered, and by whom"
+        },
+        {
+          "id": "chest",
+          "cue": "the corded sea chest",
+          "benefit": "once, have what a traveller would have packed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they packed it to leave, and still want to"
+        },
+        {
+          "id": "pilotbadge",
+          "cue": "a pilot's badge",
+          "benefit": "once, be taken aboard anything on the water",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to bring the vessel back"
+        }
+      ]
+    },
+    "tide": {
+      "danger": "the hour",
+      "dangerLine": "the harbour keeps time by the water and it is not going to wait for you",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a tide glass in the office window, turned by the watch",
+          "tide marks cut into every quay wall for two hundred years",
+          "a harbour that is a basin at high water and a mud flat at low"
+        ],
+        "ritual": [
+          "the glass turned at the top of every tide",
+          "the gates of the basin shut at the same point on the flood",
+          "a bell struck for the turn, twice"
+        ],
+        "demand": [
+          "a glass running out with nobody by it",
+          "a basin gate standing open on the flood",
+          "a tide mark reached and passed with nothing moving"
+        ],
+        "wound": [
+          "a glass left unturned and the sand all through",
+          "basin gates jammed open and the water gone",
+          "tide marks cut for years that never came"
+        ],
+        "anchor": [
+          "the tide glass, still running",
+          "a tide table in one hand, correct to the minute",
+          "a gate that still shuts on the flood"
+        ]
+      },
+      "features": [
+        "a glass with the sand nearly through",
+        "a basin gate standing open",
+        "a tide mark freshly cut",
+        "a bell rope swinging after the turn",
+        "a tide table left open",
+        "water standing where it should not"
+      ],
+      "decisions": [
+        {
+          "cue": "a tide glass running out with nobody by it to turn it",
+          "cost": "turning it keeps the harbour's time going",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you turn it at the right moment and the harbour keeps your time — one thing here waits for you",
+            "failure": "you turn it late and the hour here is wrong for the rest of the delve: +1 Bane",
+            "orElse": "let it run out; the harbour stops keeping time and everything happens at once"
+          }
+        },
+        {
+          "cue": "a basin gate standing open on the flood",
+          "cost": "shutting it holds the water in; leaving it lets the basin drain",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you shut the gate on the tide and the basin fills — the drowned street goes under and stays there",
+            "failure": "you shut it with something still coming through: roll the clock",
+            "orElse": "leave it open; the basin empties and the mud berth is walkable, both ways"
+          }
+        },
+        {
+          "cue": "a tide mark cut fresh into a wall above the waterline",
+          "cost": "somebody is still recording tides that do not happen",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the marks and learn exactly when the harbour stopped, and what was in it",
+            "failure": "you cut a mark of your own and the water rises to meet it",
+            "orElse": "leave the wall; you will misjudge the water later, at the worst point"
+          }
+        },
+        {
+          "cue": "a bell rope still swinging after a turn nobody struck",
+          "cost": "the turn was struck by something",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you strike the turn correctly and everything here that keeps time comes to order",
+            "failure": "you strike it wrong and the harbour turns early, against you",
+            "orElse": "leave the rope; nothing here agrees about what hour it is"
+          }
+        },
+        {
+          "cue": "a tide table lying open, correct to the minute, in a dead man's hand",
+          "cost": "the table is right and the harbour is wrong",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take the table and can predict every movement of the water here",
+            "failure": "you take it and the hand closes: whatever kept it wants it back",
+            "orElse": "leave it; you cross the mud on a guess"
+          }
+        },
+        {
+          "cue": "water standing on a quay it should not reach for another six hours",
+          "cost": "the harbour's tide is not the sea's any more",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what the harbour is keeping time to instead, and can use it",
+            "failure": "you wade it, and what the water is standing over notices",
+            "orElse": "go the long way round above the waterline, costing a Turn"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the tide watch",
+          "doing": "turning a glass that has already run through",
+          "onArrival": "it asks what the hour is, and means the tide",
+          "because": "the glass is turned at the top of every tide and the tides stopped",
+          "offer": "give it an hour and it will hold the water back while you cross"
+        },
+        {
+          "occupant": "two of the Board",
+          "doing": "standing at a basin gate with the winch bars in their hands",
+          "onArrival": "they look to you before they heave",
+          "because": "the gate shuts on the flood and the flood has not come",
+          "offer": "tell them to shut it and the basin fills, and the drowned street is closed"
+        },
+        {
+          "occupant": "a living lighterman",
+          "doing": "waiting on the mud with a boat that has nothing to float on",
+          "onArrival": "he asks how long until the water",
+          "because": "he came in on a tide that never went out again",
+          "offer": "tell him a time and he will put you across the harbour when it comes"
+        },
+        {
+          "occupant": "the Water Bailiff",
+          "doing": "cutting a tide mark into a wall well above the water",
+          "onArrival": "it steps back and asks whether that looks right to you",
+          "because": "the marks are cut for tides the harbour still expects",
+          "offer": "agree with the mark and the water will rise for you, once, where you need it"
+        },
+        {
+          "occupant": "a bell",
+          "doing": "hanging in a frame on the quay head with the rope still moving",
+          "onArrival": "the rope stops when you take hold of it",
+          "because": "the turn was struck and nobody struck it",
+          "offer": "strike the turn properly and everything here that keeps time obeys you"
+        },
+        {
+          "occupant": "the harbour",
+          "doing": "lying full at a state of tide that cannot be happening",
+          "onArrival": "the water is dead flat and there is a good breeze",
+          "because": "the harbour keeps its own time now and will not be corrected",
+          "offer": "name the true hour aloud and the water goes back to the sea's time"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "glass",
+          "cue": "the tide glass, running",
+          "benefit": "once, make something happen exactly when you say",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the harbour's time is yours and everyone else's is wrong",
+          "acceptanceCost": {
+            "vice": "Wrath"
+          }
+        },
+        {
+          "id": "table",
+          "cue": "the tide table",
+          "benefit": "know when the water will do anything here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you also know how little time you have"
+        },
+        {
+          "id": "gatebar",
+          "cue": "a winch bar off the basin gate",
+          "benefit": "once, hold or release the water",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever the water covers is uncovered, or the reverse"
+        },
+        {
+          "id": "bellclapper",
+          "cue": "a clapper out of the quay bell",
+          "benefit": "once, call the turn and be obeyed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "nothing here can strike the true turn while you hold it"
+        },
+        {
+          "id": "mark",
+          "cue": "a chisel from the tide-cutter's belt",
+          "benefit": "once, set where the water stops",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the water treats the mark as a promise"
+        }
+      ]
+    },
+    "wreck": {
+      "danger": "what the sea kept",
+      "dangerLine": "the harbour lost a ship in its own roads and has never once admitted it",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "a hall hung with the boards of every vessel lost off this coast",
+          "a bell buoy moored over a wreck in the fairway",
+          "a burial ground for the ones who came ashore unnamed"
+        ],
+        "ritual": [
+          "a name read out and a board hung for every ship that does not return",
+          "the bell buoy answered from the shore each night",
+          "the drowned laid out on the quay and given names if anyone can"
+        ],
+        "demand": [
+          "a board hung blank in a hall where every other board is lettered",
+          "a bell buoy sounding with no sea running",
+          "a grave dug and left open above the tideline"
+        ],
+        "wound": [
+          "boards taken down and burnt in one night",
+          "a wreck in the fairway with no mark over it at all",
+          "the drowned buried unnamed, all of them, in a hurry"
+        ],
+        "anchor": [
+          "the bell off the ship that went down in the roads",
+          "a list of the lost with every name written",
+          "a board lettered for a ship the harbour denies"
+        ]
+      },
+      "features": [
+        "a blank board in a hall of lettered ones",
+        "a grave dug open above the tideline",
+        "a bell sounding with no sea running",
+        "charred boards in a grate",
+        "a list of the lost with a gap",
+        "wreckage stacked and sorted"
+      ],
+      "decisions": [
+        {
+          "cue": "a board hung blank in a hall where every other board is lettered",
+          "cost": "lettering it admits the loss",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you letter the board with the right name and the Trinity Brethren give you everything they have",
+            "failure": "you letter it wrongly and a ship that came home is entered as lost: +1 Bane",
+            "orElse": "leave it blank; the harbour goes on denying the wreck and so does everything in it"
+          }
+        },
+        {
+          "cue": "a bell buoy sounding out in the roads with no sea running",
+          "cost": "something is moving it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you answer the bell from the shore, properly, and what is under it comes up to talk",
+            "failure": "you go out to it and it stops sounding while you are alongside",
+            "orElse": "let it ring; it rings all night, and the drowned come in on the tide"
+          }
+        },
+        {
+          "cue": "a grave dug open above the tideline with nobody in it",
+          "cost": "filling it needs a name and a body",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you name whoever it was cut for and the ground here settles, and lets you pass",
+            "failure": "you fill it with anything else and the ground takes exception: roll the clock",
+            "orElse": "leave it open; the burial ground stays restless behind you"
+          }
+        },
+        {
+          "cue": "charred boards in a grate with the lettering half readable",
+          "cost": "somebody burnt the record of what was lost",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read enough off the char to name the ship the harbour denies",
+            "failure": "you are found reading it by something that helped burn them",
+            "orElse": "leave the grate; the ship's name is never established"
+          }
+        },
+        {
+          "cue": "a list of the lost with every name written and one line short",
+          "cost": "the missing name is the one that matters",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you match the gap against {priorCue} and have the name for the ending",
+            "failure": "you write in a guess and the list accepts it, and it is wrong",
+            "orElse": "leave the gap; the ending is fought rather than answered"
+          }
+        },
+        {
+          "cue": "wreckage stacked and sorted on the quay by size, not by ship",
+          "cost": "somebody has been keeping it, not selling it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the piece with the ship's name on it, which is what the sorter was hiding",
+            "failure": "you disturb the stack and the sorter comes to see who is in their yard",
+            "orElse": "leave the stack; the only proof of the wreck stays buried in it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a Trinity brother",
+          "doing": "holding a blank board up against a wall of lettered ones",
+          "onArrival": "it asks you what name goes on it",
+          "because": "the board must be hung and nobody would say the name",
+          "offer": "give it the name and it will open the light and everything under it"
+        },
+        {
+          "occupant": "the drowned",
+          "doing": "lying in a row on the quay with their hands crossed",
+          "onArrival": "the nearest turns its head as your shadow falls on it",
+          "because": "they came ashore unnamed and were buried unnamed",
+          "offer": "name any one of them and they will carry you across the harbour"
+        },
+        {
+          "occupant": "a living wrecker",
+          "doing": "sorting salvage into piles by size in a locked yard",
+          "onArrival": "they stop and ask what you are looking for, without hiding anything",
+          "because": "nobody has come for any of it in living memory",
+          "offer": "tell them and they will find it, and tell you what ship it came off"
+        },
+        {
+          "occupant": "the Water Bailiff",
+          "doing": "standing at an open grave above the tideline with a spade",
+          "onArrival": "it asks whether you know who this one was",
+          "because": "the grave was cut for somebody who never came ashore",
+          "offer": "give it a name and it will fill the grave and let you through the ground"
+        },
+        {
+          "occupant": "a bell buoy",
+          "doing": "sounding steadily out in flat calm water",
+          "onArrival": "the sounding changes when you come to the quay edge",
+          "because": "it is moored over a wreck the harbour will not mark on any chart",
+          "offer": "answer it and what is under it will tell you what happened here"
+        },
+        {
+          "occupant": "the Trinity Brethren",
+          "doing": "standing in a hall of boards with one wall bare",
+          "onArrival": "they part to let you at the bare wall",
+          "because": "the boards on that wall were burnt in a night",
+          "offer": "letter one board and the whole hall will vouch for you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bell",
+          "cue": "the bell off the wreck",
+          "benefit": "once, make a loss be admitted",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "everything drowned here hears it and comes to be counted",
+          "acceptanceCost": {
+            "vice": "Wrath"
+          }
+        },
+        {
+          "id": "board",
+          "cue": "a lettered board off the hall wall",
+          "benefit": "once, prove a ship was lost and when",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ship it names is unaccounted for again"
+        },
+        {
+          "id": "salvage",
+          "cue": "a piece of named wreckage",
+          "benefit": "once, be recognised by any of the drowned",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "they recognise you as one of the crew"
+        },
+        {
+          "id": "list",
+          "cue": "the list of the lost",
+          "benefit": "know every name the sea took here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the gap in it is a name that wants filling"
+        },
+        {
+          "id": "spade",
+          "cue": "the bailiff's spade",
+          "benefit": "once, put something to rest",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ground opens for you wherever you carry it"
+        }
+      ]
+    }
+  }
+}

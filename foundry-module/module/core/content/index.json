@@ -20,15 +20,33 @@
       "motifs": 4
     },
     {
+      "id": "city",
+      "label": "City",
+      "geometry": "village",
+      "motifs": 4
+    },
+    {
       "id": "forest",
       "label": "Forest",
       "geometry": "forest",
       "motifs": 4
     },
     {
+      "id": "market",
+      "label": "Market",
+      "geometry": "village",
+      "motifs": 4
+    },
+    {
       "id": "palace",
       "label": "Palace",
       "geometry": "barrow",
+      "motifs": 4
+    },
+    {
+      "id": "port",
+      "label": "Port",
+      "geometry": "village",
       "motifs": 4
     },
     {
@@ -40,6 +58,12 @@
     {
       "id": "town",
       "label": "Town",
+      "geometry": "village",
+      "motifs": 4
+    },
+    {
+      "id": "village",
+      "label": "Village",
       "geometry": "village",
       "motifs": 4
     }

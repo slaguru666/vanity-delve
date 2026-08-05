@@ -1,0 +1,1188 @@
+{
+  "id": "city",
+  "label": "City",
+  "forgeStageType": "village",
+  "schema": 1,
+  "placeNameStyle": "own",
+  "_model": "Settlement kernel at its largest. Nobody here knows anybody, so the city knows instead — by ward, by roll, by works, by freedom granted and withheld. Its cruelties are all administrative, which is why none of them can be argued with.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Common Council",
+    "Aldermen",
+    "Sheriffs",
+    "Lord Mayor",
+    "Chamberlain",
+    "Wardmote",
+    "Livery Companies"
+  ],
+  "appetites": [
+    {
+      "id": "great",
+      "want": "never to be equalled by anywhere else",
+      "lack": "equalled",
+      "purpose": "it would be the greatest thing ever built",
+      "motif": "works",
+      "prize": "keystone",
+      "conscript": "the labourers",
+      "asks": "\"Have you seen anything finer?\"",
+      "appeasement": {
+        "move": "praise something the city built, specifically, and out loud",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "it was admired for what it made",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "known",
+      "want": "that nobody within its walls should be unaccounted for",
+      "lack": "unaccounted for",
+      "purpose": "every soul would be on a roll somewhere",
+      "motif": "rolls",
+      "prize": "roll",
+      "conscript": "the unenrolled",
+      "asks": "\"And your name?\"",
+      "appeasement": {
+        "move": "give your name and your parish, in full, to be written down",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "it has you down",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "orderly",
+      "want": "that everything should be in its proper ward",
+      "lack": "out of place",
+      "purpose": "nothing would ever be where it should not be",
+      "motif": "wards",
+      "prize": "chain",
+      "conscript": "the displaced",
+      "asks": "\"Which ward are you from?\"",
+      "appeasement": {
+        "move": "put one thing back exactly where the city says it belongs",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "it is where it should be",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "free",
+      "want": "that no power outside its walls should reach inside them",
+      "lack": "reached into",
+      "purpose": "nothing here would ever answer to anybody else",
+      "motif": "liberties",
+      "prize": "gate",
+      "conscript": "the sanctuary-men",
+      "asks": "\"Whose writ runs here?\"",
+      "appeasement": {
+        "move": "claim the freedom of the city aloud, and then act as though you had it",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "its writ ran",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "conscripted",
+      "text": "conscripted {conscript} onto the works and never signed their release",
+      "cruelty": 3,
+      "fits": [
+        "great",
+        "orderly",
+        "known"
+      ]
+    },
+    {
+      "id": "warded",
+      "text": "moved {conscript} from ward to ward until no ward would own them",
+      "cruelty": 2,
+      "fits": [
+        "orderly",
+        "known"
+      ]
+    },
+    {
+      "id": "enrolled",
+      "text": "enrolled {conscript} so thoroughly that they could not exist anywhere else",
+      "cruelty": 2,
+      "fits": [
+        "known",
+        "free",
+        "orderly"
+      ]
+    },
+    {
+      "id": "builtover",
+      "text": "built over the street {conscript} lived in, with {conscript} still in it",
+      "cruelty": 3,
+      "fits": [
+        "great",
+        "orderly"
+      ]
+    },
+    {
+      "id": "freed",
+      "text": "made {conscript} free of the city, which cost them their freedom everywhere else",
+      "cruelty": 2,
+      "fits": [
+        "free",
+        "known",
+        "great"
+      ]
+    },
+    {
+      "id": "struckoff",
+      "text": "struck {conscript} off every roll, so that the city could say they had never come",
+      "cruelty": 3,
+      "fits": [
+        "known",
+        "free"
+      ]
+    }
+  ],
+  "prizes": {
+    "keystone": {
+      "label": "the keystone cut for the arch that was never closed",
+      "function": "the only piece of the works that would have finished it"
+    },
+    "roll": {
+      "label": "the roll with every name on it, including the struck-off",
+      "function": "the only record here that was never corrected"
+    },
+    "chain": {
+      "label": "the chain of office, still warm",
+      "function": "the only thing here that everything obeyed without asking why"
+    },
+    "gate": {
+      "label": "the key of the postern that is not on any plan",
+      "function": "the only way in or out the city never controlled"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "Great",
+      "New",
+      "High",
+      "Old",
+      "Kings",
+      "Broad",
+      "Wall",
+      "Bridge"
+    ],
+    "second": [
+      "Ashford",
+      "Vardon",
+      "Culminster",
+      "Ravensgate",
+      "Thornhold",
+      "Merrowgate",
+      "Cawlbury",
+      "Estwich",
+      "Hallamgate",
+      "Stanbrook"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Bar",
+      "The Bridge Gate",
+      "The Wall Walk",
+      "The Liberties",
+      "The Great Road"
+    ],
+    "complication": [
+      "The Conduit",
+      "The Guildhall Yard",
+      "The Tenements",
+      "The Ward Street",
+      "The Cloth Quarter"
+    ],
+    "turn": [
+      "The Guildhall",
+      "The Chamber",
+      "The Wardmote House",
+      "The Great Conduit",
+      "The Exchange"
+    ],
+    "descent": [
+      "The Undercity",
+      "The Sewers",
+      "The Old Wall",
+      "The Buried Street",
+      "The Charnel Ground"
+    ],
+    "threshold": [
+      "The Chamberlain's Room",
+      "The Muniment Room",
+      "The Roll Room",
+      "The Gate House",
+      "The Mason's Lodge"
+    ],
+    "ending": [
+      "The Empty Ward",
+      "Where the Roll Ends",
+      "The Buried Gate",
+      "Under the Keystone"
+    ]
+  },
+  "factions": [
+    {
+      "id": "city",
+      "name": "the City",
+      "kind": "undead",
+      "essence": "still administering, still expecting everyone to be from somewhere",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "incomers",
+      "name": "the incomers",
+      "kind": "living",
+      "essence": "came in for the work and were never enrolled",
+      "handledBy": "trade"
+    },
+    {
+      "id": "wardmote",
+      "name": "the Wardmote",
+      "kind": "undead",
+      "essence": "will not let anything stand in the wrong ward",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "undercity",
+      "name": "what lives under the streets",
+      "kind": "beast",
+      "essence": "was built over and did not move out",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in at a gate and gave a name to the man on it",
+    "seenTwice": "noticed in two different wards on the same day",
+    "loud": "a raised voice in a street with windows above it",
+    "lingering": "stood in one ward long enough for the Wardmote to want you accounted for",
+    "disturbed": "opened a grating, moved a boundary mark, or went into the works"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Bandits out of the tenements",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "know every alley; will vanish rather than die"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "they are working the ward, not hunting you — walk into another ward and they stop"
+    },
+    "fight": {
+      "line": "4 Bandits and a Hobgoblin Soldier as ward constable",
+      "foes": [
+        {
+          "n": 4,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 4,
+          "nerve": 3,
+          "note": "scatter if the constable drops"
+        },
+        {
+          "n": 1,
+          "name": "Hobgoblin Soldier",
+          "atk": 4,
+          "def": 4,
+          "grit": 6,
+          "nerve": 4,
+          "note": "demands to know your ward before it strikes"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "name a ward convincingly and the constable calls them off"
+    },
+    "battle": {
+      "line": "1 Necromancer of the Chamber and 4 Skeletons in livery",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 3,
+          "def": 3,
+          "grit": 8,
+          "nerve": 4,
+          "note": "raises one Skeleton per round off the charnel ground"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — the Necromancer is alive and bleeds",
+      "avoid": "it is enrolling the dead; give it a name for the roll and it must stop to write"
+    },
+    "nightmare": {
+      "line": "1 Wraith of the Lord Mayor, 1 Necromancer and 5 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 3,
+          "def": 3,
+          "grit": 8,
+          "nerve": 4,
+          "note": "raises one Skeleton per round"
+        },
+        {
+          "n": 5,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "works": {
+      "danger": "the works",
+      "dangerLine": "the city is still building, and it does not release anyone it has taken on",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "scaffolding grown into the buildings it was raised against",
+          "a mason's lodge with the drawings pinned up and current",
+          "cranes on every roofline, all of them loaded"
+        ],
+        "ritual": [
+          "a course of stone laid each day whether or not there is anyone to lay it",
+          "the bell for the shift rung at the same hour",
+          "a drawing checked against the work and initialled"
+        ],
+        "demand": [
+          "an arch standing open with the keystone cut and set aside",
+          "a course of stone laid and the next course marked out",
+          "a hod filled and left at the foot of a ladder"
+        ],
+        "wound": [
+          "a crane loaded and the rope cut",
+          "a lodge with the drawings still pinned and the tools gone",
+          "an arch that came down and was built again over what fell"
+        ],
+        "anchor": [
+          "the keystone cut for the arch that was never closed",
+          "the master drawing, complete and to scale",
+          "a mason's mark on every good stone in the city"
+        ]
+      },
+      "features": [
+        "a hod filled at the foot of a ladder",
+        "a keystone set aside beside its arch",
+        "a course marked out in chalk",
+        "a crane loaded with the rope cut",
+        "drawings pinned and current",
+        "a mason's mark cut fresh"
+      ],
+      "decisions": [
+        {
+          "cue": "an arch standing open with the keystone cut and set aside",
+          "cost": "setting it closes the arch, and closes something else",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you set the keystone and the works stop for the first time — the city exhales, and a way opens",
+            "failure": "it slips, and the arch takes it out on whatever is beneath: roll the clock",
+            "orElse": "leave the arch open; the works go on and the shift bell keeps ringing"
+          }
+        },
+        {
+          "cue": "a hod filled and left at the foot of a ladder",
+          "cost": "picking it up puts you on the shift",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you carry one hod up and the works accept you — you can walk the scaffold anywhere",
+            "failure": "you carry it and cannot put it down until the shift bell rings: +1 Bane",
+            "orElse": "leave the hod; the scaffold will not take your weight"
+          }
+        },
+        {
+          "cue": "a master drawing pinned up and initialled to today's date",
+          "cost": "somebody is still checking the work",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who is initialling and they will show you what the works were really for",
+            "failure": "you alter the drawing and the works build it exactly as altered",
+            "orElse": "leave it; the works continue to a plan you do not know"
+          }
+        },
+        {
+          "cue": "a crane loaded and the rope cut, the load still up there",
+          "cost": "the load can be brought down or left",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you bring it down safely and the lodge is grateful, and opens",
+            "failure": "you cut it loose and it comes down on the street: +1 Bane",
+            "orElse": "leave it hanging; it hangs over every route through this quarter"
+          }
+        },
+        {
+          "cue": "a course of stone laid today, in a city with nobody in it",
+          "cost": "the next course is marked out in chalk",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you lay the next course correctly and the works count you as one of their own",
+            "failure": "you lay it wrong and the whole run has to come down, with you on it",
+            "orElse": "leave the chalk; you are trespass on the works, not labour"
+          }
+        },
+        {
+          "cue": "a mason's mark cut fresh into a stone laid centuries ago",
+          "cost": "the mark says who is still working",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you match the mark and can find the mason, who wants releasing and will trade for it",
+            "failure": "you cut your own mark beside it and are on the works' books: +1 Bane",
+            "orElse": "leave the stone; the mason keeps working and nobody finds them"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a mason",
+          "doing": "cutting a stone that is already finished",
+          "onArrival": "it holds the chisel out to you rather than speak",
+          "because": "the stone was never signed off and the shift never ended",
+          "offer": "take a single stroke for it and it will cut you through any wall here"
+        },
+        {
+          "occupant": "two labourers of the City",
+          "doing": "carrying a hod up a ladder into empty air",
+          "onArrival": "the top of the ladder reaches nothing at all",
+          "because": "the course must go up and the scaffold came down",
+          "offer": "tell them the course is finished and they will carry you up instead"
+        },
+        {
+          "occupant": "the Master of the Works",
+          "doing": "standing under an open arch with a keystone at its feet",
+          "onArrival": "it looks up at the gap and then at you",
+          "because": "the arch cannot be closed by anyone still on the books",
+          "offer": "close the arch and it will release anything the works hold"
+        },
+        {
+          "occupant": "a living surveyor",
+          "doing": "chalking a course onto a wall that already has one",
+          "onArrival": "they ask whether the drawing has been revised",
+          "because": "they were sent to mark out and nobody came to build",
+          "offer": "give them a revision and they will show you the lodge"
+        },
+        {
+          "occupant": "a crane",
+          "doing": "standing loaded with the rope cut and the load in the air",
+          "onArrival": "the load turns very slowly in no wind",
+          "because": "it was loaded for a shift that was never called",
+          "offer": "bring the load down and the whole quarter's scaffolding opens to you"
+        },
+        {
+          "occupant": "the shift bell",
+          "doing": "hanging still in a tower over an empty site",
+          "onArrival": "the rope moves as though somebody has just let go",
+          "because": "the shift is rung at this hour and always has been",
+          "offer": "ring it and everything on the works comes, and does as it is told"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "keystone",
+          "cue": "a wedge of the cut keystone",
+          "benefit": "once, close something that was left open",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the works stop while you hold it, and notice why",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "drawing",
+          "cue": "a sheet off the master drawing",
+          "benefit": "know what this quarter was built to be",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the lodge wants the sheet back and will send for it"
+        },
+        {
+          "id": "mark",
+          "cue": "a mason's punch",
+          "benefit": "once, make a thing look as though it belongs here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the mason knows their mark has been used"
+        },
+        {
+          "id": "hod",
+          "cue": "a labourer's tally",
+          "benefit": "once, walk the works unchallenged",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are on the shift, and the bell applies to you"
+        },
+        {
+          "id": "chalk",
+          "cue": "a stick of the works' chalk",
+          "benefit": "once, mark out a way through a wall",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the works build what you marked, immediately"
+        }
+      ]
+    },
+    "rolls": {
+      "danger": "the roll",
+      "dangerLine": "the city has everyone written down, and it has noticed that you are not",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a muniment room with a roll for every year and every ward",
+          "clerks' desks set so that nobody enters unseen",
+          "a roll called at the gate before anyone comes in"
+        ],
+        "ritual": [
+          "names entered at the gate and read back for confirmation",
+          "the rolls compared against each other each quarter",
+          "a name struck through with a single line, never scratched out"
+        ],
+        "demand": [
+          "a roll open at a blank line with the pen still wet",
+          "a desk with a chair drawn out and a form set square",
+          "a name read out at a gate, and a pause"
+        ],
+        "wound": [
+          "a roll with a season cut out of it and the ends sewn together",
+          "names struck through so hard the parchment is holed",
+          "a muniment room with the presses forced and the rolls sorted by somebody in a hurry"
+        ],
+        "anchor": [
+          "the roll with every name on it, including the struck-off",
+          "a clerk's hand that never varied in forty years",
+          "a gate book, complete"
+        ]
+      },
+      "features": [
+        "a roll open at a blank line",
+        "a pen still wet on a desk",
+        "a name struck through with one line",
+        "holes worn through struck-out names",
+        "a gate book left open",
+        "a press forced and re-sorted"
+      ],
+      "decisions": [
+        {
+          "cue": "a roll lying open at a blank line with the pen still wet",
+          "cost": "writing a name enrols it, permanently",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you enter a name the city will accept and pass every gate and ward unchallenged",
+            "failure": "you enter your own and the city has you: +1 Bane and it always knows where you are",
+            "orElse": "leave the line blank; you are unaccounted for, and everything here reacts to that"
+          }
+        },
+        {
+          "cue": "a name struck through with a single line, still legible underneath",
+          "cost": "reading it is not the same as restoring it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the struck name and learn who the city decided had never come",
+            "failure": "you restore it, and whatever it named comes back onto the rolls too",
+            "orElse": "leave it struck; the ending has no name to give and must be improvised"
+          }
+        },
+        {
+          "cue": "a roll with a season cut out of it and the ends sewn together",
+          "cost": "the cut season is somewhere",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the excised season at {priorCue} and learn what the city did that year",
+            "failure": "you unpick the stitching and the roll will not lie flat again — the clerks notice",
+            "orElse": "leave it sewn; that season stays out of every account here"
+          }
+        },
+        {
+          "cue": "a gate book with a name read out and no answer written beside it",
+          "cost": "answering to it enters you under that name",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you answer to it and inherit the freedoms of whoever that was",
+            "failure": "you answer and inherit their debts as well: +1 Bane",
+            "orElse": "stay silent; the gate does not open and the wall runs for miles"
+          }
+        },
+        {
+          "cue": "a muniment press forced and the rolls sorted by somebody in a hurry",
+          "cost": "the sorter was looking for one thing",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out what they were looking for and get to it first",
+            "failure": "you disturb the sort and the clerks begin again, with you in the room",
+            "orElse": "leave the press; you never learn what was worth forcing it for"
+          }
+        },
+        {
+          "cue": "a clerk's desk with a chair drawn out and a form set square",
+          "cost": "sitting down is taking the post",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take the desk and the City treats you as its own officer for the delve",
+            "failure": "you sit and cannot rise while there is anything left unentered",
+            "orElse": "stay standing; you are a member of the public, and are handled as one"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a clerk of the City",
+          "doing": "holding a pen over a blank line on a roll",
+          "onArrival": "it looks up and asks your name and parish",
+          "because": "the line cannot be left blank and nobody has come to fill it",
+          "offer": "give it a name and it will enter you as free of the city"
+        },
+        {
+          "occupant": "the gate-keeper",
+          "doing": "reading names off a book to an empty road",
+          "onArrival": "it stops at a name with no answer beside it",
+          "because": "the roll is called before anyone comes in",
+          "offer": "answer to the name and the gate opens, and stays open behind you"
+        },
+        {
+          "occupant": "two clerks",
+          "doing": "comparing two rolls that will not agree",
+          "onArrival": "they push both toward you without looking up",
+          "because": "the rolls have disagreed since the season that was cut out",
+          "offer": "tell them which is right and they will show you the muniment room"
+        },
+        {
+          "occupant": "a living notary",
+          "doing": "copying a struck-out name onto a fresh sheet",
+          "onArrival": "they cover the sheet when you enter and then uncover it",
+          "because": "somebody is paying them to put a name back",
+          "offer": "tell them who you are and they will sell you the name"
+        },
+        {
+          "occupant": "the Chamberlain",
+          "doing": "holding a roll open at a name struck through with one line",
+          "onArrival": "it holds a finger on the line and waits",
+          "because": "the strike was made and never explained",
+          "offer": "read the name aloud and it will tell you exactly what was done and why"
+        },
+        {
+          "occupant": "a roll",
+          "doing": "lying open on a desk in an empty room",
+          "onArrival": "the parchment is warm and the ink is not dry",
+          "because": "somebody was writing when the room emptied",
+          "offer": "read the last entry and the city admits what it has been doing since"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "roll",
+          "cue": "a strip cut from the great roll",
+          "benefit": "once, be somebody the city has on its books",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "whoever that was is unaccounted for now, and comes looking",
+          "acceptanceCost": {
+            "vice": "Envy"
+          }
+        },
+        {
+          "id": "pen",
+          "cue": "a clerk's pen, still wet",
+          "benefit": "once, make a thing officially true",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what you wrote is now true for everyone, not just you"
+        },
+        {
+          "id": "gatebook",
+          "cue": "the gate book",
+          "benefit": "know who came in and who never came out",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "your own entry is in it, and can be read"
+        },
+        {
+          "id": "seal",
+          "cue": "a ward clerk's seal",
+          "benefit": "once, be from anywhere you say you are",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the ward you claimed expects you at its wardmote"
+        },
+        {
+          "id": "strike",
+          "cue": "a name struck off the rolls",
+          "benefit": "once, be nobody at all",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the city cannot help you either while you are nobody"
+        }
+      ]
+    },
+    "wards": {
+      "danger": "the boundary",
+      "dangerLine": "everything here belongs to a ward, and the wards are still checking which",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "boundary marks set into the paving every hundred paces",
+          "a wardmote for each quarter, meeting on its own night",
+          "posts and chains across the streets between wards"
+        ],
+        "ritual": [
+          "the bounds of each ward beaten once a year",
+          "chains drawn across the ends of streets at curfew",
+          "a question asked at every boundary: which ward"
+        ],
+        "demand": [
+          "a chain drawn across a street with nothing either side",
+          "a boundary mark with the ward name worn off",
+          "a post standing where two wards meet, and a space around it"
+        ],
+        "wound": [
+          "boundary marks prised up and reset wrongly",
+          "a ward that no longer answers when its bounds are beaten",
+          "chains left drawn across streets that go nowhere"
+        ],
+        "anchor": [
+          "the chain of office, still warm",
+          "a plan of the wards with every bound marked",
+          "a boundary mark that has never been moved"
+        ]
+      },
+      "features": [
+        "a chain drawn across an empty street",
+        "a boundary mark with the name worn off",
+        "a post at the meeting of two wards",
+        "marks prised up and reset",
+        "a ward plan pinned to a door",
+        "a curfew chain hanging loose"
+      ],
+      "decisions": [
+        {
+          "cue": "a chain drawn across a street with nothing on either side of it",
+          "cost": "stepping over is trespass; unhooking it is worse",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you ask leave of the ward properly and it drops the chain for you",
+            "failure": "you step over and the ward has you as a trespasser: +1 Bane",
+            "orElse": "go round through another ward, costing a Turn"
+          }
+        },
+        {
+          "cue": "a boundary mark with the ward name worn off it",
+          "cost": "which ward this is decides what is allowed here",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you identify the ward from the plan and can claim its protections",
+            "failure": "you guess wrong and claim protections from a ward that wants nothing to do with you",
+            "orElse": "move on unplaced; everything here treats you as being from nowhere"
+          }
+        },
+        {
+          "cue": "boundary marks prised up and reset a street further in",
+          "cost": "somebody moved a ward's edge deliberately",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who gained by the move and can hold the Wardmote to it",
+            "failure": "you reset them yourself and both wards come to see who did: roll the clock",
+            "orElse": "leave them; the wrong ward has jurisdiction over the route ahead"
+          }
+        },
+        {
+          "cue": "a post standing where two wards meet with a clear space around it",
+          "cost": "standing at the post makes you nobody's, briefly",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you stand at the post and neither ward can touch you while you negotiate",
+            "failure": "you stand there too long and both wards come to claim you",
+            "orElse": "keep to one side; you are that ward's business entirely"
+          }
+        },
+        {
+          "cue": "a curfew chain hanging loose at the end of a street",
+          "cost": "drawing it shuts the street; leaving it open lets things through",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you draw the chain and whatever is coming up the street stops at it",
+            "failure": "you draw it with something already inside: +1 Bane",
+            "orElse": "leave it hanging; the street is open both ways all night"
+          }
+        },
+        {
+          "cue": "a ward plan pinned to a door with one ward inked over",
+          "cost": "the inked ward is not on any other plan",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the erased ward and can enter it, which nothing else here can",
+            "failure": "you ask about it aloud and the Wardmote takes an interest in you",
+            "orElse": "leave the plan; the ending happens somewhere you will not have been"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Wardmote",
+          "doing": "sitting in a street with the chain drawn behind them",
+          "onArrival": "they turn as one and ask which ward you are from",
+          "because": "nobody may be in a ward without belonging to one",
+          "offer": "name a ward and they will escort you through it, and vouch for you"
+        },
+        {
+          "occupant": "a beadle",
+          "doing": "beating the bounds of a ward that no longer answers",
+          "onArrival": "it strikes a mark and waits for a reply that does not come",
+          "because": "the bounds are beaten annually and this year nothing answered",
+          "offer": "answer for the ward and it will beat you a way through the next one"
+        },
+        {
+          "occupant": "a living carter",
+          "doing": "waiting at a chain with a load and no patience",
+          "onArrival": "they ask whether you know whose street this is",
+          "because": "the chain went up and nobody has come to drop it",
+          "offer": "find whose street it is and they will carry you and your load anywhere"
+        },
+        {
+          "occupant": "two of the City",
+          "doing": "standing either side of a boundary mark, not crossing",
+          "onArrival": "each asks you what the mark says",
+          "because": "the name wore off and neither will concede",
+          "offer": "read it for them and the losing ward opens its gates to you"
+        },
+        {
+          "occupant": "a chain",
+          "doing": "hanging drawn across a street with nothing either side of it",
+          "onArrival": "it tightens very slightly as you approach",
+          "because": "the curfew was drawn and never lifted",
+          "offer": "have it dropped properly and every chain in the quarter drops with it"
+        },
+        {
+          "occupant": "an Alderman",
+          "doing": "standing at a post where two wards meet, in neither",
+          "onArrival": "it asks whose you are, and means it as a real question",
+          "because": "it was between wards when the city stopped and belongs to neither",
+          "offer": "claim it for a ward and it will give you the freedom of that ward entirely"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "chain",
+          "cue": "a length of curfew chain",
+          "benefit": "once, close a street to whatever is coming",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "what it stops waits for you at the other end"
+        },
+        {
+          "id": "mark",
+          "cue": "a boundary mark, prised up",
+          "benefit": "once, decide which ward something is in",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the ward you took it from has no edge at all now",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "wardplan",
+          "cue": "the plan of the wards",
+          "benefit": "know every bound and jurisdiction here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you know which ward wants you, too"
+        },
+        {
+          "id": "beadlestaff",
+          "cue": "a beadle's staff",
+          "benefit": "once, be an officer of a ward you are not from",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "that ward's wardmote expects your report"
+        },
+        {
+          "id": "post",
+          "cue": "a marker post, portable",
+          "benefit": "once, stand where nothing has jurisdiction",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "nothing has jurisdiction to protect you either"
+        }
+      ]
+    },
+    "liberties": {
+      "danger": "the freedom",
+      "dangerLine": "the city's writ runs to the walls and stops, and things here are very clear about which side you are on",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "a bar across the road where the city's writ begins",
+          "liberties outside the walls where the city cannot reach",
+          "a charter read out at the gate once a year"
+        ],
+        "ritual": [
+          "the freedom given to apprentices at the end of their term",
+          "a sheriff's writ refused at the bar, ceremonially",
+          "sanctuary claimed at a door and granted for forty days"
+        ],
+        "demand": [
+          "a bar standing across a road with nobody at it",
+          "a sanctuary door standing open with the knocker down",
+          "a freedom made out and never collected"
+        ],
+        "wound": [
+          "a bar broken and the road open both ways",
+          "sanctuary taken by force out of a doorway",
+          "freedoms revoked in a single sitting, all of them"
+        ],
+        "anchor": [
+          "the key of the postern that is not on any plan",
+          "the charter, sealed and whole",
+          "a freedom made out in a name nobody claimed"
+        ]
+      },
+      "features": [
+        "a bar across a road with nobody at it",
+        "a sanctuary knocker hanging down",
+        "a freedom made out and uncollected",
+        "a charter unrolled on a table",
+        "a postern with no plan of it",
+        "a writ refused and left"
+      ],
+      "decisions": [
+        {
+          "cue": "a freedom of the city made out and never collected",
+          "cost": "claiming it makes you free of the city, with everything that carries",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you claim it and the City treats you as its own — nothing here may lay hands on you",
+            "failure": "you claim it and are bound by the city's obligations too: +1 Bane",
+            "orElse": "leave it uncollected; you are a foreigner here, and the wards act accordingly"
+          }
+        },
+        {
+          "cue": "a sanctuary door standing open with the knocker down",
+          "cost": "taking sanctuary buys forty days and costs the road",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you claim sanctuary correctly and nothing in the city can touch you in this place",
+            "failure": "you claim it and cannot leave the ground while anything is still pursuing you",
+            "orElse": "stay outside; whatever is hunting in this ward has an open run at you"
+          }
+        },
+        {
+          "cue": "a bar standing across a road with nobody at it",
+          "cost": "the bar marks where the writ starts",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out which side you want to be on and stay there to your advantage",
+            "failure": "you cross without thinking and the wrong power has jurisdiction over you",
+            "orElse": "turn back; the whole liberty is closed to you and the ending is inside it"
+          }
+        },
+        {
+          "cue": "a charter unrolled on a table with the seal intact",
+          "cost": "the charter says what the city may and may not do",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the clause the city has been breaking and can hold it to its own charter",
+            "failure": "you break the seal and the charter is void, and so is every protection under it",
+            "orElse": "leave it rolled; you have no leverage over anything official here"
+          }
+        },
+        {
+          "cue": "a sheriff's writ refused at the bar and left lying",
+          "cost": "the writ names somebody the city wanted",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the name and learn who ran to the liberties and why",
+            "failure": "you serve the writ yourself and the liberty treats you as the city's creature",
+            "orElse": "leave it; whoever it names stays hidden and unhelpful"
+          }
+        },
+        {
+          "cue": "a postern that is not marked on any plan of the walls",
+          "cost": "it goes out, or something came in by it",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you open it and have a way out of the city nothing here controls",
+            "failure": "it opens outward and something that was waiting comes in: roll the clock",
+            "orElse": "leave it shut; the only ways out are the gates, and the gates are watched"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a sanctuary-man",
+          "doing": "sitting inside a doorway with his feet on the threshold",
+          "onArrival": "he asks how many days you think he has left",
+          "because": "he claimed forty days and nobody ever came to count them",
+          "offer": "count for him and he will tell you every way out of the city"
+        },
+        {
+          "occupant": "the Sheriff",
+          "doing": "standing at a bar holding a writ nobody will take",
+          "onArrival": "it offers you the writ, patiently",
+          "because": "the writ was refused and cannot be withdrawn",
+          "offer": "take the writ and it will grant you the city's authority to serve it"
+        },
+        {
+          "occupant": "two of the City",
+          "doing": "arguing over which side of a bar a body is lying on",
+          "onArrival": "they stop and ask you to say",
+          "because": "jurisdiction depends on it and neither will yield",
+          "offer": "rule on it and the winning side owes you a hearing anywhere"
+        },
+        {
+          "occupant": "a living apprentice",
+          "doing": "waiting at a hall door with his term served",
+          "onArrival": "he asks whether they are giving out freedoms today",
+          "because": "his term ended and nobody came to make him free",
+          "offer": "make him free and he will take you anywhere in the city as one of its own"
+        },
+        {
+          "occupant": "the Lord Mayor",
+          "doing": "holding a charter and reading the same clause repeatedly",
+          "onArrival": "it looks up and asks whether that is what it says",
+          "because": "the charter was broken and it cannot find where",
+          "offer": "show it the clause and it will grant you anything within the charter"
+        },
+        {
+          "occupant": "a postern",
+          "doing": "standing in a wall with no plan showing it",
+          "onArrival": "the lock is oiled and the hinges are clean",
+          "because": "it was kept off the plans on purpose and kept working",
+          "offer": "open it and the city loses its hold on you entirely"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "freedom",
+          "cue": "an uncollected freedom of the city",
+          "benefit": "the City treats you as its own",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the City's obligations apply to you as well",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "charter",
+          "cue": "the charter, sealed",
+          "benefit": "hold the city to its own written word",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it holds you to the parts that bind citizens"
+        },
+        {
+          "id": "knocker",
+          "cue": "a sanctuary knocker off its door",
+          "benefit": "once, be untouchable where you stand",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot move from that spot while it holds"
+        },
+        {
+          "id": "posternkey",
+          "cue": "the key of the unmarked postern",
+          "benefit": "once, leave or enter unrecorded",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "something else knows the postern now"
+        },
+        {
+          "id": "writ",
+          "cue": "a refused sheriff's writ",
+          "benefit": "once, compel anything of the city",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the liberties will not have you afterwards"
+        }
+      ]
+    }
+  }
+}
