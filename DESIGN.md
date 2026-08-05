@@ -1,7 +1,8 @@
 # DELVE — a dungeon layer for VANITY
 
-*Working name `vanity-delve`. **Draft 6**, 2026-08-05.*
-*First draft describing a tool that **exists**. The core is built, tested and generating.*
+*Working name `vanity-delve`. **Draft 7**, 2026-08-05.*
+*Describes a tool that **exists** and is released. The core is built, tested and generating; the
+Foundry module is published at v0.6.0.*
 
 ---
 
@@ -11,19 +12,46 @@
 |---|---|
 | 1. Handwrite a delve, run it twice on paper | ✅ complete — [`paper/`](paper/) |
 | 2. Seam spike | ✅ complete — [`spike/SPIKE-REPORT.md`](spike/SPIKE-REPORT.md) |
-| 3. Land the Forge seams | ✅ **branch ready for review** — `~/projects/Vanity` branch `delve-seams`, committed, **not pushed** |
-| 4. Core + Barrow content | ✅ built — [`core/`](core/), 11/11 tests passing |
+| 3. Land the Forge seams | ✅ **merged and released** — VANITY v0.10.4, PR #1 |
+| 4. Core + content | ✅ built — [`core/`](core/), **39/39 tests passing** |
 | 5. Curated overlays | not started |
-| 6. Foundry vertical slice | not started |
+| 6. Foundry vertical slice | ✅ **released** — v0.1.0 → v0.6.0 |
 | 7. Growing Delve Map | not started |
-| 8. More themes | not started |
+| 8. More themes | ✅ **16 themes**, 68 motifs — all passing [`validate-pack.mjs`](core/validate-pack.mjs) |
 
-**What runs today:** `node core/cli.mjs --seed=gilded-court-404` emits a complete, coherent,
-GM-readable delve. Samples in [`samples/`](samples/).
+**What runs today:** the module installs from its manifest and raises a whole delve in the world
+on one button, and `node core/cli.mjs --new --seed=gilded-court-404` emits the same delve as a
+worksheet at the desk. Samples in [`samples/`](samples/).
+
+**What has never happened:** a live session. Everything since the two paper playtests has been
+validated at the desk, by tests and by reading. Open question 1 is still open, and it is the only
+one that matters.
+
+### Versions
+
+| | |
+|---|---|
+| Module | 0.6.0 |
+| Requires | VANITY **0.10.4+** — the release the seams landed in |
+| Foundry | v13 minimum, verified 14.365 |
+| Generator stamp | `GENERATOR_VERSION` 0.1.0 — written into every delve file, **not** the module version |
 
 ---
 
-## 1. What changed since draft 5
+## 1. What changed
+
+### In draft 7 — the tool shipped
+
+| Change | Source |
+|---|---|
+| **Seams: "unpushed branch" → merged** | PR #1 into `slaguru666/Vanity`, released in **v0.10.4** |
+| **Step 6 shipped** | The Foundry module went v0.1.0 → v0.6.0 in a day |
+| **One theme → 16** | Castle, then the interior, settlement and wild families — 68 motifs |
+| **11 tests → 39** | The authoring layer, situations and the subtraction pass each brought invariants |
+| **A pack validator exists** | [`validate-pack.mjs`](core/validate-pack.mjs) — the structural rules, checked per theme rather than rediscovered |
+| **Required VANITY floor corrected** | The manifest said 0.10.0; the seams land in 0.10.4. Below that a delve emits 9 chat cards and 3 folders |
+
+### In draft 6, since draft 5
 
 | Change | Source |
 |---|---|
@@ -125,8 +153,15 @@ Two rules the tests enforce:
   long delve outruns its motif; temptations may not. A generic relic breaks the fiction, while a
   repeated one only looks thin.
 
-**Remaining limit:** the second cue fragment still comes from a global `features` pool. That is
-the last piece of generic furniture.
+**Closed in draft 7:** the `features` pool was the last piece of generic furniture, and it is now
+motif-scoped too. Every pack carries **6 features, 6 decisions, 5 temptations and 6 situations per
+motif**; the top-level pools survive only as fallbacks for a delve long enough to outrun its motif,
+and the pack itself says so (`_globalPoolsNote`). Nothing generic reaches a six-area delve.
+
+**Areas arrive as situations, not prompts.** A `situations` pool per motif gives each area an
+occupant doing something, with a leverage point — *"The tide watch, turning a glass that has
+already run through — it asks what the hour is, and means the tide."* Four test invariants police
+the grammar, because the first pass rendered broken English.
 
 ### The appeasement move
 
@@ -159,23 +194,49 @@ core/                  pure JS, seeded, zero Foundry globals, Node-testable
   director.mjs         arc roles, heat, hoard tier, density, Bane beats
   beat.mjs             an area as a beat: Cue + Truth
   pressure.mjs         the clock and the tab — never rolls a die
-  delve.mjs            composition
+  delve.mjs            composition; GENERATOR_VERSION
+  authoring.mjs        the working file — reroll, lock, setAuthored, outstanding
   render.mjs           markdown
-  cli.mjs              --seed --areas --depth --density --greed --json
-  content/barrow.json  the theme pack
-  test.mjs             11 invariants
+  render-authoring.mjs the two surfaces — worksheet and play sheet (§2)
+  cli.mjs              --new --file --theme --themes --seed --areas
+                       --reroll --lock --unlock --write --text
+                       --play --json --todo --out   (worksheet is the default)
+  validate-pack.mjs    the structural rules a theme pack must satisfy
+  build-index.mjs      regenerates content/index.json
+  content/*.json       16 theme packs + index.json
+  test.mjs             39 invariants
 ```
 
 **The core never sees an Actor, a UUID, HTML or a roll.** `pressure.mjs` decides *when* a clock
 roll is due and what it means; the adapter rolls it at the table. That separation is what makes
 the seed promise honest.
 
+**The module vendors the core.** `foundry-module/module/core/` is a copy of `core/` minus the
+Node-only tools (`cli.mjs`, `test.mjs`, `validate-pack.mjs`, `build-index.mjs`). It must stay
+byte-identical to `core/` for the shared files — a drift there means the table and the desk
+generate different delves from the same seed.
+
+**Themes are pluggable.** A pack declares its `forgeStageType` from the five geometries VANITY can
+build — `barrow · cave · fen · village · forest` — so a new theme is authored content, not code:
+
+| Geometry | Themes |
+|---|---|
+| barrow | barrow, castle, church, palace, temple |
+| village | city, market, port, town, village |
+| cave | cave, mountain |
+| forest | forest, valley |
+| fen | lake, river |
+
 ---
 
 ## 5. The Forge seams — landed
 
-Branch `delve-seams` in a clone of `slaguru666/Vanity`, **committed, unpushed, awaiting review**.
-All default to current behaviour, so nothing changes for existing callers.
+Merged into `slaguru666/Vanity` as PR #1 from branch `delve-seams`, and **published in VANITY
+v0.10.4**. All default to current behaviour, so nothing changed for existing callers.
+
+**This is the module's hard floor.** `module.json` requires VANITY 0.10.4 or later. On anything
+earlier the seams simply are not there, and every delve emits the 9 chat cards and 3 folders the
+spike measured — the exact failure the seams exist to prevent.
 
 | Seam | Change | Verified |
 |---|---|---|
@@ -195,7 +256,7 @@ Neither gates a first release.
 | Parameter | Range | Default | Confidence |
 |---|---|---|---|
 | **Areas** (excludes ending slot) | 3–12 | **6** | *working default* — one theme, one table, two passes |
-| Theme | Barrow (+4 planned) | Barrow | only Barrow exists |
+| Theme | 16 packs, 5 geometries (§4) | Barrow | all validate; **only Barrow is playtested** |
 | Depth | 1–5 | 2 | |
 | Party | 1–8 | 4 | |
 | Deadliness | forgiving/standard/cruel | standard | **severity only** |
@@ -293,18 +354,27 @@ if the rest of the packet is operational. It wasn't. Fixed since:
 - **A trigger glossary**, so `seenTwice` is not shorthand
 - **Accommodation/appetite compatibility**, killing the equation-output kernels
 
-Still missing, and still the gap to a document: per-area read-aloud, exact route costs and
-failure outcomes, concrete clue answers, and a full ending packet with negotiation terms.
+**Draft 7 closed most of the rest.** "Mostly prompts" was the charge; the answer was to make every
+area arrive as a situation with an occupant, a leverage point and a way through, and to enforce it
+with tests: every decision now states success *and* failure, offers an attempt rather than a pick,
+and never gates progress without an alternative — playtest 1 died on exactly that.
+
+Still missing, and still the gap to a document: per-area read-aloud (deliberately — §11), exact
+route costs, concrete clue answers, and a full ending packet with negotiation terms.
 
 ## 13. Open questions
 
-1. **Does the module beat a document?** The spike answers the mechanical half — unmodified, the
-   Forge emits 9 cards and 3 folders per delve that no document could intercept, and the seams
-   take that to 0. The *table* half is still open until a live session.
+1. **Does the module beat a document?** The mechanical half is now settled *in shipped code* — the
+   unmodified Forge emits 9 cards and 3 folders per delve that no document could intercept, and
+   the released seams take that to 0. The *table* half is still open, and no amount of desk work
+   will close it. **This is the blocking question.**
 2. Is `Ending: Authored` right, or right only for its author?
 3. Is 6 areas right beyond one theme and one simulated table?
-4. Is the ~5-Bane target reachable without feeling mechanical?
+4. Is the ~5-Bane target reachable without feeling mechanical? Still **UNCALIBRATED** — the target
+   is ~5, playtest 2 reached 3, and nothing since has been measured against a real table.
 5. Do cue *fragments* work at a live table, or does a GM need prose?
+6. **Do the other 15 themes hold up?** They validate structurally, but only Barrow has ever been
+   read closely against a playtest. A pack can pass every invariant and still be dull.
 
 ---
 

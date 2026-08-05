@@ -12,7 +12,9 @@ cold — then drops it into your world.
 https://github.com/slaguru666/vanity-delve/releases/latest/download/module.json
 ```
 
-Requires the [VANITY](https://github.com/slaguru666/Vanity) system, **0.10.5 or later**.
+Requires the [VANITY](https://github.com/slaguru666/Vanity) system, **0.10.4 or later** — that is
+the release the Forge seams landed in, and without them a delve emits nine stray chat cards and
+three stray folders.
 
 * **⛏** raise a dungeon
 * **🗑** remove one you don't want — it deletes exactly what it made and nothing else
