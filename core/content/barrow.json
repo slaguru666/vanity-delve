@@ -2154,5 +2154,6 @@
     "lingering": "stayed in one place longer than it takes to search it",
     "disturbed": "struck or moved something that had not moved in centuries"
   },
-  "_globalPoolsNote": "decisions/temptations/features below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>."
+  "_globalPoolsNote": "decisions/temptations/features below are FALLBACKS ONLY. Real content is motif-scoped under motifs.<id>.",
+  "placeNameStyle": "claimant"
 }

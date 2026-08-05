@@ -1,0 +1,1176 @@
+{
+  "id": "forest",
+  "label": "Forest",
+  "forgeStageType": "forest",
+  "schema": 1,
+  "_model": "The wild kernel: the APPETITE belongs to the place itself. A wood wants to be entered, fed, spread, or left uncounted, and the ACCOMMODATION is what it did to whoever was here — took them, grew through them, let them wander. Claimants are the wood's own names for itself.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Green Man",
+    "Antlered Thing",
+    "Lady of Thorns",
+    "First Tree",
+    "Wood's Own",
+    "Charcoal-Burner",
+    "Hunt That Does Not End"
+  ],
+  "appetites": [
+    {
+      "id": "entered",
+      "want": "to be walked into and never out of",
+      "lack": "walked out of",
+      "purpose": "nobody would ever find the far side",
+      "motif": "paths",
+      "prize": "lantern",
+      "conscript": "the travellers",
+      "asks": "\"Which way did you think you were going?\"",
+      "appeasement": {
+        "move": "walk in deliberately, and say aloud that you mean to",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "someone came in on purpose",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "fed",
+      "want": "to be given something at the edge",
+      "lack": "unfed",
+      "purpose": "nobody would ever pass without paying",
+      "motif": "tithe",
+      "prize": "bowl",
+      "conscript": "the offerings",
+      "asks": "\"What have you brought me?\"",
+      "appeasement": {
+        "move": "leave something of value at a root, without asking anything",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "the wood has been given something",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "spreading",
+      "want": "to grow over everything that was ever cleared",
+      "lack": "held back",
+      "purpose": "nothing would ever stay cut",
+      "motif": "reclaiming",
+      "prize": "axe",
+      "conscript": "the woodsmen",
+      "asks": "\"Why do you cut me?\"",
+      "appeasement": {
+        "move": "let something of yours be taken and grown over",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the wood has taken back a little more",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "uncounted",
+      "want": "never to be mapped or measured",
+      "lack": "surveyed",
+      "purpose": "nobody would ever say how big it is",
+      "motif": "trackless",
+      "prize": "chain",
+      "conscript": "the surveyors",
+      "asks": "\"Do you know where you are?\"",
+      "appeasement": {
+        "move": "admit aloud that you are lost, and mean it",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "nobody can say where they are",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "took",
+      "text": "took {conscript} one at a time and did not give them back",
+      "cruelty": 3,
+      "fits": [
+        "entered",
+        "fed",
+        "uncounted"
+      ]
+    },
+    {
+      "id": "grewthrough",
+      "text": "grew through {conscript} until there was more wood than not",
+      "cruelty": 3,
+      "fits": [
+        "spreading",
+        "fed",
+        "entered"
+      ]
+    },
+    {
+      "id": "wandered",
+      "text": "let {conscript} wander until they stopped wanting to leave",
+      "cruelty": 2,
+      "fits": [
+        "entered",
+        "uncounted",
+        "spreading"
+      ]
+    },
+    {
+      "id": "traded",
+      "text": "took {conscript} for a season and returned something else",
+      "cruelty": 2,
+      "fits": [
+        "fed",
+        "entered",
+        "uncounted"
+      ]
+    },
+    {
+      "id": "edged",
+      "text": "kept {conscript} at the treeline, facing out, as a warning",
+      "cruelty": 3,
+      "fits": [
+        "spreading",
+        "fed",
+        "uncounted"
+      ]
+    },
+    {
+      "id": "rooted",
+      "text": "let {conscript} put down roots where they stood",
+      "cruelty": 1,
+      "fits": [
+        "spreading",
+        "entered",
+        "fed"
+      ]
+    }
+  ],
+  "prizes": {
+    "lantern": {
+      "label": "the lantern that still shows the way out",
+      "function": "the only thing here that knows a direction"
+    },
+    "bowl": {
+      "label": "the bowl the offerings were left in",
+      "function": "the only place the wood has ever been satisfied"
+    },
+    "axe": {
+      "label": "the axe that held the treeline for a century",
+      "function": "the only thing that ever cut and stayed cut"
+    },
+    "chain": {
+      "label": "a surveyor's chain, complete",
+      "function": "the only honest measurement anyone took"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "The Wood of the",
+      "The Green of the",
+      "Under the",
+      "The Thicket of the",
+      "The Old Wood of the"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Treeline",
+      "The Ride",
+      "The Verge",
+      "The Coppice Edge",
+      "The Old Track"
+    ],
+    "complication": [
+      "The Coppice",
+      "The Charcoal Burns",
+      "The Deer Lawn",
+      "The Hollow Way",
+      "The Bramble Break"
+    ],
+    "turn": [
+      "The Clearing",
+      "The Standing Stones",
+      "The Green Ride",
+      "The Crossways",
+      "The Sunken Glade"
+    ],
+    "descent": [
+      "The Deep Wood",
+      "The Blackthorn",
+      "The Fallen Ground",
+      "The Wet Wood",
+      "The Root Hollow"
+    ],
+    "threshold": [
+      "The Grove",
+      "The Ring of Oaks",
+      "The Last Clearing",
+      "The Thorn Gate",
+      "The Still Place"
+    ],
+    "ending": [
+      "The First Tree",
+      "The Heart of the Wood",
+      "Where the Green Man Waits",
+      "The Oldest Clearing"
+    ]
+  },
+  "factions": [
+    {
+      "id": "taken",
+      "name": "the Taken",
+      "kind": "undead",
+      "essence": "still walking the paths they were lost on",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "foresters",
+      "name": "charcoal-burners",
+      "kind": "living",
+      "essence": "working a wood that is working on them",
+      "handledBy": "trade"
+    },
+    {
+      "id": "hunt",
+      "name": "the Hunt",
+      "kind": "beast",
+      "essence": "running something down, and has been for a long time",
+      "handledBy": "standing still"
+    },
+    {
+      "id": "thorns",
+      "name": "what grew over the rest",
+      "kind": "beast",
+      "essence": "neither knows nor cares who came through",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in by the ride, singing or talking, as travellers do",
+    "seenTwice": "passed the same tree twice, or were watched from two sides",
+    "loud": "an axe, a shout, a horn — the wood minds all three",
+    "lingering": "stopped moving long enough for the wood to catch up",
+    "disturbed": "cut, broke or took something growing"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "a Bat Swarm and 2 Giant Rats in the leaf-litter",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Bat Swarm",
+          "atk": 3,
+          "def": 3,
+          "grit": 1,
+          "nerve": 2,
+          "note": "disperses to nothing and re-forms"
+        },
+        {
+          "n": 2,
+          "name": "Giant Rat",
+          "atk": 2,
+          "def": 2,
+          "grit": 1,
+          "nerve": 2,
+          "note": "flees from fire"
+        }
+      ],
+      "harmedBy": "anything; fire scatters all of it",
+      "avoid": "stand still and they pass around you"
+    },
+    "fight": {
+      "line": "2 Dire Wolves",
+      "foes": [
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "circles; takes the one who runs"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "nobody runs and they will not commit"
+    },
+    "battle": {
+      "line": "1 Troll under the roots and 2 Dire Wolves",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 4,
+          "note": "regrows unless the wound is burned"
+        },
+        {
+          "n": 2,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "circles"
+        }
+      ],
+      "harmedBy": "anything, but the Troll only stays down if fire closes the wound",
+      "avoid": "it is territorial and will not follow past the treeline"
+    },
+    "nightmare": {
+      "line": "the Hunt: 1 Wraith mounted, 1 Troll and 4 Dire Wolves",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Troll",
+          "atk": 5,
+          "def": 3,
+          "grit": 12,
+          "nerve": 4,
+          "note": "regrows unless burned"
+        },
+        {
+          "n": 4,
+          "name": "Dire Wolf",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "runs down anything that flees"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; fire for the Troll; anything for the wolves",
+      "avoid": "the Hunt passes over anyone standing perfectly still — say so before initiative"
+    }
+  },
+  "motifs": {
+    "paths": {
+      "danger": "straying",
+      "dangerLine": "the wood is still taking people in, and it is patient about it",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a ride cut straight for a mile and going nowhere",
+          "waymarks nailed to trees, all of them facing inward",
+          "a stile into the wood with no stile out"
+        ],
+        "ritual": [
+          "boots left in a row at the treeline, toes pointing in",
+          "a path swept clear of leaf-fall by nothing at all",
+          "a lantern lit at dusk on a post with no road"
+        ],
+        "demand": [
+          "a path that widens invitingly wherever you slow down",
+          "a clearing you keep arriving at from different directions",
+          "a track that is easier walking than the way back"
+        ],
+        "wound": [
+          "one boot, worn through, a long way from any road",
+          "waymarks prised off and stacked at a root",
+          "a track worn deep by someone walking it for years"
+        ],
+        "anchor": [
+          "a lantern still burning on a post at a crossway",
+          "a walking-staff planted upright, worn to the grain",
+          "a map-case, empty, hanging on a branch"
+        ]
+      },
+      "features": [
+        "a fresh blaze cut into bark, this season",
+        "a campfire cold but recent, with nobody's gear taken",
+        "a hat on a branch at head height",
+        "a path that was not there when you looked before",
+        "a coat folded neatly at a root",
+        "cart-ruts leading in and none leading out"
+      ],
+      "decisions": [
+        {
+          "cue": "two paths, one plainly easier walking than the other",
+          "cost": "the wood made one of them easy on purpose",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the leaf-fall and take the true path, losing no time",
+            "failure": "you take the easy path and it costs a Turn more than it should",
+            "orElse": "take the hard path deliberately: one Turn, but you know where you are"
+          }
+        },
+        {
+          "cue": "a lantern burning on a post at a crossway",
+          "cost": "carrying it means the wood can see you coming",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you take it and it shows the way — the party does not stray this delve",
+            "failure": "you take it and something starts walking toward the light",
+            "orElse": "leave it burning: no guidance, and no attention"
+          }
+        },
+        {
+          "cue": "waymarks prised off and stacked at a root",
+          "cost": "resetting them is a service to whoever comes next",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you reset them and the Taken are grateful — they will guide you once",
+            "failure": "you are seen doing it and the wood closes a path behind you",
+            "orElse": "leave them stacked; you are not the wood's problem to solve"
+          }
+        },
+        {
+          "cue": "a stranger's coat folded at a root, still dry",
+          "cost": "taking it is theft from someone probably still walking",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the mark inside and learn who is still on these paths",
+            "failure": "you take it and something begins following at coat-distance",
+            "orElse": "leave it folded; you will pass it again"
+          }
+        },
+        {
+          "cue": "a clearing you have now arrived at twice",
+          "cost": "the third time will not be a coincidence",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you break the loop by leaving a mark and walking off it",
+            "failure": "you arrive a third time: lose a Turn and roll the clock",
+            "orElse": "walk out in a straight line whatever the ground does: one Turn, hard going"
+          }
+        },
+        {
+          "cue": "a track worn deep by long use, going the wrong way",
+          "cost": "following it finds whoever wore it",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you follow it and find them, and they can still be spoken to",
+            "failure": "you follow it and join it — the party walks it a Turn before noticing",
+            "orElse": "ignore it; the walker keeps walking"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "one of the Taken",
+          "doing": "walking a path it has walked for a very long time",
+          "onArrival": "it falls into step beside you without a word",
+          "because": "it was never told it could stop",
+          "offer": "tell it the way out and it will show you a shortcut in return"
+        },
+        {
+          "occupant": "a lantern on a post",
+          "doing": "burning steadily with nothing to burn",
+          "onArrival": "the flame turns toward you as you approach",
+          "because": "it was lit for someone who never came",
+          "offer": "carry it and the paths behave for one area"
+        },
+        {
+          "occupant": "a living charcoal-burner",
+          "doing": "recutting a blaze the wood keeps growing over",
+          "onArrival": "they nod and keep working",
+          "because": "the marks must be kept or the burn cannot be found",
+          "offer": "help them cut and they will mark your route out"
+        },
+        {
+          "occupant": "two of the Taken",
+          "doing": "standing at a fork, each facing a different way",
+          "onArrival": "they both turn to you to settle it",
+          "because": "they disagreed once and have not moved since",
+          "offer": "choose a path for them and both will walk it with you"
+        },
+        {
+          "occupant": "the path",
+          "doing": "widening ahead of you into easy walking",
+          "onArrival": "the going becomes noticeably pleasant",
+          "because": "the wood is being welcoming",
+          "offer": "refuse the easy way aloud and the wood respects it"
+        },
+        {
+          "occupant": "a walking-staff",
+          "doing": "standing upright where it was planted",
+          "onArrival": "the leaves around it are undisturbed",
+          "because": "whoever planted it meant to come back",
+          "offer": "take it up and the wood counts you a traveller, not a trespasser"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "lantern",
+          "cue": "a lantern that burns without fuel",
+          "benefit": "the party never loses its way",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything in the wood knows where you are"
+        },
+        {
+          "id": "waymark",
+          "cue": "a waymark prised off a tree",
+          "benefit": "once, make a path lead where you say",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the path you displaced has to go somewhere"
+        },
+        {
+          "id": "staff",
+          "cue": "a walking-staff worn to the grain",
+          "benefit": "once, walk out of anywhere in a straight line",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot stop walking while you hold it"
+        },
+        {
+          "id": "bootlace",
+          "cue": "a boot-lace from the row at the treeline",
+          "benefit": "once, retrace your steps exactly, however far",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you retrace someone else's too",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "mapcase",
+          "cue": "an empty map-case, oiled",
+          "benefit": "once, know the way to somewhere you have never been",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the wood learns where you wanted to go"
+        }
+      ]
+    },
+    "tithe": {
+      "danger": "debt",
+      "dangerLine": "the wood is owed something, and it remembers who has not paid",
+      "trigger": "disturbed",
+      "facets": {
+        "institution": [
+          "a stone at the treeline worn hollow by things set down on it",
+          "offerings nailed to a trunk at every height",
+          "a bowl at a root, never quite empty"
+        ],
+        "ritual": [
+          "bread left out, untouched but not stale",
+          "a first cut of every coppice stacked and unburned",
+          "a horn sounded at the edge before anyone enters"
+        ],
+        "demand": [
+          "a root grown across the path at exactly waist height",
+          "a hollow in a trunk at the height of an outstretched hand",
+          "a clearing where everything you carry feels heavier"
+        ],
+        "wound": [
+          "offerings taken back, and the trees around them dead",
+          "a bowl smashed and the pieces kept in place",
+          "a treeline that has moved a field's width since the wall was built"
+        ],
+        "anchor": [
+          "the offering-bowl itself, at the oldest root",
+          "a stone table with a hollow worn in the centre",
+          "a hoard of small given things in a hollow trunk"
+        ]
+      },
+      "features": [
+        "a fresh offering, still wet",
+        "a hollow tree stuffed with things nobody wanted",
+        "bread on a stone, untouched and not old",
+        "a coin pressed into bark and grown half over",
+        "a dead animal laid out deliberately, not eaten",
+        "a stack of first-cuttings, unburned"
+      ],
+      "decisions": [
+        {
+          "cue": "a bowl at a root that is not quite empty",
+          "cost": "leaving something is cheap; taking something is not",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you leave something well-chosen and the wood eases — no clock roll in this area",
+            "failure": "you leave something worthless and it is noticed: +1 Bane",
+            "orElse": "leave nothing and walk on; the wood keeps count"
+          }
+        },
+        {
+          "cue": "a hollow trunk full of small given things",
+          "cost": "one of them is exactly what you need",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you take one and leave one, and the exchange is accepted",
+            "failure": "you take without leaving, and the wood follows you the rest of the delve",
+            "orElse": "take nothing: the need goes unmet"
+          }
+        },
+        {
+          "cue": "a root grown across the path at waist height",
+          "cost": "stepping over is trespass; going under is submission",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you go under, which the wood counts as courtesy, and it lets you by",
+            "failure": "you step over and the wood treats you as a woodsman from here",
+            "orElse": "cut it: loud, roll the clock, and the wood remembers the cut"
+          }
+        },
+        {
+          "cue": "a dead animal laid out deliberately at a crossway",
+          "cost": "it was left for something that has not come",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read what it was left for, and what that thing wants instead",
+            "failure": "you disturb it and whatever it was for arrives hungry",
+            "orElse": "leave it and go round: one Turn"
+          }
+        },
+        {
+          "cue": "bread on a stone, fresh, in a wood with nobody in it",
+          "cost": "eating it accepts the wood's hospitality",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you eat and are a guest — the Taken will not touch you this delve",
+            "failure": "you eat and are fed by the wood, which means you belong to it: +1 Bane",
+            "orElse": "do not eat; you stay hungry and free"
+          }
+        },
+        {
+          "cue": "a coin pressed into bark and half grown over",
+          "cost": "prising it out takes back an offering",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you free it cleanly and the tree does not seem to mind",
+            "failure": "the bark tears and the wood takes something of yours instead",
+            "orElse": "leave it; it will be gone entirely in another century"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a living family",
+          "doing": "leaving bread on a stone and backing away from it",
+          "onArrival": "they gesture at you to be quiet, and to wait",
+          "because": "the tithe must be left and not watched",
+          "offer": "wait with them and they will share what the wood accepts"
+        },
+        {
+          "occupant": "the offering-bowl",
+          "doing": "filling with rainwater that is not rain",
+          "onArrival": "the surface stills as you approach",
+          "because": "the bowl must not be empty",
+          "offer": "put something in it and the wood grants you one passage unmolested"
+        },
+        {
+          "occupant": "one of the Taken",
+          "doing": "carrying an armful of small things toward a hollow trunk",
+          "onArrival": "it offers you the armful to hold",
+          "because": "the offerings must be collected and never are",
+          "offer": "help it carry and it will let you keep one"
+        },
+        {
+          "occupant": "a charcoal-burner",
+          "doing": "stacking a first-cutting that will not be burned",
+          "onArrival": "they hand you an axe, handle first",
+          "because": "the first cut is owed and they cannot bring themselves to burn it",
+          "offer": "burn it for them and the wood counts the debt paid"
+        },
+        {
+          "occupant": "the trees",
+          "doing": "closing a little around a stone with nothing on it",
+          "onArrival": "the gap you came through narrows",
+          "because": "something was due and was not left",
+          "offer": "leave anything at all and the gap opens"
+        },
+        {
+          "occupant": "a horn",
+          "doing": "sounding at the treeline behind you",
+          "onArrival": "the note holds far longer than a horn should",
+          "because": "nobody announced themselves on the way in",
+          "offer": "answer it — shout back — and the wood treats you as expected"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "bowl",
+          "cue": "a shallow bowl worn smooth at the rim",
+          "benefit": "leave anything in it and the wood is satisfied, once",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "it must be filled again before you leave the wood"
+        },
+        {
+          "id": "givenring",
+          "cue": "a ring from the hollow trunk, someone's offering",
+          "benefit": "once, be owed a favour by something in the wood",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whoever gave it originally still wants it"
+        },
+        {
+          "id": "firstcut",
+          "cue": "a bundle of first-cutting, unburned",
+          "benefit": "once, burn it to buy safe passage for a scene",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the smoke tells the wood exactly where you are"
+        },
+        {
+          "id": "stonebread",
+          "cue": "bread from the offering-stone, still soft",
+          "benefit": "eat it and nothing in the wood will touch you",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "you are fed by the wood, and it counts you as its own",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "barkcoin",
+          "cue": "a coin half grown into bark",
+          "benefit": "once, pay a debt you have not the means to pay",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the tree it came from is looking for it"
+        }
+      ]
+    },
+    "reclaiming": {
+      "danger": "encroachment",
+      "dangerLine": "the wood is taking the ground back, and it does not stop while you watch",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a field wall with trees growing out of the top of it",
+          "furrows still visible under twenty years of bramble",
+          "a gate standing on its own with wood on both sides"
+        ],
+        "ritual": [
+          "coppice stools cut on a rotation nobody is keeping",
+          "a hedge laid by hands, thirty years ago, still holding",
+          "boundary trees marked and the marks grown shut"
+        ],
+        "demand": [
+          "a clearing that is smaller than it was this morning",
+          "saplings standing in a doorway in a line",
+          "a path narrowing behind you as you walk it"
+        ],
+        "wound": [
+          "a plough left in a furrow with a tree through it",
+          "a cottage with the roof gone and an oak in the hearth",
+          "an orchard gone feral, the grafts thrown off"
+        ],
+        "anchor": [
+          "an axe in a stump, handle still sound",
+          "a hedging bill hung on a nail in a wall that is now a tree",
+          "a ring of stumps cut clean, and nothing regrown"
+        ]
+      },
+      "features": [
+        "a wall pushed over from the wood side, recently",
+        "a sapling in a doorway, this year's growth",
+        "a plough share polished by roots",
+        "a fence post with a living branch",
+        "a chimney standing alone in a thicket",
+        "a wheel-rut with a tree in the middle of it"
+      ],
+      "decisions": [
+        {
+          "cue": "a clearing that is measurably smaller than the map says",
+          "cost": "the wood will not stop while you are watching it",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you mark the edge and can tell how fast it is moving, which is useful",
+            "failure": "you lose the edge and the clearing closes a little around you",
+            "orElse": "move through fast and do not measure: one Turn, no knowledge"
+          }
+        },
+        {
+          "cue": "an axe standing in a stump, handle sound",
+          "cost": "using it is a declaration; leaving it is a concession",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you cut what needs cutting and the ground stays open behind you",
+            "failure": "the cut does not take and the wood closes the way you came: lose a Turn",
+            "orElse": "leave the axe; the way narrows but nothing is provoked"
+          }
+        },
+        {
+          "cue": "a cottage with an oak growing in the hearth",
+          "cost": "what is inside was never cleared out",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you get in and out through the roots, and find what was left",
+            "failure": "the roots shift and the doorway closes: +1 Bane and a Turn to dig out",
+            "orElse": "leave it; whatever is inside stays inside"
+          }
+        },
+        {
+          "cue": "a hedge laid by human hands, still holding, blocking the way",
+          "cost": "breaking it undoes a good piece of work",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you find the layer's gap and pass without breaking a stem",
+            "failure": "you force through and the hedge is ruined: the wood counts it",
+            "orElse": "go round the hedge: two Turns"
+          }
+        },
+        {
+          "cue": "saplings standing in a doorway in a deliberate line",
+          "cost": "pulling them is easy and will be noticed",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you pull them cleanly and replant them outside — the wood accepts the trade",
+            "failure": "you pull them and drop them: the wood takes something of yours in exchange",
+            "orElse": "step over them; the doorway is half closed and you are half through"
+          }
+        },
+        {
+          "cue": "an orchard gone feral, and one tree still bearing",
+          "cost": "the fruit is good and it is not yours",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you take fruit in a way the orchard permits, and are the better for it",
+            "failure": "you take too much and the orchard remembers the hand",
+            "orElse": "take none: you go hungry and unremarked"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a living farmer",
+          "doing": "cutting back a hedge that grew again behind them",
+          "onArrival": "they do not look up, and ask if you have a bill-hook",
+          "because": "the hedge must be kept and cannot be",
+          "offer": "cut with them and they will tell you where the old road ran"
+        },
+        {
+          "occupant": "saplings",
+          "doing": "standing in a doorway in a straight line",
+          "onArrival": "the line shifts, very slightly, as you look at it",
+          "because": "the doorway is being closed",
+          "offer": "step through and say aloud that you are passing, and they let you"
+        },
+        {
+          "occupant": "one of the Taken",
+          "doing": "laying a hedge with hands that are mostly root",
+          "onArrival": "it holds out a stem for you to bend",
+          "because": "the work was begun and must be finished",
+          "offer": "bend the stem and it will lay you a gap through anything"
+        },
+        {
+          "occupant": "the clearing",
+          "doing": "closing by a hand's breadth while you stand in it",
+          "onArrival": "the light changes",
+          "because": "nothing cleared is permitted to stay cleared",
+          "offer": "cut one sapling and the clearing holds for the delve"
+        },
+        {
+          "occupant": "an old orchard",
+          "doing": "dropping fruit in front of you as you pass",
+          "onArrival": "the fruit lands and does not roll",
+          "because": "the trees were tended once and remember it",
+          "offer": "eat, and the orchard will show you where the house was"
+        },
+        {
+          "occupant": "two charcoal-burners",
+          "doing": "arguing over a coppice stool cut out of rotation",
+          "onArrival": "they appeal to you as a third opinion",
+          "because": "the rotation was lost and the wood is taking the difference",
+          "offer": "settle it and they will burn a path for you"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "axe",
+          "cue": "an axe with a sound handle",
+          "benefit": "once, cut a way through anything growing",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the wood counts every cut you make and settles later"
+        },
+        {
+          "id": "hedgingbill",
+          "cue": "a hedging bill, oiled",
+          "benefit": "once, close a way behind you that nothing follows through",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the way stays shut for you too"
+        },
+        {
+          "id": "graft",
+          "cue": "a graft from the last bearing tree",
+          "benefit": "once, make something grow where it should not",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever you grow is the wood's, not yours"
+        },
+        {
+          "id": "boundarystone",
+          "cue": "a boundary stone the wood has not yet swallowed",
+          "benefit": "once, hold a piece of ground against the wood for a scene",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the wood takes twice that ground afterwards",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "plough",
+          "cue": "an iron share off a buried plough",
+          "benefit": "once, break new ground and have it stay broken",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the wood knows there is iron in the party"
+        }
+      ]
+    },
+    "trackless": {
+      "danger": "measurement",
+      "dangerLine": "the wood will not be counted, and it notices anyone trying",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "survey pegs driven in rows and every one at a different angle",
+          "a chain hung in a tree, complete, at head height",
+          "cairns built to mark a line that does not run straight"
+        ],
+        "ritual": [
+          "a perambulation walked yearly and never finishing",
+          "a tally cut into a post, the count restarting",
+          "a rope measured out and coiled and measured again"
+        ],
+        "demand": [
+          "ground that is longer walking than looking",
+          "a stand of trees that is not the same number twice",
+          "a distance that changes depending which way you go"
+        ],
+        "wound": [
+          "a map torn into strips and nailed to six trees",
+          "a surveyor's theodolite smashed against its own tripod",
+          "a chain snapped and the links scattered along a mile"
+        ],
+        "anchor": [
+          "a surveyor's chain, complete and coiled",
+          "a field-book with the last page filled in a shaking hand",
+          "a cairn with a brass plate under the top stone"
+        ]
+      },
+      "features": [
+        "survey pegs pulled and re-driven wrongly",
+        "a tally-post with the count started over",
+        "a rope coiled at a root, measured and unmeasured",
+        "a cairn built this season",
+        "a page of a field-book pinned to bark",
+        "chain-links scattered in a line through the leaf-litter"
+      ],
+      "decisions": [
+        {
+          "cue": "a surveyor's chain hung complete in a tree",
+          "cost": "measuring anything here is the one thing the wood minds",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you measure one distance honestly and it holds — you can trust that route",
+            "failure": "the measurement comes out different twice and you lose a Turn to it",
+            "orElse": "leave the chain hanging: no measurements, no offence"
+          }
+        },
+        {
+          "cue": "a field-book with the last entry in a shaking hand",
+          "cost": "reading it tells you what the surveyor found",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you read it and learn one true thing about the wood's shape",
+            "failure": "you read it aloud, and the wood hears itself described: +1 Bane",
+            "orElse": "leave it; the finding stays lost"
+          }
+        },
+        {
+          "cue": "cairns marking a line that does not run straight",
+          "cost": "following the cairns is following someone else's error",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you spot where the line was corrected and follow the true one",
+            "failure": "you follow the error and arrive somewhere you did not intend",
+            "orElse": "ignore the cairns entirely: one Turn, your own reckoning"
+          }
+        },
+        {
+          "cue": "a stand of trees you have counted twice and got two answers",
+          "cost": "counting a third time is a challenge",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you accept aloud that it cannot be counted, and the stand lets you through",
+            "failure": "you insist on a number and the stand does not open: lose a Turn",
+            "orElse": "do not count; walk through without looking too hard"
+          }
+        },
+        {
+          "cue": "a map torn into strips and nailed to six trees",
+          "cost": "assembling it is possible and slow",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you assemble enough of it to know where the far side is",
+            "failure": "you assemble it wrongly and are confidently mistaken for a Turn",
+            "orElse": "take one strip and go: you know a fragment, and no more"
+          }
+        },
+        {
+          "cue": "a perambulation the Taken are still walking, and a gap in the line",
+          "cost": "joining the walk means walking it to the end",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you join, walk one leg, and are let out at a place you chose",
+            "failure": "you join and the walk does not end where you hoped: lose a Turn",
+            "orElse": "let them pass: they nod, and the wood notes that you did not join"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a surveyor",
+          "doing": "measuring the same distance for the fourth time",
+          "onArrival": "it asks you to hold the far end of a chain",
+          "because": "the survey must close and has never closed",
+          "offer": "hold the chain and it will tell you the one distance it trusts"
+        },
+        {
+          "occupant": "the trees",
+          "doing": "standing in a number that is not the same twice",
+          "onArrival": "the count you began comes out differently",
+          "because": "the wood will not be enumerated",
+          "offer": "stop counting aloud and the stand opens"
+        },
+        {
+          "occupant": "one of the Taken",
+          "doing": "walking a perambulation with a gap in the line where someone dropped out",
+          "onArrival": "it beckons you into the gap",
+          "because": "the bounds must be walked by a full company",
+          "offer": "walk one leg with them and they will set you down wherever you name"
+        },
+        {
+          "occupant": "a living cartographer",
+          "doing": "tearing up their own map, carefully, into strips",
+          "onArrival": "they offer you a strip without explanation",
+          "because": "the map was wrong and they would rather it were nowhere",
+          "offer": "take the strip and it shows one true thing"
+        },
+        {
+          "occupant": "a cairn",
+          "doing": "standing where no cairn was a moment ago",
+          "onArrival": "the top stone is warm",
+          "because": "the line must be marked and the line keeps moving",
+          "offer": "add a stone and the cairns lead you somewhere useful, once"
+        },
+        {
+          "occupant": "a tally-post",
+          "doing": "carrying a count that has restarted many times",
+          "onArrival": "the fresh cut is very fresh",
+          "because": "something is still counting and cannot finish",
+          "offer": "cut the next tally yourself and the wood accepts the number"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "chain",
+          "cue": "a surveyor's chain, complete",
+          "benefit": "once, know a true distance in the wood",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the wood knows you measured it"
+        },
+        {
+          "id": "fieldbook",
+          "cue": "a field-book with one honest page",
+          "benefit": "once, know exactly where you are",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot be lost, and the wood dislikes that"
+        },
+        {
+          "id": "brassplate",
+          "cue": "a brass plate from under a cairn",
+          "benefit": "once, fix a place so it stays where it is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "everything around that place moves instead"
+        },
+        {
+          "id": "mapstrip",
+          "cue": "a strip of a torn map",
+          "benefit": "once, find the far side of anything",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the rest of the map wants to be reassembled",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "tallypost",
+          "cue": "a section of tally-post",
+          "benefit": "once, make a count come out the same twice",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "something begins counting you"
+        }
+      ]
+    }
+  },
+  "placeNameStyle": "claimant"
+}

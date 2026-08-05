@@ -12,6 +12,18 @@
       "label": "Castle",
       "geometry": "barrow",
       "motifs": 4
+    },
+    {
+      "id": "forest",
+      "label": "Forest",
+      "geometry": "forest",
+      "motifs": 4
+    },
+    {
+      "id": "town",
+      "label": "Town",
+      "geometry": "village",
+      "motifs": 4
     }
   ]
 }

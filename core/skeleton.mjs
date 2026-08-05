@@ -64,6 +64,7 @@ export function generateSkeleton({ pack, areas = 6, ending = 'authored', rng }) 
   const transgression =
     `The ${claimant} ${fill(accommodation.text, { conscript: appetite.conscript })}, ` +
     `so that ${appetite.purpose}.`;
+  // The bottom problem is the claimant itself — a person in a tomb, an office in a town.
 
   const bottomProblem = {
     label: `The ${claimant}`,
@@ -79,8 +80,11 @@ export function generateSkeleton({ pack, areas = 6, ending = 'authored', rng }) 
   };
   const secondary = r.derive('faction2').pick(pack.factions.filter(f => f.id !== primary.id));
 
-  // Named for its occupant. Drawing the name separately produced tombs named after strangers.
-  const placeName = `${r.derive('place').pick(pack.placeNames.first)} ${claimant}`;
+  // A barrow or keep is named for its occupant — drawing that separately produced tombs named
+  // after strangers. A settlement is not: it has its own name and the claimant merely runs it.
+  const placeName = pack.placeNameStyle === 'own'
+    ? `${r.derive('place1').pick(pack.placeNames.first)} ${r.derive('place2').pick(pack.placeNames.second)}`
+    : `${r.derive('place').pick(pack.placeNames.first)} ${claimant}`;
 
   // ---- the foreshadow chain ----------------------------------------------
   const progression = pack.facetProgression ?? {};

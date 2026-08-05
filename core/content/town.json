@@ -1,0 +1,1190 @@
+{
+  "id": "town",
+  "label": "Town",
+  "forgeStageType": "village",
+  "schema": 1,
+  "_model": "The settlement kernel: the APPETITE belongs to the place, not to a buried person. A town wants to be prosperous, respectable, safe or necessary, and its ACCOMMODATION is what a corporation does to keep it that way — price people out, charter them away, wall them off. Claimants are offices, not corpses.",
+  "facetProgression": {
+    "approach": "institution",
+    "complication": "ritual",
+    "turn": "demand",
+    "descent": "wound",
+    "threshold": "anchor",
+    "ending": "demand"
+  },
+  "claimants": [
+    "Guild of Mercers",
+    "Corporation",
+    "Watch Committee",
+    "Burgesses",
+    "Mayor-for-Life",
+    "Market Court",
+    "Company of Wool"
+  ],
+  "appetites": [
+    {
+      "id": "prosperous",
+      "want": "never to be poor again",
+      "lack": "poor",
+      "purpose": "the money would never leave",
+      "motif": "ledger",
+      "prize": "charter",
+      "conscript": "the debtors",
+      "asks": "\"Who is paying for this?\"",
+      "appeasement": {
+        "move": "pay a debt that is not yours, in public",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "the books balance again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "respectable",
+      "want": "never to be shamed",
+      "lack": "shamed",
+      "purpose": "nothing unseemly would ever be visible",
+      "motif": "appearances",
+      "prize": "portrait",
+      "conscript": "the shameful",
+      "asks": "\"What will people say?\"",
+      "appeasement": {
+        "move": "compliment the town on how well it is kept, in the street",
+        "attribute": "Flair",
+        "successes": 2,
+        "why": "the town is admired again",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "safe",
+      "want": "never to be sacked again",
+      "lack": "threatened",
+      "purpose": "nothing would ever get in",
+      "motif": "vigilance",
+      "prize": "keys",
+      "conscript": "the strangers",
+      "asks": "\"Who let you in?\"",
+      "appeasement": {
+        "move": "submit to being searched, without complaint",
+        "attribute": "Poise",
+        "successes": 2,
+        "why": "a stranger has been checked, properly",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    },
+    {
+      "id": "necessary",
+      "want": "never to be bypassed",
+      "lack": "bypassed",
+      "purpose": "the road would always come through here",
+      "motif": "thoroughfare",
+      "prize": "milestone",
+      "conscript": "the carters",
+      "asks": "\"Where do you think you are going?\"",
+      "appeasement": {
+        "move": "ask the town for directions, and take them",
+        "attribute": "Wits",
+        "successes": 2,
+        "why": "the town was needed for something",
+        "gain": {
+          "vanity": 1
+        },
+        "cost": {
+          "bane": 1
+        },
+        "repeatable": true
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "priced",
+      "text": "priced {conscript} out until they left of their own accord",
+      "cruelty": 2,
+      "fits": [
+        "prosperous",
+        "respectable",
+        "necessary"
+      ]
+    },
+    {
+      "id": "chartered",
+      "text": "chartered {conscript} away to another town entirely",
+      "cruelty": 2,
+      "fits": [
+        "prosperous",
+        "respectable",
+        "safe"
+      ]
+    },
+    {
+      "id": "walled",
+      "text": "walled {conscript} outside the gates and did not open them",
+      "cruelty": 3,
+      "fits": [
+        "safe",
+        "respectable",
+        "prosperous"
+      ]
+    },
+    {
+      "id": "indentured",
+      "text": "indentured {conscript} to the corporation for three generations",
+      "cruelty": 3,
+      "fits": [
+        "prosperous",
+        "necessary"
+      ]
+    },
+    {
+      "id": "struck",
+      "text": "struck {conscript} from the rolls, so the town could say they had never been here",
+      "cruelty": 3,
+      "fits": [
+        "respectable",
+        "safe",
+        "necessary"
+      ]
+    },
+    {
+      "id": "housed",
+      "text": "housed {conscript} where they could not be seen from the square",
+      "cruelty": 1,
+      "fits": [
+        "respectable",
+        "safe",
+        "prosperous"
+      ]
+    }
+  ],
+  "prizes": {
+    "charter": {
+      "label": "the charter that made the town rich",
+      "function": "the only proof the privilege was ever granted"
+    },
+    "portrait": {
+      "label": "the town's official portrait of itself",
+      "function": "the version everyone agreed to remember"
+    },
+    "keys": {
+      "label": "the keys to the gates, all four",
+      "function": "the only things the walls answer to"
+    },
+    "milestone": {
+      "label": "the milestone that says all roads pass here",
+      "function": "the reason anyone ever came"
+    }
+  },
+  "placeNames": {
+    "first": [
+      "Market",
+      "Nether",
+      "Old",
+      "Kings",
+      "Salt",
+      "Stone",
+      "Bridge",
+      "Cold"
+    ],
+    "second": [
+      "Harrow",
+      "Weld",
+      "Combe",
+      "Barrow",
+      "Stanton",
+      "Marden",
+      "Fordwich",
+      "Thrale",
+      "Winbury",
+      "Cawley"
+    ]
+  },
+  "areaNames": {
+    "approach": [
+      "The Toll Road",
+      "The North Gate",
+      "The Bridge",
+      "The Weighbridge",
+      "The Outskirts"
+    ],
+    "complication": [
+      "The Market Square",
+      "The Shambles",
+      "The Wool Hall",
+      "The Almshouse Row",
+      "The Cornmarket"
+    ],
+    "turn": [
+      "The Guildhall",
+      "The Counting House",
+      "The Assembly Rooms",
+      "The Exchange",
+      "The Session House"
+    ],
+    "descent": [
+      "The Undercrofts",
+      "The Debtors' Yard",
+      "The Tanneries",
+      "The Back Lanes",
+      "The Drain"
+    ],
+    "threshold": [
+      "The Mayor's Parlour",
+      "The Muniment Chest",
+      "The Strongroom",
+      "The Charter Room",
+      "The Private Office"
+    ],
+    "ending": [
+      "The Council Chamber",
+      "The High Table",
+      "The Mayor's Seat",
+      "The Corporation Assembled"
+    ]
+  },
+  "factions": [
+    {
+      "id": "corporation",
+      "name": "the Corporation",
+      "kind": "undead",
+      "essence": "still meeting, still minuting, still deciding",
+      "handledBy": "courtesy"
+    },
+    {
+      "id": "debtors",
+      "name": "the debtors",
+      "kind": "living",
+      "essence": "owed on and owing, and still here",
+      "handledBy": "trade"
+    },
+    {
+      "id": "watch",
+      "name": "the Watch",
+      "kind": "undead",
+      "essence": "checking papers nobody has issued for centuries",
+      "handledBy": "proof of right"
+    },
+    {
+      "id": "outsiders",
+      "name": "what came in anyway",
+      "kind": "beast",
+      "essence": "never read the charter",
+      "handledBy": "force"
+    }
+  ],
+  "triggerGlossary": {
+    "announced": "came in by the main gate and paid the toll, publicly",
+    "seenTwice": "noticed by two different windows, or a window and a watchman",
+    "loud": "a raised voice in a public place — the town minds that",
+    "lingering": "stood about in the square long enough to be asked your business",
+    "disturbed": "moved something the Corporation had placed"
+  },
+  "rosters": {
+    "skirmish": {
+      "line": "3 Bandits in watchmen's coats",
+      "foes": [
+        {
+          "n": 3,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 2,
+          "nerve": 2,
+          "note": "asks for your papers first"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "produce any document with a seal and they will accept it"
+    },
+    "fight": {
+      "line": "4 Bandits and a Hobgoblin Soldier as sergeant",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Hobgoblin Soldier",
+          "atk": 4,
+          "def": 3,
+          "grit": 5,
+          "nerve": 3,
+          "note": "the others hold while he lasts"
+        },
+        {
+          "n": 4,
+          "name": "Bandit",
+          "atk": 3,
+          "def": 3,
+          "grit": 2,
+          "nerve": 2,
+          "note": "breaks when the sergeant falls"
+        }
+      ],
+      "harmedBy": "anything",
+      "avoid": "drop the sergeant and the rest are Nerve 2"
+    },
+    "battle": {
+      "line": "1 Necromancer of the Corporation and 4 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 4,
+          "def": 3,
+          "grit": 6,
+          "nerve": 4,
+          "note": "raises one Skeleton per round from the paupers' ground"
+        },
+        {
+          "n": 4,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "anything — but the Skeletons keep coming until the Necromancer stops",
+      "avoid": "he is a clerk and will take a bribe, in coin, publicly"
+    },
+    "nightmare": {
+      "line": "1 Wraith of the Mayor, 1 Necromancer and 5 Skeletons",
+      "foes": [
+        {
+          "n": 1,
+          "name": "Wraith",
+          "atk": 5,
+          "def": 3,
+          "grit": 10,
+          "nerve": 5,
+          "note": "INCORPOREAL — chill touch ignores armour, drains 1 max Grit"
+        },
+        {
+          "n": 1,
+          "name": "Necromancer",
+          "atk": 4,
+          "def": 3,
+          "grit": 6,
+          "nerve": 4,
+          "note": "keeps raising"
+        },
+        {
+          "n": 5,
+          "name": "Skeleton",
+          "atk": 3,
+          "def": 2,
+          "grit": 1,
+          "nerve": 5,
+          "note": "fearless"
+        }
+      ],
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
+      "avoid": "do not run this without an appeasement route open"
+    }
+  },
+  "motifs": {
+    "ledger": {
+      "danger": "debt",
+      "dangerLine": "the town is still owed, and it keeps very good records",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "a debt-board in the square, names chalked and re-chalked",
+          "weights and measures chained to a bench, all of them shaved",
+          "a counting house with the shutters open at every hour"
+        ],
+        "ritual": [
+          "a market bell rung at an hour when nobody trades",
+          "accounts read aloud to an empty hall, quarterly",
+          "coins counted into a box that is already full"
+        ],
+        "demand": [
+          "a table set for a settlement, two chairs, one occupied",
+          "a room where a price is named before you ask",
+          "a hand out, palm up, at every doorway"
+        ],
+        "wound": [
+          "a ledger with a page cut out and the stub still in",
+          "houses emptied for arrears and never re-let",
+          "a debtor's stone worn hollow by kneeling"
+        ],
+        "anchor": [
+          "a charter under glass, the seal intact",
+          "a strongbox with one document and no coin",
+          "a tally-stick split and both halves kept"
+        ]
+      },
+      "features": [
+        "fresh chalk on a debt-board, this week's hand",
+        "a shop cleared out overnight and the door left open",
+        "coin scattered and not picked up, which never happens here",
+        "a stall taken down in a hurry, the frame still standing",
+        "a ledger left open at a page somebody wanted found",
+        "a lock changed on a door that was never locked"
+      ],
+      "decisions": [
+        {
+          "cue": "a debt-board with a name you could pay off, or add to",
+          "cost": "paying is public and generous; adding is quiet and cruel",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you pay in the square and the Corporation counts you a benefactor",
+            "failure": "your coin is refused as insufficient, publicly: +1 Bane",
+            "orElse": "walk past the board; nothing changes and nothing is owed"
+          }
+        },
+        {
+          "cue": "a toll demanded at a gate by nobody in particular",
+          "cost": "the toll is real even if the collector is not",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out the correct toll from the board and pay exactly it — the gate opens",
+            "failure": "you overpay and are marked as someone with money: every price rises for you",
+            "orElse": "go round to the weighbridge: two Turns, no toll"
+          }
+        },
+        {
+          "cue": "a set of shaved weights and a merchant about to use them",
+          "cost": "exposing the fraud makes an enemy of the guild",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you expose it in a way that flatters the Corporation's honesty and gain their favour",
+            "failure": "you expose it clumsily and the guild closes ranks: +1 Bane",
+            "orElse": "say nothing; the merchant remembers your discretion"
+          }
+        },
+        {
+          "cue": "a strongbox that opens to whoever holds the charter",
+          "cost": "you do not hold the charter",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find the charter's copy in the muniment chest and the box opens",
+            "failure": "the box holds and the attempt is entered in a ledger somewhere",
+            "orElse": "break it: loud, roll the clock, contents damaged"
+          }
+        },
+        {
+          "cue": "a debtor offering information for the price of their arrears",
+          "cost": "their information is good; their arrears are not small",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you settle the debt at a discount and get the whole of what they know",
+            "failure": "you pay in full and they tell you half",
+            "orElse": "refuse: they tell you nothing and follow you at a distance"
+          }
+        },
+        {
+          "cue": "a tally-stick, split, with the other half somewhere in the town",
+          "cost": "matching it proves a claim worth having",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you match it against the counting-house half and hold a claim the town honours",
+            "failure": "you match it wrongly and hold a claim on nothing: +1 Bane",
+            "orElse": "leave it: no claim, no obligation"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a clerk of the Corporation",
+          "doing": "chalking a debt-board that has no room left",
+          "onArrival": "it asks whether you have come to settle",
+          "because": "the accounts must balance and never have",
+          "offer": "settle any debt at all and the whole board is wiped, which it badly wants"
+        },
+        {
+          "occupant": "two living debtors",
+          "doing": "dividing a purse that is plainly not theirs",
+          "onArrival": "they stop and offer you a share",
+          "because": "they were paid to leave and could not",
+          "offer": "take the share and they will tell you who paid them"
+        },
+        {
+          "occupant": "the Weighmaster",
+          "doing": "testing weights that are every one of them short",
+          "onArrival": "it hands you a weight and asks your honest opinion",
+          "because": "the measures must be certified and cannot be",
+          "offer": "certify them anyway and every trader in the town owes you"
+        },
+        {
+          "occupant": "a market bell",
+          "doing": "ringing an hour when no trade is permitted",
+          "onArrival": "the square begins, very slowly, to fill",
+          "because": "the hour was never struck from the calendar",
+          "offer": "trade something, anything, and the market recognises you as a burgess"
+        },
+        {
+          "occupant": "the Chamberlain",
+          "doing": "counting coin into a box that is already full",
+          "onArrival": "it does not look up, and asks you to hold the lid",
+          "because": "the count has never once come out right",
+          "offer": "hold the lid and it will tell you which house the shortfall went to"
+        },
+        {
+          "occupant": "a living creditor",
+          "doing": "waiting outside a door with a writ and no bailiff",
+          "onArrival": "they ask if you are going in anyway",
+          "because": "the writ cannot be served without an officer",
+          "offer": "serve it for them and they hand you what is behind the door"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "charterseal",
+          "cue": "a seal matrix for the town's charter",
+          "benefit": "doors that check privilege open for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Corporation expects you at its next meeting"
+        },
+        {
+          "id": "tallystick",
+          "cue": "half a split tally-stick",
+          "benefit": "once, prove a debt is owed to you and be believed",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the other half is out there and its holder is looking"
+        },
+        {
+          "id": "shavedweight",
+          "cue": "a weight, subtly light",
+          "benefit": "once, make a trade come out in your favour",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "traders begin to check everything you hand them"
+        },
+        {
+          "id": "writ",
+          "cue": "a writ of distraint, unserved, name blank",
+          "benefit": "name someone and the Watch will detain them once",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "your own name is on the reverse in the same clerk's hand",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "keytocounting",
+          "cue": "a small key to a counting-house drawer",
+          "benefit": "one locked box per scene opens",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Corporation notices what has been opened"
+        }
+      ]
+    },
+    "appearances": {
+      "danger": "scandal",
+      "dangerLine": "the town is being looked at, and it has arranged itself accordingly",
+      "trigger": "seenTwice",
+      "facets": {
+        "institution": [
+          "a square where every frontage is painted and every back is not",
+          "shutters on the side of the street the road can see",
+          "a fine hall with a fine door and no rooms behind it"
+        ],
+        "ritual": [
+          "a procession route swept daily, and only that route",
+          "a mayor's portrait unveiled every year to the same crowd",
+          "best clothes laid out in every house, for a visit that never comes"
+        ],
+        "demand": [
+          "a street arranged so a visitor is always in view",
+          "a mirror set at the end of the square, facing in",
+          "a bench positioned for being seen sitting on"
+        ],
+        "wound": [
+          "a row of houses with the fronts kept and the backs collapsed",
+          "a name painted over on a shopfront, badly",
+          "a portrait with one figure scraped out of the group"
+        ],
+        "anchor": [
+          "the town's own portrait of itself, framed and lit",
+          "a visitor's book with one page and many signatures",
+          "a plan of the town as it would like to be"
+        ]
+      },
+      "features": [
+        "fresh paint on one side of a street only",
+        "a curtain drawn across an alley mouth",
+        "a scandal-sheet trodden into the mud, still legible",
+        "a shopfront boarded and painted to look occupied",
+        "chairs set out in the square for an audience",
+        "a signboard taken down and the hooks left"
+      ],
+      "decisions": [
+        {
+          "cue": "an alley the town would rather you did not walk down",
+          "cost": "walking it sees what the frontage hides",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you go down and back unobserved, and learn what the town is covering",
+            "failure": "you are seen coming out of it: +1 Bane and the Corporation cools toward you",
+            "orElse": "stay on the swept route: one Turn longer, no offence given"
+          }
+        },
+        {
+          "cue": "a scandal-sheet naming somebody still influential here",
+          "cost": "reading it aloud is a weapon; pocketing it is leverage",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you use it to open a door that flattery alone would not",
+            "failure": "you are seen holding it and become the story: +1 Bane",
+            "orElse": "burn it: the town relaxes and thanks you without saying so"
+          }
+        },
+        {
+          "cue": "a group portrait with one figure scraped out",
+          "cost": "asking who it was is a rude question here",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you ask it delicately enough to be answered honestly",
+            "failure": "you ask badly and the room closes: the next encounter starts hostile",
+            "orElse": "do not ask; the gap goes unexplained and you are liked for it"
+          }
+        },
+        {
+          "cue": "a procession forming that expects you to join or stand aside",
+          "cost": "joining is endorsement; standing aside is comment",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you join well and the town takes you for a person of standing",
+            "failure": "you join badly and are laughed at: +1 Bane",
+            "orElse": "stand aside respectfully: neutral, and you lose one Turn"
+          }
+        },
+        {
+          "cue": "a house-front with no house behind it, and a way through",
+          "cost": "the way through is real; the pretence is what matters",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you slip through without bringing the frontage down",
+            "failure": "the frontage comes down, publicly: roll the clock",
+            "orElse": "go round the block: one Turn"
+          }
+        },
+        {
+          "cue": "a visitor's book open at a blank page",
+          "cost": "signing puts you on the record, favourably or otherwise",
+          "resolve": {
+            "roll": "Flair 1",
+            "success": "you sign in a way that flatters the town and doors open",
+            "failure": "you sign plainly and the town judges the hand: +1 Bane",
+            "orElse": "leave it unsigned; you remain a stranger and are treated as one"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "two of the Corporation",
+          "doing": "painting a frontage that is already perfect",
+          "onArrival": "they ask you to stand back and judge the colour",
+          "because": "the street must look well from the road",
+          "offer": "approve the colour warmly and they will let you behind it"
+        },
+        {
+          "occupant": "a portrait-painter",
+          "doing": "scraping a figure out of a group portrait",
+          "onArrival": "it pauses, brush up, and asks whether you know the face",
+          "because": "the town resolved that person had never been here",
+          "offer": "name the face and it will tell you what they did"
+        },
+        {
+          "occupant": "the Beadle",
+          "doing": "sweeping a route that is already clean",
+          "onArrival": "it sweeps around you rather than asking you to move",
+          "because": "the route must be ready and the visit never comes",
+          "offer": "tell it the visitor has arrived and it will escort you anywhere"
+        },
+        {
+          "occupant": "a living journalist",
+          "doing": "copying a notice down before it is taken away",
+          "onArrival": "they pocket the paper and smile at you carefully",
+          "because": "the story is real and the town is faster than they are",
+          "offer": "offer to distract the Beadle and they will share what they have"
+        },
+        {
+          "occupant": "the Mayor",
+          "doing": "rehearsing a welcome to an empty square",
+          "onArrival": "it welcomes you instead, warmly and at length",
+          "because": "the speech has never once been given",
+          "offer": "let it finish and the town treats you as its guest of honour"
+        },
+        {
+          "occupant": "three of the town",
+          "doing": "standing in their best clothes at their doors",
+          "onArrival": "they nod as you pass, and keep standing",
+          "because": "word went round that someone important was coming",
+          "offer": "be that someone and every door on the street opens"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "townportrait",
+          "cue": "a small copy of the town's own portrait",
+          "benefit": "show it and be taken for a person of standing",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to behave like one, publicly"
+        },
+        {
+          "id": "visitorsbook",
+          "cue": "a page torn from the visitor's book",
+          "benefit": "once, be remembered as having been welcome here",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the page is missed, and the Corporation asks after it"
+        },
+        {
+          "id": "scandalsheet",
+          "cue": "a scandal-sheet, folded small",
+          "benefit": "once, make one person here do as you ask",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "they will tell others what you are holding",
+          "acceptanceCost": {
+            "vice": "Greed"
+          }
+        },
+        {
+          "id": "bestcoat",
+          "cue": "a good coat, cut for the square",
+          "benefit": "the Watch does not stop you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot be seen in the back lanes wearing it"
+        },
+        {
+          "id": "paintpot",
+          "cue": "a pot of the town's own paint",
+          "benefit": "once, make something look sound that is not",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "whatever you painted will fail at the worst moment"
+        }
+      ]
+    },
+    "vigilance": {
+      "danger": "suspicion",
+      "dangerLine": "the town is still watching the road, and you came down it",
+      "trigger": "announced",
+      "facets": {
+        "institution": [
+          "a gate that is shut at an hour nobody remembers agreeing",
+          "watch-boxes at every corner, all of them occupied",
+          "a wall built higher on the side facing the road"
+        ],
+        "ritual": [
+          "papers demanded at a gate that has no gatekeeper",
+          "a curfew bell rung to an empty street",
+          "a roll of strangers read out nightly"
+        ],
+        "demand": [
+          "a room you must be searched to leave",
+          "a bench where you are asked to wait and be looked at",
+          "a window arranged so the square can see who calls"
+        ],
+        "wound": [
+          "a gate barred from inside with the bar broken anyway",
+          "a list of strangers with every name struck through",
+          "a house burned deliberately, alone in its row"
+        ],
+        "anchor": [
+          "four gate-keys on one ring, hung where all can see",
+          "a strangers' book with the last entry unfinished",
+          "a bar for a gate, oiled, never used"
+        ]
+      },
+      "features": [
+        "a gate barred at midday, with no reason given",
+        "shutters closed on one house only",
+        "a watch-box with the brazier still warm",
+        "chalk marks on doors, recent, in a code",
+        "a barricade half-built across a lane",
+        "a dog kennel, empty, chain snapped"
+      ],
+      "decisions": [
+        {
+          "cue": "a watchman demanding papers you do not have",
+          "cost": "any document with a seal will do, if given confidently",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you produce something and it is accepted; the Watch passes you through",
+            "failure": "your papers are refused and you are entered in the strangers' book: +1 Bane",
+            "orElse": "go over the wall by the tannery: one Turn and a Brawn roll"
+          }
+        },
+        {
+          "cue": "a gate shut against the hour, and a wicket beside it",
+          "cost": "the wicket admits one person at a time",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you work out the wicket's trick and the party passes one by one, unremarked",
+            "failure": "the wicket sticks and the noise brings the Watch: roll the clock",
+            "orElse": "wait for the gate to open on the bell: two Turns"
+          }
+        },
+        {
+          "cue": "a search you can submit to, or refuse",
+          "cost": "submitting means showing what you carry",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you submit and the Watch counts you honest — no further checks this delve",
+            "failure": "you refuse and are followed for the rest of the delve",
+            "orElse": "let them search only one of you: partial trust, one Turn"
+          }
+        },
+        {
+          "cue": "chalk marks on doors in a code the Watch uses",
+          "cost": "reading it tells you which houses are being watched",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the code and know which doors are safe to knock at",
+            "failure": "you copy a mark wrongly onto yourselves without realising",
+            "orElse": "ignore the marks; knock and find out"
+          }
+        },
+        {
+          "cue": "a curfew bell about to ring",
+          "cost": "being on the street after it is an offence here",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you talk your way into a doorway before it rings and are sheltered",
+            "failure": "you are caught out after curfew: +1 Bane and the Watch escorts you",
+            "orElse": "run for the gate: one Turn, loud, roll the clock"
+          }
+        },
+        {
+          "cue": "a strangers' book with your description already in it",
+          "cost": "somebody entered you before you arrived",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you find who wrote it and what else they wrote",
+            "failure": "you alter the entry and the alteration is noticed: +1 Bane",
+            "orElse": "leave it; the Watch has your description and uses it"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "a watchman",
+          "doing": "checking papers nobody has carried for a century",
+          "onArrival": "it puts out a hand and waits",
+          "because": "the order to stand the watch was never rescinded",
+          "offer": "hand it anything with a seal and it will wave you through and salute"
+        },
+        {
+          "occupant": "the Constable",
+          "doing": "reading a roll of strangers aloud in an empty street",
+          "onArrival": "it reaches a blank and looks up at you",
+          "because": "the roll must be complete before the gate may open",
+          "offer": "give it names — any names — and the gate opens"
+        },
+        {
+          "occupant": "two living smugglers",
+          "doing": "waiting for the curfew bell before moving a crate",
+          "onArrival": "they put a finger to their lips and shrug",
+          "because": "the Watch is predictable and they are patient",
+          "offer": "help them shift it and they show you the way through the wall"
+        },
+        {
+          "occupant": "a gate",
+          "doing": "closing itself, slowly, on no schedule you can see",
+          "onArrival": "the bar begins to slide across",
+          "because": "the hour was set by a council that no longer sits",
+          "offer": "hold the bar and it will stay open behind you"
+        },
+        {
+          "occupant": "the Searcher",
+          "doing": "turning out a bag that keeps refilling",
+          "onArrival": "it asks you to empty your pockets, apologetically",
+          "because": "the search must be thorough and never is",
+          "offer": "let it search you properly and the Watch leaves you alone thereafter"
+        },
+        {
+          "occupant": "three of the Watch",
+          "doing": "standing at a corner, facing outward",
+          "onArrival": "they part to let you through without being asked",
+          "because": "something is expected from the road and it is not you",
+          "offer": "ask what they are watching for and they will tell you exactly"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "gatekeys",
+          "cue": "one of the four gate-keys",
+          "benefit": "one gate per scene opens for you",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the Watch counts the keys nightly and one is missing"
+        },
+        {
+          "id": "papers",
+          "cue": "a set of papers with a good seal and a blank name",
+          "benefit": "pass any check in the town without a roll",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you must answer to the name you wrote"
+        },
+        {
+          "id": "watchcode",
+          "cue": "a scrap listing the chalk-code",
+          "benefit": "once, know exactly which house is watched",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you begin marking doors yourself without noticing"
+        },
+        {
+          "id": "curfewbell",
+          "cue": "a hand-bell from a watch-box",
+          "benefit": "ring it and the street empties for one scene",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "the Watch comes to see who rang",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "strangersbook",
+          "cue": "a page of the strangers' book",
+          "benefit": "once, prove you were here all along",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "someone else's alibi is now missing"
+        }
+      ]
+    },
+    "thoroughfare": {
+      "danger": "passage",
+      "dangerLine": "the town needs the road to come through it, and will arrange that",
+      "trigger": "lingering",
+      "facets": {
+        "institution": [
+          "milestones all pointing here, some of them moved",
+          "a bridge that is the only bridge for a day's ride",
+          "roads that all bend, slightly, toward the square"
+        ],
+        "ritual": [
+          "a toll taken at a bar that swings on nothing",
+          "carts waved through by a hand at a window",
+          "a road swept before a coach that never comes"
+        ],
+        "demand": [
+          "a market you must cross to get anywhere at all",
+          "a square with one exit visible and three not",
+          "a street that returns you to where you started"
+        ],
+        "wound": [
+          "a rival town's milestone, broken and kept",
+          "a road washed out and never repaired, deliberately",
+          "a bypass surveyed, staked, and the stakes pulled up"
+        ],
+        "anchor": [
+          "the milestone that says all roads pass here",
+          "a map with one road drawn heavier than the rest",
+          "a bridge-toll board, the figures freshly cut"
+        ]
+      },
+      "features": [
+        "a signpost turned to point the wrong way",
+        "a road newly blocked with a felled tree",
+        "cart-ruts that stop in the middle of a field",
+        "a bridge plank taken up and laid beside the gap",
+        "survey stakes pulled up and stacked",
+        "a milestone with the distance recut"
+      ],
+      "decisions": [
+        {
+          "cue": "a signpost that has plainly been turned",
+          "cost": "following it goes somewhere the town wants you to go",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you read the wear on the post and work out the true direction",
+            "failure": "you follow it and lose a Turn, arriving where the town intended",
+            "orElse": "ask a local: they will tell you truly, and the town will know you asked"
+          }
+        },
+        {
+          "cue": "a toll-bar across the only bridge",
+          "cost": "the toll is small; the record of paying it is not",
+          "resolve": {
+            "roll": "Poise 2",
+            "success": "you pay and are entered as legitimate traffic — the town stops obstructing you",
+            "failure": "you argue the toll and the bar stays down: lose a Turn, +1 Bane",
+            "orElse": "ford it downstream: one Turn, everything gets wet"
+          }
+        },
+        {
+          "cue": "a market you must cross, and it does not want you to cross quickly",
+          "cost": "the crowd is the obstacle and it is deliberate",
+          "resolve": {
+            "roll": "Flair 2",
+            "success": "you move through by seeming to belong, and are not delayed",
+            "failure": "you are drawn into three transactions and lose a Turn",
+            "orElse": "go round by the back lanes: one Turn, and you are noticed doing it"
+          }
+        },
+        {
+          "cue": "survey stakes for a bypass, pulled up and stacked",
+          "cost": "replanting them is a declaration of war on the town",
+          "resolve": {
+            "roll": "Brawn 2",
+            "success": "you replant enough to matter and the surveyors' ghosts owe you",
+            "failure": "you are seen at it: the Corporation treats you as hostile from here",
+            "orElse": "leave them stacked; the bypass stays unbuilt"
+          }
+        },
+        {
+          "cue": "a square with three exits and only one that leaves",
+          "cost": "the other two return you here",
+          "resolve": {
+            "roll": "Wits 2",
+            "success": "you spot which street the ruts actually leave by",
+            "failure": "you take a returning street: lose a Turn and roll the clock",
+            "orElse": "follow a cart out: whichever way it goes, one Turn"
+          }
+        },
+        {
+          "cue": "a milestone recut to move the town closer to everywhere",
+          "cost": "correcting it is honest and unwelcome",
+          "resolve": {
+            "roll": "Wits 1",
+            "success": "you read the older cut beneath and know the true distances",
+            "failure": "you accept the new figures and misjudge your time: lose a Turn",
+            "orElse": "take the milestone at its word and hurry"
+          }
+        }
+      ],
+      "situations": [
+        {
+          "occupant": "the Tollkeeper",
+          "doing": "raising a bar that hangs on nothing at all",
+          "onArrival": "it names a toll and waits, hand out",
+          "because": "the bridge must be paid for and the bridge is gone",
+          "offer": "pay anything and it will tell you the true road"
+        },
+        {
+          "occupant": "a carter",
+          "doing": "arguing with a signpost that has been turned",
+          "onArrival": "they appeal to you as a witness",
+          "because": "they have been round this way three times",
+          "offer": "settle the argument and they will carry you a stage"
+        },
+        {
+          "occupant": "the Surveyor",
+          "doing": "staking out a bypass that the town keeps pulling up",
+          "onArrival": "it hands you the mallet without looking",
+          "because": "the survey must be completed and never is",
+          "offer": "drive one stake and it will show you the shortest way through"
+        },
+        {
+          "occupant": "two of the Corporation",
+          "doing": "recutting a milestone, closer",
+          "onArrival": "they stand in front of the figures as you approach",
+          "because": "the distances must favour the town",
+          "offer": "admire the work and they will tell you the real distance, privately"
+        },
+        {
+          "occupant": "a crowd",
+          "doing": "filling a square that was empty a moment ago",
+          "onArrival": "it closes gently around you and does not let you hurry",
+          "because": "the market must be busy when strangers pass",
+          "offer": "buy something and the crowd opens"
+        },
+        {
+          "occupant": "the Bridge",
+          "doing": "holding itself up on a span that is not there",
+          "onArrival": "the planks settle as you step on",
+          "because": "the crossing must exist because the charter says so",
+          "offer": "cross confidently and it holds; hesitate and it does not"
+        }
+      ],
+      "temptations": [
+        {
+          "id": "milestone",
+          "cue": "a milestone small enough to carry",
+          "benefit": "once, make a journey shorter than it is",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "distances you did not carry get longer"
+        },
+        {
+          "id": "tollboard",
+          "cue": "a toll-board with the figures cut",
+          "benefit": "once, demand passage and be given it",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you are expected to keep the bridge in repair"
+        },
+        {
+          "id": "roadmap",
+          "cue": "a map with one road drawn heavier",
+          "benefit": "never lose your way in the town",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "you cannot see the roads it leaves out"
+        },
+        {
+          "id": "bar",
+          "cue": "a length of toll-bar, iron-shod",
+          "benefit": "once, close a way behind you that nothing can pass",
+          "useCost": {
+            "bane": 2
+          },
+          "standingDrawback": "whatever you shut out waits at that spot",
+          "acceptanceCost": {
+            "vice": "Pride"
+          }
+        },
+        {
+          "id": "carterswhip",
+          "cue": "a carter's whip, worn to the handle",
+          "benefit": "once, make anything give way and let you through",
+          "useCost": {
+            "bane": 1
+          },
+          "standingDrawback": "the town treats you as traffic, not a guest"
+        }
+      ]
+    }
+  },
+  "placeNameStyle": "own"
+}
