@@ -244,5 +244,17 @@ import { renderWorksheet, renderPlay } from './render-authoring.mjs';
     wrong.length ? `wrong: ${wrong.join(', ')}` : `${ids.length} packs`);
 }
 
+// Every shipped pack must satisfy the structural rules. validate-pack.mjs was a tool you had to
+// remember to run; a pack regression should fail the suite. The initiative warning went missing
+// from twelve rosters without anything noticing.
+{
+  const { validatePack } = await import('./validate-pack.mjs');
+  const bad = readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'index.json')
+    .map(f => validatePack(JSON.parse(readFileSync(join(dir, f), 'utf8')), f.replace('.json', '')))
+    .filter(r => r.errs.length);
+  t('every shipped pack validates', bad.length === 0,
+    bad.length ? bad.map(b => `${b.name}: ${b.errs[0]}`).join('; ') : '16 packs');
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

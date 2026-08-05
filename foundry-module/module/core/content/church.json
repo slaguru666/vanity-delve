@@ -382,7 +382,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
-      "avoid": "it will not strike anyone kneeling — say so before initiative"
+      "avoid": "it will not strike anyone kneeling",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

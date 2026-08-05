@@ -338,8 +338,9 @@
           "note": "hold the top of the gully"
         }
       ],
-      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative, and there is no fuel above the snowline",
-      "avoid": "it will not leave the gully; the buttress is longer and it is climbable"
+      "harmedBy": "anything, but the Troll only stays down if fire touches it, and there is no fuel above the snowline",
+      "avoid": "it will not leave the gully; the buttress is longer and it is climbable",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith above the snowline, 1 Troll and 3 Dire Wolves",
@@ -373,7 +374,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll",
-      "avoid": "do not run this without an appeasement route open and shelter within a Turn"
+      "avoid": "do not run this without an appeasement route open and shelter within a Turn",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

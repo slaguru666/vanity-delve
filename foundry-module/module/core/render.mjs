@@ -104,9 +104,8 @@ export function renderMarkdown(d) {
     L.push('');
 
     if (R) {
-      // No appended "say so before initiative" — the packs that need it already say it, and three
-      // battle rosters carry the phrase verbatim, so the addendum printed it twice.
-      L.push(`**${cap(a.encounter.heat)} — ${R.line}.** Harmed by ${R.harmedBy}. *${R.avoid}.*`);
+      L.push(`**${cap(a.encounter.heat)} — ${R.line}.** Harmed by ${R.harmedBy}.`
+             + `${R.beforeInitiative ? ` **${R.beforeInitiative}**` : ''} *${R.avoid}.*`);
       L.push('');
       L.push('| Foe | atk | def | Grit | Nerve | |');
       L.push('|---|---|---|---|---|---|');

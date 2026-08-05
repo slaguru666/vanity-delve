@@ -337,8 +337,9 @@
           "note": "hold the ground below it"
         }
       ],
-      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative; there is wood in the hanging wood",
-      "avoid": "it holds the head wall and nothing else; the col is a longer climb and it is clear"
+      "harmedBy": "anything, but the Troll only stays down if fire touches it; there is wood in the hanging wood",
+      "avoid": "it holds the head wall and nothing else; the col is a longer climb and it is clear",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith on the col, 1 Troll, 1 Ogre and 2 Dire Wolves",
@@ -381,7 +382,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll",
-      "avoid": "do not run this without an appeasement route open"
+      "avoid": "do not run this without an appeasement route open",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

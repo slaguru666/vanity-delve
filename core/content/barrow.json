@@ -2110,7 +2110,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons ONLY",
-      "avoid": "it will take an appeasement over a fight every time"
+      "avoid": "it will take an appeasement over a fight every time",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith, 1 Ghoul and 4 Skeletons",

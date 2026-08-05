@@ -337,8 +337,9 @@
           "note": "free Called Shot to freeze on a hit"
         }
       ],
-      "harmedBy": "anything, but the Troll only stays down if fire touches it, and everything here is wet — say so before initiative",
-      "avoid": "it will not go into deep water; the boat is safe from it and the shore is not"
+      "harmedBy": "anything, but the Troll only stays down if fire touches it, and everything here is wet",
+      "avoid": "it will not go into deep water; the boat is safe from it and the shore is not",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith standing on the water, 1 Troll and 4 Ghouls",
@@ -372,7 +373,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest, fire for the Troll and it is wet",
-      "avoid": "do not run this without an appeasement route open"
+      "avoid": "do not run this without an appeasement route open",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

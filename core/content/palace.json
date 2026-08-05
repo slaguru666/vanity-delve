@@ -347,8 +347,9 @@
           "note": "fearless"
         }
       ],
-      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons — say so before initiative",
-      "avoid": "it would far rather be flattered than fight, and will pause to be"
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons",
+      "avoid": "it would far rather be flattered than fight, and will pause to be",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith, 1 Ogre in the under-stair and 4 Skeletons",
@@ -382,7 +383,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
-      "avoid": "do not run this without an appeasement route open"
+      "avoid": "do not run this without an appeasement route open",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

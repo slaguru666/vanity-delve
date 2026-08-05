@@ -102,6 +102,18 @@ export function validatePack(pack, name = pack?.id ?? '?') {
     if (!r.line || !r.foes?.length) E(`rosters.${h}: needs a line and foes`);
     if (!r.harmedBy) E(`rosters.${h}: must say what harms them — a party discovering an immunity by failing is how playtest 1 died`);
     if (!r.avoid) W(`rosters.${h}: no avoidance note`);
+
+    /**
+     * A restriction the party cannot discover safely must be told to them before initiative, and
+     * it must be said exactly once. This lived as a renderer heuristic — synthesise the warning
+     * whenever `harmedBy` contained the word ONLY — which printed twice on the rosters that
+     * already said it in prose, and vanished from twelve rosters when the heuristic was removed.
+     * It is authored data now, and this is the check that keeps it that way.
+     */
+    if (/say so before initiative/i.test(`${r.harmedBy} ${r.avoid ?? ''}`))
+      E(`rosters.${h}: put the initiative warning in beforeInitiative, not in the prose — it renders twice otherwise`);
+    if (r.harmedBy.includes('ONLY') && !r.beforeInitiative)
+      E(`rosters.${h}: harmedBy restricts what works, so it needs beforeInitiative — the party cannot discover this safely`);
     for (const f of r.foes ?? [])
       for (const k of ['n', 'name', 'atk', 'def', 'grit', 'nerve'])
         if (f[k] === undefined) E(`rosters.${h}: foe ${f.name ?? '?'} missing ${k}`);

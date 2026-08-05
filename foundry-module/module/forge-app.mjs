@@ -181,7 +181,7 @@ function foeSection(c) {
   if (c.kind === 'planned') return `
     <p><b>${esc(cap(c.heat))} — not cast.</b> Nothing was forged for this area, so the plan is the encounter. Cast it by hand:</p>
     ${table(c.roster.foes.map(f => `<tr><td>${f.n}× ${esc(f.name)}</td><td>${f.atk}</td><td>${f.def}</td><td>${f.grit}</td><td>${f.nerve}</td><td><i>${esc(f.note)}</i></td></tr>`).join(''))}
-    <p>Harmed by ${esc(c.roster.harmedBy)}. <i>${esc(c.roster.avoid)}.</i></p>`;
+    <p>Harmed by ${esc(c.roster.harmedBy)}.${c.roster.beforeInitiative ? ` <b>${esc(c.roster.beforeInitiative)}</b>` : ''} <i>${esc(c.roster.avoid)}.</i></p>`;
   if (c.kind === 'unavailable') return `
     <p><b>${esc(cap(c.heat))} — nothing to run.</b> No actors were created and this theme has no roster at this heat. Improvise the fight or skip it; the area's decision and fallback still stand.</p>`;
   return '';

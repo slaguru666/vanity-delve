@@ -17,7 +17,7 @@
 import { coinSeed, Rng } from './core/rng.mjs';
 import { newWorkingFile, outstanding, readyToPlay } from './core/authoring.mjs';
 import { DelveForgeApp, raiseDungeon, listDungeons, removeDungeon, removeDungeonDialog, setThemes } from './forge-app.mjs';
-import { foeStats, foeLine, classifyFoes } from './foes.mjs';
+import { stageArea } from './stage.mjs';
 
 const MOD = 'vanity-delve';
 const FLAG = 'state';
@@ -61,9 +61,6 @@ async function packFor(d) {
   if (!p) ui.notifications.error(`DELVE: could not load the ${id} theme — refusing to stage, it would use the wrong geometry.`);
   return p;
 }
-const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
-const list = items => `<ul>${items.filter(Boolean).map(i => `<li>${i}</li>`).join('')}</ul>`;
-
 /** GM-only: truth, numbers, leverage. Never read aloud. */
 const gmCard = (label, sub, body) => ChatMessage.create({
   speaker: { alias: 'DELVE' },
@@ -131,55 +128,25 @@ async function enter() {
   if (!pack) return;
   ui.notifications.info(`DELVE: raising ${name}…`);
 
-  // A Forge failure must not leave the area half-raised. If the scene itself fails there is
-  // nothing to run, so stop before the turn advances and let the GM try again. If the population
-  // fails the scene is up and the delve is still playable — the planned roster stands in.
+  // The decisions live in stage.mjs so their failure paths can be tested; this is only the wiring.
   const quiet = seamsPresent ? { post: false, folderId: st.folderId } : {};
-  const stage = await game.vanity.forge.stage({
-    type: pack.forgeStageType, size: 'medium', name, populate: false, activate: true, ...quiet,
-  }).catch(e => { console.error('DELVE | stage failed', e); return null; });
-  if (!stage) return ui.notifications.error(`DELVE: the Forge could not raise ${name}. Nothing staged; try again.`);
-
-  const enc = area.encounter ? await game.vanity.forge.encounter({
-    heat: area.encounter.heat, forStage: name,
-    ...(seamsPresent ? { hoard: false, post: false, folderId: st.folderId } : {}),
-  }).catch(e => {
-    console.error('DELVE | encounter failed', e);
-    ui.notifications.warn(`DELVE: could not populate ${name} — the planned roster stands in.`);
-    return null;
-  }) : null;
-  if (area.hoard) await game.vanity.forge.hoard({ size: area.hoard, ...(seamsPresent ? { post: false } : {}) })
-    .catch(e => { console.error('DELVE | hoard failed', e); return null; });
-
-  // Players first — the scene is up and this is what they came for.
-  await readAloudCard(name, w.readAloud ?? `<i>(unwritten)</i> ${area.cueFragments.join('. ')}.`);
-
-  // Then the GM, quietly.
-  const rv = area.decision?.resolve ?? {};
-  const c = classifyFoes(area, (enc?.actors ?? []).map(foeStats));
-  const foeBlock =
-    c.kind === 'forged'
-      ? `<p><b>${cap(c.heat)} — in the world:</b></p>${list(c.foes.map(foeLine))}${
-          c.planned ? `<p><i>DELVE planned ${c.planned.line}; the Forge rolled its own, so the plan's tactics do not describe these.</i></p>` : ''}`
-    : c.kind === 'planned'
-      ? `<p><b>${cap(c.heat)} — not cast.</b> Nothing was forged; run the plan by hand:</p>${
-          list(c.roster.foes.map(f => `${f.n}× <b>${f.name}</b> — ${f.atk}/${f.def}/${f.grit}, Nerve ${f.nerve}. <i>${f.note}</i>`))
-        }<p><b>Harmed by ${c.roster.harmedBy}.</b> ${c.roster.avoid}.</p>`
-    : c.kind === 'unavailable'
-      ? `<p><b>${cap(c.heat)} — nothing to run.</b> No actors, and no roster at this heat. Improvise or skip; the decision and fallback still stand.</p>`
-    : '';
-  await gmCard(`⛏ ${area.index} · ${name}`, `${area.role} · ${area.facet}`,
-    `${area.situation ? `<p><b>Here:</b> ${cap(area.situation.occupant)}, ${area.situation.doing} — ${area.situation.onArrival}.<br>
-        <b>They can:</b> ${area.situation.offer}. <i>${cap(area.situation.because)}.</i></p>` : ''}
-     <p><b>${cap(area.decision.cue)}</b>${rv.roll ? ` — [${rv.roll}] ${rv.success}` : ''}${rv.failure ? `<br><b>Miss:</b> ${rv.failure}` : ''}${rv.orElse ? `<br><b>Or:</b> ${rv.orElse}` : ''}</p>
-     ${foeBlock}
-     ${area.temptation ? `<p><b>${cap(area.temptation.id)}:</b> ${area.temptation.benefit}. <i>Use: ${area.temptation.useCost?.bane ? `+${area.temptation.useCost.bane} Bane` : '—'}. ${area.temptation.standingDrawback}.</i></p>` : ''}
-     ${w.notes ? `<p><b>Your note:</b> ${w.notes}</p>` : ''}
-     <p><code>${area.trigger}${area.baneBeat ? ` · ${area.baneBeat}` : ''} · fallback: ${area.fallback.route}</code></p>`);
-
-  st.at += 1; st.turn += 1;
-  await setState(st);
-  return { stage, area };
+  const fx = {
+    stage: n => game.vanity.forge.stage({
+      type: pack.forgeStageType, size: 'medium', name: n, populate: false, activate: true, ...quiet,
+    }),
+    encounter: heat => game.vanity.forge.encounter({
+      heat, forStage: name,
+      ...(seamsPresent ? { hoard: false, post: false, folderId: st.folderId } : {}),
+    }),
+    hoard: size => game.vanity.forge.hoard({ size, ...(seamsPresent ? { post: false } : {}) }),
+    commit: async () => { st.at += 1; st.turn += 1; await setState(st); },
+    readAloud: readAloudCard,
+    gm: gmCard,
+    warn: m => ui.notifications.warn(m),
+    error: m => ui.notifications.error(m),
+    log: e => console.error('DELVE | staging', e),
+  };
+  return stageArea(fx, { area, name, authored: w });
 }
 
 async function ending() {
@@ -232,7 +199,9 @@ Hooks.once('ready', async () => {
                  load, loadFile, draft, enter, ending, bane, clock, state: getState,
                  outstanding: () => outstanding(getState()?.delve ?? { areas: [] }),
                  ready: () => readyToPlay(getState()?.delve ?? { areas: [] }),
-                 loadPack: id => loadPack(id),
+                 // the validating resolver, not the raw fetcher — raiseDungeon stages from this,
+                 // so a pack with no forgeStageType must never reach forge.stage({type: undefined})
+                 loadPack: id => packById(id),
                  get pack() { return PACK; } };
   console.log(`DELVE | ready. Forge seams ${seamsPresent ? 'present' : 'ABSENT'}.`);
   if (!seamsPresent) ui.notifications.warn('DELVE: Forge seams not installed — see the delve-seams branch.');

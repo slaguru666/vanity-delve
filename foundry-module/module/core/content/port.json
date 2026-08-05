@@ -360,8 +360,9 @@
           "note": "fearless; still working the ship they died on"
         }
       ],
-      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons — say so before initiative",
-      "avoid": "it wants the crew accounted for; name one of the drowned and it stops to enter them"
+      "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the Skeletons",
+      "avoid": "it wants the crew accounted for; name one of the drowned and it stops to enter them",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Wraith, 1 Ogre out of the mud berth and 5 Skeletons",
@@ -395,7 +396,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; anything for the rest",
-      "avoid": "do not run this without an appeasement route open"
+      "avoid": "do not run this without an appeasement route open",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

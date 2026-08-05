@@ -383,7 +383,8 @@
         }
       ],
       "harmedBy": "blessed, silvered or magical weapons for the Wraith ONLY; fire for the Troll; anything for the wolves",
-      "avoid": "the Hunt passes over anyone standing perfectly still — say so before initiative"
+      "avoid": "the Hunt passes over anyone standing perfectly still",
+      "beforeInitiative": "Say so before initiative."
     }
   },
   "motifs": {

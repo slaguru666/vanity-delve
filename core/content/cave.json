@@ -346,8 +346,9 @@
           "note": "douses open flames on a hit"
         }
       ],
-      "harmedBy": "anything, but the Troll only stays down if fire touches it — say so before initiative, and note the swarm is putting your fires out",
-      "avoid": "it will not leave the water; stay off the streamway and it stays in"
+      "harmedBy": "anything, but the Troll only stays down if fire touches it, and note the swarm is putting your fires out",
+      "avoid": "it will not leave the water; stay off the streamway and it stays in",
+      "beforeInitiative": "Say so before initiative."
     },
     "nightmare": {
       "line": "1 Troll, 1 Ogre and 3 Ghouls of the Kept",
