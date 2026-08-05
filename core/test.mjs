@@ -84,6 +84,16 @@ for (let i = 0; i < 40; i++) {
   }
 }
 t('no repeated decision inside one delve', dupD === 0, `${dupD}/80`);
+{
+  let dupNames = 0;
+  for (let i = 0; i < 60; i++) {
+    for (const areas of [6, 9, 12]) {
+      const names = generateDelve({ pack, seed: `nm-${i}`, areas }).areas.map(a => a.name);
+      if (new Set(names).size !== names.length) dupNames++;
+    }
+  }
+  t('no two areas share a name', dupNames === 0, `${dupNames}/180 delves had a clash`);
+}
 t('no repeated temptation inside one delve', dupT === 0, `${dupT}/80`);
 
 // every decision must be resolvable, and no decision may gate progress without an escape

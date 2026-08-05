@@ -20,10 +20,10 @@ const FACET_TRUTH = {
   demandEnd:   'the question itself, asked directly',
 };
 
-export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision, temptation = null, situation = null }) {
+export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = null, feature, decision, temptation = null, situation = null, name = null }) {
   const r = rng.derive('area', String(planned.index));
   const fs = skeleton.foreshadow.find(f => f.index === planned.index) ?? {};
-  const names = pack.areaNames?.[planned.role] ?? pack.areaNames?.approach ?? ['Unnamed'];
+
 
   // feature/decision are dealt by the caller without replacement across the delve — drawing them
   // per-area from pools of 8 and 6 made repeats near-certain inside a single delve.
@@ -34,7 +34,7 @@ export function buildArea({ skeleton, planned, pack, pressure, rng, baneBeat = n
   return {
     index: planned.index,
     role: planned.role,
-    name: r.derive('name').pick(names),
+    name,
     facet: fs.facet ?? null,
 
     // Cue: fragments, not prose.

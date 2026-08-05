@@ -48,6 +48,19 @@ export function generateDelve(params = {}) {
   // prompt plus a resolver: the review's verdict was "choices attached to prompts, not spaces
   // that naturally produce play".
   const situations = deal(motifPack.situations ?? [], plan.areas.length, 'situations');
+
+  // Names are dealt globally, not per role: two `complication` areas both drawing from the same
+  // four-name list produced two scenes called "The Lesser Vault" in one dungeon.
+  const nameRng = rng.derive('names');
+  const usedNames = new Set();
+  const allNames = Object.values(pack.areaNames ?? {}).flat();
+  const areaNames = plan.areas.map(a => {
+    const forRole = (pack.areaNames?.[a.role] ?? []).filter(n => !usedNames.has(n));
+    const pool = forRole.length ? forRole : allNames.filter(n => !usedNames.has(n));
+    const pick = nameRng.pick(pool.length ? pool : allNames);
+    if (pick) usedNames.add(pick);
+    return pick;
+  });
   const decisions = deal(decisionPool, plan.areas.length, 'decisions', pack.decisions ?? []);
 
   // Temptations are dealt across the areas that carry a hoard, for the same reason as decisions:
@@ -60,7 +73,7 @@ export function generateDelve(params = {}) {
   const built = plan.areas.map((planned, i) => {
     const beat = baneBeatFor(planned, pressure, rng.derive('banebeat', String(planned.index)));
     if (beat) pressure.bankBane('(offered)', beat, planned.index);
-    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i], situation: situations[i], temptation: planned.hoard ? temptations[tIdx++] : null });
+    const area = buildArea({ skeleton, planned, pack, pressure, rng, baneBeat: beat, feature: features[i], decision: decisions[i], situation: situations[i], name: areaNames[i], temptation: planned.hoard ? temptations[tIdx++] : null });
     area.fallback = fallbackRoute(area, skeleton);
     return area;
   });

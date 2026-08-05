@@ -173,21 +173,24 @@ Hooks.once('ready', async () => {
 
 Hooks.on('getSceneControlButtons', controls => {
   if (!game.user.isGM) return;
-  const group = Array.isArray(controls) ? controls.find(c => c.name === 'token') : controls.token;
-  if (!group) return;
-  const tools = Array.isArray(group.tools) ? group.tools : Object.values(group.tools ?? {});
-  const open = () => new DelveForgeApp().render(true);
-  tools.push({
-    name: 'delve-forge', title: 'DELVE — raise a dungeon', icon: 'fas fa-mountain', button: true,
-    onClick: open, onChange: open,
-  });
-  tools.push({
-    name: 'delve-remove', title: 'DELVE — remove a generated dungeon', icon: 'fas fa-trash', button: true,
-    onClick: () => removeDungeonDialog(), onChange: () => removeDungeonDialog(),
-  });
-  tools.push({
-    name: 'delve-next', title: 'DELVE — stage the next area (pre-authored delve)', icon: 'fas fa-forward', button: true,
-    onClick: () => (getState() ? enter() : ui.notifications.info('DELVE: no staged delve — use the ⛏ button to raise one.')),
-    onChange: () => (getState() ? enter() : ui.notifications.info('DELVE: no staged delve — use the ⛏ button to raise one.')),
-  });
+  // Foundry v13+ passes controls as a record keyed by name — the token group is `tokens`, plural —
+  // and each group's `tools` is a record too, not an array. Written for the old array shape, this
+  // hook silently added nothing and the button never appeared.
+  const group = controls.tokens ?? controls.token;
+  if (!group?.tools) return;
+
+  const tool = (name, title, icon, order, onClick) => {
+    const entry = { name, title, icon, order, button: true,
+                    onChange: (event, active) => { if (active !== false) onClick(); },
+                    onClick };
+    if (Array.isArray(group.tools)) group.tools.push(entry);
+    else group.tools[name] = entry;
+  };
+
+  tool('delve-forge', 'DELVE — raise a dungeon', 'fas fa-mountain', 90,
+       () => new DelveForgeApp().render(true));
+  tool('delve-remove', 'DELVE — remove a generated dungeon', 'fas fa-trash-can', 91,
+       () => removeDungeonDialog());
+  tool('delve-next', 'DELVE — stage the next area of a pre-authored delve', 'fas fa-forward', 92,
+       () => (getState() ? enter() : ui.notifications.info('DELVE: no staged delve — use ⛏ to raise one.')));
 });
